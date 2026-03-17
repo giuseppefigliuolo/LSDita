@@ -202,6 +202,7 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
   if (phase === 'preview' && exercise) {
     return (
       <ExercisePreview
+        key={exercise.id}
         exercise={exercise}
         exerciseIndex={exerciseIndex}
         totalExercises={exercises.length}

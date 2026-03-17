@@ -19,13 +19,6 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
   const [time, setTime] = useState(exercise.hangTime)
   const [editing, setEditing] = useState<'sets' | 'reps' | 'time' | null>(null)
 
-  useEffect(() => {
-    setSets(exercise.sets)
-    setReps(exercise.repsPerSet)
-    setTime(exercise.hangTime)
-    setEditing(null)
-  }, [exercise])
-
   const equipmentLabels: Record<string, string> = {
     hangboard: '🪨 Hangboard',
     wooden_balls: '⚪ Sfere legno',
@@ -118,7 +111,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
       )}
 
       <div className={`flex gap-3 w-full max-w-xs ${editing ? 'mt-2' : 'mt-2'}`}>
-        <Button variant="ghost" size="md" onClick={onSkip} className="flex-shrink-0">
+        <Button variant="ghost" size="md" onClick={onSkip} className="shrink-0">
           Salta
         </Button>
         <Button variant="primary" size="lg" fullWidth onClick={handleStart}>
@@ -141,9 +134,8 @@ function ParamBox({ value, suffix, label, color, ringColor, active, onClick }: {
   return (
     <motion.button
       onClick={onClick}
-      className={`bg-surface rounded-xl p-3 text-center transition-all ${
-        active ? `ring-2 ${ringColor} bg-surface-elevated` : 'hover:bg-surface-elevated'
-      }`}
+      className={`bg-surface rounded-xl p-3 text-center transition-all ${active ? `ring-2 ${ringColor} bg-surface-elevated` : 'hover:bg-surface-elevated'
+        }`}
       whileTap={{ scale: 0.95 }}
     >
       <p className={`text-lg font-bold font-timer ${color}`}>
