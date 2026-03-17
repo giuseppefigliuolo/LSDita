@@ -8,8 +8,8 @@ import Button from '../components/ui/Button'
 import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
 import trainingProgram from '../data/training-program.json'
 import type { TrainingProgram, Exercise } from '../types'
-import { getDayNameIT, formatSeconds } from '../utils/dateUtils'
-import { getWorkoutForDay, getDayTypeColor, getDayTypeLabel, getTotalExerciseDuration } from '../utils/programUtils'
+import { formatSeconds } from '../utils/dateUtils'
+import { getWorkoutForDay, getDayTypeColor, getDayTypeLabel, getTotalExerciseDuration, getSessionLabel } from '../utils/programUtils'
 
 const program = trainingProgram as unknown as TrainingProgram
 
@@ -39,12 +39,13 @@ export default function WorkoutDay() {
   }
 
   const weekData = program.weeks.find((w) => w.weekNumber === week)
+  const sessionLabel = weekData ? getSessionLabel(weekData.days, day.dayOfWeek) : ''
 
   return (
     <div className="min-h-dvh bg-bg">
       <PageHeader
         title={day.title}
-        subtitle={`${getDayNameIT(day.dayOfWeek)} — Settimana ${week}`}
+        subtitle={`${sessionLabel} — Settimana ${week}`}
         backButton
       />
 

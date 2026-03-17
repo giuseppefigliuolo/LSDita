@@ -100,7 +100,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
           <NumberEditor key="reps" value={reps} onChange={setReps} min={1} max={20} color="secondary" />
         )}
         {editing === 'time' && (
-          <TimeDialEditor key="time" value={time} onChange={setTime} min={3} max={120} />
+          <TimeTickerEditor key="time" value={time} onChange={setTime} min={3} max={120} />
         )}
       </AnimatePresence>
 
@@ -192,59 +192,60 @@ function NumberEditor({ value, onChange, min, max, color }: {
   )
 }
 
-function TimeDialEditor({ value, onChange, min, max }: {
+function TimeTickerEditor({ value, onChange, min, max }: {
   value: number
   onChange: (v: number) => void
   min: number
   max: number
 }) {
-  const dialRef = useRef<HTMLDivElement>(null)
-  const isDragging = useRef(false)
-
-  const angle = ((value - min) / (max - min)) * 270 - 135
-  const radius = 56
-
-  const updateFromAngle = useCallback((clientX: number, clientY: number) => {
-    const el = dialRef.current
-    if (!el) return
-    const rect = el.getBoundingClientRect()
-    const cx = rect.left + rect.width / 2
-    const cy = rect.top + rect.height / 2
-    let a = Math.atan2(clientY - cy, clientX - cx) * (180 / Math.PI)
-    a = a + 90
-    if (a < -135) a += 360
-    const clamped = Math.max(-135, Math.min(135, a))
-    const normalized = (clamped + 135) / 270
-    const newValue = Math.round(min + normalized * (max - min))
-    onChange(Math.max(min, Math.min(max, newValue)))
-  }, [min, max, onChange])
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const isProgrammatic = useRef(false)
+  const scrollEndTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+  const TICK_W = 10
 
   useEffect(() => {
-    const handleMove = (e: TouchEvent | MouseEvent) => {
-      if (!isDragging.current) return
-      e.preventDefault()
-      const point = 'touches' in e ? e.touches[0] : e
-      updateFromAngle(point.clientX, point.clientY)
-    }
-    const handleEnd = () => { isDragging.current = false }
+    const el = scrollRef.current
+    if (!el) return
+    el.scrollLeft = (value - min) * TICK_W
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
-    document.addEventListener('mousemove', handleMove)
-    document.addEventListener('mouseup', handleEnd)
-    document.addEventListener('touchmove', handleMove, { passive: false })
-    document.addEventListener('touchend', handleEnd)
+  useEffect(() => {
+    return () => clearTimeout(scrollEndTimer.current)
+  }, [])
 
-    return () => {
-      document.removeEventListener('mousemove', handleMove)
-      document.removeEventListener('mouseup', handleEnd)
-      document.removeEventListener('touchmove', handleMove)
-      document.removeEventListener('touchend', handleEnd)
-    }
-  }, [updateFromAngle])
+  const handleScroll = useCallback(() => {
+    if (isProgrammatic.current) return
+    clearTimeout(scrollEndTimer.current)
 
-  const knobX = radius * Math.cos((angle - 90) * (Math.PI / 180))
-  const knobY = radius * Math.sin((angle - 90) * (Math.PI / 180))
+    const el = scrollRef.current
+    if (!el) return
 
-  const arcPath = describeArc(0, 0, radius, -135 - 90, angle - 90)
+    const tickIndex = Math.round(el.scrollLeft / TICK_W)
+    const newValue = Math.max(min, Math.min(max, min + tickIndex))
+    onChange(newValue)
+
+    scrollEndTimer.current = setTimeout(() => {
+      const snapped = tickIndex * TICK_W
+      if (Math.abs(el.scrollLeft - snapped) > 1) {
+        isProgrammatic.current = true
+        el.scrollTo({ left: snapped, behavior: 'smooth' })
+        setTimeout(() => { isProgrammatic.current = false }, 200)
+      }
+    }, 80)
+  }, [min, max, onChange])
+
+  const nudge = (delta: number) => {
+    const newVal = Math.max(min, Math.min(max, value + delta))
+    onChange(newVal)
+    const el = scrollRef.current
+    if (!el) return
+    isProgrammatic.current = true
+    el.scrollTo({ left: (newVal - min) * TICK_W, behavior: 'smooth' })
+    setTimeout(() => { isProgrammatic.current = false }, 300)
+  }
+
+  const totalTicks = max - min + 1
 
   return (
     <motion.div
@@ -255,61 +256,79 @@ function TimeDialEditor({ value, onChange, min, max }: {
       className="w-full max-w-xs overflow-hidden"
     >
       <div className="flex flex-col items-center py-3">
-        <div
-          ref={dialRef}
-          className="relative"
-          style={{ width: 160, height: 160 }}
-          onMouseDown={(e) => {
-            isDragging.current = true
-            updateFromAngle(e.clientX, e.clientY)
-          }}
-          onTouchStart={(e) => {
-            isDragging.current = true
-            updateFromAngle(e.touches[0].clientX, e.touches[0].clientY)
-          }}
-        >
-          <svg width="160" height="160" viewBox="-80 -80 160 160" className="select-none">
-            <circle r={radius} fill="none" stroke="#201F32" strokeWidth="6" />
-            <path d={arcPath} fill="none" stroke="#FFD23F" strokeWidth="6" strokeLinecap="round" />
+        <div className="flex items-baseline gap-1 mb-3">
+          <span className="text-3xl font-bold font-timer text-accent">{value}</span>
+          <span className="text-sm text-text-muted font-timer">s</span>
+        </div>
 
-            {[...Array(13)].map((_, i) => {
-              const tickAngle = (-135 + i * (270 / 12) - 90) * (Math.PI / 180)
-              const inner = radius - 10
-              const outer = radius - 5
-              return (
-                <line
-                  key={i}
-                  x1={inner * Math.cos(tickAngle)}
-                  y1={inner * Math.sin(tickAngle)}
-                  x2={outer * Math.cos(tickAngle)}
-                  y2={outer * Math.sin(tickAngle)}
-                  stroke="#55556A"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              )
-            })}
+        <div className="relative w-full">
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] rounded-full bg-accent z-20 opacity-70" />
 
-            <circle
-              cx={knobX}
-              cy={knobY}
-              r="10"
-              fill="#FFD23F"
-              className="cursor-grab active:cursor-grabbing"
-              filter="drop-shadow(0 0 6px #FFD23F80)"
-            />
-          </svg>
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-linear-to-r from-bg to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-linear-to-l from-bg to-transparent z-10 pointer-events-none" />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-            <span className="text-3xl font-bold font-timer text-accent">{value}</span>
-            <span className="text-[10px] uppercase tracking-wider text-text-muted">secondi</span>
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="overflow-x-auto"
+            style={{
+              scrollbarWidth: 'none',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
+            <div
+              className="flex items-end"
+              style={{
+                height: 52,
+                paddingLeft: '50%',
+                paddingRight: '50%',
+              }}
+            >
+              {Array.from({ length: totalTicks }, (_, i) => {
+                const tickValue = min + i
+                const isActive = tickValue <= value
+                const isMajor = tickValue % 10 === 0
+                const isMid = tickValue % 5 === 0 && !isMajor
+
+                return (
+                  <div
+                    key={tickValue}
+                    className="flex flex-col items-center justify-end shrink-0"
+                    style={{ width: TICK_W, height: '100%' }}
+                  >
+                    {isMajor && (
+                      <span
+                        className={`text-[8px] font-timer mb-1 select-none ${
+                          isActive ? 'text-accent/80' : 'text-text-muted/60'
+                        }`}
+                      >
+                        {tickValue}
+                      </span>
+                    )}
+                    <div
+                      className="rounded-full"
+                      style={{
+                        width: 4,
+                        height: isMajor ? 28 : isMid ? 20 : 14,
+                        backgroundColor: isActive
+                          ? 'var(--color-accent)'
+                          : 'var(--color-surface-elevated)',
+                        boxShadow: isActive
+                          ? '0 0 6px color-mix(in srgb, var(--color-accent) 30%, transparent)'
+                          : 'none',
+                      }}
+                    />
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-3 mt-1">
+        <div className="flex items-center gap-3 mt-2">
           <motion.button
             whileTap={{ scale: 0.85 }}
-            onClick={() => onChange(Math.max(min, value - 1))}
+            onClick={() => nudge(-1)}
             disabled={value <= min}
             className="w-9 h-9 rounded-full bg-accent-soft text-accent flex items-center justify-center text-sm font-bold disabled:opacity-30"
           >
@@ -317,7 +336,7 @@ function TimeDialEditor({ value, onChange, min, max }: {
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.85 }}
-            onClick={() => onChange(Math.min(max, value + 1))}
+            onClick={() => nudge(1)}
             disabled={value >= max}
             className="w-9 h-9 rounded-full bg-accent-soft text-accent flex items-center justify-center text-sm font-bold disabled:opacity-30"
           >
@@ -327,16 +346,4 @@ function TimeDialEditor({ value, onChange, min, max }: {
       </div>
     </motion.div>
   )
-}
-
-function describeArc(cx: number, cy: number, r: number, startAngle: number, endAngle: number): string {
-  const start = polarToCartesian(cx, cy, r, endAngle)
-  const end = polarToCartesian(cx, cy, r, startAngle)
-  const largeArc = endAngle - startAngle <= 180 ? '0' : '1'
-  return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 0 ${end.x} ${end.y}`
-}
-
-function polarToCartesian(cx: number, cy: number, r: number, angle: number) {
-  const rad = angle * (Math.PI / 180)
-  return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) }
 }

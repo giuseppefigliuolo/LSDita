@@ -42,6 +42,11 @@ export function getDayTypeColor(type: string): string {
   }
 }
 
+export function getSessionLabel(days: TrainingDay[], dayOfWeek: string): string {
+  const index = days.findIndex((d) => d.dayOfWeek === dayOfWeek)
+  return index >= 0 ? `Sessione ${index + 1}` : dayOfWeek
+}
+
 export function getDayTypeLabel(type: string): string {
   switch (type) {
     case 'finger_strength': return 'Forza Dita'

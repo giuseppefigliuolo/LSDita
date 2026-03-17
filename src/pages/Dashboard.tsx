@@ -6,8 +6,8 @@ import Button from '../components/ui/Button'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import trainingProgram from '../data/training-program.json'
 import type { TrainingProgram, DayType } from '../types'
-import { getCurrentDayOfWeek, getDayNameIT, getWeekNumber, formatSeconds } from '../utils/dateUtils'
-import { getTotalExerciseDuration, getDayTypeColor, getDayTypeLabel } from '../utils/programUtils'
+import { getCurrentDayOfWeek, getWeekNumber, formatSeconds } from '../utils/dateUtils'
+import { getTotalExerciseDuration, getDayTypeColor, getDayTypeLabel, getSessionLabel } from '../utils/programUtils'
 
 const program = trainingProgram as unknown as TrainingProgram
 
@@ -83,7 +83,7 @@ export default function Dashboard() {
       {todayWorkout ? (
         <motion.div variants={fadeUp} className="mb-6">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
-            Oggi — {getDayNameIT(currentDayOfWeek)}
+            Oggi — {currentWeek ? getSessionLabel(currentWeek.days, currentDayOfWeek) : ''}
           </h2>
           <Card
             variant={getDayTypeColor(todayWorkout.type) as 'primary' | 'secondary' | 'violet'}
@@ -115,7 +115,7 @@ export default function Dashboard() {
       ) : (
         <motion.div variants={fadeUp} className="mb-6">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
-            Oggi — {getDayNameIT(currentDayOfWeek)}
+            Oggi
           </h2>
           <Card>
             <div className="text-center py-4">
@@ -147,13 +147,13 @@ export default function Dashboard() {
               <Card
                 key={day.dayOfWeek}
                 onClick={() => navigate(`/workout/${weekNumber}/${day.dayOfWeek}`)}
-                className={isToday ? 'ring-1 ring-primary/30' : ''}
+                className={isToday ? 'ring-1 ring-primary/50 bg-primary/5' : 'opacity-60'}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <DayDot type={day.type} completed={dayCompleted} />
                     <div>
-                      <p className="text-sm font-semibold text-text">{getDayNameIT(day.dayOfWeek)}</p>
+                      <p className="text-sm font-semibold text-text">{currentWeek ? getSessionLabel(currentWeek.days, day.dayOfWeek) : ''}</p>
                       <p className="text-xs text-text-secondary">{day.title}</p>
                     </div>
                   </div>
@@ -204,8 +204,8 @@ function DayDot({ type, completed }: { type: DayType; completed: boolean }) {
   }
 
   return (
-    <div className={`w-8 h-8 rounded-full ${colors[type] ?? 'bg-text-muted'} opacity-30 flex items-center justify-center`}>
-      <div className={`w-3 h-3 rounded-full ${colors[type] ?? 'bg-text-muted'}`} />
+    <div className={`w-8 h-8 rounded-full ${colors[type] ?? 'bg-text-muted'} opacity-25 flex items-center justify-center`}>
+      <div className={`w-3 h-3 rounded-full ${colors[type] ?? 'bg-text-muted'} opacity-100`} />
     </div>
   )
 }
