@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/climbing-training/',
+  base: '/crux-timer/',
   plugins: [
     react(),
     tailwindcss(),
@@ -19,8 +19,8 @@ export default defineConfig({
         background_color: '#101018',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/climbing-training/',
-        start_url: '/climbing-training/',
+        scope: '/crux-timer/',
+        start_url: '/crux-timer/',
         icons: [
           {
             src: 'icons/icon-192.png',
