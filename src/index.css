@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* La Sportiva Old School x Dark Mode palette */
+  --color-bg: #101018;
+  --color-surface: #171624;
+  --color-surface-elevated: #201F32;
+  --color-border: #302E4A;
+
+  --color-primary: #E8175D;
+  --color-primary-soft: #E8175D33;
+  --color-secondary: #00B4D8;
+  --color-secondary-soft: #00B4D833;
+  --color-accent: #FFD23F;
+  --color-accent-soft: #FFD23F33;
+  --color-violet: #8B35A6;
+  --color-violet-soft: #8B35A633;
+
+  --color-success: #4DD474;
+  --color-danger: #FF4757;
+  --color-text: #F5F5F7;
+  --color-text-secondary: #8E8EA0;
+  --color-text-muted: #55556A;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Grotesk", "SF Mono", monospace;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@utility glass {
+  background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@utility text-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@utility font-timer {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
