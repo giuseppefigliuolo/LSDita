@@ -110,7 +110,7 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
       vibrateShort()
     }
   }, [phase, exercise, currentRep, currentSet, exerciseIndex, exercises.length,
-      beepStart, beepEnd, beepComplete, speak, vibrateShort, vibrateMedium, vibrateLong, wakeLockRelease])
+    beepStart, beepEnd, beepComplete, speak, vibrateShort, vibrateMedium, vibrateLong, wakeLockRelease])
 
   const timer = useTimer(handleTimerComplete)
 
@@ -196,7 +196,7 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
       setPhase('set_rest')
     }
   }, [exercise, currentSet, exerciseIndex, exercises.length,
-      beepComplete, speak, vibrateMedium, vibrateLong, wakeLockRelease])
+    beepComplete, speak, vibrateMedium, vibrateLong, wakeLockRelease])
 
   const handleSkipTimer = useCallback(() => {
     timer.stop()
@@ -263,10 +263,10 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
 
   const phaseLabel =
     phase === 'hanging' ? 'TIENI' :
-    phase === 'resting' ? 'RIPOSA' :
-    phase === 'set_rest' ? 'RIPOSO TRA SERIE' :
-    phase === 'paused' ? 'PAUSA' :
-    phase === 'exercise_complete' ? 'COMPLETATO' : ''
+      phase === 'resting' ? 'RIPOSA' :
+        phase === 'set_rest' ? 'RIPOSO TRA SERIE' :
+          phase === 'paused' ? 'PAUSA' :
+            phase === 'exercise_complete' ? 'COMPLETATO' : ''
 
   const currentTotalTime =
     phase === 'hanging' || phase === 'paused' && wasPausedPhase === 'hanging'
@@ -286,34 +286,59 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
             exit={{ opacity: 0 }}
             className="flex flex-col items-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-1">
+
+            <div className="flex items-center gap-3 mb-3">
+              {Array.from({ length: exercise?.sets ?? 0 }, (_, i) => (
+                <div
+                  key={i}
+                  className={`h-2 rounded-full transition-all duration-300 ${i < currentSet
+                    ? 'w-8 bg-primary shadow-[0_0_8px_rgba(232,23,93,0.4)]'
+                    : i === currentSet - 1
+                      ? 'w-8 bg-primary'
+                      : 'w-5 bg-surface-elevated'
+                    }`}
+                />
+              ))}
+            </div>
+
+            <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-6">
               {exercise?.name}
             </p>
 
-            <div className="mb-6">
-              <CircularTimer
-                timeRemaining={0}
-                totalTime={0}
-                phase="hanging"
-                label={`${exercise?.repsPerSet ?? 0} REP`}
-                subLabel={`Serie ${currentSet}/${exercise?.sets ?? 0}`}
+            <div className="relative flex items-center justify-center mb-2">
+              <div
+                className="absolute rounded-full blur-3xl opacity-40"
+                style={{ width: 160, height: 160, backgroundColor: '#E8175D40' }}
               />
+              <div className="w-52 h-52 rounded-full border-[6px] border-primary/20 flex flex-col items-center justify-center">
+                <p className="font-timer text-7xl text-primary leading-none">
+                  {exercise?.repsPerSet ?? 0}
+                </p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary mt-2">
+                  ripetizioni
+                </p>
+              </div>
             </div>
 
+            <p className="text-xs uppercase tracking-widest text-text-muted">
+              Serie {currentSet} di {exercise?.sets ?? 0}
+            </p>
+
             {exercise?.weight && exercise.weight !== 'corpo libero' && (
-              <p className="text-sm text-violet font-semibold mb-5">{exercise.weight}</p>
+              <span className="text-xs px-3 py-1 rounded-full bg-violet-soft text-violet font-semibold mt-4">
+                {exercise.weight}
+              </span>
             )}
 
             <motion.button
               whileTap={{ scale: 0.93 }}
               onClick={handleRepsSetDone}
-              className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30 mb-4"
+              className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30 mt-8"
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F5F5F7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
             </motion.button>
-            <p className="text-xs text-text-muted uppercase tracking-wider">Fatto</p>
 
             <button
               onClick={() => setShowSkipConfirm(true)}

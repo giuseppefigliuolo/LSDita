@@ -21,6 +21,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
   const [reps, setReps] = useState(exercise.repsPerSet)
   const [time, setTime] = useState(exercise.hangTime)
   const [editing, setEditing] = useState<'sets' | 'reps' | 'time' | null>(null)
+  const [showSkipConfirm, setShowSkipConfirm] = useState(false)
 
   const dragY = useMotionValue(0)
   const cardOpacity = useTransform(dragY, [0, DISMISS_THRESHOLD * 1.5], [1, 0.2])
@@ -31,15 +32,12 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
       info.offset.y > DISMISS_THRESHOLD || info.velocity.y > VELOCITY_THRESHOLD
 
     if (shouldDismiss) {
-      motionAnimate(dragY, window.innerHeight, {
-        duration: 0.3,
-        ease: 'easeIn',
-        onComplete: onSkip,
-      })
+      motionAnimate(dragY, 0, { type: 'spring', stiffness: 400, damping: 30 })
+      setShowSkipConfirm(true)
     } else {
       motionAnimate(dragY, 0, { type: 'spring', stiffness: 400, damping: 30 })
     }
-  }, [dragY, onSkip])
+  }, [dragY])
 
   const equipmentLabels: Record<string, string> = {
     hangboard: '🪨 Hangboard',
@@ -74,85 +72,125 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
       >
         <div className="w-10 h-1 rounded-full bg-text-muted/40 mb-4 shrink-0 cursor-grab active:cursor-grabbing" />
 
-      <Badge variant="accent" className="mb-4">
-        Esercizio {exerciseIndex + 1} di {totalExercises}
-      </Badge>
+        <Badge variant="accent" className="mb-4">
+          Esercizio {exerciseIndex + 1} di {totalExercises}
+        </Badge>
 
-      <div className="w-24 h-24 rounded-2xl bg-surface-elevated flex items-center justify-center mb-4">
-        <ExerciseIllustration name={exercise.illustration} size={72} />
-      </div>
+        <div className="w-24 h-24 rounded-2xl bg-surface-elevated flex items-center justify-center mb-4">
+          <ExerciseIllustration name={exercise.illustration} size={72} />
+        </div>
 
-      <h2 className="text-xl font-bold text-text mb-2">{exercise.name}</h2>
-      <p className="text-sm text-text-secondary mb-4 max-w-xs">{exercise.description}</p>
+        <h2 className="text-xl font-bold text-text mb-2">{exercise.name}</h2>
+        <p className="text-sm text-text-secondary mb-4 max-w-xs">{exercise.description}</p>
 
-      <div className="flex flex-wrap justify-center gap-2 mb-4">
-        <span className="text-xs px-3 py-1 rounded-full bg-surface-elevated text-text-muted">
-          {equipmentLabels[exercise.equipment] ?? exercise.equipment}
-        </span>
-        {exercise.weight && exercise.weight !== 'corpo libero' && (
-          <span className="text-xs px-3 py-1 rounded-full bg-violet-soft text-violet">
-            {exercise.weight}
+        <div className="flex flex-wrap justify-center gap-2 mb-4">
+          <span className="text-xs px-3 py-1 rounded-full bg-surface-elevated text-text-muted">
+            {equipmentLabels[exercise.equipment] ?? exercise.equipment}
           </span>
-        )}
-      </div>
+          {exercise.weight && exercise.weight !== 'corpo libero' && (
+            <span className="text-xs px-3 py-1 rounded-full bg-violet-soft text-violet">
+              {exercise.weight}
+            </span>
+          )}
+        </div>
 
-      <div className={`grid ${exercise.type === 'reps' ? 'grid-cols-2' : 'grid-cols-3'} gap-3 w-full max-w-xs mb-2`}>
-        <ParamBox
-          value={sets}
-          label="Serie"
-          color="text-primary"
-          ringColor="ring-primary/40"
-          active={editing === 'sets'}
-          onClick={() => setEditing(editing === 'sets' ? null : 'sets')}
-        />
-        <ParamBox
-          value={reps}
-          label="Rep"
-          color="text-secondary"
-          ringColor="ring-secondary/40"
-          active={editing === 'reps'}
-          onClick={() => setEditing(editing === 'reps' ? null : 'reps')}
-        />
-        {exercise.type !== 'reps' && (
+        <div className={`grid ${exercise.type === 'reps' ? 'grid-cols-2' : 'grid-cols-3'} gap-3 w-full max-w-xs mb-2`}>
           <ParamBox
-            value={time}
-            suffix="s"
-            label="Tempo"
-            color="text-accent"
-            ringColor="ring-accent/40"
-            active={editing === 'time'}
-            onClick={() => setEditing(editing === 'time' ? null : 'time')}
+            value={sets}
+            label="Serie"
+            color="text-primary"
+            ringColor="ring-primary/40"
+            active={editing === 'sets'}
+            onClick={() => setEditing(editing === 'sets' ? null : 'sets')}
           />
-        )}
-      </div>
+          <ParamBox
+            value={reps}
+            label="Rep"
+            color="text-secondary"
+            ringColor="ring-secondary/40"
+            active={editing === 'reps'}
+            onClick={() => setEditing(editing === 'reps' ? null : 'reps')}
+          />
+          {exercise.type !== 'reps' && (
+            <ParamBox
+              value={time}
+              suffix="s"
+              label="Tempo"
+              color="text-accent"
+              ringColor="ring-accent/40"
+              active={editing === 'time'}
+              onClick={() => setEditing(editing === 'time' ? null : 'time')}
+            />
+          )}
+        </div>
 
-      <AnimatePresence mode="wait">
-        {editing === 'sets' && (
-          <NumberEditor key="sets" value={sets} onChange={setSets} min={1} max={12} color="primary" />
+        <AnimatePresence mode="wait">
+          {editing === 'sets' && (
+            <NumberEditor key="sets" value={sets} onChange={setSets} min={1} max={12} color="primary" />
+          )}
+          {editing === 'reps' && (
+            <NumberEditor key="reps" value={reps} onChange={setReps} min={1} max={20} color="secondary" />
+          )}
+          {editing === 'time' && (
+            <TimeTickerEditor key="time" value={time} onChange={setTime} min={3} max={120} />
+          )}
+        </AnimatePresence>
+
+        {!editing && exercise.notes && (
+          <p className="text-xs text-text-muted italic mb-4 max-w-xs mt-2">
+            💡 {exercise.notes}
+          </p>
         )}
-        {editing === 'reps' && (
-          <NumberEditor key="reps" value={reps} onChange={setReps} min={1} max={20} color="secondary" />
-        )}
-        {editing === 'time' && (
-          <TimeTickerEditor key="time" value={time} onChange={setTime} min={3} max={120} />
+
+        <div className={`flex gap-3 w-full max-w-xs ${editing ? 'mt-2' : 'mt-2'}`}>
+          <Button variant="ghost" size="md" onClick={() => setShowSkipConfirm(true)} className="shrink-0">
+            Salta
+          </Button>
+          <Button variant="primary" size="lg" fullWidth onClick={handleStart}>
+            Inizia
+          </Button>
+        </div>
+      </motion.div>
+
+      <AnimatePresence>
+        {showSkipConfirm && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-6"
+            onClick={() => setShowSkipConfirm(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              className="bg-surface-elevated border border-border rounded-2xl p-5 w-full max-w-xs text-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <p className="text-text font-semibold mb-1">Saltare esercizio?</p>
+              <p className="text-sm text-text-muted mb-5">
+                L&apos;esercizio verrà segnato come saltato.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowSkipConfirm(false)}
+                  className="flex-1 h-11 rounded-xl bg-surface border border-border text-sm font-medium text-text"
+                >
+                  Annulla
+                </button>
+                <button
+                  onClick={onSkip}
+                  className="flex-1 h-11 rounded-xl bg-danger/15 text-sm font-medium text-danger"
+                >
+                  Salta
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
-
-      {!editing && exercise.notes && (
-        <p className="text-xs text-text-muted italic mb-4 max-w-xs mt-2">
-          💡 {exercise.notes}
-        </p>
-      )}
-
-      <div className={`flex gap-3 w-full max-w-xs ${editing ? 'mt-2' : 'mt-2'}`}>
-        <Button variant="ghost" size="md" onClick={onSkip} className="shrink-0">
-          Salta
-        </Button>
-        <Button variant="primary" size="lg" fullWidth onClick={handleStart}>
-          Inizia
-        </Button>
-      </div>
-      </motion.div>
     </motion.div>
   )
 }
@@ -333,9 +371,8 @@ function TimeTickerEditor({ value, onChange, min, max }: {
                   >
                     {isMajor && (
                       <span
-                        className={`text-[8px] font-timer mb-1 select-none ${
-                          isActive ? 'text-accent/80' : 'text-text-muted/60'
-                        }`}
+                        className={`text-[8px] font-timer mb-1 select-none ${isActive ? 'text-accent/80' : 'text-text-muted/60'
+                          }`}
                       >
                         {tickValue}
                       </span>
