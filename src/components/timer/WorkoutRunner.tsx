@@ -406,6 +406,27 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
           exit={{ opacity: 0 }}
           className="flex flex-col items-center"
         >
+          {exercise?.type === 'repeaters' && (
+            <div className="flex items-center gap-2 mb-3">
+              {Array.from({ length: exercise.repsPerSet }, (_, i) => {
+                const activePhase = phase === 'paused' ? wasPausedPhase : phase
+                const isDone = i < currentRep - 1 || (i === currentRep - 1 && activePhase !== 'hanging')
+                const isCurrent = i === currentRep - 1 && activePhase === 'hanging'
+                return (
+                  <div
+                    key={i}
+                    className={`h-2 rounded-full transition-all duration-300 ${isDone
+                      ? 'w-6 bg-primary shadow-[0_0_8px_rgba(232,23,93,0.4)]'
+                      : isCurrent
+                        ? 'w-6 bg-primary/50'
+                        : 'w-4 bg-surface-elevated'
+                      }`}
+                  />
+                )
+              })}
+            </div>
+          )}
+
           <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-1">
             {exercise?.name}
           </p>
@@ -421,6 +442,17 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
           </div>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={() => setShowSkipConfirm(true)}
+              className="w-10 h-10 rounded-full bg-surface-elevated border border-border flex items-center justify-center"
+              title="Salta esercizio"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8EA0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+
             {phase === 'paused' ? (
               <button
                 onClick={handleResume}
@@ -444,23 +476,12 @@ export default function WorkoutRunner({ exercises, dayTitle, onComplete, onExit 
 
             <button
               onClick={handleSkipTimer}
-              className="w-12 h-12 rounded-full bg-surface-elevated border border-border flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-surface-elevated border border-border flex items-center justify-center"
               title="Salta timer"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5F5F7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="5 4 15 12 5 20" fill="#F5F5F7" />
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E8EA0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 4 15 12 5 20" />
                 <line x1="19" y1="5" x2="19" y2="19" />
-              </svg>
-            </button>
-
-            <button
-              onClick={() => setShowSkipConfirm(true)}
-              className="w-10 h-10 rounded-full bg-surface-elevated border border-border flex items-center justify-center"
-              title="Salta esercizio"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8EA0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </button>
           </div>
