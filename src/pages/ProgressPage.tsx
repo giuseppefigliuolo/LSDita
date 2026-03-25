@@ -24,8 +24,9 @@ export default function ProgressPage() {
   return (
     <motion.div
       className="px-4 pt-6 pb-6 max-w-lg mx-auto"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
     >
       <h1 className="text-2xl font-bold mb-1">Progressi</h1>
       <p className="text-text-secondary text-sm mb-6">Il tuo percorso di allenamento</p>
@@ -53,7 +54,7 @@ export default function ProgressPage() {
                       <p className="text-xs text-text-secondary">
                         Settimana {workout.weekNumber} — {new Date(workout.completedAt).toLocaleDateString('it-IT')}
                       </p>
-                      <div className="flex items-center gap-3 mt-1 text-[10px] text-text-muted">
+                      <div className="flex items-center gap-3 mt-1 text-[11px] text-text-muted">
                         <span>{workout.exercisesCompleted}/{workout.exercisesTotal} esercizi</span>
                         <span>{formatSeconds(workout.durationSeconds)}</span>
                         {workout.skippedExercises.length > 0 && (
@@ -77,7 +78,11 @@ export default function ProgressPage() {
 
       {sortedWorkouts.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-4xl mb-3">🧗</p>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6E6E85" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-2">
+            <circle cx="12" cy="5" r="2" />
+            <path d="M7 21l3-9 2 3 2-3 3 9" />
+            <path d="M9 12l-2-4h10l-2 4" />
+          </svg>
           <p className="text-text-secondary">Completa il tuo primo allenamento!</p>
           <p className="text-xs text-text-muted mt-1">Le statistiche appariranno qui</p>
         </div>
@@ -90,7 +95,7 @@ function StatBlock({ label, value, color }: { label: string; value: string; colo
   return (
     <div className="bg-surface rounded-xl border border-border p-4">
       <p className={`text-xl font-bold font-timer ${color}`}>{value}</p>
-      <p className="text-[10px] uppercase tracking-wider text-text-muted mt-1">{label}</p>
+      <p className="text-[11px] uppercase tracking-wider text-text-muted mt-1">{label}</p>
     </div>
   )
 }

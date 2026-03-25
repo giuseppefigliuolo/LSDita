@@ -20,7 +20,7 @@
   --color-danger: #FF4757;
   --color-text: #F5F5F7;
   --color-text-secondary: #8E8EA0;
-  --color-text-muted: #55556A;
+  --color-text-muted: #6E6E85;
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "Space Grotesk", "SF Mono", monospace;
@@ -90,4 +90,15 @@ body {
   font-family: var(--font-mono);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

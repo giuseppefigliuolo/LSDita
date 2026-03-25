@@ -15,11 +15,11 @@ const program = trainingProgram as unknown as TrainingProgram
 
 const stagger = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.06 } },
+  show: { opacity: 1, transition: { staggerChildren: 0.03 } },
 }
 const fadeUp = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.2 } },
 }
 
 export default function WorkoutDay() {
@@ -126,24 +126,24 @@ function ExerciseCard({ exercise, index, onTap }: { exercise: Exercise; index: n
           <p className="text-xs text-text-secondary mt-0.5 line-clamp-2">{exercise.description}</p>
 
           <div className="flex flex-wrap items-center gap-2 mt-2">
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-surface-elevated text-text-muted font-medium">
+            <span className="text-[11px] px-2 py-0.5 rounded-full bg-surface-elevated text-text-muted font-medium">
               {equipmentLabels[exercise.equipment] ?? exercise.equipment}
             </span>
             {exercise.type === 'repeaters' ? (
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-primary-soft text-primary font-medium">
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-primary-soft text-primary font-medium">
                 {exercise.hangTime}s/{exercise.restBetweenReps}s × {exercise.repsPerSet} rep × {exercise.sets} set
               </span>
             ) : exercise.type === 'reps' ? (
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-secondary-soft text-secondary font-medium">
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-secondary-soft text-secondary font-medium">
                 {exercise.repsPerSet} rep × {exercise.sets} set
               </span>
             ) : (
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium">
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium">
                 {exercise.hangTime}s × {exercise.sets} set
               </span>
             )}
             {exercise.weight && exercise.weight !== 'corpo libero' && (
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-violet-soft text-violet font-medium">
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-violet-soft text-violet font-medium">
                 {exercise.weight}
               </span>
             )}
@@ -165,13 +165,13 @@ const gripLabels: Record<string, string> = {
 }
 
 const equipmentLabelsModal: Record<string, string> = {
-  hangboard: '🪨 Hangboard',
-  wooden_balls: '⚪ Sfere legno',
-  pull_up_bar: '🏋️ Sbarra',
-  dumbbells: '💪 Manubri',
-  fitness_band: '🔵 Elastico',
-  yoga_mat: '🧘 Tappetino',
-  bodyweight: '🤸 Corpo libero',
+  hangboard: 'Hangboard',
+  wooden_balls: 'Sfere legno',
+  pull_up_bar: 'Sbarra',
+  dumbbells: 'Manubri',
+  fitness_band: 'Elastico',
+  yoga_mat: 'Tappetino',
+  bodyweight: 'Corpo libero',
 }
 
 function ExerciseDetailModal({ exercise, onClose }: { exercise: Exercise; onClose: () => void }) {
@@ -323,12 +323,12 @@ function ExerciseDetailModal({ exercise, onClose }: { exercise: Exercise; onClos
               </span>
               {exercise.grip && (
                 <span className="text-xs px-3 py-1 rounded-full bg-primary-soft text-primary font-medium">
-                  ✋ {gripLabels[exercise.grip] ?? exercise.grip}
+                  {gripLabels[exercise.grip] ?? exercise.grip}
                 </span>
               )}
               {exercise.weight && exercise.weight !== 'corpo libero' && (
                 <span className="text-xs px-3 py-1 rounded-full bg-violet-soft text-violet font-medium">
-                  ⚖️ {exercise.weight}
+                  {exercise.weight}
                 </span>
               )}
             </div>
@@ -372,7 +372,7 @@ function DetailCell({ label, value, color }: { label: string; value: string; col
   return (
     <div className="bg-surface-elevated rounded-xl p-3 text-center">
       <p className={`text-lg font-bold font-timer ${color}`}>{value}</p>
-      <p className="text-[10px] uppercase tracking-wider text-text-muted">{label}</p>
+      <p className="text-[11px] uppercase tracking-wider text-text-muted">{label}</p>
     </div>
   )
 }

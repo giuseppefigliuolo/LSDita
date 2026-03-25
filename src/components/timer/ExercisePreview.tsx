@@ -40,13 +40,13 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
   }, [dragY])
 
   const equipmentLabels: Record<string, string> = {
-    hangboard: '🪨 Hangboard',
-    wooden_balls: '⚪ Sfere legno',
-    pull_up_bar: '🏋️ Sbarra',
-    dumbbells: '💪 Manubri',
-    fitness_band: '🔵 Elastico',
-    yoga_mat: '🧘 Tappetino',
-    bodyweight: '🤸 Corpo libero',
+    hangboard: 'Hangboard',
+    wooden_balls: 'Sfere legno',
+    pull_up_bar: 'Sbarra',
+    dumbbells: 'Manubri',
+    fitness_band: 'Elastico',
+    yoga_mat: 'Tappetino',
+    bodyweight: 'Corpo libero',
   }
 
   function handleStart() {
@@ -138,7 +138,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
 
         {!editing && exercise.notes && (
           <p className="text-xs text-text-muted italic mb-4 max-w-xs mt-2">
-            💡 {exercise.notes}
+            {exercise.notes}
           </p>
         )}
 
@@ -214,7 +214,7 @@ function ParamBox({ value, suffix, label, color, ringColor, active, onClick }: {
       <p className={`text-lg font-bold font-timer ${color}`}>
         {value}{suffix}
       </p>
-      <p className="text-[10px] uppercase tracking-wider text-text-muted">{label}</p>
+      <p className="text-[11px] uppercase tracking-wider text-text-muted">{label}</p>
     </motion.button>
   )
 }

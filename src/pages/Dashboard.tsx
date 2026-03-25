@@ -14,12 +14,12 @@ const program = trainingProgram as unknown as TrainingProgram
 
 const stagger = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.08 } },
+  show: { opacity: 1, transition: { staggerChildren: 0.04 } },
 }
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
 }
 
 export default function Dashboard() {
@@ -121,7 +121,11 @@ export default function Dashboard() {
           </h2>
           <Card>
             <div className="text-center py-4">
-              <p className="text-2xl mb-2">🧗</p>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6E6E85" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-1">
+                <circle cx="12" cy="5" r="2" />
+                <path d="M7 21l3-9 2 3 2-3 3 9" />
+                <path d="M9 12l-2-4h10l-2 4" />
+              </svg>
               <p className="text-text font-medium">
                 {currentDayOfWeek === 'wednesday' ? 'Giorno di palestra!' : 'Giorno di riposo'}
               </p>
@@ -182,7 +186,7 @@ function StatCard({ label, value, color }: { label: string; value: string; color
   return (
     <div className="bg-surface rounded-xl border border-border p-3 text-center">
       <p className={`text-xl font-bold font-timer ${colorClasses[color] ?? 'text-text'}`}>{value}</p>
-      <p className="text-[10px] uppercase tracking-wider text-text-muted mt-0.5">{label}</p>
+      <p className="text-[11px] uppercase tracking-wider text-text-muted mt-0.5">{label}</p>
     </div>
   )
 }

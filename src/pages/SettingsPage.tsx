@@ -41,8 +41,9 @@ export default function SettingsPage() {
   return (
     <motion.div
       className="px-4 pt-6 pb-6 max-w-lg mx-auto"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
     >
       <h1 className="text-2xl font-bold mb-1">Impostazioni</h1>
       <p className="text-text-secondary text-sm mb-6">Personalizza la tua esperienza</p>
@@ -80,7 +81,9 @@ export default function SettingsPage() {
           </h2>
           <Card>
             <div className="flex items-center gap-3">
-              <span className="text-sm text-text-secondary">🔈</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8EA0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              </svg>
               <input
                 type="range"
                 min="0"
@@ -88,9 +91,13 @@ export default function SettingsPage() {
                 step="0.1"
                 value={settings.volume}
                 onChange={(e) => settings.setVolume(Number(e.target.value))}
+                aria-label="Volume"
                 className="flex-1 accent-primary h-1"
               />
-              <span className="text-sm text-text-secondary">🔊</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8EA0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" />
+              </svg>
             </div>
           </Card>
         </section>
@@ -187,6 +194,9 @@ function ToggleRow({
         </div>
         <button
           onClick={onToggle}
+          role="switch"
+          aria-checked={enabled}
+          aria-label={label}
           className={`relative w-11 h-6 rounded-full transition-colors ${
             enabled ? 'bg-primary' : 'bg-border'
           }`}

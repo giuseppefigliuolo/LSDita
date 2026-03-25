@@ -63,15 +63,15 @@ export default function WorkoutComplete({
       <div className="grid grid-cols-3 gap-3 w-full max-w-xs mb-6">
         <div className="bg-surface rounded-xl p-3 text-center">
           <p className="text-lg font-bold font-timer text-primary">{exercisesCompleted}/{exercisesTotal}</p>
-          <p className="text-[10px] uppercase tracking-wider text-text-muted">Esercizi</p>
+          <p className="text-[11px] uppercase tracking-wider text-text-muted">Esercizi</p>
         </div>
         <div className="bg-surface rounded-xl p-3 text-center">
           <p className="text-lg font-bold font-timer text-secondary">{formatSeconds(duration)}</p>
-          <p className="text-[10px] uppercase tracking-wider text-text-muted">Durata</p>
+          <p className="text-[11px] uppercase tracking-wider text-text-muted">Durata</p>
         </div>
         <div className="bg-surface rounded-xl p-3 text-center">
           <p className="text-lg font-bold font-timer text-accent">{skippedExercises.length}</p>
-          <p className="text-[10px] uppercase tracking-wider text-text-muted">Saltati</p>
+          <p className="text-[11px] uppercase tracking-wider text-text-muted">Saltati</p>
         </div>
       </div>
 
@@ -89,7 +89,7 @@ export default function WorkoutComplete({
               }`}
             >
               <span className="text-xl">{f.emoji}</span>
-              <span className="text-[9px] text-text-muted">{f.label}</span>
+              <span className="text-[11px] text-text-muted">{f.label}</span>
             </button>
           ))}
         </div>

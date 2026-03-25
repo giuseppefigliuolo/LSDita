@@ -53,8 +53,9 @@ export default function CalendarPage() {
   return (
     <motion.div
       className="px-4 pt-6 pb-6 max-w-lg mx-auto"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
     >
       <h1 className="text-2xl font-bold mb-1">Calendario</h1>
       <p className="text-text-secondary text-sm mb-6">
@@ -64,7 +65,7 @@ export default function CalendarPage() {
       <div className="bg-surface rounded-2xl border border-border p-4">
         <div className="grid grid-cols-7 gap-1 mb-2">
           {WEEKDAY_LABELS.map((label) => (
-            <div key={label} className="text-center text-[10px] font-semibold uppercase tracking-wider text-text-muted py-1">
+            <div key={label} className="text-center text-[11px] font-semibold uppercase tracking-wider text-text-muted py-1">
               {label}
             </div>
           ))}
