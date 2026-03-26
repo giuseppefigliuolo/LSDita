@@ -10,7 +10,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'prompt',
-      includeAssets: ['favicon.svg', 'icons/*.png', 'sounds/*.mp3'],
+      includeAssets: ['favicon.png', 'favicon.ico', 'icons/*.png', 'sounds/*.mp3'],
       manifest: {
         name: 'LSDita - Climbing Training',
         short_name: 'LSDita',
