@@ -1,4 +1,4 @@
-# CruxTimer - Climbing Training PWA
+# LSDita - Climbing Training PWA
 
 App mobile-first per allenamento di arrampicata con timer stile Grippy, programma di 4 settimane, e tracciamento progressi.
 

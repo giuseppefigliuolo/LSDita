@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { INK, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
 
-const INK = '#3A1248'
 const INACTIVE_COLOR = '#9C7B5C'
 
 const tabs = [
@@ -10,10 +10,6 @@ const tabs = [
   { path: '/progress', label: 'Progressi', icon: ChartIcon },
   { path: '/settings', label: 'Impostazioni', icon: SettingsIcon }
 ] as const
-
-// Wavy organic nav pill
-const NAV_RADIUS = '2rem 1.5rem 2rem 1.5rem / 1.5rem 2rem 1.5rem 2rem'
-const INDICATOR_RADIUS = '1.5rem 1rem 1.5rem 1rem / 1rem 1.5rem 1rem 1.5rem'
 
 export default function BottomNav() {
   const location = useLocation()
@@ -24,10 +20,10 @@ export default function BottomNav() {
       <div
         className="flex items-center justify-around h-16 max-w-lg mx-auto px-2 border-[3px]"
         style={{
-          backgroundColor: '#FFF8E8',
+          backgroundColor: SURFACE_ELEVATED,
           borderColor: INK,
-          borderRadius: NAV_RADIUS,
-          boxShadow: `5px 5px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.6)`
+          borderRadius: RADIUS.nav,
+          boxShadow: SHADOW.lg,
         }}
       >
         {tabs.map((tab) => {
@@ -48,7 +44,7 @@ export default function BottomNav() {
                   style={{
                     backgroundColor: '#E8B820',
                     borderColor: INK,
-                    borderRadius: INDICATOR_RADIUS,
+                    borderRadius: RADIUS.navIndicator,
                     boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5)'
                   }}
                   transition={{ type: 'spring', stiffness: 500, damping: 35 }}

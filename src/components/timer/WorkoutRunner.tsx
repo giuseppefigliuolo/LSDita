@@ -9,6 +9,7 @@ import { useAudio } from '../../hooks/useAudio'
 import { useSpeech } from '../../hooks/useSpeech'
 import { useVibration } from '../../hooks/useVibration'
 import { useWakeLock } from '../../hooks/useWakeLock'
+import { INK, RADIUS, SHADOW } from '../../styles/tokens'
 
 interface WorkoutRunnerProps {
   exercises: Exercise[]
@@ -538,8 +539,8 @@ export default function WorkoutRunner({
               onClick={() => setShowSkipConfirm(true)}
               className="w-14 h-14 bg-surface border-[2.5px] border-[#3A1248] flex items-center justify-center active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
               style={{
-                borderRadius: '1.8rem 1.3rem 1.8rem 1.3rem / 1.3rem 1.8rem 1.3rem 1.8rem',
-                boxShadow: '3px 3px 0px #3A1248, inset 0 1px 0 rgba(255,255,255,0.4)',
+                borderRadius: RADIUS.controlSm,
+                boxShadow: SHADOW.sm,
               }}
               title="Salta esercizio"
             >
@@ -548,7 +549,7 @@ export default function WorkoutRunner({
                 height="20"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#3A1248"
+                stroke={INK}
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -563,11 +564,11 @@ export default function WorkoutRunner({
                 onClick={handleResume}
                 className="w-20 h-20 bg-accent border-[3px] border-[#3A1248] flex items-center justify-center active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all"
                 style={{
-                  borderRadius: '2.8rem 2rem 2.8rem 2rem / 2rem 2.8rem 2rem 2.8rem',
-                  boxShadow: '4px 4px 0px #3A1248, inset 0 2px 0 rgba(255,255,255,0.5)',
+                  borderRadius: RADIUS.controlLg,
+                  boxShadow: SHADOW.md,
                 }}
               >
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="#3A1248">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill={INK}>
                   <polygon points="5 3 19 12 5 21" />
                 </svg>
               </button>
@@ -576,11 +577,11 @@ export default function WorkoutRunner({
                 onClick={handlePause}
                 className="w-20 h-20 bg-surface border-[3px] border-[#3A1248] flex items-center justify-center active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all"
                 style={{
-                  borderRadius: '2.8rem 2rem 2.8rem 2rem / 2rem 2.8rem 2rem 2.8rem',
-                  boxShadow: '4px 4px 0px #3A1248, inset 0 2px 0 rgba(255,255,255,0.5)',
+                  borderRadius: RADIUS.controlLg,
+                  boxShadow: SHADOW.md,
                 }}
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="#3A1248">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill={INK}>
                   <rect x="6" y="4" width="4" height="16" rx="1" />
                   <rect x="14" y="4" width="4" height="16" rx="1" />
                 </svg>
@@ -591,8 +592,8 @@ export default function WorkoutRunner({
               onClick={handleSkipTimer}
               className="w-14 h-14 bg-surface border-[2.5px] border-[#3A1248] flex items-center justify-center active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
               style={{
-                borderRadius: '1.8rem 1.3rem 1.8rem 1.3rem / 1.3rem 1.8rem 1.3rem 1.8rem',
-                boxShadow: '3px 3px 0px #3A1248, inset 0 1px 0 rgba(255,255,255,0.4)',
+                borderRadius: RADIUS.controlSm,
+                boxShadow: SHADOW.sm,
               }}
               title="Salta timer"
             >
@@ -601,7 +602,7 @@ export default function WorkoutRunner({
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#3A1248"
+                stroke={INK}
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"

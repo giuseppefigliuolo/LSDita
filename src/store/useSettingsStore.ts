@@ -21,12 +21,13 @@ export const useSettingsStore = create<SettingsStore>()(
 
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
       toggleVoice: () => set((s) => ({ voiceEnabled: !s.voiceEnabled })),
-      toggleVibration: () => set((s) => ({ vibrationEnabled: !s.vibrationEnabled })),
+      toggleVibration: () =>
+        set((s) => ({ vibrationEnabled: !s.vibrationEnabled })),
       setVolume: (volume) => set({ volume }),
-      setSelectedProgram: (program) => set({ selectedProgram: program }),
+      setSelectedProgram: (program) => set({ selectedProgram: program })
     }),
     {
-      name: 'cruxtimer-settings',
-    },
-  ),
+      name: 'LSDita-settings'
+    }
+  )
 )

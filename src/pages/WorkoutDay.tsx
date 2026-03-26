@@ -23,6 +23,7 @@ import {
   getTotalExerciseDuration,
   getSessionLabel
 } from '../utils/programUtils'
+import { INK, SURFACE, RADIUS, SHADOW } from '../styles/tokens'
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -430,8 +431,8 @@ function ExerciseDetailModal({
       <motion.div
         className="relative w-full max-w-lg max-h-[85dvh] overflow-hidden border-[3px] border-b-0 border-[#3A1248]"
         style={{
-          borderRadius: '1.75rem 1.25rem 0 0 / 1.25rem 1.75rem 0 0',
-          boxShadow: '0 -4px 0px #3A1248, inset 0 2px 0 rgba(255,255,255,0.55)',
+          borderRadius: RADIUS.sheetTop,
+          boxShadow: `0 -4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.55)`,
         }}
         initial={{ y: '100%' }}
         animate={{ y: 0 }}
@@ -447,9 +448,9 @@ function ExerciseDetailModal({
             <div
               className="w-12 h-1.5 border-[1.5px] border-[#3A1248]"
               style={{
-                borderRadius: '1.5rem 1rem 1.5rem 1rem / 1rem 1.5rem 1rem 1.5rem',
-                backgroundColor: '#EDE0B2',
-                boxShadow: '1px 1px 0px #3A1248',
+                borderRadius: RADIUS.btnSm,
+                backgroundColor: SURFACE,
+                boxShadow: SHADOW.xxs,
               }}
             />
           </div>
@@ -459,8 +460,8 @@ function ExerciseDetailModal({
               <div
                 className="w-28 h-28 bg-surface-elevated flex items-center justify-center mb-4 border-[2.5px] border-[#3A1248]"
                 style={{
-                  borderRadius: '2rem 1.4rem 2rem 1.4rem / 1.4rem 2rem 1.4rem 2rem',
-                  boxShadow: '3px 3px 0px #3A1248, inset 0 1px 0 rgba(255,255,255,0.5)',
+                  borderRadius: RADIUS.blob,
+                  boxShadow: SHADOW.sm,
                 }}
               >
                 <ExerciseIllustration name={exercise.illustration} size={96} />

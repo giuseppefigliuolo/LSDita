@@ -9,6 +9,7 @@ import type { DayType } from '../types'
 import { getWeekNumber, formatSeconds } from '../utils/dateUtils'
 import { getTotalExerciseDuration, getSessionLabel } from '../utils/programUtils'
 import { fireConfettiFromEvent } from '../utils/confetti'
+import { RADIUS, SHADOW } from '../styles/tokens'
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -126,8 +127,8 @@ function StatCard({ label, value, color }: { label: string; value: string; color
     <div
       className="bg-surface border-[2.5px] border-[#3A1248] p-3 text-center"
       style={{
-        borderRadius: '2.2rem 1.6rem 2rem 1.4rem / 1.5rem 2.2rem 1.6rem 2rem',
-        boxShadow: '3px 3px 0px #3A1248, inset 0 1px 0 rgba(255,255,255,0.4)',
+        borderRadius: RADIUS.stat,
+        boxShadow: SHADOW.sm,
       }}
     >
       <p className={`text-xl font-bold font-timer ${colorClasses[color] ?? 'text-text'}`}>{value}</p>

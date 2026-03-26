@@ -10,7 +10,11 @@ interface WorkoutStore {
   setProgramStartDate: (date: string) => void
   markComplete: (workout: CompletedWorkout) => void
   addNote: (note: WorkoutNote) => void
-  isWorkoutCompleted: (weekNumber: number, dayOfWeek: string, date: string) => boolean
+  isWorkoutCompleted: (
+    weekNumber: number,
+    dayOfWeek: string,
+    date: string
+  ) => boolean
   getCompletedCount: () => number
   getStreak: () => number
   exportData: () => string
@@ -29,17 +33,20 @@ export const useWorkoutStore = create<WorkoutStore>()(
 
       markComplete: (workout) =>
         set((state) => ({
-          completedWorkouts: [...state.completedWorkouts, workout],
+          completedWorkouts: [...state.completedWorkouts, workout]
         })),
 
       addNote: (note) =>
         set((state) => ({
-          notes: [...state.notes, note],
+          notes: [...state.notes, note]
         })),
 
       isWorkoutCompleted: (weekNumber, dayOfWeek, date) => {
         return get().completedWorkouts.some(
-          (w) => w.weekNumber === weekNumber && w.date === date && w.dayType === dayOfWeek as CompletedWorkout['dayType'],
+          (w) =>
+            w.weekNumber === weekNumber &&
+            w.date === date &&
+            w.dayType === (dayOfWeek as CompletedWorkout['dayType'])
         )
       },
 
@@ -51,7 +58,9 @@ export const useWorkoutStore = create<WorkoutStore>()(
 
         const dates = [...new Set(workouts.map((w) => w.date))].sort().reverse()
         const today = new Date().toISOString().split('T')[0]
-        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0]
+        const yesterday = new Date(Date.now() - 86400000)
+          .toISOString()
+          .split('T')[0]
 
         if (dates[0] !== today && dates[0] !== yesterday) return 0
 
@@ -68,7 +77,11 @@ export const useWorkoutStore = create<WorkoutStore>()(
 
       exportData: () => {
         const { programStartDate, completedWorkouts, notes } = get()
-        return JSON.stringify({ programStartDate, completedWorkouts, notes }, null, 2)
+        return JSON.stringify(
+          { programStartDate, completedWorkouts, notes },
+          null,
+          2
+        )
       },
 
       importData: (json) => {
@@ -77,7 +90,7 @@ export const useWorkoutStore = create<WorkoutStore>()(
           set({
             programStartDate: data.programStartDate ?? null,
             completedWorkouts: data.completedWorkouts ?? [],
-            notes: data.notes ?? [],
+            notes: data.notes ?? []
           })
         } catch {
           console.error('Invalid import data')
@@ -88,11 +101,11 @@ export const useWorkoutStore = create<WorkoutStore>()(
         set({
           programStartDate: null,
           completedWorkouts: [],
-          notes: [],
-        }),
+          notes: []
+        })
     }),
     {
-      name: 'cruxtimer-workout-store',
-    },
-  ),
+      name: 'LSDita-workout-store'
+    }
+  )
 )

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
+import { INK, SURFACE, RADIUS, SHADOW } from '../../styles/tokens'
 
 interface PageHeaderProps {
   title: string
@@ -31,13 +32,13 @@ export default function PageHeader({ title, subtitle, backButton, rightAction }:
               onClick={() => navigate(-1)}
               className="flex items-center justify-center w-9 h-9 border-[2.5px] border-[#3A1248] cursor-pointer"
               style={{
-                backgroundColor: '#EDE0B2',
-                borderRadius: '1rem 0.75rem 1rem 0.75rem / 0.75rem 1rem 0.75rem 1rem',
-                boxShadow: '2px 2px 0px #3A1248, inset 0 1px 0 rgba(255,255,255,0.5)',
+                backgroundColor: SURFACE,
+                borderRadius: RADIUS.backBtn,
+                boxShadow: SHADOW.xs,
               }}
-              whileTap={{ x: 2, y: 2, boxShadow: '0px 0px 0px #3A1248' }}
+              whileTap={{ x: 2, y: 2, boxShadow: `0px 0px 0px ${INK}` }}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A1248" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="15 18 9 12 15 6" />
               </svg>
             </motion.button>

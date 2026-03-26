@@ -18,7 +18,7 @@ export default function SettingsPage() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `cruxtimer-backup-${new Date().toISOString().split('T')[0]}.json`
+    a.download = `LSDita-backup-${new Date().toISOString().split('T')[0]}.json`
     a.click()
     URL.revokeObjectURL(url)
   }
@@ -47,8 +47,15 @@ export default function SettingsPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25 }}
     >
-      <h1 className="text-3xl mb-1" style={{ fontFamily: 'var(--font-display)' }}>Impostazioni</h1>
-      <p className="text-text-secondary text-sm mb-6">Personalizza la tua esperienza</p>
+      <h1
+        className="text-3xl mb-1"
+        style={{ fontFamily: 'var(--font-display)' }}
+      >
+        Impostazioni
+      </h1>
+      <p className="text-text-secondary text-sm mb-6">
+        Personalizza la tua esperienza
+      </p>
 
       <div className="space-y-6">
         <section>
@@ -60,19 +67,29 @@ export default function SettingsPage() {
               <Card
                 key={opt.id}
                 onClick={() => settings.setSelectedProgram(opt.id as ProgramId)}
-                className={settings.selectedProgram === opt.id ? 'ring-2 ring-primary bg-primary/5' : ''}
+                className={
+                  settings.selectedProgram === opt.id
+                    ? 'ring-2 ring-primary bg-primary/5'
+                    : ''
+                }
               >
                 <div className="flex items-center gap-3">
-                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                    settings.selectedProgram === opt.id ? 'border-primary' : 'border-border'
-                  }`}>
+                  <div
+                    className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                      settings.selectedProgram === opt.id
+                        ? 'border-primary'
+                        : 'border-border'
+                    }`}
+                  >
                     {settings.selectedProgram === opt.id && (
                       <div className="w-2.5 h-2.5 rounded-full bg-primary" />
                     )}
                   </div>
                   <div>
                     <p className="text-sm font-medium text-text">{opt.label}</p>
-                    <p className="text-xs text-text-secondary">{opt.description}</p>
+                    <p className="text-xs text-text-secondary">
+                      {opt.description}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -112,7 +129,17 @@ export default function SettingsPage() {
           </h2>
           <Card>
             <div className="flex items-center gap-3">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#8C7355"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="shrink-0"
+              >
                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
               </svg>
               <input
@@ -125,7 +152,17 @@ export default function SettingsPage() {
                 aria-label="Volume"
                 className="flex-1 accent-primary h-1"
               />
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#8C7355"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="shrink-0"
+              >
                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
                 <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" />
               </svg>
@@ -141,8 +178,12 @@ export default function SettingsPage() {
             <Card>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-text">Esporta Progressi</p>
-                  <p className="text-xs text-text-secondary">Salva un backup JSON</p>
+                  <p className="text-sm font-medium text-text">
+                    Esporta Progressi
+                  </p>
+                  <p className="text-xs text-text-secondary">
+                    Salva un backup JSON
+                  </p>
                 </div>
                 <Button variant="ghost" size="sm" onClick={handleExport}>
                   Esporta
@@ -152,8 +193,12 @@ export default function SettingsPage() {
             <Card>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-text">Importa Progressi</p>
-                  <p className="text-xs text-text-secondary">Ripristina da backup JSON</p>
+                  <p className="text-sm font-medium text-text">
+                    Importa Progressi
+                  </p>
+                  <p className="text-xs text-text-secondary">
+                    Ripristina da backup JSON
+                  </p>
                 </div>
                 <Button variant="ghost" size="sm" onClick={handleImport}>
                   Importa
@@ -178,13 +223,19 @@ export default function SettingsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-text">Reset Programma</p>
-                <p className="text-xs text-text-secondary">Cancella tutti i progressi</p>
+                <p className="text-xs text-text-secondary">
+                  Cancella tutti i progressi
+                </p>
               </div>
               <Button
                 variant="danger"
                 size="sm"
                 onClick={() => {
-                  if (confirm('Sei sicuro? Tutti i progressi verranno cancellati.')) {
+                  if (
+                    confirm(
+                      'Sei sicuro? Tutti i progressi verranno cancellati.'
+                    )
+                  ) {
                     workoutStore.resetAll()
                   }
                 }}
@@ -197,7 +248,7 @@ export default function SettingsPage() {
 
         <div className="text-center pt-4 pb-8">
           <p className="text-xs text-text-muted">
-            CruxTimer v1.0 — Fatto con ❤️ per l'arrampicata
+            LSDita v1.0 — Fatto con ❤️ per l'arrampicata
           </p>
         </div>
       </div>
@@ -209,7 +260,7 @@ function ToggleRow({
   label,
   description,
   enabled,
-  onToggle,
+  onToggle
 }: {
   label: string
   description: string

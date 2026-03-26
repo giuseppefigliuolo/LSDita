@@ -4,6 +4,7 @@ import type { Exercise } from '../../types'
 import Button from '../ui/Button'
 import Badge from '../ui/Badge'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
+import { SURFACE, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
 
 const DISMISS_THRESHOLD = 100
 const VELOCITY_THRESHOLD = 400
@@ -67,9 +68,9 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
           y: dragY,
           opacity: cardOpacity,
           scale: cardScale,
-          backgroundColor: '#FFF8E8',
-          borderRadius: '1.75rem 1.25rem 1.75rem 1.25rem / 1.25rem 1.75rem 1.25rem 1.75rem',
-          boxShadow: '5px 5px 0px #3A1248, inset 0 2px 0 rgba(255,255,255,0.55)',
+          backgroundColor: SURFACE_ELEVATED,
+          borderRadius: RADIUS.card,
+          boxShadow: SHADOW.lg,
         }}
         drag="y"
         dragDirectionLock
@@ -80,9 +81,9 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
         <div
           className="w-12 h-1.5 mb-4 shrink-0 cursor-grab active:cursor-grabbing border-[1.5px] border-[#3A1248]"
           style={{
-            borderRadius: '1.5rem 1rem 1.5rem 1rem / 1rem 1.5rem 1rem 1.5rem',
-            backgroundColor: '#EDE0B2',
-            boxShadow: '1px 1px 0px #3A1248',
+            borderRadius: RADIUS.btnSm,
+            backgroundColor: SURFACE,
+            boxShadow: SHADOW.xxs,
           }}
         />
 
@@ -93,8 +94,8 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
         <div
           className="w-24 h-24 bg-surface-elevated flex items-center justify-center mb-4 border-[2.5px] border-[#3A1248]"
           style={{
-            borderRadius: '2rem 1.4rem 2rem 1.4rem / 1.4rem 2rem 1.4rem 2rem',
-            boxShadow: '3px 3px 0px #3A1248, inset 0 1px 0 rgba(255,255,255,0.5)',
+            borderRadius: RADIUS.blob,
+            boxShadow: SHADOW.sm,
           }}
         >
           <ExerciseIllustration name={exercise.illustration} size={72} />
