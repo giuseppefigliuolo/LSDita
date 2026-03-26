@@ -2,16 +2,17 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import WorkoutRunner from '../components/timer/WorkoutRunner'
 import { useWorkoutStore } from '../store/useWorkoutStore'
-import trainingProgram from '../data/training-program.json'
-import type { TrainingProgram, CompletedWorkout, WorkoutNote } from '../types'
+import { useSettingsStore } from '../store/useSettingsStore'
+import { getProgram } from '../utils/getProgram'
+import type { CompletedWorkout, WorkoutNote } from '../types'
 import { getWorkoutForDay } from '../utils/programUtils'
-
-const program = trainingProgram as unknown as TrainingProgram
 
 export default function ActiveWorkout() {
   const { weekNumber, dayOfWeek } = useParams<{ weekNumber: string; dayOfWeek: string }>()
   const navigate = useNavigate()
   const { markComplete, addNote } = useWorkoutStore()
+  const { selectedProgram } = useSettingsStore()
+  const program = getProgram(selectedProgram)
 
   const week = Number(weekNumber)
   const day = getWorkoutForDay(program, week, dayOfWeek ?? '')

@@ -43,6 +43,7 @@ export interface TrainingWeek {
 }
 
 export interface TrainingProgram {
+  id: string
   name: string
   description: string
   durationWeeks: number
@@ -80,9 +81,12 @@ export interface TimerState {
   isPaused: boolean
 }
 
+export type ProgramId = 'home' | 'travel'
+
 export interface AppSettings {
   soundEnabled: boolean
   voiceEnabled: boolean
   vibrationEnabled: boolean
   volume: number
+  selectedProgram: ProgramId
 }

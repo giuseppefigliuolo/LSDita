@@ -6,12 +6,11 @@ import Card from '../components/ui/Card'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
-import trainingProgram from '../data/training-program.json'
-import type { TrainingProgram, Exercise } from '../types'
+import type { Exercise } from '../types'
+import { useSettingsStore } from '../store/useSettingsStore'
+import { getProgram } from '../utils/getProgram'
 import { formatSeconds } from '../utils/dateUtils'
 import { getWorkoutForDay, getDayTypeColor, getDayTypeLabel, getTotalExerciseDuration, getSessionLabel } from '../utils/programUtils'
-
-const program = trainingProgram as unknown as TrainingProgram
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -26,6 +25,8 @@ export default function WorkoutDay() {
   const { weekNumber, dayOfWeek } = useParams<{ weekNumber: string; dayOfWeek: string }>()
   const navigate = useNavigate()
   const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null)
+  const { selectedProgram } = useSettingsStore()
+  const program = getProgram(selectedProgram)
 
   const week = Number(weekNumber)
   const day = getWorkoutForDay(program, week, dayOfWeek ?? '')

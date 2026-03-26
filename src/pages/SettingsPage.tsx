@@ -2,8 +2,10 @@ import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { useWorkoutStore } from '../store/useWorkoutStore'
+import { programOptions } from '../utils/getProgram'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
+import type { ProgramId } from '../types'
 
 export default function SettingsPage() {
   const settings = useSettingsStore()
@@ -49,6 +51,35 @@ export default function SettingsPage() {
       <p className="text-text-secondary text-sm mb-6">Personalizza la tua esperienza</p>
 
       <div className="space-y-6">
+        <section>
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            Programma Attivo
+          </h2>
+          <div className="space-y-2">
+            {programOptions.map((opt) => (
+              <Card
+                key={opt.id}
+                onClick={() => settings.setSelectedProgram(opt.id as ProgramId)}
+                className={settings.selectedProgram === opt.id ? 'ring-2 ring-primary bg-primary/5' : ''}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                    settings.selectedProgram === opt.id ? 'border-primary' : 'border-border'
+                  }`}>
+                    {settings.selectedProgram === opt.id && (
+                      <div className="w-2.5 h-2.5 rounded-full bg-primary" />
+                    )}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-text">{opt.label}</p>
+                    <p className="text-xs text-text-secondary">{opt.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         <section>
           <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
             Audio e Feedback

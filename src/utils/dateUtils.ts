@@ -50,9 +50,9 @@ export function formatSeconds(seconds: number): string {
   return `${mins}:${secs.toString().padStart(2, '0')}`
 }
 
-export function getWeekNumber(startDate: string): number {
+export function getWeekNumber(startDate: string, maxWeeks: number = 4): number {
   const start = new Date(startDate)
   const now = new Date()
   const diffDays = Math.floor((now.getTime() - start.getTime()) / 86400000)
-  return Math.min(Math.floor(diffDays / 7) + 1, 4)
+  return Math.min(Math.floor(diffDays / 7) + 1, maxWeeks)
 }

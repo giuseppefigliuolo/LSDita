@@ -5,7 +5,25 @@
       "Bash(uipro --help)",
       "Bash(npx eslint:*)",
       "Bash(python3:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(git checkout:*)",
+      "Bash(git merge:*)",
+      "Bash(curl -s -L https://www.amazon.it/-/en/dp/B099WB5253)",
+      "Bash(curl -s https://www.reddit.com/r/climbharder/wiki/index.json -H 'User-Agent: Mozilla/5.0')",
+      "Bash(curl -s \"https://latticetraining.com/wp-json/wp/v2/posts?per_page=5&search=hangboard+protocol\" -H 'User-Agent: Mozilla/5.0')",
+      "WebSearch",
+      "WebFetch(domain:www.metoliusclimbing.com)",
+      "WebFetch(domain:www.climbing.com)",
+      "WebFetch(domain:trainingforclimbing.com)",
+      "WebFetch(domain:strengthclimbing.com)",
+      "WebFetch(domain:latticetraining.com)",
+      "WebFetch(domain:www.hoopersbeta.com)",
+      "WebFetch(domain:www.physivantage.com)",
+      "WebFetch(domain:theclimbingdoctor.com)",
+      "WebFetch(domain:flashpumped.com)",
+      "WebFetch(domain:www.amazon.com)",
+      "WebFetch(domain:www.outdoorgearlab.com)",
+      "WebFetch(domain:www.mountainproject.com)"
     ]
   }
 }

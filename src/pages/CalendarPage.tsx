@@ -2,18 +2,18 @@ import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useWorkoutStore } from '../store/useWorkoutStore'
-import trainingProgram from '../data/training-program.json'
-import type { TrainingProgram } from '../types'
+import { useSettingsStore } from '../store/useSettingsStore'
+import { getProgram } from '../utils/getProgram'
 import { getMonthNameIT, getWeekNumber } from '../utils/dateUtils'
 import { getDayTypeColor } from '../utils/programUtils'
-
-const program = trainingProgram as unknown as TrainingProgram
 
 const WEEKDAY_LABELS = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
 
 export default function CalendarPage() {
   const navigate = useNavigate()
   const { programStartDate, completedWorkouts } = useWorkoutStore()
+  const { selectedProgram } = useSettingsStore()
+  const program = getProgram(selectedProgram)
   const now = new Date()
   const year = now.getFullYear()
   const month = now.getMonth()
@@ -43,7 +43,7 @@ export default function CalendarPage() {
     const isCompleted = completedDates.has(dateStr)
     const isToday = dateStr === today
 
-    const weekNum = programStartDate ? getWeekNumber(programStartDate) : 1
+    const weekNum = programStartDate ? getWeekNumber(programStartDate, program.durationWeeks) : 1
     const week = program.weeks.find((w) => w.weekNumber === weekNum)
     const trainingDay = week?.days.find((d) => d.dayOfWeek === dayName)
 

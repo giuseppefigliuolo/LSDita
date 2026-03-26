@@ -1,16 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Card from '../components/ui/Card'
-import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import { useWorkoutStore } from '../store/useWorkoutStore'
-import trainingProgram from '../data/training-program.json'
-import type { TrainingProgram, DayType } from '../types'
-import { getCurrentDayOfWeek, getWeekNumber, formatSeconds } from '../utils/dateUtils'
-import { getTotalExerciseDuration, getDayTypeColor, getDayTypeLabel, getSessionLabel } from '../utils/programUtils'
+import { useSettingsStore } from '../store/useSettingsStore'
+import { getProgram } from '../utils/getProgram'
+import type { DayType } from '../types'
+import { getWeekNumber, formatSeconds } from '../utils/dateUtils'
+import { getTotalExerciseDuration, getSessionLabel } from '../utils/programUtils'
 import { fireConfettiFromEvent } from '../utils/confetti'
-
-const program = trainingProgram as unknown as TrainingProgram
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -25,16 +23,13 @@ const fadeUp = {
 export default function Dashboard() {
   const navigate = useNavigate()
   const { programStartDate, setProgramStartDate, getCompletedCount, getStreak, completedWorkouts } = useWorkoutStore()
+  const { selectedProgram } = useSettingsStore()
+  const program = getProgram(selectedProgram)
 
-  const currentDayOfWeek = getCurrentDayOfWeek()
-  const weekNumber = programStartDate ? getWeekNumber(programStartDate) : 1
+  const weekNumber = programStartDate ? getWeekNumber(programStartDate, program.durationWeeks) : 1
   const currentWeek = program.weeks.find((w) => w.weekNumber === weekNumber)
 
-  const todayWorkout = currentWeek?.days.find((d) => d.dayOfWeek === currentDayOfWeek)
   const todayDate = new Date().toISOString().split('T')[0]
-  const isTodayCompleted = todayWorkout
-    ? completedWorkouts.some((w) => w.date === todayDate && w.dayType === todayWorkout.type)
-    : false
 
   function handleStartProgram(e: React.MouseEvent) {
     fireConfettiFromEvent(e)
@@ -66,7 +61,7 @@ export default function Dashboard() {
             <div className="text-center py-2">
               <p className="text-lg font-bold text-text mb-1">Pronto per iniziare?</p>
               <p className="text-sm text-text-secondary mb-4">
-                Piano di 4 settimane per migliorare la tua arrampicata
+                {program.name}
               </p>
               <Button variant="primary" size="lg" fullWidth onClick={handleStartProgram}>
                 Inizia il Programma
@@ -79,65 +74,8 @@ export default function Dashboard() {
       <motion.div variants={fadeUp} className="grid grid-cols-3 gap-3 mb-6">
         <StatCard label="Completati" value={String(getCompletedCount())} color="primary" />
         <StatCard label="Streak" value={`${getStreak()}g`} color="accent" />
-        <StatCard label="Settimana" value={`${weekNumber}/4`} color="violet" />
+        <StatCard label="Settimana" value={`${weekNumber}/${program.durationWeeks}`} color="violet" />
       </motion.div>
-
-      {todayWorkout ? (
-        <motion.div variants={fadeUp} className="mb-6">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
-            Oggi — {currentWeek ? getSessionLabel(currentWeek.days, currentDayOfWeek) : ''}
-          </h2>
-          <Card
-            variant={getDayTypeColor(todayWorkout.type) as 'primary' | 'secondary' | 'violet'}
-            onClick={() => navigate(`/workout/${weekNumber}/${currentDayOfWeek}`)}
-            className="overflow-hidden"
-          >
-            <div className="flex items-start justify-between">
-              <div className="flex-1">
-                <Badge variant={getDayTypeColor(todayWorkout.type) as 'primary' | 'secondary' | 'accent' | 'violet'}>
-                  {getDayTypeLabel(todayWorkout.type)}
-                </Badge>
-                <h3 className="text-lg font-bold mt-2 text-text">{todayWorkout.title}</h3>
-                <p className="text-sm text-text-secondary mt-1">{todayWorkout.description}</p>
-                <div className="flex items-center gap-4 mt-3 text-xs text-text-muted">
-                  <span>{todayWorkout.exercises.length} esercizi</span>
-                  <span>~{formatSeconds(getTotalExerciseDuration(todayWorkout))}</span>
-                </div>
-              </div>
-              {isTodayCompleted && (
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-success/20">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5CB87A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-              )}
-            </div>
-          </Card>
-        </motion.div>
-      ) : (
-        <motion.div variants={fadeUp} className="mb-6">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
-            Oggi
-          </h2>
-          <Card>
-            <div className="text-center py-4">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8C7355" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-1">
-                <circle cx="12" cy="5" r="2" />
-                <path d="M7 21l3-9 2 3 2-3 3 9" />
-                <path d="M9 12l-2-4h10l-2 4" />
-              </svg>
-              <p className="text-text font-medium">
-                {currentDayOfWeek === 'wednesday' ? 'Giorno di palestra!' : 'Giorno di riposo'}
-              </p>
-              <p className="text-sm text-text-secondary mt-1">
-                {currentDayOfWeek === 'wednesday'
-                  ? 'Vai in palestra e arrampica!'
-                  : 'Il recupero è parte dell\'allenamento'}
-              </p>
-            </div>
-          </Card>
-        </motion.div>
-      )}
 
       <motion.div variants={fadeUp}>
         <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
@@ -145,7 +83,6 @@ export default function Dashboard() {
         </h2>
         <div className="space-y-2">
           {currentWeek?.days.map((day) => {
-            const isToday = day.dayOfWeek === currentDayOfWeek
             const dayCompleted = completedWorkouts.some(
               (w) => w.weekNumber === weekNumber && w.dayType === day.type && w.date === todayDate,
             )
@@ -153,7 +90,6 @@ export default function Dashboard() {
               <Card
                 key={day.dayOfWeek}
                 onClick={() => navigate(`/workout/${weekNumber}/${day.dayOfWeek}`)}
-                className={isToday ? 'ring-1 ring-primary/50 bg-primary/5' : 'opacity-60'}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -163,9 +99,12 @@ export default function Dashboard() {
                       <p className="text-xs text-text-secondary">{day.title}</p>
                     </div>
                   </div>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] text-text-muted">~{formatSeconds(getTotalExerciseDuration(day))}</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8C7355" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </div>
                 </div>
               </Card>
             )
