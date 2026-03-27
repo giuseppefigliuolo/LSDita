@@ -26,7 +26,8 @@
       "WebFetch(domain:www.mountainproject.com)",
       "Bash(grep -r \"1.75rem 1.25rem\\\\|2.8rem 2rem\\\\|1.8rem 1.3rem\\\\|2.2rem 1.6rem\\\\|1.5rem 1rem\\\\|2rem 1.4rem\" /Users/giuseppefigliuolo/bitrock/climbing-training/src --include=*.tsx)",
       "Bash(grep -r \"5px 5px 0px\\\\|4px 4px 0px\\\\|3px 3px 0px\\\\|2px 2px 0px\\\\|1px 1px 0px\" /Users/giuseppefigliuolo/bitrock/climbing-training/src --include=*.tsx)",
-      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/giuseppefigliuolo/bitrock/climbing-training/public/icons/logo-circled \\(1\\).png\")"
+      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/giuseppefigliuolo/bitrock/climbing-training/public/icons/logo-circled \\(1\\).png\")",
+      "Bash(npm uninstall:*)"
     ]
   }
 }
