@@ -3,7 +3,7 @@ import BottomNav from '../ui/BottomNav'
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-dvh bg-bg relative overflow-x-hidden">
+    <div className="flex flex-col min-h-dvh bg-bg relative overflow-x-hidden safe-top">
 
       {/* Psychedelic decorations only — rainbow stripes removed */}
 

@@ -142,6 +142,10 @@ body::after {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+@utility safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
 @utility font-timer {
   font-family: var(--font-mono);
   font-weight: 700;
