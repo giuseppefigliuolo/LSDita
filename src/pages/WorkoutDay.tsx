@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   motion,
@@ -314,10 +314,24 @@ function ExerciseDetailModal({
   exercise: Exercise
   onClose: () => void
 }) {
-  const dragY = useMotionValue(0)
+  const dragY = useMotionValue(window.innerHeight)
   const sheetScale = useTransform(dragY, [0, 300], [1, 0.95])
   const sheetOpacity = useTransform(dragY, [0, 300], [1, 0.4])
+  const backdropOpacity = useTransform(dragY, [0, window.innerHeight], [1, 0])
   const sheetRef = useRef<HTMLDivElement>(null)
+
+  // Enter animation: slide up from bottom
+  useEffect(() => {
+    motionAnimate(dragY, 0, { type: 'spring', damping: 28, stiffness: 300 })
+  }, [dragY])
+
+  const dismiss = useCallback(() => {
+    motionAnimate(dragY, window.innerHeight, {
+      duration: 0.25,
+      ease: 'easeIn',
+      onComplete: onClose
+    })
+  }, [dragY, onClose])
 
   useEffect(() => {
     const el = sheetRef.current
@@ -413,37 +427,25 @@ function ExerciseDetailModal({
   }, [dragY, onClose])
 
   return (
-    <motion.div
-      className="fixed inset-0 z-50 flex items-end justify-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-    >
+    <div className="fixed inset-0 z-50 flex items-end justify-center">
       <motion.div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        onClick={onClose}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        style={{ opacity: backdropOpacity }}
+        onClick={dismiss}
       />
 
       <motion.div
+        ref={sheetRef}
         className="relative w-full max-w-lg max-h-[85dvh] overflow-hidden border-[3px] border-b-0 border-[#3A1248]"
         style={{
           borderRadius: RADIUS.sheetTop,
           boxShadow: `0 -4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.55)`,
+          y: dragY,
+          scale: sheetScale,
+          opacity: sheetOpacity,
         }}
-        initial={{ y: '100%' }}
-        animate={{ y: 0 }}
-        exit={{ y: '100%' }}
-        transition={{ type: 'spring', damping: 28, stiffness: 300 }}
       >
-        <motion.div
-          ref={sheetRef}
-          className="bg-surface overflow-y-auto overscroll-contain max-h-[85dvh]"
-          style={{ y: dragY, scale: sheetScale, opacity: sheetOpacity }}
-        >
+        <div className="bg-surface overflow-y-auto overscroll-contain max-h-[85dvh]">
           <div className="sticky top-0 z-10 flex justify-center pt-3 pb-2 bg-surface">
             <div
               className="w-12 h-1.5 border-[1.5px] border-[#3A1248]"
@@ -528,13 +530,13 @@ function ExerciseDetailModal({
               </div>
             )}
 
-            <Button variant="ghost" size="md" fullWidth onClick={onClose}>
+            <Button variant="ghost" size="md" fullWidth onClick={dismiss}>
               Chiudi
             </Button>
           </div>
-        </motion.div>
+        </div>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }
 
