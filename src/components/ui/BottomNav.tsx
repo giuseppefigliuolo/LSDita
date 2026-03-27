@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { INK, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
@@ -14,11 +15,19 @@ const tabs = [
 export default function BottomNav() {
   const location = useLocation()
   const navigate = useNavigate()
+  const activeIndex = tabs.findIndex(t => t.path === location.pathname)
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const [blobLeft, setBlobLeft] = useState<number | null>(null)
+
+  useEffect(() => {
+    const btn = buttonRefs.current[activeIndex]
+    if (btn) setBlobLeft(btn.offsetLeft)
+  }, [activeIndex])
 
   return (
     <nav className="fixed bottom-3 left-3 right-3 z-50 safe-bottom">
       <div
-        className="flex items-center justify-around h-16 max-w-lg mx-auto px-2 border-[3px]"
+        className="relative flex items-center justify-around h-16 max-w-lg mx-auto px-2 border-[3px]"
         style={{
           backgroundColor: SURFACE_ELEVATED,
           borderColor: INK,
@@ -26,30 +35,31 @@ export default function BottomNav() {
           boxShadow: SHADOW.lg,
         }}
       >
-        {tabs.map((tab) => {
+        {blobLeft !== null && (
+          <motion.div
+            className="absolute inset-y-1 w-16 border-2 pointer-events-none"
+            animate={{ left: blobLeft }}
+            transition={{ type: 'spring', stiffness: 500, damping: 35 }}
+            style={{
+              backgroundColor: '#E8B820',
+              borderColor: INK,
+              borderRadius: RADIUS.navIndicator,
+              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5)',
+            }}
+          />
+        )}
+        {tabs.map((tab, i) => {
           const isActive = location.pathname === tab.path
           const Icon = tab.icon
           return (
             <button
               key={tab.path}
+              ref={el => { buttonRefs.current[i] = el }}
               onClick={() => navigate(tab.path)}
               aria-label={tab.label}
               aria-current={isActive ? 'page' : undefined}
               className="relative flex flex-col items-center justify-center gap-0.5 w-16 h-full cursor-pointer"
             >
-              {isActive && (
-                <motion.div
-                  layoutId="nav-indicator"
-                  className="absolute inset-1 border-2"
-                  style={{
-                    backgroundColor: '#E8B820',
-                    borderColor: INK,
-                    borderRadius: RADIUS.navIndicator,
-                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5)'
-                  }}
-                  transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-                />
-              )}
               <div className="relative z-10">
                 <Icon active={isActive} />
               </div>
