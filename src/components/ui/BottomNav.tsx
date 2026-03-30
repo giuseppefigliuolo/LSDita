@@ -7,7 +7,7 @@ const INACTIVE_COLOR = '#9C7B5C'
 
 const tabs = [
   { path: '/', label: 'Home', icon: HomeIcon },
-  { path: '/calendar', label: 'Calendario', icon: CalendarIcon },
+  { path: '/timer', label: 'Timer', icon: TimerIcon },
   { path: '/progress', label: 'Progressi', icon: ChartIcon },
   { path: '/settings', label: 'Impostazioni', icon: SettingsIcon }
 ] as const
@@ -95,7 +95,7 @@ function HomeIcon({ active }: { active: boolean }) {
   )
 }
 
-function CalendarIcon({ active }: { active: boolean }) {
+function TimerIcon({ active }: { active: boolean }) {
   return (
     <svg
       width="20"
@@ -107,10 +107,10 @@ function CalendarIcon({ active }: { active: boolean }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-      <line x1="16" y1="2" x2="16" y2="6" />
-      <line x1="8" y1="2" x2="8" y2="6" />
-      <line x1="3" y1="10" x2="21" y2="10" />
+      <circle cx="12" cy="13" r="8" />
+      <path d="M12 9v4l2 2" />
+      <path d="M9 2h6" />
+      <path d="M12 2v2" />
     </svg>
   )
 }
