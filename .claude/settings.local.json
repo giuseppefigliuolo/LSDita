@@ -28,7 +28,9 @@
       "Bash(grep -r \"5px 5px 0px\\\\|4px 4px 0px\\\\|3px 3px 0px\\\\|2px 2px 0px\\\\|1px 1px 0px\" /Users/giuseppefigliuolo/bitrock/climbing-training/src --include=*.tsx)",
       "Bash(sips -g pixelWidth -g pixelHeight \"/Users/giuseppefigliuolo/bitrock/climbing-training/public/icons/logo-circled \\(1\\).png\")",
       "Bash(npm uninstall:*)",
-      "Bash(wc -c /Users/giuseppefigliuolo/bitrock/climbing-training/.claude/skills/ui-ux-pro-max/data/*.csv)"
+      "Bash(wc -c /Users/giuseppefigliuolo/bitrock/climbing-training/.claude/skills/ui-ux-pro-max/data/*.csv)",
+      "Bash(ls /Users/giuseppefigliuolo/bitrock/climbing-training/*.md)",
+      "Bash(ls /Users/giuseppefigliuolo/bitrock/climbing-training/public/*.png)"
     ]
   }
 }
