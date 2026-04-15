@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { useWorkoutStore } from '../store/useWorkoutStore'
-import { programOptions } from '../utils/getProgram'
+import { getProgram, programOptions } from '../utils/getProgram'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import type { ProgramId } from '../types'
@@ -11,6 +11,7 @@ export default function SettingsPage() {
   const settings = useSettingsStore()
   const workoutStore = useWorkoutStore()
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const program = getProgram(settings.selectedProgram)
 
   function handleExport() {
     const data = workoutStore.exportData()
@@ -121,6 +122,53 @@ export default function SettingsPage() {
               onToggle={settings.toggleVibration}
             />
           </div>
+        </section>
+
+        <section>
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            Settimana Corrente
+          </h2>
+          <Card>
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-sm font-medium text-text">Settimana attiva</p>
+                <p className="text-xs text-text-secondary">
+                  {settings.currentWeek == null
+                    ? 'Automatica in base alla data di inizio'
+                    : 'Manuale — sovrascrive il calcolo automatico'}
+                </p>
+              </div>
+              {settings.currentWeek != null && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => settings.setCurrentWeek(null)}
+                >
+                  Auto
+                </Button>
+              )}
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {Array.from({ length: program.durationWeeks }, (_, i) => i + 1).map(
+                (week) => {
+                  const isActive = settings.currentWeek === week
+                  return (
+                    <button
+                      key={week}
+                      onClick={() => settings.setCurrentWeek(week)}
+                      className={`h-10 rounded-lg border-2 text-sm font-bold font-timer transition-colors ${
+                        isActive
+                          ? 'border-primary bg-primary/10 text-primary'
+                          : 'border-border bg-surface text-text hover:border-primary/40'
+                      }`}
+                    >
+                      {week}
+                    </button>
+                  )
+                }
+              )}
+            </div>
+          </Card>
         </section>
 
         <section>

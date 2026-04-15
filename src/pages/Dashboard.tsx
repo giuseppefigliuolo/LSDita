@@ -33,12 +33,15 @@ export default function Dashboard() {
     getStreak,
     completedWorkouts
   } = useWorkoutStore()
-  const { selectedProgram } = useSettingsStore()
+  const { selectedProgram, currentWeek: overrideWeek } = useSettingsStore()
   const program = getProgram(selectedProgram)
 
-  const weekNumber = programStartDate
+  const autoWeek = programStartDate
     ? getWeekNumber(programStartDate, program.durationWeeks)
     : 1
+  const weekNumber = overrideWeek != null
+    ? Math.min(Math.max(1, overrideWeek), program.durationWeeks)
+    : autoWeek
   const currentWeek = program.weeks.find((w) => w.weekNumber === weekNumber)
 
   const todayDate = new Date().toISOString().split('T')[0]

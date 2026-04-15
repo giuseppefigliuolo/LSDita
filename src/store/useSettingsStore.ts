@@ -9,6 +9,7 @@ interface SettingsStore extends AppSettings {
   setVolume: (volume: number) => void
   setSelectedProgram: (program: ProgramId) => void
   setCountdownDuration: (duration: number) => void
+  setCurrentWeek: (week: number | null) => void
 }
 
 export const useSettingsStore = create<SettingsStore>()(
@@ -20,6 +21,7 @@ export const useSettingsStore = create<SettingsStore>()(
       volume: 0.8,
       selectedProgram: 'home',
       countdownDuration: 3,
+      currentWeek: null,
 
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
       toggleVoice: () => set((s) => ({ voiceEnabled: !s.voiceEnabled })),
@@ -27,7 +29,8 @@ export const useSettingsStore = create<SettingsStore>()(
         set((s) => ({ vibrationEnabled: !s.vibrationEnabled })),
       setVolume: (volume) => set({ volume }),
       setSelectedProgram: (program) => set({ selectedProgram: program }),
-      setCountdownDuration: (duration) => set({ countdownDuration: duration })
+      setCountdownDuration: (duration) => set({ countdownDuration: duration }),
+      setCurrentWeek: (week) => set({ currentWeek: week })
     }),
     {
       name: 'LSDita-settings'

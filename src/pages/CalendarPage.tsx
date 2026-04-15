@@ -13,8 +13,13 @@ const WEEKDAY_LABELS = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
 export default function CalendarPage() {
   const navigate = useNavigate()
   const { programStartDate, completedWorkouts } = useWorkoutStore()
-  const { selectedProgram } = useSettingsStore()
+  const { selectedProgram, currentWeek: overrideWeek } = useSettingsStore()
   const program = getProgram(selectedProgram)
+
+  const autoWeek = programStartDate ? getWeekNumber(programStartDate, program.durationWeeks) : 1
+  const activeWeek = overrideWeek != null
+    ? Math.min(Math.max(1, overrideWeek), program.durationWeeks)
+    : autoWeek
   const now = new Date()
   const year = now.getFullYear()
   const month = now.getMonth()
@@ -44,7 +49,7 @@ export default function CalendarPage() {
     const isCompleted = completedDates.has(dateStr)
     const isToday = dateStr === today
 
-    const weekNum = programStartDate ? getWeekNumber(programStartDate, program.durationWeeks) : 1
+    const weekNum = activeWeek
     const week = program.weeks.find((w) => w.weekNumber === weekNum)
     const trainingDay = week?.days.find((d) => d.dayOfWeek === dayName)
 

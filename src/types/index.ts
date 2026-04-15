@@ -90,4 +90,5 @@ export interface AppSettings {
   volume: number
   selectedProgram: ProgramId
   countdownDuration: number
+  currentWeek: number | null
 }
