@@ -89,7 +89,7 @@ export interface TimerState {
   isPaused: boolean
 }
 
-export type ProgramId = 'home' | 'travel'
+export type ProgramId = 'home' | 'travel' | 'custom'
 
 export interface AppSettings {
   soundEnabled: boolean
@@ -99,4 +99,5 @@ export interface AppSettings {
   selectedProgram: ProgramId
   countdownDuration: number
   currentWeek: number | null
+  customProgram: TrainingProgram | null
 }
