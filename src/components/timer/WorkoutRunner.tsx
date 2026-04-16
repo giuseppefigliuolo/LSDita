@@ -11,6 +11,7 @@ import { useVibration } from '../../hooks/useVibration'
 import { useWakeLock } from '../../hooks/useWakeLock'
 import { useSettingsStore } from '../../store/useSettingsStore'
 import { INK, RADIUS, SHADOW } from '../../styles/tokens'
+import { fireConfetti } from '../../utils/confetti'
 
 interface WorkoutRunnerProps {
   exercises: Exercise[]
@@ -226,6 +227,12 @@ export default function WorkoutRunner({
       beepCountdown()
     }
   }, [timer.timeRemaining, phase, beepCountdown])
+
+  useEffect(() => {
+    if (phase === 'exercise_complete') {
+      fireConfetti({ x: 0.5, y: 0.45 })
+    }
+  }, [phase])
 
   const handleStartExercise = useCallback(
     (params: { sets: number; repsPerSet: number; hangTime: number }) => {
@@ -569,7 +576,7 @@ export default function WorkoutRunner({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70dvh] px-4">
+    <div className="flex flex-col items-center justify-center min-h-[80dvh] px-4">
       <AnimatePresence mode="wait">
         <motion.div
           key={`${exerciseIndex}-${phase}`}
@@ -579,7 +586,7 @@ export default function WorkoutRunner({
           className="flex flex-col items-center"
         >
           {exercise?.type === 'repeaters' && (
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-4 mb-5">
               {Array.from({ length: exercise.repsPerSet }, (_, i) => {
                 const activePhase = phase === 'paused' ? wasPausedPhase : phase
                 const isDone =
@@ -592,10 +599,10 @@ export default function WorkoutRunner({
                     key={i}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       isDone
-                        ? 'w-6 bg-primary shadow-[0_0_8px_rgba(232,98,42,0.4)]'
+                        ? 'w-8 bg-primary shadow-[0_0_8px_rgba(232,98,42,0.4)]'
                         : isCurrent
-                          ? 'w-6 bg-primary/50'
-                          : 'w-4 bg-surface-elevated'
+                          ? 'w-12 bg-primary/80'
+                          : 'w-8 bg-surface-elevated'
                     }`}
                   />
                 )
@@ -603,29 +610,30 @@ export default function WorkoutRunner({
             </div>
           )}
 
-          <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-1">
+          <p className="font-semibold uppercase tracking-widest text-text-muted mb-14">
             {exercise?.name}
           </p>
 
-          <div className="mb-6">
+          <div className="mb-4">
             <CircularTimer
               timeRemaining={timer.timeRemaining}
               totalTime={currentTotalTime}
               phase={phase === 'paused' ? wasPausedPhase : phase}
               label={phaseLabel}
-              subLabel={
-                phase === 'countdown' ||
-                (phase === 'paused' && wasPausedPhase === 'countdown')
-                  ? 'Posizionati!'
-                  : `Serie ${currentSet}/${exercise?.sets ?? 0}  •  Rep ${currentRep}/${exercise?.repsPerSet ?? 0}`
-              }
             />
           </div>
 
-          <div className="flex items-center justify-center gap-5">
+          <p className="text font-semibold uppercase tracking-widest text-text-muted text-center my-4">
+            {phase === 'countdown' ||
+            (phase === 'paused' && wasPausedPhase === 'countdown')
+              ? 'Posizionati!'
+              : `Serie ${currentSet}/${exercise?.sets ?? 0}  •  Rep ${currentRep}/${exercise?.repsPerSet ?? 0}`}
+          </p>
+
+          <div className="flex items-center justify-center gap-7 mt-8">
             <button
               onClick={() => setShowSkipConfirm(true)}
-              className="w-14 h-14 bg-surface border-[2.5px] border-[#3A1248] flex items-center justify-center active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+              className="w-16 h-16 bg-surface border-[2.5px] border-[#3A1248] flex items-center justify-center active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
               style={{
                 borderRadius: RADIUS.controlSm,
                 boxShadow: SHADOW.sm
@@ -650,7 +658,7 @@ export default function WorkoutRunner({
             {phase === 'paused' ? (
               <button
                 onClick={handleResume}
-                className="w-20 h-20 bg-accent border-[3px] border-[#3A1248] flex items-center justify-center active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all"
+                className="w-24 h-24 bg-accent border-[3px] border-[#3A1248] flex items-center justify-center active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all"
                 style={{
                   borderRadius: RADIUS.controlLg,
                   boxShadow: SHADOW.md
@@ -663,7 +671,7 @@ export default function WorkoutRunner({
             ) : (
               <button
                 onClick={handlePause}
-                className="w-20 h-20 bg-surface border-[3px] border-[#3A1248] flex items-center justify-center active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all"
+                className="w-24 h-24 bg-surface border-[3px] border-[#3A1248] flex items-center justify-center active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all"
                 style={{
                   borderRadius: RADIUS.controlLg,
                   boxShadow: SHADOW.md
@@ -678,7 +686,7 @@ export default function WorkoutRunner({
 
             <button
               onClick={handleSkipTimer}
-              className="w-14 h-14 bg-surface border-[2.5px] border-[#3A1248] flex items-center justify-center active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+              className="w-16 h-16 bg-surface border-[2.5px] border-[#3A1248] flex items-center justify-center active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
               style={{
                 borderRadius: RADIUS.controlSm,
                 boxShadow: SHADOW.sm

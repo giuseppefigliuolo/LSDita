@@ -7,7 +7,6 @@ interface BlobTimerProps {
   totalTime: number
   phase: WorkoutPhase
   label: string
-  subLabel?: string
 }
 
 // All blobs: same structure M + 4×C + Z — framer-motion interpolates smoothly
@@ -40,7 +39,7 @@ const INK = '#3A1248'
 // Number of sunburst rays
 const RAY_COUNT = 20
 
-export default function CircularTimer({ timeRemaining, totalTime, phase, label, subLabel }: BlobTimerProps) {
+export default function CircularTimer({ timeRemaining, totalTime, phase, label }: BlobTimerProps) {
   const uid = useId().replace(/:/g, '_')
   const blobPath = useMotionValue(BLOBS[0])
 
@@ -48,6 +47,7 @@ export default function CircularTimer({ timeRemaining, totalTime, phase, label, 
   const fillY = VIEW * (1 - progress)
   const colors = phaseColors[phase] ?? phaseColors.idle
   const displayTime = Math.ceil(timeRemaining)
+  const hideTime = phase === 'exercise_complete' || phase === 'workout_complete'
 
   // Continuous organic blob morphing
   useEffect(() => {
@@ -60,8 +60,11 @@ export default function CircularTimer({ timeRemaining, totalTime, phase, label, 
     return () => controls.stop()
   }, [blobPath])
 
-  // Switch text color when fill covers the center
-  const textColor = progress > 0.52 ? colors.textOnFill : INK
+  // Per-element text color: each switches when the rising fill passes its vertical center
+  const labelCenterY = 88
+  const numberCenterY = 140
+  const labelColor = labelCenterY > fillY ? colors.textOnFill : INK
+  const numberColor = numberCenterY > fillY ? colors.textOnFill : INK
 
   return (
     <div className="relative flex items-center justify-center" style={{ width: VIEW, height: VIEW }}>
@@ -151,26 +154,19 @@ export default function CircularTimer({ timeRemaining, totalTime, phase, label, 
             <motion.p
               className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
               style={{ fontFamily: 'var(--font-display)' }}
-              animate={{ color: textColor }}
+              animate={{ color: labelColor }}
               transition={{ duration: 0.3 }}
             >
               {label}
             </motion.p>
-            <motion.p
-              className="font-timer leading-none"
-              style={{ fontSize: '5rem' }}
-              animate={{ color: textColor }}
-              transition={{ duration: 0.3 }}
-            >
-              {displayTime}
-            </motion.p>
-            {subLabel && (
+            {!hideTime && (
               <motion.p
-                className="text-xs mt-2 text-center px-6 leading-tight"
-                animate={{ color: textColor }}
+                className="font-timer leading-none"
+                style={{ fontSize: '5rem' }}
+                animate={{ color: numberColor }}
                 transition={{ duration: 0.3 }}
               >
-                {subLabel}
+                {displayTime}
               </motion.p>
             )}
           </motion.div>

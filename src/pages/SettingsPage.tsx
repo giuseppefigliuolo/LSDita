@@ -131,7 +131,9 @@ export default function SettingsPage() {
           <Card>
             <div className="flex items-center justify-between mb-3">
               <div>
-                <p className="text-sm font-medium text-text">Settimana attiva</p>
+                <p className="text-sm font-medium text-text">
+                  Settimana attiva
+                </p>
                 <p className="text-xs text-text-secondary">
                   {settings.currentWeek == null
                     ? 'Automatica in base alla data di inizio'
@@ -149,24 +151,25 @@ export default function SettingsPage() {
               )}
             </div>
             <div className="grid grid-cols-4 gap-2">
-              {Array.from({ length: program.durationWeeks }, (_, i) => i + 1).map(
-                (week) => {
-                  const isActive = settings.currentWeek === week
-                  return (
-                    <button
-                      key={week}
-                      onClick={() => settings.setCurrentWeek(week)}
-                      className={`h-10 rounded-lg border-2 text-sm font-bold font-timer transition-colors ${
-                        isActive
-                          ? 'border-primary bg-primary/10 text-primary'
-                          : 'border-border bg-surface text-text hover:border-primary/40'
-                      }`}
-                    >
-                      {week}
-                    </button>
-                  )
-                }
-              )}
+              {Array.from(
+                { length: program.durationWeeks },
+                (_, i) => i + 1
+              ).map((week) => {
+                const isActive = settings.currentWeek === week
+                return (
+                  <button
+                    key={week}
+                    onClick={() => settings.setCurrentWeek(week)}
+                    className={`h-10 rounded-lg border-2 text-sm font-bold font-timer transition-colors ${
+                      isActive
+                        ? 'border-primary bg-primary/10 text-primary'
+                        : 'border-border bg-surface text-text hover:border-primary/40'
+                    }`}
+                  >
+                    {week}
+                  </button>
+                )
+              })}
             </div>
           </Card>
         </section>
@@ -178,14 +181,20 @@ export default function SettingsPage() {
           <Card>
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-text">Countdown iniziale</p>
+                <p className="text-sm font-medium text-text">
+                  Countdown iniziale
+                </p>
                 <p className="text-xs text-text-secondary">
                   Secondi prima che l'esercizio parta
                 </p>
               </div>
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => settings.setCountdownDuration(Math.max(0, settings.countdownDuration - 1))}
+                  onClick={() =>
+                    settings.setCountdownDuration(
+                      Math.max(0, settings.countdownDuration - 1)
+                    )
+                  }
                   disabled={settings.countdownDuration <= 0}
                   className="w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-sm font-bold text-text disabled:opacity-30"
                 >
@@ -195,7 +204,11 @@ export default function SettingsPage() {
                   {settings.countdownDuration}
                 </span>
                 <button
-                  onClick={() => settings.setCountdownDuration(Math.min(10, settings.countdownDuration + 1))}
+                  onClick={() =>
+                    settings.setCountdownDuration(
+                      Math.min(10, settings.countdownDuration + 1)
+                    )
+                  }
                   disabled={settings.countdownDuration >= 10}
                   className="w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-sm font-bold text-text disabled:opacity-30"
                 >
@@ -329,9 +342,13 @@ export default function SettingsPage() {
           </Card>
         </section>
 
-        <div className="text-center pt-4 pb-8">
+        <div className="text-center pt-4">
           <p className="text-xs text-text-muted">
-            LSDita v1.0 — Fatto con ❤️ per l'arrampicata
+            LSDita v{import.meta.env.VITE_APP_VERSION} — Fatto con ❤️ per
+            l'arrampicata
+          </p>
+          <p className="text-xs text-text-muted mt-2">
+            Gruppo <b>Picasass</b>
           </p>
         </div>
       </div>
