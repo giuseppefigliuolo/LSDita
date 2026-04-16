@@ -1,14 +1,29 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
-import { motion, AnimatePresence, useMotionValue, useTransform, animate as motionAnimate, type PanInfo } from 'framer-motion'
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useMotionValueEvent,
+  useTransform,
+  animate as motionAnimate,
+  type PanInfo,
+} from 'framer-motion'
 import type { Exercise } from '../../types'
 import Button from '../ui/Button'
 import ExerciseDescription from '../ui/ExerciseDescription'
 import Badge from '../ui/Badge'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
-import { SURFACE, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
+import { INK, SURFACE, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
 
 const DISMISS_THRESHOLD = 100
 const VELOCITY_THRESHOLD = 400
+
+function formatCountdown(seconds: number): string {
+  const s = Math.max(0, Math.ceil(seconds))
+  const m = Math.floor(s / 60)
+  const r = s % 60
+  return m > 0 ? `${m}:${r.toString().padStart(2, '0')}` : `${r}s`
+}
 
 interface ExercisePreviewProps {
   exercise: Exercise
@@ -16,18 +31,55 @@ interface ExercisePreviewProps {
   totalExercises: number
   onStart: (overrides: { sets: number; repsPerSet: number; hangTime: number }) => void
   onSkip: () => void
+  autoStartSeconds?: number
 }
 
-export default function ExercisePreview({ exercise, exerciseIndex, totalExercises, onStart, onSkip }: ExercisePreviewProps) {
+export default function ExercisePreview({ exercise, exerciseIndex, totalExercises, onStart, onSkip, autoStartSeconds }: ExercisePreviewProps) {
   const [sets, setSets] = useState(exercise.sets)
   const [reps, setReps] = useState(exercise.repsPerSet)
   const [time, setTime] = useState(exercise.hangTime)
   const [editing, setEditing] = useState<'sets' | 'reps' | 'time' | null>(null)
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
+  const [autoCancelled, setAutoCancelled] = useState(false)
+
+  const autoActive = !!autoStartSeconds && autoStartSeconds > 0 && !autoCancelled
+
+  const autoProgress = useMotionValue(0)
+  const fillWidth = useTransform(autoProgress, (p) => `${p * 100}%`)
+  const [remainingSecs, setRemainingSecs] = useState(autoStartSeconds ?? 0)
+
+  useMotionValueEvent(autoProgress, 'change', (v) => {
+    if (!autoStartSeconds) return
+    const r = Math.max(0, Math.ceil(autoStartSeconds * (1 - v)))
+    setRemainingSecs((prev) => (r !== prev ? r : prev))
+  })
+
+  const startRef = useRef<() => void>(() => {})
+
+  useEffect(() => {
+    if (!autoActive || !autoStartSeconds) return
+    autoProgress.set(0)
+    setRemainingSecs(autoStartSeconds)
+    const controls = motionAnimate(autoProgress, 1, {
+      duration: autoStartSeconds,
+      ease: 'linear',
+      onComplete: () => startRef.current(),
+    })
+    return () => controls.stop()
+  }, [autoActive, autoStartSeconds, autoProgress])
+
+  const cancelAuto = useCallback(() => {
+    setAutoCancelled(true)
+    autoProgress.stop()
+  }, [autoProgress])
 
   const dragY = useMotionValue(0)
   const cardOpacity = useTransform(dragY, [0, DISMISS_THRESHOLD * 1.5], [1, 0.2])
   const cardScale = useTransform(dragY, [0, DISMISS_THRESHOLD * 2], [1, 0.9])
+
+  const handleDragStart = useCallback(() => {
+    cancelAuto()
+  }, [cancelAuto])
 
   const handleDragEnd = useCallback((_: unknown, info: PanInfo) => {
     const shouldDismiss =
@@ -52,8 +104,21 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
   }
 
   function handleStart() {
+    cancelAuto()
     setEditing(null)
     onStart({ sets, repsPerSet: reps, hangTime: time })
+  }
+
+  startRef.current = handleStart
+
+  const toggleEditing = (field: 'sets' | 'reps' | 'time') => {
+    cancelAuto()
+    setEditing((prev) => (prev === field ? null : field))
+  }
+
+  const openSkipConfirm = () => {
+    cancelAuto()
+    setShowSkipConfirm(true)
   }
 
   return (
@@ -76,6 +141,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
         dragDirectionLock
         dragConstraints={{ top: 0 }}
         dragElastic={{ top: 0.05, bottom: 0.6 }}
+        onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
       >
         <div
@@ -124,7 +190,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
             color="text-primary"
             ringColor="ring-primary/40"
             active={editing === 'sets'}
-            onClick={() => setEditing(editing === 'sets' ? null : 'sets')}
+            onClick={() => toggleEditing('sets')}
           />
           <ParamBox
             value={reps}
@@ -132,7 +198,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
             color="text-secondary"
             ringColor="ring-secondary/40"
             active={editing === 'reps'}
-            onClick={() => setEditing(editing === 'reps' ? null : 'reps')}
+            onClick={() => toggleEditing('reps')}
           />
           {exercise.type !== 'reps' && (
             <ParamBox
@@ -142,7 +208,7 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
               color="text-accent"
               ringColor="ring-accent/40"
               active={editing === 'time'}
-              onClick={() => setEditing(editing === 'time' ? null : 'time')}
+              onClick={() => toggleEditing('time')}
             />
           )}
         </div>
@@ -166,12 +232,43 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
         )}
 
         <div className={`flex gap-3 w-full max-w-xs ${editing ? 'mt-2' : 'mt-2'}`}>
-          <Button variant="ghost" size="md" onClick={() => setShowSkipConfirm(true)} className="shrink-0">
+          <Button variant="ghost" size="md" onClick={openSkipConfirm} className="shrink-0">
             Salta
           </Button>
-          <Button variant="primary" size="lg" fullWidth onClick={handleStart}>
-            Inizia
-          </Button>
+          {autoActive ? (
+            <motion.button
+              onClick={handleStart}
+              className="relative overflow-hidden inline-flex items-center justify-center gap-2 font-bold border-[3px] px-6 py-3.5 text-lg w-full cursor-pointer"
+              style={{
+                backgroundColor: '#D4541A',
+                color: '#FFFBF0',
+                borderColor: INK,
+                borderRadius: RADIUS.btnLg,
+                boxShadow: `4px 4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.4)`,
+              }}
+              whileTap={{
+                x: 4,
+                y: 4,
+                boxShadow: SHADOW.pressed,
+              }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            >
+              <motion.div
+                className="absolute inset-y-0 right-0 z-0"
+                style={{
+                  width: fillWidth,
+                  backgroundColor: 'rgba(244, 232, 196, 0.72)',
+                }}
+              />
+              <span className="relative z-10">
+                Inizia tra {formatCountdown(remainingSecs)}
+              </span>
+            </motion.button>
+          ) : (
+            <Button variant="primary" size="lg" fullWidth onClick={handleStart}>
+              Inizia
+            </Button>
+          )}
         </div>
       </motion.div>
 
