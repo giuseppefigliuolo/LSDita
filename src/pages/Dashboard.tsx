@@ -204,6 +204,7 @@ function DayDot({ type, completed }: { type: DayType; completed: boolean }) {
     finger_strength: 'bg-primary',
     pull_strength: 'bg-accent',
     power_endurance: 'bg-secondary',
+    general_strength: 'bg-success',
     mobility: 'bg-violet'
   }
 

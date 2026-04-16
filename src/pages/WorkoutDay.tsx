@@ -85,6 +85,7 @@ export default function WorkoutDay() {
                 | 'secondary'
                 | 'accent'
                 | 'violet'
+                | 'success'
             }
           >
             {getDayTypeLabel(day.type)}

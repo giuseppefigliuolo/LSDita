@@ -4,7 +4,7 @@ export type Equipment = 'hangboard' | 'wooden_balls' | 'pull_up_bar' | 'dumbbell
 
 export type ExerciseType = 'timed_hang' | 'timed_hold' | 'repeaters' | 'reps' | 'timed_stretch'
 
-export type DayType = 'finger_strength' | 'pull_strength' | 'power_endurance' | 'mobility' | 'rest' | 'climbing_gym'
+export type DayType = 'finger_strength' | 'pull_strength' | 'power_endurance' | 'general_strength' | 'mobility' | 'rest' | 'climbing_gym'
 
 export type WorkoutPhase = 'idle' | 'preview' | 'countdown' | 'hanging' | 'resting' | 'set_rest' | 'exercise_complete' | 'workout_complete' | 'paused'
 

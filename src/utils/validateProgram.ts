@@ -29,6 +29,7 @@ const DAY_TYPE_VALUES: DayType[] = [
   'finger_strength',
   'pull_strength',
   'power_endurance',
+  'general_strength',
   'mobility',
   'rest',
   'climbing_gym',

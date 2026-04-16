@@ -32,7 +32,8 @@
       "Bash(ls /Users/giuseppefigliuolo/bitrock/climbing-training/*.md)",
       "Bash(ls /Users/giuseppefigliuolo/bitrock/climbing-training/public/*.png)",
       "Bash(node -e \"const p = require\\('./src/data/training-program.json'\\); console.log\\('weeks:', p.weeks.length\\); p.weeks.forEach\\(w => { console.log\\('W'+w.weekNumber+' '+w.theme+':', w.days.map\\(d => d.dayOfWeek+'\\('+d.exercises.length+'\\)'\\).join\\(' '\\)\\); }\\);\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const p = require\\('./src/data/training-program.json'\\); console.log\\('weeks:', p.weeks.length\\); p.weeks.forEach\\(w => console.log\\('  W'+w.weekNumber, w.theme+':', w.days.length+' days', '-', w.days.map\\(d => d.dayOfWeek+'\\('+d.exercises.length+'\\)'\\).join\\(', '\\)\\)\\);\")"
     ]
   }
 }

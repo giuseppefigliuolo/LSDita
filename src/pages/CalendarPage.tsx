@@ -129,6 +129,7 @@ export default function CalendarPage() {
           <LegendItem color="bg-primary" label="Forza Dita" />
           <LegendItem color="bg-accent" label="Trazione" />
           <LegendItem color="bg-secondary" label="Power Endurance" />
+          <LegendItem color="bg-success" label="Forza Generale" />
           <LegendItem color="bg-violet" label="Mobilità" />
           <LegendItem color="bg-success" label="Completato" />
         </div>
