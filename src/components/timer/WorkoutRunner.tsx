@@ -645,7 +645,10 @@ export default function WorkoutRunner({
                   const isDone = isRepsProgress
                     ? i < currentRep - 1 ||
                       (i === currentRep - 1 && activePhase !== 'hanging')
-                    : i < currentSet - 1
+                    : i < currentSet - 1 ||
+                      (i === currentSet - 1 &&
+                        (activePhase === 'set_rest' ||
+                          activePhase === 'exercise_complete'))
                   const isCurrent = isRepsProgress
                     ? i === currentRep - 1 && activePhase === 'hanging'
                     : i === currentSet - 1 &&
