@@ -436,7 +436,7 @@ export default function WorkoutRunner({
 
   if (isRepsExercise && phase === 'hanging') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[70dvh] px-4">
+      <div className="flex flex-col items-center justify-center min-h-[80dvh] px-4">
         <AnimatePresence mode="wait">
           <motion.div
             key={`${exerciseIndex}-reps`}
@@ -445,26 +445,60 @@ export default function WorkoutRunner({
             exit={{ opacity: 0 }}
             className="flex flex-col items-center"
           >
-            <div className="flex items-center gap-3 mb-3">
-              {Array.from({ length: exercise?.sets ?? 0 }, (_, i) => (
-                <div
-                  key={i}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i < currentSet
-                      ? 'w-8 bg-primary shadow-[0_0_8px_rgba(232,98,42,0.4)]'
-                      : i === currentSet - 1
-                        ? 'w-8 bg-primary'
-                        : 'w-5 bg-surface-elevated'
-                  }`}
-                />
-              ))}
-            </div>
+            {(exercise?.sets ?? 0) > 1 && (
+              <div className="flex items-center gap-3 mb-5">
+                {Array.from({ length: exercise?.sets ?? 0 }, (_, i) => {
+                  const isDone = i < currentSet - 1
+                  const isCurrent = i === currentSet - 1
+                  return (
+                    <motion.div
+                      key={i}
+                      className={`w-7 h-7 border-[2.5px] flex items-center justify-center ${
+                        isDone
+                          ? 'bg-primary'
+                          : isCurrent
+                            ? 'bg-accent'
+                            : 'bg-surface-elevated'
+                      }`}
+                      style={{
+                        borderColor: INK,
+                        borderRadius: REP_BLOB_RADII[i % REP_BLOB_RADII.length],
+                        boxShadow: isDone || isCurrent ? SHADOW.xs : 'none',
+                      }}
+                      animate={
+                        isCurrent ? { scale: [1, 1.18, 1] } : { scale: 1 }
+                      }
+                      transition={
+                        isCurrent
+                          ? { duration: 1.5, repeat: Infinity, ease: 'easeInOut' }
+                          : { duration: 0.25 }
+                      }
+                    >
+                      {isDone && (
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#FFF8E8"
+                          strokeWidth="4"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      )}
+                    </motion.div>
+                  )
+                })}
+              </div>
+            )}
 
-            <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-6">
+            <p className="font-semibold uppercase tracking-widest text-text-muted mb-14">
               {exercise?.name}
             </p>
 
-            <div className="relative flex items-center justify-center mb-2">
+            <div className="relative flex items-center justify-center mb-4">
               <div
                 className="absolute rounded-full blur-3xl opacity-40"
                 style={{
@@ -486,13 +520,13 @@ export default function WorkoutRunner({
               </div>
             </div>
 
-            <p className="text-xs uppercase tracking-widest text-text-muted">
+            <p className="font-semibold uppercase tracking-widest text-text-muted text-center my-4">
               Serie {currentSet} di {exercise?.sets ?? 0}
             </p>
 
             {exercise?.weight && exercise.weight !== 'corpo libero' && (
               <span
-                className="text-xs px-3 py-1 bg-violet-soft text-violet font-semibold mt-4 border-[1.5px] border-[#3A1248]"
+                className="text-xs px-3 py-1 bg-violet-soft text-violet font-semibold border-[1.5px] border-[#3A1248]"
                 style={{ borderRadius: RADIUS.pill, boxShadow: SHADOW.xxs }}
               >
                 {exercise.weight}
@@ -600,60 +634,68 @@ export default function WorkoutRunner({
           exit={{ opacity: 0 }}
           className="flex flex-col items-center"
         >
-          {exercise?.type === 'repeaters' && (
-            <div className="flex items-center gap-3 mb-5">
-              {Array.from({ length: exercise.repsPerSet }, (_, i) => {
-                const activePhase = phase === 'paused' ? wasPausedPhase : phase
-                const isDone =
-                  i < currentRep - 1 ||
-                  (i === currentRep - 1 && activePhase !== 'hanging')
-                const isCurrent =
-                  i === currentRep - 1 && activePhase === 'hanging'
-                return (
-                  <motion.div
-                    key={i}
-                    className={`w-7 h-7 border-[2.5px] flex items-center justify-center ${
-                      isDone
-                        ? 'bg-primary'
-                        : isCurrent
-                          ? 'bg-accent'
-                          : 'bg-surface-elevated'
-                    }`}
-                    style={{
-                      borderColor: INK,
-                      borderRadius: REP_BLOB_RADII[i % REP_BLOB_RADII.length],
-                      boxShadow: isDone || isCurrent ? SHADOW.xs : 'none',
-                    }}
-                    animate={
-                      isCurrent
-                        ? { scale: [1, 1.18, 1] }
-                        : { scale: 1 }
-                    }
-                    transition={
-                      isCurrent
-                        ? { duration: 1.5, repeat: Infinity, ease: 'easeInOut' }
-                        : { duration: 0.25 }
-                    }
-                  >
-                    {isDone && (
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#FFF8E8"
-                        strokeWidth="4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    )}
-                  </motion.div>
-                )
-              })}
-            </div>
-          )}
+          {exercise && (() => {
+            const isRepsProgress = exercise.type === 'repeaters'
+            const count = isRepsProgress ? exercise.repsPerSet : exercise.sets
+            if (count <= 1) return null
+            const activePhase = phase === 'paused' ? wasPausedPhase : phase
+            return (
+              <div className="flex items-center gap-3 mb-5">
+                {Array.from({ length: count }, (_, i) => {
+                  const isDone = isRepsProgress
+                    ? i < currentRep - 1 ||
+                      (i === currentRep - 1 && activePhase !== 'hanging')
+                    : i < currentSet - 1
+                  const isCurrent = isRepsProgress
+                    ? i === currentRep - 1 && activePhase === 'hanging'
+                    : i === currentSet - 1 &&
+                      (activePhase === 'hanging' || activePhase === 'countdown')
+                  return (
+                    <motion.div
+                      key={i}
+                      className={`w-7 h-7 border-[2.5px] flex items-center justify-center ${
+                        isDone
+                          ? 'bg-primary'
+                          : isCurrent
+                            ? 'bg-accent'
+                            : 'bg-surface-elevated'
+                      }`}
+                      style={{
+                        borderColor: INK,
+                        borderRadius: REP_BLOB_RADII[i % REP_BLOB_RADII.length],
+                        boxShadow: isDone || isCurrent ? SHADOW.xs : 'none',
+                      }}
+                      animate={
+                        isCurrent
+                          ? { scale: [1, 1.18, 1] }
+                          : { scale: 1 }
+                      }
+                      transition={
+                        isCurrent
+                          ? { duration: 1.5, repeat: Infinity, ease: 'easeInOut' }
+                          : { duration: 0.25 }
+                      }
+                    >
+                      {isDone && (
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#FFF8E8"
+                          strokeWidth="4"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      )}
+                    </motion.div>
+                  )
+                })}
+              </div>
+            )
+          })()}
 
           <p className="font-semibold uppercase tracking-widest text-text-muted mb-14">
             {exercise?.name}
@@ -668,7 +710,7 @@ export default function WorkoutRunner({
             />
           </div>
 
-          <p className="text font-semibold uppercase tracking-widest text-text-muted text-center my-4">
+          <p className="font-semibold uppercase tracking-widest text-text-muted text-center my-4">
             {phase === 'countdown' ||
             (phase === 'paused' && wasPausedPhase === 'countdown')
               ? 'Posizionati!'
