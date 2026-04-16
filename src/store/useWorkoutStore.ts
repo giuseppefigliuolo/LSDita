@@ -1,15 +1,20 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { CompletedWorkout, WorkoutNote } from '../types'
+import type { CompletedWorkout, ExerciseNote, WorkoutNote } from '../types'
 
 interface WorkoutStore {
   programStartDate: string | null
   completedWorkouts: CompletedWorkout[]
   notes: WorkoutNote[]
+  exerciseNotes: ExerciseNote[]
 
   setProgramStartDate: (date: string) => void
   markComplete: (workout: CompletedWorkout) => void
   addNote: (note: WorkoutNote) => void
+  addExerciseNote: (note: ExerciseNote) => void
+  updateExerciseNote: (id: string, text: string) => void
+  deleteExerciseNote: (id: string) => void
+  getExerciseNotes: (exerciseId: string) => ExerciseNote[]
   isWorkoutCompleted: (
     weekNumber: number,
     dayOfWeek: string,
@@ -28,6 +33,7 @@ export const useWorkoutStore = create<WorkoutStore>()(
       programStartDate: null,
       completedWorkouts: [],
       notes: [],
+      exerciseNotes: [],
 
       setProgramStartDate: (date) => set({ programStartDate: date }),
 
@@ -40,6 +46,28 @@ export const useWorkoutStore = create<WorkoutStore>()(
         set((state) => ({
           notes: [...state.notes, note]
         })),
+
+      addExerciseNote: (note) =>
+        set((state) => ({
+          exerciseNotes: [...state.exerciseNotes, note]
+        })),
+
+      updateExerciseNote: (id, text) =>
+        set((state) => ({
+          exerciseNotes: state.exerciseNotes.map((n) =>
+            n.id === id ? { ...n, text } : n
+          )
+        })),
+
+      deleteExerciseNote: (id) =>
+        set((state) => ({
+          exerciseNotes: state.exerciseNotes.filter((n) => n.id !== id)
+        })),
+
+      getExerciseNotes: (exerciseId) =>
+        get()
+          .exerciseNotes.filter((n) => n.exerciseId === exerciseId)
+          .sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
 
       isWorkoutCompleted: (weekNumber, dayOfWeek, date) => {
         return get().completedWorkouts.some(
@@ -76,9 +104,9 @@ export const useWorkoutStore = create<WorkoutStore>()(
       },
 
       exportData: () => {
-        const { programStartDate, completedWorkouts, notes } = get()
+        const { programStartDate, completedWorkouts, notes, exerciseNotes } = get()
         return JSON.stringify(
-          { programStartDate, completedWorkouts, notes },
+          { programStartDate, completedWorkouts, notes, exerciseNotes },
           null,
           2
         )
@@ -90,7 +118,8 @@ export const useWorkoutStore = create<WorkoutStore>()(
           set({
             programStartDate: data.programStartDate ?? null,
             completedWorkouts: data.completedWorkouts ?? [],
-            notes: data.notes ?? []
+            notes: data.notes ?? [],
+            exerciseNotes: data.exerciseNotes ?? []
           })
         } catch {
           console.error('Invalid import data')
@@ -101,7 +130,8 @@ export const useWorkoutStore = create<WorkoutStore>()(
         set({
           programStartDate: null,
           completedWorkouts: [],
-          notes: []
+          notes: [],
+          exerciseNotes: []
         })
     }),
     {

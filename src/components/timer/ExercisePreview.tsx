@@ -13,6 +13,8 @@ import Button from '../ui/Button'
 import ExerciseDescription from '../ui/ExerciseDescription'
 import Badge from '../ui/Badge'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
+import ExerciseNotesModal from './ExerciseNotesModal'
+import { useWorkoutStore } from '../../store/useWorkoutStore'
 import { INK, SURFACE, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
 
 const DISMISS_THRESHOLD = 100
@@ -40,7 +42,12 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
   const [time, setTime] = useState(exercise.hangTime)
   const [editing, setEditing] = useState<'sets' | 'reps' | 'time' | null>(null)
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
+  const [showNotes, setShowNotes] = useState(false)
   const [autoCancelled, setAutoCancelled] = useState(false)
+
+  const notesCount = useWorkoutStore(
+    (state) => state.exerciseNotes.filter((n) => n.exerciseId === exercise.id).length
+  )
 
   const autoActive = !!autoStartSeconds && autoStartSeconds > 0 && !autoCancelled
 
@@ -121,10 +128,15 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
     setShowSkipConfirm(true)
   }
 
+  const openNotes = () => {
+    cancelAuto()
+    setShowNotes(true)
+  }
+
   return (
     <>
       <motion.div
-        className="flex flex-col items-center text-center px-6 py-5 mx-4 border-[3px] border-[#3A1248]"
+        className="relative flex flex-col items-center text-center px-6 py-5 mx-4 border-[3px] border-[#3A1248]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
@@ -152,6 +164,38 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
             boxShadow: SHADOW.xxs,
           }}
         />
+
+        <button
+          type="button"
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={openNotes}
+          aria-label={notesCount > 0 ? `Visualizza ${notesCount} note` : 'Aggiungi nota'}
+          className="absolute top-3 right-3 w-10 h-10 flex items-center justify-center border-[2.5px] border-[#3A1248] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+          style={{
+            backgroundColor: notesCount > 0 ? '#E8B820' : SURFACE,
+            borderRadius: RADIUS.blob,
+            boxShadow: SHADOW.sm,
+          }}
+        >
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke={INK} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 3h8l4 4v10H4z" />
+            <path d="M12 3v4h4" />
+            <path d="M7 11h6M7 14h4" />
+          </svg>
+          {notesCount > 0 && (
+            <span
+              className="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 flex items-center justify-center text-[10px] font-bold border-[2px] border-[#3A1248]"
+              style={{
+                backgroundColor: '#D4541A',
+                color: '#FFFBF0',
+                borderRadius: RADIUS.pill,
+                boxShadow: SHADOW.xxs,
+              }}
+            >
+              {notesCount}
+            </span>
+          )}
+        </button>
 
         <Badge variant="accent" className="mb-4">
           Esercizio {exerciseIndex + 1} di {totalExercises}
@@ -271,6 +315,13 @@ export default function ExercisePreview({ exercise, exerciseIndex, totalExercise
           )}
         </div>
       </motion.div>
+
+      <ExerciseNotesModal
+        open={showNotes}
+        exerciseId={exercise.id}
+        exerciseName={exercise.name}
+        onClose={() => setShowNotes(false)}
+      />
 
       <AnimatePresence>
         {showSkipConfirm && (

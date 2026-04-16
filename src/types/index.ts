@@ -71,6 +71,14 @@ export interface WorkoutNote {
   feeling?: 1 | 2 | 3 | 4 | 5
 }
 
+export interface ExerciseNote {
+  id: string
+  exerciseId: string
+  date: string
+  createdAt: string
+  text: string
+}
+
 export interface TimerState {
   phase: WorkoutPhase
   currentExerciseIndex: number
