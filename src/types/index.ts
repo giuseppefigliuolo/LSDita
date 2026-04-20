@@ -89,7 +89,7 @@ export interface TimerState {
   isPaused: boolean
 }
 
-export type ProgramId = 'home' | 'travel' | 'custom'
+export type ProgramId = 'home' | 'travel' | 'girl_workout' | 'custom'
 
 export interface AppSettings {
   soundEnabled: boolean
