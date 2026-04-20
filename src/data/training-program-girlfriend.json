@@ -50,7 +50,7 @@
             {
               "id": "gw-w1-mon-sl-rdl",
               "name": "Single-Leg RDL (Stacco Rumeno Monopodalico)",
-              "description": "In piedi su una gamba, zaino tenuto con entrambe le mani davanti (o in una mano sola, quella OPPOSTA alla gamba d'appoggio). Cerniera d'anca: spingi il BACINO ALL'INDIETRO mantenendo la schiena neutra, la gamba libera si solleva dietro in linea col busto (disegni una 'T'). Scendi finché senti lo stretch sull'ischio-crurale (parte posteriore della coscia), poi risali contraendo il gluteo. Ginocchio d'appoggio leggermente piegato. Se perdi equilibrio, fissa un punto davanti a te. Ref: https://www.youtube.com/watch?v=hRJZUpHe3cY",
+              "description": "In piedi su una gamba, zaino tenuto con entrambe le mani davanti (o in una mano sola, quella OPPOSTA alla gamba d'appoggio). Cerniera d'anca: spingi il BACINO ALL'INDIETRO mantenendo la schiena neutra, la gamba libera si solleva dietro in linea col busto (disegni una 'T'). Scendi finché senti lo stretch sull'ischio-crurale (parte posteriore della coscia), poi risali contraendo il gluteo. Ginocchio d'appoggio leggermente piegato. Se perdi equilibrio, fissa un punto davanti a te. Ref: https://www.youtube.com/shorts/MmxwuvwwvBM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -80,7 +80,7 @@
             {
               "id": "gw-w1-mon-cossack",
               "name": "Cossack Squat",
-              "description": "Piedi MOLTO larghi (circa 2 volte la larghezza spalle), punte leggermente aperte. Scendi lateralmente su UNA gamba piegandola, mentre l'altra resta TESA con la punta del piede verso l'alto. Il tallone della gamba piegata resta piantato a terra. Risali e cambia lato. Lavora mobilità delle anche + forza laterale. Ref: https://www.youtube.com/watch?v=aX-McJ-VsNU",
+              "description": "Piedi MOLTO larghi (circa 2 volte la larghezza spalle), punte leggermente aperte. Scendi lateralmente su UNA gamba piegandola, mentre l'altra resta TESA con la punta del piede verso l'alto. Il tallone della gamba piegata resta piantato a terra. Risali e cambia lato. Lavora mobilità delle anche + forza laterale. Ref: https://www.youtube.com/watch?v=iPZNB5GsOnM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -160,7 +160,7 @@
             {
               "id": "gw-w1-tue-ring-row",
               "name": "Ring Row (Inverted Row agli Anelli)",
-              "description": "Afferra gli anelli, cammina sotto con i piedi avanti, corpo in linea retta e inclinato (più orizzontale = più difficile). Braccia tese, poi TIRA il petto verso gli anelli portando i GOMITI INDIETRO (come remata). Scapole che si uniscono in cima. Discesa controllata. È la 'trazione orizzontale' che bilancia la spalla e rinforza il dorso medio — cruciale per il climbing. Ref: https://www.youtube.com/watch?v=KOaCAmYbgV0",
+              "description": "Afferra gli anelli, cammina sotto con i piedi avanti, corpo in linea retta e inclinato (più orizzontale = più difficile). Braccia tese, poi TIRA il petto verso gli anelli portando i GOMITI INDIETRO (come remata). Scapole che si uniscono in cima. Discesa controllata. È la 'trazione orizzontale' che bilancia la spalla e rinforza il dorso medio — cruciale per il climbing. Ref: https://www.youtube.com/shorts/Z1LPTxY2c4E",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -174,7 +174,7 @@
             {
               "id": "gw-w1-tue-tuck-fl",
               "name": "Tuck Front Lever Hold",
-              "description": "Appesa alla sbarra, tira le ginocchia al petto e porta il bacino verso l'alto finché la schiena è PARALLELA al pavimento e le ginocchia guardano il soffitto. Braccia TESE, scapole depresse (spalle basse, non al collo). Primo passo verso il front lever completo — costruisce tensione corporea enorme. Ref: https://www.youtube.com/watch?v=KDEEMDZwNyM",
+              "description": "Appesa alla sbarra, tira le ginocchia al petto e porta il bacino verso l'alto finché la schiena è PARALLELA al pavimento e le ginocchia guardano il soffitto. Braccia TESE, scapole depresse (spalle basse, non al collo). Primo passo verso il front lever completo — costruisce tensione corporea enorme. Ref: https://www.youtube.com/shorts/FC9Ch8clkZc",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "default",
@@ -225,7 +225,7 @@
             {
               "id": "gw-w1-thu-jump-squat",
               "name": "Jump Squat",
-              "description": "Piedi larghezza spalle. Scendi in squat (cosce parallele al pavimento), poi SPINGI esplosivamente verso l'alto saltando più in alto possibile. Braccia che accompagnano il salto. Atterra MORBIDA (talloni e poi punte) piegando subito le ginocchia per assorbire l'impatto e scendere nel prossimo squat. Atterraggio controllato = zero infortuni. Ref: https://www.youtube.com/watch?v=A-cFYWvaHr0",
+              "description": "Piedi larghezza spalle. Scendi in squat (cosce parallele al pavimento), poi SPINGI esplosivamente verso l'alto saltando più in alto possibile. Braccia che accompagnano il salto. Atterra MORBIDA (talloni e poi punte) piegando subito le ginocchia per assorbire l'impatto e scendere nel prossimo squat. Atterraggio controllato = zero infortuni. Ref: https://www.youtube.com/shorts/z2O4qhlLLtw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -239,7 +239,7 @@
             {
               "id": "gw-w1-thu-skater",
               "name": "Skater Jump",
-              "description": "Salto laterale da una gamba all'altra (come un pattinatore). Parti su gamba destra, salta LATERALMENTE a sinistra atterrando sulla gamba sinistra in lieve squat. L'altra gamba passa dietro incrociata. Subito dopo salta a destra. Potenza laterale + coordinazione + stabilità del ginocchio. Ref: https://www.youtube.com/watch?v=LKLltnPmxLE",
+              "description": "Salto laterale da una gamba all'altra (come un pattinatore). Parti su gamba destra, salta LATERALMENTE a sinistra atterrando sulla gamba sinistra in lieve squat. L'altra gamba passa dietro incrociata. Subito dopo salta a destra. Potenza laterale + coordinazione + stabilità del ginocchio. Ref: https://www.youtube.com/shorts/el_HLUDDYJs",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -253,7 +253,7 @@
             {
               "id": "gw-w1-thu-pushup",
               "name": "Push-up Standard",
-              "description": "Mani sotto le spalle (o leggermente più larghe), corpo in LINEA RETTA dalla testa ai talloni (plank). Glutei e addome contratti (non far cedere il bacino!). Scendi finché sfiori il pavimento col petto, GOMITI a circa 45° dal busto (NON aperti a 90°). Poi spingi in alto. Se troppo duro, fai sulle GINOCCHIA mantenendo identica la tecnica. Ref: https://www.youtube.com/watch?v=IODxDxX7oi4",
+              "description": "Mani sotto le spalle (o leggermente più larghe), corpo in LINEA RETTA dalla testa ai talloni (plank). Glutei e addome contratti (non far cedere il bacino!). Scendi finché sfiori il pavimento col petto, GOMITI a circa 45° dal busto (NON aperti a 90°). Poi spingi in alto. Se troppo duro, fai sulle GINOCCHIA mantenendo identica la tecnica. Ref: https://www.youtube.com/shorts/IRjgWtzNvAw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -267,7 +267,7 @@
             {
               "id": "gw-w1-thu-ring-dip",
               "name": "Ring Dip (Anelli Bassi)",
-              "description": "Afferra gli anelli all'altezza del petto, mani rivolte verso i fianchi. Salti/ti issi in posizione di SUPPORTO: braccia TESE, anelli vicino ai fianchi, corpo leggermente inclinato in avanti, gambe piegate (se gli anelli sono bassi, ginocchia piegate o gambe sotto). Scendi piegando i gomiti (che restano VICINI al corpo), scendi finché le spalle arrivano all'altezza dei gomiti, poi spingi in alto. Se troppo duro: tieni i piedi a terra come 'ring push-up inclinato'. Ref: https://www.youtube.com/watch?v=iOSD0Gd8wYQ",
+              "description": "Afferra gli anelli all'altezza del petto, mani rivolte verso i fianchi. Salti/ti issi in posizione di SUPPORTO: braccia TESE, anelli vicino ai fianchi, corpo leggermente inclinato in avanti, gambe piegate (se gli anelli sono bassi, ginocchia piegate o gambe sotto). Scendi piegando i gomiti (che restano VICINI al corpo), scendi finché le spalle arrivano all'altezza dei gomiti, poi spingi in alto. Se troppo duro: tieni i piedi a terra come 'ring push-up inclinato'. Ref: https://www.youtube.com/shorts/FfTqXe6_-2k",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -347,7 +347,7 @@
             {
               "id": "gw-w1-fri-hip-cars",
               "name": "Hip CARs",
-              "description": "Controlled Articular Rotations dell'anca. In piedi tenendoti a un supporto, solleva un ginocchio davanti, aprilo di lato, ruotalo indietro e riportalo giù in un cerchio AMPIO. Attivo, lento, controllato. Mappa lo spazio articolare dell'anca. Ref: https://www.youtube.com/watch?v=lNcqmcJ97ZA",
+              "description": "Controlled Articular Rotations dell'anca. In piedi tenendoti a un supporto, solleva un ginocchio davanti, aprilo di lato, ruotalo indietro e riportalo giù in un cerchio AMPIO. Attivo, lento, controllato. Mappa lo spazio articolare dell'anca. Ref: https://www.youtube.com/shorts/VFLjTG2OOiU",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -361,7 +361,7 @@
             {
               "id": "gw-w1-fri-worlds-greatest",
               "name": "World's Greatest Stretch",
-              "description": "Da posizione di push-up, porta il piede destro a lato della mano destra in affondo profondo. Appoggia il gomito destro al pavimento all'INTERNO del piede destro (stretch degli adduttori + anca). Poi porta la mano destra al soffitto ruotando il busto. Torna giù, cambia gamba. Apre anca + torace in un solo movimento — potente. Ref: https://www.youtube.com/watch?v=f0VZRQXc16s",
+              "description": "Da posizione di push-up, porta il piede destro a lato della mano destra in affondo profondo. Appoggia il gomito destro al pavimento all'INTERNO del piede destro (stretch degli adduttori + anca). Poi porta la mano destra al soffitto ruotando il busto. Torna giù, cambia gamba. Apre anca + torace in un solo movimento — potente. Ref: https://www.youtube.com/watch?v=-CiWQ2IvY34",
               "equipment": "yoga_mat",
               "type": "reps",
               "illustration": "default",
@@ -375,7 +375,7 @@
             {
               "id": "gw-w1-fri-deep-squat",
               "name": "Deep Squat Hold",
-              "description": "Asian squat: piedi larghezza spalle, scendi in squat PROFONDO con TALLONI A TERRA, mantieni la posizione. Se i talloni si alzano, metti un libro sotto. Apre anche, caviglie e lombare. La posizione più 'climbing' che esista. Oscilla lateralmente per rilassarti. Ref: https://www.youtube.com/watch?v=LsDjK3mZ_3c",
+              "description": "Asian squat: piedi larghezza spalle, scendi in squat PROFONDO con TALLONI A TERRA, mantieni la posizione. Se i talloni si alzano, metti un libro sotto. Apre anche, caviglie e lombare. La posizione più 'climbing' che esista. Oscilla lateralmente per rilassarti. Ref: https://www.youtube.com/watch?v=IHApHfNA2Ag",
               "equipment": "bodyweight",
               "type": "timed_hold",
               "illustration": "default",
@@ -389,7 +389,7 @@
             {
               "id": "gw-w1-fri-90-90",
               "name": "90/90 Hip Stretch",
-              "description": "Seduta a terra: gamba davanti piegata a 90° con stinco PERPENDICOLARE al corpo, gamba dietro piegata a 90° all'indietro. Siediti dritta e inclina il busto IN AVANTI sopra lo stinco davanti. Apre rotazione interna ed esterna dell'anca — chiave per drop knee e lay back in arrampicata. Ref: https://www.youtube.com/watch?v=paWMPirAN60",
+              "description": "Seduta a terra: gamba davanti piegata a 90° con stinco PERPENDICOLARE al corpo, gamba dietro piegata a 90° all'indietro. Siediti dritta e inclina il busto IN AVANTI sopra lo stinco davanti. Apre rotazione interna ed esterna dell'anca — chiave per drop knee e lay back in arrampicata. Ref: https://www.youtube.com/shorts/PuxmfP2Rr74",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "default",
@@ -403,7 +403,7 @@
             {
               "id": "gw-w1-fri-pigeon",
               "name": "Pigeon Pose",
-              "description": "Da quadrupedia porta un ginocchio avanti verso la mano dello stesso lato, distendi la gamba dietro in linea, scendi col busto verso terra. Allungamento profondo di gluteo e piriforme. Respira profondamente e rilassati nella posizione. Ref: https://www.youtube.com/watch?v=GvEpZ7UIrVw",
+              "description": "Da quadrupedia porta un ginocchio avanti verso la mano dello stesso lato, distendi la gamba dietro in linea, scendi col busto verso terra. Allungamento profondo di gluteo e piriforme. Respira profondamente e rilassati nella posizione. Ref: https://www.youtube.com/shorts/ApYf-bUZ3kE",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "pigeon-pose",
@@ -417,7 +417,7 @@
             {
               "id": "gw-w1-fri-frog",
               "name": "Frog Stretch",
-              "description": "In ginocchio, allarga le ginocchia il PIÙ POSSIBILE con piedi girati verso l'esterno (90°). Scendi sugli avambracci e spingi dolcemente i FIANCHI INDIETRO. Allungamento profondo degli adduttori. Non forzare, entra gradualmente. Ref: https://www.youtube.com/watch?v=Og8Gm68gRJg",
+              "description": "In ginocchio, allarga le ginocchia il PIÙ POSSIBILE con piedi girati verso l'esterno (90°). Scendi sugli avambracci e spingi dolcemente i FIANCHI INDIETRO. Allungamento profondo degli adduttori. Non forzare, entra gradualmente. Ref: https://www.youtube.com/shorts/nqfIgokUL08",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -431,7 +431,7 @@
             {
               "id": "gw-w1-fri-butterfly",
               "name": "Butterfly Stretch",
-              "description": "Seduta, piante dei piedi unite, ginocchia aperte verso l'esterno (come farfalla). Premi delicatamente le ginocchia verso terra con i gomiti. Per più intensità inclina il busto in AVANTI dalle anche (schiena dritta, non curva). Ref: https://www.youtube.com/watch?v=NxTLMFh_ibk",
+              "description": "Seduta, piante dei piedi unite, ginocchia aperte verso l'esterno (come farfalla). Premi delicatamente le ginocchia verso terra con i gomiti. Per più intensità inclina il busto in AVANTI dalle anche (schiena dritta, non curva). Ref: https://www.youtube.com/shorts/Abbx4vLPTBo",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -445,7 +445,7 @@
             {
               "id": "gw-w1-fri-pancake",
               "name": "Pancake Stretch",
-              "description": "Seduta con le gambe DIVARICATE il più possibile. Inclina il busto IN AVANTI mantenendo la SCHIENA DRITTA (meglio meno profondo ma dritta). Piedi puntati verso l'alto. Fondamentale per high heel hook e posizioni aperte in parete. Ref: https://www.youtube.com/watch?v=OPl_2ztmRiw",
+              "description": "Seduta con le gambe DIVARICATE il più possibile. Inclina il busto IN AVANTI mantenendo la SCHIENA DRITTA (meglio meno profondo ma dritta). Piedi puntati verso l'alto. Fondamentale per high heel hook e posizioni aperte in parete. Ref: https://www.youtube.com/shorts/NFd1TO8GApg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "hamstring-stretch",
@@ -459,7 +459,7 @@
             {
               "id": "gw-w1-fri-thoracic",
               "name": "Rotazione Toracica",
-              "description": "Sdraiata su un fianco, gambe piegate sovrapposte. Apri il braccio superiore verso il lato OPPOSTO ruotando il busto, cercando di portare la scapola a terra. Migliora la rotazione toracica — chiave per movimenti laterali e respirazione sotto sforzo. Ref: https://www.youtube.com/watch?v=UDTbL8eKr1M",
+              "description": "Sdraiata su un fianco, gambe piegate sovrapposte. Apri il braccio superiore verso il lato OPPOSTO ruotando il busto, cercando di portare la scapola a terra. Migliora la rotazione toracica — chiave per movimenti laterali e respirazione sotto sforzo. Ref: https://www.youtube.com/shorts/uGeALnP_WCI",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "thoracic-rotation",
@@ -473,7 +473,7 @@
             {
               "id": "gw-w1-fri-forearm",
               "name": "Stretching Avambracci",
-              "description": "In ginocchio, PALMI A TERRA con dita verso le ginocchia — oscilla dolcemente per allungare i FLESSORI. Poi inverti: DORSO DELLE MANI a terra, dita verso le ginocchia per gli ESTENSORI. Fondamentale dopo sessioni di trazione e prima di una giornata in falesia. Ref: https://www.youtube.com/watch?v=9Tus-KY9AYw",
+              "description": "In ginocchio, PALMI A TERRA con dita verso le ginocchia — oscilla dolcemente per allungare i FLESSORI. Poi inverti: DORSO DELLE MANI a terra, dita verso le ginocchia per gli ESTENSORI. Fondamentale dopo sessioni di trazione e prima di una giornata in falesia. Ref: https://www.youtube.com/shorts/QiMiia4F7Xg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "forearm-stretch",
@@ -534,7 +534,7 @@
             {
               "id": "gw-w2-mon-sl-rdl",
               "name": "Single-Leg RDL",
-              "description": "In piedi su una gamba, zaino tenuto con entrambe le mani davanti. Cerniera d'anca: spingi il bacino all'indietro, gamba libera che si solleva dietro in linea ('T' col corpo). Ginocchio d'appoggio leggermente piegato. Ref: https://www.youtube.com/watch?v=hRJZUpHe3cY",
+              "description": "In piedi su una gamba, zaino tenuto con entrambe le mani davanti. Cerniera d'anca: spingi il bacino all'indietro, gamba libera che si solleva dietro in linea ('T' col corpo). Ginocchio d'appoggio leggermente piegato. Ref: https://www.youtube.com/shorts/MmxwuvwwvBM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -564,7 +564,7 @@
             {
               "id": "gw-w2-mon-cossack",
               "name": "Cossack Squat",
-              "description": "Piedi molto larghi, punte leggermente aperte. Scendi lateralmente su una gamba, l'altra TESA con punta su. Tallone della gamba piegata piantato. Risali e cambia lato. Ref: https://www.youtube.com/watch?v=aX-McJ-VsNU",
+              "description": "Piedi molto larghi, punte leggermente aperte. Scendi lateralmente su una gamba, l'altra TESA con punta su. Tallone della gamba piegata piantato. Risali e cambia lato. Ref: https://www.youtube.com/watch?v=iPZNB5GsOnM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -644,7 +644,7 @@
             {
               "id": "gw-w2-tue-ring-row",
               "name": "Ring Row",
-              "description": "Afferra anelli, corpo inclinato in linea retta. Tira il petto verso gli anelli portando i gomiti INDIETRO. Scapole unite in cima. Più orizzontale = più difficile. Ref: https://www.youtube.com/watch?v=KOaCAmYbgV0",
+              "description": "Afferra anelli, corpo inclinato in linea retta. Tira il petto verso gli anelli portando i gomiti INDIETRO. Scapole unite in cima. Più orizzontale = più difficile. Ref: https://www.youtube.com/shorts/Z1LPTxY2c4E",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -658,7 +658,7 @@
             {
               "id": "gw-w2-tue-tuck-fl",
               "name": "Tuck Front Lever Hold",
-              "description": "Appesa, tira ginocchia al petto e bacino in alto finché schiena parallela al pavimento. Braccia tese, scapole depresse. Ref: https://www.youtube.com/watch?v=KDEEMDZwNyM",
+              "description": "Appesa, tira ginocchia al petto e bacino in alto finché schiena parallela al pavimento. Braccia tese, scapole depresse. Ref: https://www.youtube.com/shorts/FC9Ch8clkZc",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "default",
@@ -724,7 +724,7 @@
             {
               "id": "gw-w2-thu-jump-squat",
               "name": "Jump Squat",
-              "description": "Squat esplosivo con salto verso l'alto. Atterraggio MORBIDO (talloni-punte), ginocchia che assorbono. Ref: https://www.youtube.com/watch?v=A-cFYWvaHr0",
+              "description": "Squat esplosivo con salto verso l'alto. Atterraggio MORBIDO (talloni-punte), ginocchia che assorbono. Ref: https://www.youtube.com/shorts/z2O4qhlLLtw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -752,7 +752,7 @@
             {
               "id": "gw-w2-thu-skater",
               "name": "Skater Jump",
-              "description": "Salto laterale da gamba a gamba come un pattinatore. Atterra stabile su una gamba in lieve squat. Ref: https://www.youtube.com/watch?v=LKLltnPmxLE",
+              "description": "Salto laterale da gamba a gamba come un pattinatore. Atterra stabile su una gamba in lieve squat. Ref: https://www.youtube.com/shorts/el_HLUDDYJs",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -766,7 +766,7 @@
             {
               "id": "gw-w2-thu-pushup",
               "name": "Push-up Standard",
-              "description": "Corpo in linea, gomiti 45°, scendi finché sfiori il pavimento, poi spingi in alto. Se troppo: sulle ginocchia. Ref: https://www.youtube.com/watch?v=IODxDxX7oi4",
+              "description": "Corpo in linea, gomiti 45°, scendi finché sfiori il pavimento, poi spingi in alto. Se troppo: sulle ginocchia. Ref: https://www.youtube.com/shorts/IRjgWtzNvAw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -780,7 +780,7 @@
             {
               "id": "gw-w2-thu-ring-dip",
               "name": "Ring Dip (Anelli Bassi)",
-              "description": "Supporto agli anelli con braccia tese, corpo stabile. Scendi piegando i gomiti (vicini al corpo) finché le spalle arrivano ai gomiti, poi spingi in alto. Se troppo: piedi a terra. Ref: https://www.youtube.com/watch?v=iOSD0Gd8wYQ",
+              "description": "Supporto agli anelli con braccia tese, corpo stabile. Scendi piegando i gomiti (vicini al corpo) finché le spalle arrivano ai gomiti, poi spingi in alto. Se troppo: piedi a terra. Ref: https://www.youtube.com/shorts/FfTqXe6_-2k",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -846,7 +846,7 @@
             {
               "id": "gw-w2-fri-hip-cars",
               "name": "Hip CARs",
-              "description": "Rotazioni controllate dell'anca in piedi, tenendoti a un supporto. Cerchio ampio col ginocchio. Ref: https://www.youtube.com/watch?v=lNcqmcJ97ZA",
+              "description": "Rotazioni controllate dell'anca in piedi, tenendoti a un supporto. Cerchio ampio col ginocchio. Ref: https://www.youtube.com/shorts/VFLjTG2OOiU",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -860,7 +860,7 @@
             {
               "id": "gw-w2-fri-worlds-greatest",
               "name": "World's Greatest Stretch",
-              "description": "Da push-up, piede a lato della mano in affondo profondo, gomito all'interno del piede, poi mano al soffitto con rotazione. Cambia lato. Ref: https://www.youtube.com/watch?v=f0VZRQXc16s",
+              "description": "Da push-up, piede a lato della mano in affondo profondo, gomito all'interno del piede, poi mano al soffitto con rotazione. Cambia lato. Ref: https://www.youtube.com/watch?v=-CiWQ2IvY34",
               "equipment": "yoga_mat",
               "type": "reps",
               "illustration": "default",
@@ -874,7 +874,7 @@
             {
               "id": "gw-w2-fri-deep-squat",
               "name": "Deep Squat Hold",
-              "description": "Asian squat con talloni a terra. Libro sotto i talloni se necessario. Ref: https://www.youtube.com/watch?v=LsDjK3mZ_3c",
+              "description": "Asian squat con talloni a terra. Libro sotto i talloni se necessario. Ref: https://www.youtube.com/watch?v=IHApHfNA2Ag",
               "equipment": "bodyweight",
               "type": "timed_hold",
               "illustration": "default",
@@ -888,7 +888,7 @@
             {
               "id": "gw-w2-fri-90-90",
               "name": "90/90 Hip Stretch",
-              "description": "Seduta con gambe a 90°/90°, inclina il busto sopra la gamba davanti. Apre rotazione interna ed esterna anca. Ref: https://www.youtube.com/watch?v=paWMPirAN60",
+              "description": "Seduta con gambe a 90°/90°, inclina il busto sopra la gamba davanti. Apre rotazione interna ed esterna anca. Ref: https://www.youtube.com/shorts/PuxmfP2Rr74",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "default",
@@ -902,7 +902,7 @@
             {
               "id": "gw-w2-fri-pigeon",
               "name": "Pigeon Pose",
-              "description": "Ginocchio avanti, gamba dietro distesa, busto verso terra. Stretch profondo di gluteo e piriforme. Ref: https://www.youtube.com/watch?v=GvEpZ7UIrVw",
+              "description": "Ginocchio avanti, gamba dietro distesa, busto verso terra. Stretch profondo di gluteo e piriforme. Ref: https://www.youtube.com/shorts/ApYf-bUZ3kE",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "pigeon-pose",
@@ -916,7 +916,7 @@
             {
               "id": "gw-w2-fri-frog",
               "name": "Frog Stretch",
-              "description": "Ginocchia larghe, piedi a 90°, fianchi indietro sugli avambracci. Stretch adduttori. Ref: https://www.youtube.com/watch?v=Og8Gm68gRJg",
+              "description": "Ginocchia larghe, piedi a 90°, fianchi indietro sugli avambracci. Stretch adduttori. Ref: https://www.youtube.com/shorts/nqfIgokUL08",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -930,7 +930,7 @@
             {
               "id": "gw-w2-fri-butterfly",
               "name": "Butterfly Stretch",
-              "description": "Piante unite, ginocchia aperte. Inclina il busto avanti con schiena dritta. Ref: https://www.youtube.com/watch?v=NxTLMFh_ibk",
+              "description": "Piante unite, ginocchia aperte. Inclina il busto avanti con schiena dritta. Ref: https://www.youtube.com/shorts/Abbx4vLPTBo",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -944,7 +944,7 @@
             {
               "id": "gw-w2-fri-pancake",
               "name": "Pancake Stretch",
-              "description": "Gambe divaricate, busto in avanti con schiena DRITTA. Piedi a martello. Ref: https://www.youtube.com/watch?v=OPl_2ztmRiw",
+              "description": "Gambe divaricate, busto in avanti con schiena DRITTA. Piedi a martello. Ref: https://www.youtube.com/shorts/NFd1TO8GApg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "hamstring-stretch",
@@ -958,7 +958,7 @@
             {
               "id": "gw-w2-fri-thoracic",
               "name": "Rotazione Toracica",
-              "description": "Sdraiata su un fianco, apri il braccio superiore verso l'opposto ruotando il busto. Ref: https://www.youtube.com/watch?v=UDTbL8eKr1M",
+              "description": "Sdraiata su un fianco, apri il braccio superiore verso l'opposto ruotando il busto. Ref: https://www.youtube.com/shorts/uGeALnP_WCI",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "thoracic-rotation",
@@ -972,7 +972,7 @@
             {
               "id": "gw-w2-fri-forearm",
               "name": "Stretching Avambracci",
-              "description": "In ginocchio, palmi e poi dorsi delle mani a terra con dita verso le ginocchia. Flessori + estensori. Ref: https://www.youtube.com/watch?v=9Tus-KY9AYw",
+              "description": "In ginocchio, palmi e poi dorsi delle mani a terra con dita verso le ginocchia. Flessori + estensori. Ref: https://www.youtube.com/shorts/QiMiia4F7Xg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "forearm-stretch",
@@ -1033,7 +1033,7 @@
             {
               "id": "gw-w3-mon-sl-rdl",
               "name": "Single-Leg RDL",
-              "description": "Cerniera d'anca monopodalica con zaino davanti. Schiena neutra, 'T' col corpo. Ref: https://www.youtube.com/watch?v=hRJZUpHe3cY",
+              "description": "Cerniera d'anca monopodalica con zaino davanti. Schiena neutra, 'T' col corpo. Ref: https://www.youtube.com/shorts/MmxwuvwwvBM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1144,7 +1144,7 @@
             {
               "id": "gw-w3-tue-ring-row",
               "name": "Ring Row (Tempo Lento)",
-              "description": "Tira verso gli anelli in 2s, pausa 1s in cima (scapole unite), discesa 2s. Il tempo sotto tensione costruisce forza. Ref: https://www.youtube.com/watch?v=KOaCAmYbgV0",
+              "description": "Tira verso gli anelli in 2s, pausa 1s in cima (scapole unite), discesa 2s. Il tempo sotto tensione costruisce forza. Ref: https://www.youtube.com/shorts/Z1LPTxY2c4E",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1158,7 +1158,7 @@
             {
               "id": "gw-w3-tue-tuck-fl",
               "name": "Tuck Front Lever Hold",
-              "description": "Schiena parallela al pavimento, braccia tese. Ref: https://www.youtube.com/watch?v=KDEEMDZwNyM",
+              "description": "Schiena parallela al pavimento, braccia tese. Ref: https://www.youtube.com/shorts/FC9Ch8clkZc",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "default",
@@ -1209,7 +1209,7 @@
             {
               "id": "gw-w3-thu-jump-squat",
               "name": "Jump Squat",
-              "description": "Squat esplosivo con atterraggio morbido. Ref: https://www.youtube.com/watch?v=A-cFYWvaHr0",
+              "description": "Squat esplosivo con atterraggio morbido. Ref: https://www.youtube.com/shorts/z2O4qhlLLtw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1237,7 +1237,7 @@
             {
               "id": "gw-w3-thu-skater",
               "name": "Skater Jump",
-              "description": "Salti laterali da pattinatrice, atterraggio su una gamba. Ref: https://www.youtube.com/watch?v=LKLltnPmxLE",
+              "description": "Salti laterali da pattinatrice, atterraggio su una gamba. Ref: https://www.youtube.com/shorts/el_HLUDDYJs",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1251,7 +1251,7 @@
             {
               "id": "gw-w3-thu-pushup",
               "name": "Push-up Standard",
-              "description": "Forma pulita, gomiti 45°. Ref: https://www.youtube.com/watch?v=IODxDxX7oi4",
+              "description": "Forma pulita, gomiti 45°. Ref: https://www.youtube.com/shorts/IRjgWtzNvAw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1265,7 +1265,7 @@
             {
               "id": "gw-w3-thu-ring-dip",
               "name": "Ring Dip",
-              "description": "Supporto agli anelli, scendi piegando i gomiti vicino al corpo. Ref: https://www.youtube.com/watch?v=iOSD0Gd8wYQ",
+              "description": "Supporto agli anelli, scendi piegando i gomiti vicino al corpo. Ref: https://www.youtube.com/shorts/FfTqXe6_-2k",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1330,7 +1330,7 @@
             {
               "id": "gw-w3-fri-hip-cars",
               "name": "Hip CARs",
-              "description": "Rotazioni controllate anca. Ref: https://www.youtube.com/watch?v=lNcqmcJ97ZA",
+              "description": "Rotazioni controllate anca. Ref: https://www.youtube.com/shorts/VFLjTG2OOiU",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1344,7 +1344,7 @@
             {
               "id": "gw-w3-fri-worlds-greatest",
               "name": "World's Greatest Stretch",
-              "description": "Affondo profondo, gomito dentro, rotazione toracica. Ref: https://www.youtube.com/watch?v=f0VZRQXc16s",
+              "description": "Affondo profondo, gomito dentro, rotazione toracica. Ref: https://www.youtube.com/watch?v=-CiWQ2IvY34",
               "equipment": "yoga_mat",
               "type": "reps",
               "illustration": "default",
@@ -1358,7 +1358,7 @@
             {
               "id": "gw-w3-fri-deep-squat",
               "name": "Deep Squat Hold",
-              "description": "Asian squat, talloni a terra. Ref: https://www.youtube.com/watch?v=LsDjK3mZ_3c",
+              "description": "Asian squat, talloni a terra. Ref: https://www.youtube.com/watch?v=IHApHfNA2Ag",
               "equipment": "bodyweight",
               "type": "timed_hold",
               "illustration": "default",
@@ -1372,7 +1372,7 @@
             {
               "id": "gw-w3-fri-90-90",
               "name": "90/90 Hip Stretch",
-              "description": "Gambe a 90°/90°, busto in avanti. Ref: https://www.youtube.com/watch?v=paWMPirAN60",
+              "description": "Gambe a 90°/90°, busto in avanti. Ref: https://www.youtube.com/shorts/PuxmfP2Rr74",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "default",
@@ -1386,7 +1386,7 @@
             {
               "id": "gw-w3-fri-pigeon",
               "name": "Pigeon Pose",
-              "description": "Ginocchio avanti, gamba dietro dritta, busto giù. Ref: https://www.youtube.com/watch?v=GvEpZ7UIrVw",
+              "description": "Ginocchio avanti, gamba dietro dritta, busto giù. Ref: https://www.youtube.com/shorts/ApYf-bUZ3kE",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "pigeon-pose",
@@ -1400,7 +1400,7 @@
             {
               "id": "gw-w3-fri-frog",
               "name": "Frog Stretch",
-              "description": "Ginocchia larghe, fianchi indietro. Ref: https://www.youtube.com/watch?v=Og8Gm68gRJg",
+              "description": "Ginocchia larghe, fianchi indietro. Ref: https://www.youtube.com/shorts/nqfIgokUL08",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -1414,7 +1414,7 @@
             {
               "id": "gw-w3-fri-butterfly",
               "name": "Butterfly Stretch",
-              "description": "Piante unite, ginocchia aperte. Ref: https://www.youtube.com/watch?v=NxTLMFh_ibk",
+              "description": "Piante unite, ginocchia aperte. Ref: https://www.youtube.com/shorts/Abbx4vLPTBo",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -1428,7 +1428,7 @@
             {
               "id": "gw-w3-fri-pancake",
               "name": "Pancake Stretch",
-              "description": "Gambe divaricate, busto in avanti. Ref: https://www.youtube.com/watch?v=OPl_2ztmRiw",
+              "description": "Gambe divaricate, busto in avanti. Ref: https://www.youtube.com/shorts/NFd1TO8GApg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "hamstring-stretch",
@@ -1442,7 +1442,7 @@
             {
               "id": "gw-w3-fri-thoracic",
               "name": "Rotazione Toracica",
-              "description": "Sdraiata di fianco, apri il braccio superiore. Ref: https://www.youtube.com/watch?v=UDTbL8eKr1M",
+              "description": "Sdraiata di fianco, apri il braccio superiore. Ref: https://www.youtube.com/shorts/uGeALnP_WCI",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "thoracic-rotation",
@@ -1456,7 +1456,7 @@
             {
               "id": "gw-w3-fri-forearm",
               "name": "Stretching Avambracci",
-              "description": "Flessori ed estensori a terra. Ref: https://www.youtube.com/watch?v=9Tus-KY9AYw",
+              "description": "Flessori ed estensori a terra. Ref: https://www.youtube.com/shorts/QiMiia4F7Xg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "forearm-stretch",
@@ -1531,7 +1531,7 @@
             {
               "id": "gw-w4-mon-sl-rdl",
               "name": "Single-Leg RDL",
-              "description": "Cerniera d'anca monopodalica. Ref: https://www.youtube.com/watch?v=hRJZUpHe3cY",
+              "description": "Cerniera d'anca monopodalica. Ref: https://www.youtube.com/shorts/MmxwuvwwvBM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1641,7 +1641,7 @@
             {
               "id": "gw-w4-tue-advanced-tuck-fl",
               "name": "Advanced Tuck Front Lever",
-              "description": "Tuck front lever con ginocchia PIÙ LONTANE dal petto (bacino più aperto) — progressione verso front lever a gambe divaricate. Braccia tese, schiena parallela al pavimento. Ref: https://www.youtube.com/watch?v=KDEEMDZwNyM",
+              "description": "Tuck front lever con ginocchia PIÙ LONTANE dal petto (bacino più aperto) — progressione verso front lever a gambe divaricate. Braccia tese, schiena parallela al pavimento. Ref: https://www.youtube.com/shorts/FC9Ch8clkZc",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "default",
@@ -1692,7 +1692,7 @@
             {
               "id": "gw-w4-thu-jump-squat",
               "name": "Jump Squat",
-              "description": "Squat esplosivo, atterraggio morbido. Ref: https://www.youtube.com/watch?v=A-cFYWvaHr0",
+              "description": "Squat esplosivo, atterraggio morbido. Ref: https://www.youtube.com/shorts/z2O4qhlLLtw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1720,7 +1720,7 @@
             {
               "id": "gw-w4-thu-skater",
               "name": "Skater Jump",
-              "description": "Salti laterali potenti. Ref: https://www.youtube.com/watch?v=LKLltnPmxLE",
+              "description": "Salti laterali potenti. Ref: https://www.youtube.com/shorts/el_HLUDDYJs",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1748,7 +1748,7 @@
             {
               "id": "gw-w4-thu-ring-dip",
               "name": "Ring Dip",
-              "description": "Supporto anelli, scendi e spingi. Ref: https://www.youtube.com/watch?v=iOSD0Gd8wYQ",
+              "description": "Supporto anelli, scendi e spingi. Ref: https://www.youtube.com/shorts/FfTqXe6_-2k",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1813,7 +1813,7 @@
             {
               "id": "gw-w4-fri-hip-cars",
               "name": "Hip CARs",
-              "description": "Rotazioni anca controllate. Ref: https://www.youtube.com/watch?v=lNcqmcJ97ZA",
+              "description": "Rotazioni anca controllate. Ref: https://www.youtube.com/shorts/VFLjTG2OOiU",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1841,7 +1841,7 @@
             {
               "id": "gw-w4-fri-deep-squat",
               "name": "Deep Squat Hold",
-              "description": "Asian squat, talloni a terra. Ref: https://www.youtube.com/watch?v=LsDjK3mZ_3c",
+              "description": "Asian squat, talloni a terra. Ref: https://www.youtube.com/watch?v=IHApHfNA2Ag",
               "equipment": "bodyweight",
               "type": "timed_hold",
               "illustration": "default",
@@ -1855,7 +1855,7 @@
             {
               "id": "gw-w4-fri-90-90",
               "name": "90/90 Hip Stretch",
-              "description": "Gambe 90°/90°, busto avanti. Ref: https://www.youtube.com/watch?v=paWMPirAN60",
+              "description": "Gambe 90°/90°, busto avanti. Ref: https://www.youtube.com/shorts/PuxmfP2Rr74",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "default",
@@ -1869,7 +1869,7 @@
             {
               "id": "gw-w4-fri-pigeon",
               "name": "Pigeon Pose",
-              "description": "Ginocchio avanti, gamba dietro dritta. Ref: https://www.youtube.com/watch?v=GvEpZ7UIrVw",
+              "description": "Ginocchio avanti, gamba dietro dritta. Ref: https://www.youtube.com/shorts/ApYf-bUZ3kE",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "pigeon-pose",
@@ -1883,7 +1883,7 @@
             {
               "id": "gw-w4-fri-frog",
               "name": "Frog Stretch",
-              "description": "Ginocchia larghe, fianchi indietro. Ref: https://www.youtube.com/watch?v=Og8Gm68gRJg",
+              "description": "Ginocchia larghe, fianchi indietro. Ref: https://www.youtube.com/shorts/nqfIgokUL08",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -1897,7 +1897,7 @@
             {
               "id": "gw-w4-fri-pancake",
               "name": "Pancake Stretch",
-              "description": "Divaricata con busto avanti, schiena dritta. Ref: https://www.youtube.com/watch?v=OPl_2ztmRiw",
+              "description": "Divaricata con busto avanti, schiena dritta. Ref: https://www.youtube.com/shorts/NFd1TO8GApg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "hamstring-stretch",
@@ -1911,7 +1911,7 @@
             {
               "id": "gw-w4-fri-thoracic",
               "name": "Rotazione Toracica",
-              "description": "Sdraiata di fianco, apri il braccio. Ref: https://www.youtube.com/watch?v=UDTbL8eKr1M",
+              "description": "Sdraiata di fianco, apri il braccio. Ref: https://www.youtube.com/shorts/uGeALnP_WCI",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "thoracic-rotation",
@@ -1925,7 +1925,7 @@
             {
               "id": "gw-w4-fri-forearm",
               "name": "Stretching Avambracci",
-              "description": "Flessori + estensori. Ref: https://www.youtube.com/watch?v=9Tus-KY9AYw",
+              "description": "Flessori + estensori. Ref: https://www.youtube.com/shorts/QiMiia4F7Xg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "forearm-stretch",
@@ -2000,7 +2000,7 @@
             {
               "id": "gw-w5-mon-sl-rdl",
               "name": "Single-Leg RDL Pesante",
-              "description": "Cerniera d'anca pesante. Ref: https://www.youtube.com/watch?v=hRJZUpHe3cY",
+              "description": "Cerniera d'anca pesante. Ref: https://www.youtube.com/shorts/MmxwuvwwvBM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2111,7 +2111,7 @@
             {
               "id": "gw-w5-tue-advanced-tuck-fl",
               "name": "Advanced Tuck Front Lever",
-              "description": "Bacino più aperto, ginocchia più lontane. Ref: https://www.youtube.com/watch?v=KDEEMDZwNyM",
+              "description": "Bacino più aperto, ginocchia più lontane. Ref: https://www.youtube.com/shorts/FC9Ch8clkZc",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "default",
@@ -2162,7 +2162,7 @@
             {
               "id": "gw-w5-thu-jump-squat",
               "name": "Jump Squat Max",
-              "description": "Massima altezza a ogni salto. Atterraggio morbido. Ref: https://www.youtube.com/watch?v=A-cFYWvaHr0",
+              "description": "Massima altezza a ogni salto. Atterraggio morbido. Ref: https://www.youtube.com/shorts/z2O4qhlLLtw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2190,7 +2190,7 @@
             {
               "id": "gw-w5-thu-pushup-amrap",
               "name": "Push-up AMRAP",
-              "description": "Fai il massimo numero di push-up CONTINUATI con forma pulita. Quando perdi la forma, fermati. Ref: https://www.youtube.com/watch?v=IODxDxX7oi4",
+              "description": "Fai il massimo numero di push-up CONTINUATI con forma pulita. Quando perdi la forma, fermati. Ref: https://www.youtube.com/shorts/IRjgWtzNvAw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2218,7 +2218,7 @@
             {
               "id": "gw-w5-thu-ring-dip",
               "name": "Ring Dip Max",
-              "description": "Massimali sui dip. Ref: https://www.youtube.com/watch?v=iOSD0Gd8wYQ",
+              "description": "Massimali sui dip. Ref: https://www.youtube.com/shorts/FfTqXe6_-2k",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2269,7 +2269,7 @@
             {
               "id": "gw-w5-fri-hip-cars",
               "name": "Hip CARs",
-              "description": "Rotazioni controllate. Ref: https://www.youtube.com/watch?v=lNcqmcJ97ZA",
+              "description": "Rotazioni controllate. Ref: https://www.youtube.com/shorts/VFLjTG2OOiU",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2297,7 +2297,7 @@
             {
               "id": "gw-w5-fri-deep-squat",
               "name": "Deep Squat Hold",
-              "description": "Asian squat. Ref: https://www.youtube.com/watch?v=LsDjK3mZ_3c",
+              "description": "Asian squat. Ref: https://www.youtube.com/watch?v=IHApHfNA2Ag",
               "equipment": "bodyweight",
               "type": "timed_hold",
               "illustration": "default",
@@ -2311,7 +2311,7 @@
             {
               "id": "gw-w5-fri-90-90",
               "name": "90/90 Hip Stretch",
-              "description": "Gambe 90°/90°. Ref: https://www.youtube.com/watch?v=paWMPirAN60",
+              "description": "Gambe 90°/90°. Ref: https://www.youtube.com/shorts/PuxmfP2Rr74",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "default",
@@ -2325,7 +2325,7 @@
             {
               "id": "gw-w5-fri-pigeon",
               "name": "Pigeon Pose",
-              "description": "Stretch profondo gluteo. Ref: https://www.youtube.com/watch?v=GvEpZ7UIrVw",
+              "description": "Stretch profondo gluteo. Ref: https://www.youtube.com/shorts/ApYf-bUZ3kE",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "pigeon-pose",
@@ -2339,7 +2339,7 @@
             {
               "id": "gw-w5-fri-frog",
               "name": "Frog Stretch",
-              "description": "Stretch adduttori profondo. Ref: https://www.youtube.com/watch?v=Og8Gm68gRJg",
+              "description": "Stretch adduttori profondo. Ref: https://www.youtube.com/shorts/nqfIgokUL08",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -2353,7 +2353,7 @@
             {
               "id": "gw-w5-fri-pancake",
               "name": "Pancake Stretch",
-              "description": "Divaricata con busto avanti. Ref: https://www.youtube.com/watch?v=OPl_2ztmRiw",
+              "description": "Divaricata con busto avanti. Ref: https://www.youtube.com/shorts/NFd1TO8GApg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "hamstring-stretch",
@@ -2367,7 +2367,7 @@
             {
               "id": "gw-w5-fri-thoracic",
               "name": "Rotazione Toracica",
-              "description": "Apri braccio superiore ruotando busto. Ref: https://www.youtube.com/watch?v=UDTbL8eKr1M",
+              "description": "Apri braccio superiore ruotando busto. Ref: https://www.youtube.com/shorts/uGeALnP_WCI",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "thoracic-rotation",
@@ -2381,7 +2381,7 @@
             {
               "id": "gw-w5-fri-forearm",
               "name": "Stretching Avambracci",
-              "description": "Flessori + estensori. Ref: https://www.youtube.com/watch?v=9Tus-KY9AYw",
+              "description": "Flessori + estensori. Ref: https://www.youtube.com/shorts/QiMiia4F7Xg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "forearm-stretch",
@@ -2442,7 +2442,7 @@
             {
               "id": "gw-w6-mon-sl-rdl",
               "name": "Single-Leg RDL",
-              "description": "Cerniera d'anca leggera. Ref: https://www.youtube.com/watch?v=hRJZUpHe3cY",
+              "description": "Cerniera d'anca leggera. Ref: https://www.youtube.com/shorts/MmxwuvwwvBM",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2523,7 +2523,7 @@
             {
               "id": "gw-w6-tue-ring-row",
               "name": "Ring Row Leggero",
-              "description": "Ring row a volume ridotto. Ref: https://www.youtube.com/watch?v=KOaCAmYbgV0",
+              "description": "Ring row a volume ridotto. Ref: https://www.youtube.com/shorts/Z1LPTxY2c4E",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2537,7 +2537,7 @@
             {
               "id": "gw-w6-tue-tuck-fl",
               "name": "Tuck Front Lever Hold",
-              "description": "Schiena parallela, tempo ridotto. Ref: https://www.youtube.com/watch?v=KDEEMDZwNyM",
+              "description": "Schiena parallela, tempo ridotto. Ref: https://www.youtube.com/shorts/FC9Ch8clkZc",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "default",
@@ -2574,7 +2574,7 @@
             {
               "id": "gw-w6-thu-jump-squat",
               "name": "Jump Squat",
-              "description": "Salti esplosivi a volume ridotto. Ref: https://www.youtube.com/watch?v=A-cFYWvaHr0",
+              "description": "Salti esplosivi a volume ridotto. Ref: https://www.youtube.com/shorts/z2O4qhlLLtw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2588,7 +2588,7 @@
             {
               "id": "gw-w6-thu-skater",
               "name": "Skater Jump",
-              "description": "Salti laterali. Ref: https://www.youtube.com/watch?v=LKLltnPmxLE",
+              "description": "Salti laterali. Ref: https://www.youtube.com/shorts/el_HLUDDYJs",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2602,7 +2602,7 @@
             {
               "id": "gw-w6-thu-pushup",
               "name": "Push-up Leggero",
-              "description": "Volume ridotto, forma perfetta. Ref: https://www.youtube.com/watch?v=IODxDxX7oi4",
+              "description": "Volume ridotto, forma perfetta. Ref: https://www.youtube.com/shorts/IRjgWtzNvAw",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2616,7 +2616,7 @@
             {
               "id": "gw-w6-thu-ring-dip",
               "name": "Ring Dip",
-              "description": "Volume ridotto. Ref: https://www.youtube.com/watch?v=iOSD0Gd8wYQ",
+              "description": "Volume ridotto. Ref: https://www.youtube.com/shorts/FfTqXe6_-2k",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2667,7 +2667,7 @@
             {
               "id": "gw-w6-fri-hip-cars",
               "name": "Hip CARs",
-              "description": "Rotazioni controllate. Ref: https://www.youtube.com/watch?v=lNcqmcJ97ZA",
+              "description": "Rotazioni controllate. Ref: https://www.youtube.com/shorts/VFLjTG2OOiU",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2681,7 +2681,7 @@
             {
               "id": "gw-w6-fri-worlds-greatest",
               "name": "World's Greatest Stretch",
-              "description": "Affondo + rotazione. Ref: https://www.youtube.com/watch?v=f0VZRQXc16s",
+              "description": "Affondo + rotazione. Ref: https://www.youtube.com/watch?v=-CiWQ2IvY34",
               "equipment": "yoga_mat",
               "type": "reps",
               "illustration": "default",
@@ -2709,7 +2709,7 @@
             {
               "id": "gw-w6-fri-deep-squat",
               "name": "Deep Squat Hold",
-              "description": "Asian squat. Ref: https://www.youtube.com/watch?v=LsDjK3mZ_3c",
+              "description": "Asian squat. Ref: https://www.youtube.com/watch?v=IHApHfNA2Ag",
               "equipment": "bodyweight",
               "type": "timed_hold",
               "illustration": "default",
@@ -2723,7 +2723,7 @@
             {
               "id": "gw-w6-fri-90-90",
               "name": "90/90 Hip Stretch",
-              "description": "Gambe 90°/90°. Ref: https://www.youtube.com/watch?v=paWMPirAN60",
+              "description": "Gambe 90°/90°. Ref: https://www.youtube.com/shorts/PuxmfP2Rr74",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "default",
@@ -2737,7 +2737,7 @@
             {
               "id": "gw-w6-fri-pigeon",
               "name": "Pigeon Pose",
-              "description": "Stretch gluteo. Ref: https://www.youtube.com/watch?v=GvEpZ7UIrVw",
+              "description": "Stretch gluteo. Ref: https://www.youtube.com/shorts/ApYf-bUZ3kE",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "pigeon-pose",
@@ -2751,7 +2751,7 @@
             {
               "id": "gw-w6-fri-frog",
               "name": "Frog Stretch",
-              "description": "Adduttori. Ref: https://www.youtube.com/watch?v=Og8Gm68gRJg",
+              "description": "Adduttori. Ref: https://www.youtube.com/shorts/nqfIgokUL08",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -2765,7 +2765,7 @@
             {
               "id": "gw-w6-fri-butterfly",
               "name": "Butterfly Stretch",
-              "description": "Piante unite. Ref: https://www.youtube.com/watch?v=NxTLMFh_ibk",
+              "description": "Piante unite. Ref: https://www.youtube.com/shorts/Abbx4vLPTBo",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "frog-stretch",
@@ -2779,7 +2779,7 @@
             {
               "id": "gw-w6-fri-pancake",
               "name": "Pancake Stretch",
-              "description": "Divaricata. Ref: https://www.youtube.com/watch?v=OPl_2ztmRiw",
+              "description": "Divaricata. Ref: https://www.youtube.com/shorts/NFd1TO8GApg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "hamstring-stretch",
@@ -2793,7 +2793,7 @@
             {
               "id": "gw-w6-fri-thoracic",
               "name": "Rotazione Toracica",
-              "description": "Apri il braccio. Ref: https://www.youtube.com/watch?v=UDTbL8eKr1M",
+              "description": "Apri il braccio. Ref: https://www.youtube.com/shorts/uGeALnP_WCI",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "thoracic-rotation",
@@ -2807,7 +2807,7 @@
             {
               "id": "gw-w6-fri-forearm",
               "name": "Stretching Avambracci",
-              "description": "Flessori + estensori. Ref: https://www.youtube.com/watch?v=9Tus-KY9AYw",
+              "description": "Flessori + estensori. Ref: https://www.youtube.com/shorts/QiMiia4F7Xg",
               "equipment": "yoga_mat",
               "type": "timed_stretch",
               "illustration": "forearm-stretch",
