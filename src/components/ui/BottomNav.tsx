@@ -8,6 +8,7 @@ const INACTIVE_COLOR = '#9C7B5C'
 const tabs = [
   { path: '/', label: 'Home', icon: HomeIcon },
   { path: '/timer', label: 'Timer', icon: TimerIcon },
+  { path: '/logbook', label: 'Logbook', icon: MountainIcon },
   { path: '/progress', label: 'Progressi', icon: ChartIcon },
   { path: '/settings', label: 'Impostazioni', icon: SettingsIcon }
 ] as const
@@ -111,6 +112,23 @@ function TimerIcon({ active }: { active: boolean }) {
       <path d="M12 9v4l2 2" />
       <path d="M9 2h6" />
       <path d="M12 2v2" />
+    </svg>
+  )
+}
+
+function MountainIcon({ active }: { active: boolean }) {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill={active ? INK : 'none'}
+      stroke={active ? INK : INACTIVE_COLOR}
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z" />
     </svg>
   )
 }

@@ -6,6 +6,7 @@ import WorkoutDay from './pages/WorkoutDay'
 import ActiveWorkout from './pages/ActiveWorkout'
 import TimerPage from './pages/TimerPage'
 import ProgressPage from './pages/ProgressPage'
+import LogbookPage from './pages/LogbookPage'
 import SettingsPage from './pages/SettingsPage'
 import ReloadPrompt from './components/ui/ReloadPrompt'
 
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/timer" element={<TimerPage />} />
             <Route path="/progress" element={<ProgressPage />} />
+            <Route path="/logbook" element={<LogbookPage />} />
             <Route path="/settings" element={<SettingsPage />} />
           </Route>
           <Route path="/workout/:weekNumber/:dayOfWeek" element={<WorkoutDay />} />

@@ -91,6 +91,22 @@ export interface TimerState {
 
 export type ProgramId = 'home' | 'travel' | 'girl_workout' | 'custom'
 
+export type ClimbStyle = 'boulder' | 'sport' | 'multipitch' | 'trad'
+export type AscentType = 'onsight' | 'flash' | 'redpoint' | 'project'
+
+export interface Climb {
+  id: string
+  date: string
+  name: string
+  grade: string
+  style: ClimbStyle
+  ascentType: AscentType
+  attempts?: number
+  location: string
+  rating: 1 | 2 | 3 | 4 | 5
+  notes?: string
+}
+
 export interface AppSettings {
   soundEnabled: boolean
   voiceEnabled: boolean
