@@ -20,6 +20,7 @@ export default function PageHeader({ title, subtitle, backButton, rightAction }:
         backgroundColor: 'color-mix(in srgb, #F4E8C4 92%, transparent)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
+        paddingTop: 'env(safe-area-inset-top)',
       }}
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
