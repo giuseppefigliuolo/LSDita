@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       includeAssets: ['favicon.png', 'favicon.ico', 'icons/*.png', 'sounds/*.mp3'],
       manifest: {
         name: 'LSDita - Climbing Training',
@@ -48,7 +48,9 @@ export default defineConfig({
       },
       workbox: {
         cleanupOutdatedCaches: true,
-        skipWaiting: false,
+        skipWaiting: true,
+        clientsClaim: true,
+        navigateFallback: 'index.html',
         globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3,woff2}'],
         runtimeCaching: [
           {
