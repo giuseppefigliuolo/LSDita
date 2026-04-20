@@ -402,6 +402,7 @@ export default function WorkoutRunner({
         exercise={exercise}
         exerciseIndex={exerciseIndex}
         totalExercises={exercises.length}
+        upcomingExercises={exercises.slice(exerciseIndex + 1, exerciseIndex + 4)}
         onStart={handleStartExercise}
         onSkip={handleSkipExercise}
         autoStartSeconds={pendingAutoStartSeconds ?? undefined}
