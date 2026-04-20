@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise } from '../../types'
-import ExerciseInfoButton from './ExerciseInfoButton'
 import SetProgressDots from './SetProgressDots'
 import { RADIUS, SHADOW } from '../../styles/tokens'
 
@@ -26,9 +25,6 @@ export default function RepsExerciseView({
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[80dvh] px-4">
-      <div className="absolute top-4 right-4 z-10">
-        <ExerciseInfoButton onClick={onOpenInfo} />
-      </div>
 
       <AnimatePresence mode="wait">
         <motion.div
@@ -44,9 +40,16 @@ export default function RepsExerciseView({
             activeState="active"
           />
 
-          <p className="font-semibold uppercase tracking-widest text-text-muted mb-14">
-            {exercise.name}
-          </p>
+          <button
+            onClick={onOpenInfo}
+            className="mb-14 outline-none active:opacity-70 transition-opacity"
+            aria-label="Informazioni esercizio"
+          >
+            <span className="font-semibold uppercase tracking-widest text-text-muted border-b-2 border-dashed border-text-muted/60 pb-1">
+              {exercise.name}
+            </span>
+          </button>
+
 
           <div className="relative flex items-center justify-center mb-4">
             <div

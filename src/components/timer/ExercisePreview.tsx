@@ -131,14 +131,14 @@ export default function ExercisePreview({
   return (
     <>
       <motion.div
-        className="flex flex-col min-h-[100dvh] w-full overflow-x-hidden"
+        className="flex flex-col h-[100dvh] w-full overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
       >
         {/* Scrollable content */}
-        <div className="flex-1 px-5 pt-4 pb-32">
+        <div className="flex-1 overflow-y-auto px-5 pt-4 pb-6">
           {/* Top: badge + progress bar */}
           <div className="flex flex-col items-center mb-4">
             <Badge variant="accent" className="mb-3">
@@ -367,7 +367,7 @@ export default function ExercisePreview({
 
         {/* Sticky bottom CTA bar */}
         <div
-          className="sticky bottom-0 w-full px-4 pt-3 pb-4 flex gap-3 border-t-[2.5px]"
+          className="shrink-0 w-full px-4 pt-3 pb-4 flex gap-3 border-t-[2.5px]"
           style={{
             borderColor: INK,
             backgroundColor: SURFACE,
