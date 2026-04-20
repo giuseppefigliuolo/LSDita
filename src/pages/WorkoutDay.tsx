@@ -13,6 +13,7 @@ import ExerciseDescription from '../components/ui/ExerciseDescription'
 import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
+import EditDayModal from '../components/EditDayModal'
 import type { Exercise } from '../types'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { getProgram } from '../utils/getProgram'
@@ -25,6 +26,26 @@ import {
   getSessionLabel
 } from '../utils/programUtils'
 import { INK, SURFACE, RADIUS, SHADOW } from '../styles/tokens'
+
+function EditPencilButton({ onClick }: { onClick: () => void }) {
+  return (
+    <motion.button
+      onClick={onClick}
+      className="flex items-center justify-center w-9 h-9 border-[2.5px] border-[#3A1248] cursor-pointer"
+      style={{
+        backgroundColor: SURFACE,
+        borderRadius: RADIUS.backBtn,
+        boxShadow: SHADOW.xs,
+      }}
+      whileTap={{ x: 2, y: 2, boxShadow: `0px 0px 0px ${INK}` }}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+      </svg>
+    </motion.button>
+  )
+}
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -44,6 +65,7 @@ export default function WorkoutDay() {
   const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(
     null
   )
+  const [editing, setEditing] = useState(false)
   const { selectedProgram } = useSettingsStore()
   const program = getProgram(selectedProgram)
 
@@ -69,6 +91,7 @@ export default function WorkoutDay() {
         title={day.title}
         subtitle={`${sessionLabel} — Settimana ${week}`}
         backButton
+        rightAction={<EditPencilButton onClick={() => setEditing(true)} />}
       />
 
       <motion.div
@@ -140,6 +163,14 @@ export default function WorkoutDay() {
           <ExerciseDetailModal
             exercise={selectedExercise}
             onClose={() => setSelectedExercise(null)}
+          />
+        )}
+        {editing && (
+          <EditDayModal
+            day={day}
+            weekNumber={week}
+            programId={selectedProgram}
+            onClose={() => setEditing(false)}
           />
         )}
       </AnimatePresence>

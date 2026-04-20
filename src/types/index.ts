@@ -100,4 +100,5 @@ export interface AppSettings {
   countdownDuration: number
   currentWeek: number | null
   customProgram: TrainingProgram | null
+  dayOverrides: Record<string, TrainingDay>
 }

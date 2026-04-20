@@ -1,20 +1,48 @@
 import homeProgram from '../data/training-program.json'
 import travelProgram from '../data/training-program-travel.json'
-import { useSettingsStore } from '../store/useSettingsStore'
-import type { TrainingProgram, ProgramId } from '../types'
+import { dayOverrideKey, useSettingsStore } from '../store/useSettingsStore'
+import type { ProgramId, TrainingDay, TrainingProgram } from '../types'
 
 const builtInPrograms: Record<Exclude<ProgramId, 'custom'>, TrainingProgram> = {
   home: homeProgram as unknown as TrainingProgram,
   travel: travelProgram as unknown as TrainingProgram,
 }
 
-export function getProgram(id: ProgramId): TrainingProgram {
+function getBaseProgram(id: ProgramId): TrainingProgram {
   if (id === 'custom') {
     const custom = useSettingsStore.getState().customProgram
     if (custom) return custom
     return builtInPrograms.home
   }
   return builtInPrograms[id] ?? builtInPrograms.home
+}
+
+export function getProgram(id: ProgramId): TrainingProgram {
+  const base = getBaseProgram(id)
+  const overrides = useSettingsStore.getState().dayOverrides
+  if (Object.keys(overrides).length === 0) return base
+
+  return {
+    ...base,
+    weeks: base.weeks.map((week) => ({
+      ...week,
+      days: week.days.map((day) => {
+        const override = overrides[dayOverrideKey(id, week.weekNumber, day.dayOfWeek)]
+        return override ?? day
+      }),
+    })),
+  }
+}
+
+export function getOriginalDay(
+  id: ProgramId,
+  weekNumber: number,
+  dayOfWeek: string
+): TrainingDay | null {
+  const base = getBaseProgram(id)
+  const week = base.weeks.find((w) => w.weekNumber === weekNumber)
+  if (!week) return null
+  return week.days.find((d) => d.dayOfWeek === dayOfWeek) ?? null
 }
 
 export const programOptions: { id: ProgramId; label: string; description: string }[] = [
