@@ -316,9 +316,10 @@ function FilterChip({
       style={{
         backgroundColor: active ? activeBg : 'transparent',
         color: active ? activeText : inactiveText,
-        borderColor: active ? activeBg : inactiveBorder,
+        borderColor: active ? INK : inactiveBorder,
         borderRadius: RADIUS.pill,
         boxShadow: active ? SHADOW.xs : 'none',
+        backgroundClip: 'padding-box',
       }}
     >
       {label}

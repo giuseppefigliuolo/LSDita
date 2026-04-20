@@ -214,7 +214,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
             />
           </div>
 
-          <div className="px-5 pb-8">
+          <div className="px-5 pb-28">
             <h2
               className="text-lg font-bold text-text text-center mb-1"
               style={{ fontFamily: 'var(--font-display)' }}

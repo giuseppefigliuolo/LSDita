@@ -47,6 +47,7 @@ export const STYLE_LABELS: Record<ClimbStyle, string> = {
   sport: 'Sport',
   multipitch: 'Multi',
   trad: 'Trad',
+  gym: 'Palestra',
 }
 
 export const STYLE_OPTIONS: { value: ClimbStyle; label: string }[] = [
@@ -54,20 +55,21 @@ export const STYLE_OPTIONS: { value: ClimbStyle; label: string }[] = [
   { value: 'sport', label: 'Sport' },
   { value: 'multipitch', label: 'Multipitch' },
   { value: 'trad', label: 'Trad' },
+  { value: 'gym', label: 'Palestra' },
 ]
 
 export const ASCENT_LABELS: Record<AscentType, string> = {
-  onsight: 'OS',
+  onsight: 'A vista',
   flash: 'Flash',
-  redpoint: 'RP',
-  project: 'Project',
+  redpoint: 'Lavorato',
+  project: 'Progetto',
 }
 
 export const ASCENT_OPTIONS: { value: AscentType; label: string }[] = [
-  { value: 'onsight', label: 'Onsight' },
+  { value: 'onsight', label: 'A vista' },
   { value: 'flash', label: 'Flash' },
-  { value: 'redpoint', label: 'Redpoint' },
-  { value: 'project', label: 'Project' },
+  { value: 'redpoint', label: 'Lavorato' },
+  { value: 'project', label: 'Progetto' },
 ]
 
 export interface AscentTone {
