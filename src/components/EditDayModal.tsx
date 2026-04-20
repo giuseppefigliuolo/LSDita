@@ -90,7 +90,7 @@ export default function EditDayModal({ day, weekNumber, programId, onClose }: Pr
   const sheetScale = useTransform(dragY, [0, 300], [1, 0.95])
   const sheetOpacity = useTransform(dragY, [0, 300], [1, 0.4])
   const backdropOpacity = useTransform(dragY, [0, window.innerHeight], [1, 0])
-  const sheetRef = useRef<HTMLDivElement>(null)
+  const handleRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     motionAnimate(dragY, 0, { type: 'spring', damping: 28, stiffness: 300 })
@@ -105,7 +105,7 @@ export default function EditDayModal({ day, weekNumber, programId, onClose }: Pr
   }, [dragY, onClose])
 
   useEffect(() => {
-    const el = sheetRef.current
+    const el = handleRef.current
     if (!el) return
 
     let startY = 0
@@ -132,7 +132,7 @@ export default function EditDayModal({ day, weekNumber, programId, onClose }: Pr
       lastTime = now
 
       if (!dragging) {
-        if (delta > 8 && el.scrollTop <= 1) dragging = true
+        if (delta > 4) dragging = true
         else return
       }
       prevent()
@@ -227,7 +227,6 @@ export default function EditDayModal({ day, weekNumber, programId, onClose }: Pr
         onClick={dismiss}
       />
       <motion.div
-        ref={sheetRef}
         className="relative w-full max-w-lg max-h-[90dvh] overflow-hidden border-[3px] border-b-0 border-[#3A1248]"
         style={{
           borderRadius: RADIUS.sheetTop,
@@ -238,7 +237,11 @@ export default function EditDayModal({ day, weekNumber, programId, onClose }: Pr
         }}
       >
         <div className="bg-surface overflow-y-auto overscroll-contain max-h-[90dvh]">
-          <div className="sticky top-0 z-10 flex justify-center pt-3 pb-2 bg-surface">
+          <div
+            ref={handleRef}
+            className="sticky top-0 z-10 flex justify-center pt-3 pb-3 bg-surface cursor-grab active:cursor-grabbing touch-none"
+            style={{ touchAction: 'none' }}
+          >
             <div
               className="w-12 h-1.5 border-[1.5px] border-[#3A1248]"
               style={{
