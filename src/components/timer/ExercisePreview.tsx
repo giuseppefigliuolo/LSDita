@@ -131,7 +131,7 @@ export default function ExercisePreview({
   return (
     <>
       <motion.div
-        className="flex flex-col h-[100dvh] w-full overflow-hidden"
+        className="flex flex-col h-full w-full overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

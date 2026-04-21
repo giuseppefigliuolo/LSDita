@@ -71,7 +71,7 @@ export default function ActiveWorkout() {
 
   return (
     <motion.div
-      className="min-h-dvh bg-bg flex flex-col"
+      className="h-dvh overflow-hidden bg-bg flex flex-col"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -91,7 +91,7 @@ export default function ActiveWorkout() {
         </p>
       </header>
 
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 min-h-0 flex items-center justify-center">
         <WorkoutRunner
           exercises={day.exercises}
           dayTitle={day.title}
