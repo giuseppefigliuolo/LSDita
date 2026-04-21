@@ -8,7 +8,7 @@ interface TimedExerciseViewProps {
   exercise: Exercise
   exerciseIndex: number
   phase: WorkoutPhase
-  wasPausedPhase: WorkoutPhase
+  wasPausedPhase: WorkoutPhase | null
   currentSet: number
   currentRep: number
   timeRemaining: number
@@ -39,7 +39,7 @@ export default function TimedExerciseView({
   onSkipExercise,
   onOpenInfo,
 }: TimedExerciseViewProps) {
-  const activePhase = phase === 'paused' ? wasPausedPhase : phase
+  const activePhase = phase === 'paused' ? (wasPausedPhase ?? 'hanging') : phase
   const isRepeaters = exercise.type === 'repeaters'
 
   const phaseLabel = getPhaseLabel(phase)

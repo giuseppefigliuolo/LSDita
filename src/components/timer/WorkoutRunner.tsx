@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import type { Exercise } from '../../types'
 import ExercisePreview from './ExercisePreview'
 import WorkoutComplete from './WorkoutComplete'
@@ -11,7 +12,7 @@ import { useWorkoutFlow } from './useWorkoutFlow'
 interface WorkoutRunnerProps {
   exercises: Exercise[]
   dayTitle: string
-  weekNumber: number
+  weekNumber?: number
   onComplete: (data: {
     exercisesCompleted: number
     exercisesTotal: number
@@ -51,6 +52,7 @@ export default function WorkoutRunner({
     completedExercises,
     finalDuration,
     skippedExercises,
+    skipExerciseCompleteWait,
   } = flow
 
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
@@ -153,6 +155,31 @@ export default function WorkoutRunner({
           onOpenInfo={openInfo}
         />
       )}
+
+      <AnimatePresence>
+        {phase === 'exercise_complete' && (
+          <motion.button
+            key="complete-overlay"
+            type="button"
+            onClick={skipExerciseCompleteWait}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-40 w-full h-full bg-transparent flex items-end justify-center pb-10 outline-none cursor-pointer"
+            aria-label="Passa al prossimo esercizio"
+          >
+            <motion.span
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-xs font-bold uppercase tracking-widest text-text-muted bg-surface-elevated/80 border-[1.5px] border-dashed border-text-muted/60 px-3 py-1.5 rounded-full pointer-events-none"
+            >
+              Tocca per continuare
+            </motion.span>
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       <SkipConfirmDialog
         open={showSkipConfirm}

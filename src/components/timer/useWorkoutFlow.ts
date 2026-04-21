@@ -30,7 +30,9 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
   const [exerciseIndex, setExerciseIndex] = useState(0)
   const [currentSet, setCurrentSet] = useState(1)
   const [currentRep, setCurrentRep] = useState(1)
-  const [wasPausedPhase, setWasPausedPhase] = useState<WorkoutPhase>('hanging')
+  const [wasPausedPhase, setWasPausedPhase] = useState<WorkoutPhase | null>(
+    null,
+  )
   const [overrides, setOverrides] = useState<Record<number, ExerciseOverride>>(
     {},
   )
@@ -46,6 +48,9 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
   const resumingRef = useRef(false)
   const skippedTimerRef = useRef(false)
   const pausedForInfoRef = useRef(false)
+  const completeWaitTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  )
 
   const countdownDuration = useSettingsStore((s) => s.countdownDuration)
 
@@ -68,6 +73,26 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
 
   const isRepsExercise = exercise?.type === 'reps'
 
+  /**
+   * Enters the next active work phase. Inserts a `countdown` preparation
+   * phase when the exercise is timed and the user has a non-zero
+   * `countdownDuration`; otherwise jumps straight to `hanging`.
+   *
+   * Centralized so every transition into active work (start of exercise,
+   * skipped rest, resume-from-pause) behaves consistently.
+   */
+  const enterActivePhase = useCallback(() => {
+    if (!isRepsExercise && countdownDuration > 0) {
+      setPhase('countdown')
+      speak('Preparati!')
+    } else {
+      setPhase('hanging')
+      speak('Tieni!')
+      beepStart()
+      vibrateShort()
+    }
+  }, [isRepsExercise, countdownDuration, speak, beepStart, vibrateShort])
+
   const finishWorkout = useCallback(() => {
     setFinalDuration(
       Math.floor((performance.now() - startTimeRef.current) / 1000),
@@ -79,12 +104,24 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     wakeLockRelease()
   }, [beepComplete, vibrateLong, speak, wakeLockRelease])
 
+  const goToNextExerciseOrFinish = useCallback(() => {
+    if (completeWaitTimeoutRef.current) {
+      clearTimeout(completeWaitTimeoutRef.current)
+      completeWaitTimeoutRef.current = null
+    }
+    setExerciseIndex((i) => i + 1)
+    setCurrentSet(1)
+    setCurrentRep(1)
+    setPhase('preview')
+  }, [])
+
   const advanceToNextExercise = useCallback(() => {
     if (exerciseIndex < exercises.length - 1) {
       const nextRest = exercises[exerciseIndex + 1]?.restBetweenSets ?? 0
       setPendingAutoStartSeconds(nextRest > 0 ? nextRest : null)
       setPhase('exercise_complete')
-      setTimeout(() => {
+      completeWaitTimeoutRef.current = setTimeout(() => {
+        completeWaitTimeoutRef.current = null
         setExerciseIndex((i) => i + 1)
         setCurrentSet(1)
         setCurrentRep(1)
@@ -94,6 +131,20 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
       finishWorkout()
     }
   }, [exercises, exerciseIndex, finishWorkout])
+
+  const skipExerciseCompleteWait = useCallback(() => {
+    if (!completeWaitTimeoutRef.current) return
+    goToNextExerciseOrFinish()
+  }, [goToNextExerciseOrFinish])
+
+  useEffect(() => {
+    return () => {
+      if (completeWaitTimeoutRef.current) {
+        clearTimeout(completeWaitTimeoutRef.current)
+        completeWaitTimeoutRef.current = null
+      }
+    }
+  }, [])
 
   const handleTimerComplete = useCallback(() => {
     if (!exercise) return
@@ -132,33 +183,23 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
       return
     }
 
-    if (phase === 'resting') {
-      setCurrentRep((r) => r + 1)
-      const wasSkipped = skippedTimerRef.current
-      skippedTimerRef.current = false
-      if (wasSkipped && countdownDuration > 0 && !isRepsExercise) {
-        setPhase('countdown')
-        speak('Preparati!')
+    if (phase === 'resting' || phase === 'set_rest') {
+      if (phase === 'set_rest') {
+        setCurrentSet((s) => s + 1)
+        setCurrentRep(1)
       } else {
-        setPhase('hanging')
-        speak('Tieni!')
-        beepStart()
-        vibrateShort()
+        setCurrentRep((r) => r + 1)
       }
-      return
-    }
-
-    if (phase === 'set_rest') {
-      setCurrentSet((s) => s + 1)
-      setCurrentRep(1)
       const wasSkipped = skippedTimerRef.current
       skippedTimerRef.current = false
-      if (wasSkipped && countdownDuration > 0 && !isRepsExercise) {
-        setPhase('countdown')
-        speak('Preparati!')
+
+      if (wasSkipped) {
+        enterActivePhase()
       } else {
         setPhase('hanging')
-        speak(`Serie ${currentSet + 1}. Tieni!`)
+        speak(
+          phase === 'set_rest' ? `Serie ${currentSet + 1}. Tieni!` : 'Tieni!',
+        )
         beepStart()
         vibrateShort()
       }
@@ -168,9 +209,8 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     exercise,
     currentRep,
     currentSet,
-    isRepsExercise,
-    countdownDuration,
     advanceToNextExercise,
+    enterActivePhase,
     beepStart,
     beepEnd,
     speak,
@@ -246,27 +286,9 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
       setOverrides((prev) => ({ ...prev, [exerciseIndex]: params }))
       setPendingAutoStartSeconds(null)
       wakeLockRequest()
-
-      const type = exercises[exerciseIndex]?.type
-      if (type === 'reps' || countdownDuration <= 0) {
-        setPhase('hanging')
-        speak('Tieni!')
-        beepStart()
-        vibrateShort()
-      } else {
-        setPhase('countdown')
-        speak('Preparati!')
-      }
+      enterActivePhase()
     },
-    [
-      exercises,
-      exerciseIndex,
-      countdownDuration,
-      wakeLockRequest,
-      speak,
-      beepStart,
-      vibrateShort,
-    ],
+    [exerciseIndex, wakeLockRequest, enterActivePhase],
   )
 
   const skipExercise = useCallback(() => {
@@ -302,11 +324,39 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     setPhase('paused')
   }, [timerPause, phase])
 
+  /**
+   * Resume from pause. When the user paused mid-hang on a timed exercise,
+   * re-enter through a fresh `countdown` preparation phase (so the hang
+   * restarts clean after a "Preparati!"). Otherwise restore the exact
+   * previous phase and resume the running timer from where it left off.
+   */
   const resumeTimer = useCallback(() => {
+    if (!wasPausedPhase) return
+
+    const shouldReenterWithCountdown =
+      wasPausedPhase === 'hanging' && !isRepsExercise && countdownDuration > 0
+
+    setWasPausedPhase(null)
+
+    if (shouldReenterWithCountdown) {
+      // Abandon the paused timer; enterActivePhase will trigger a fresh
+      // countdown via the phase-change effect.
+      timerStop()
+      enterActivePhase()
+      return
+    }
+
     resumingRef.current = true
     setPhase(wasPausedPhase)
     timerResume()
-  }, [timerResume, wasPausedPhase])
+  }, [
+    wasPausedPhase,
+    isRepsExercise,
+    countdownDuration,
+    timerStop,
+    enterActivePhase,
+    timerResume,
+  ])
 
   /** Mark the current set as done for a reps-counted exercise. */
   const repsSetDone = useCallback(() => {
@@ -369,6 +419,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     repsSetDone,
     pauseForInfo,
     resumeFromInfo,
+    skipExerciseCompleteWait,
     // workout summary helpers
     completedExercises,
     finalDuration,
