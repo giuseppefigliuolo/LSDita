@@ -10,17 +10,14 @@ import {
 import PageHeader from '../components/ui/PageHeader'
 import Card from '../components/ui/Card'
 import ExerciseDescription from '../components/ui/ExerciseDescription'
-import Badge from '../components/ui/Badge'
 import Button from '../components/ui/Button'
 import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
 import EditDayModal from '../components/EditDayModal'
 import type { Exercise } from '../types'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { getProgram } from '../utils/getProgram'
-import { formatSeconds } from '../utils/dateUtils'
 import {
   getWorkoutForDay,
-  getDayTypeColor,
   getDayTypeLabel,
   getTotalExerciseDuration,
   getSessionLabel
@@ -84,52 +81,40 @@ export default function WorkoutDay() {
   const sessionLabel = weekData
     ? getSessionLabel(weekData.days, day.dayOfWeek)
     : ''
+  const totalMin = Math.round(getTotalExerciseDuration(day) / 60)
+  const headerSubtitle = `Settimana ${week}${weekData ? ` · ${weekData.theme}` : ''}`
 
   return (
     <div className="bg-bg">
       <PageHeader
-        title={day.title}
-        subtitle={`${sessionLabel} — Settimana ${week}`}
+        title={sessionLabel}
+        subtitle={headerSubtitle}
         backButton
         rightAction={<EditPencilButton onClick={() => setEditing(true)} />}
       />
 
       <motion.div
-        className="px-4 pt-4 pb-8 max-w-lg mx-auto"
+        className="px-4 pt-2 pb-8 max-w-lg mx-auto"
         variants={stagger}
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={fadeUp} className="flex items-center gap-2 mb-2">
-          <Badge
-            variant={
-              getDayTypeColor(day.type) as
-                | 'primary'
-                | 'secondary'
-                | 'accent'
-                | 'violet'
-                | 'success'
-            }
-          >
-            {getDayTypeLabel(day.type)}
-          </Badge>
-          {weekData && <Badge variant="violet">{weekData.theme}</Badge>}
+        <motion.div variants={fadeUp}>
+          <HeroCard
+            typeLabel={getDayTypeLabel(day.type)}
+            title={day.title}
+            description={day.description}
+            exerciseCount={day.exercises.length}
+            durationMin={totalMin}
+          />
         </motion.div>
 
         <motion.p
           variants={fadeUp}
-          className="text-sm text-text-secondary mb-4"
+          className="text-[11px] font-bold uppercase tracking-[0.25em] text-text-muted mt-6 mb-3"
         >
-          <ExerciseDescription text={day.description} />
+          Esercizi
         </motion.p>
-
-        <motion.div
-          variants={fadeUp}
-          className="flex items-center gap-4 text-xs text-text-muted mb-6"
-        >
-          <span>{day.exercises.length} esercizi</span>
-          <span>~{formatSeconds(getTotalExerciseDuration(day))}</span>
-        </motion.div>
 
         <div className="space-y-3 mb-24">
           {day.exercises.map((exercise, index) => (
@@ -153,7 +138,7 @@ export default function WorkoutDay() {
               navigate(`/workout/${weekNumber}/${dayOfWeek}/active`)
             }
           >
-            Inizia Allenamento
+            ▶ Inizia allenamento · {totalMin} min
           </Button>
         </div>
       </motion.div>
@@ -178,83 +163,208 @@ export default function WorkoutDay() {
   )
 }
 
-const flowerColors = [
-  { outer: '#D4541A', inner: '#E8B820', center: '#7B3A9E', ring: '#3A1248' },
-  { outer: '#7B3A9E', inner: '#17A8A8', center: '#E8B820', ring: '#3A1248' },
-  { outer: '#17A8A8', inner: '#5A9A1E', center: '#D4541A', ring: '#3A1248' },
-  { outer: '#E84830', inner: '#D4541A', center: '#E8B820', ring: '#3A1248' },
-  { outer: '#5A9A1E', inner: '#E8B820', center: '#17A8A8', ring: '#3A1248' },
-  { outer: '#E8B820', inner: '#7B3A9E', center: '#D4541A', ring: '#3A1248' },
-  { outer: '#D4541A', inner: '#5A9A1E', center: '#E84830', ring: '#3A1248' },
-  { outer: '#7B3A9E', inner: '#E84830', center: '#E8B820', ring: '#3A1248' }
+// ──────────────────────────────────────────────────────────────
+// Hero card
+// ──────────────────────────────────────────────────────────────
+
+function HeroCard({
+  typeLabel,
+  title,
+  description,
+  exerciseCount,
+  durationMin
+}: {
+  typeLabel: string
+  title: string
+  description: string
+  exerciseCount: number
+  durationMin: number
+}) {
+  return (
+    <div
+      className="relative overflow-hidden border-[3px] border-[#3A1248]"
+      style={{
+        borderRadius: RADIUS.card,
+        boxShadow: SHADOW.lg,
+      }}
+    >
+      <div
+        className="relative px-5 pt-5 pb-5"
+        style={{
+          background:
+            'linear-gradient(135deg, #17A8A8 0%, #3E6FA8 50%, #7B3A9E 100%)'
+        }}
+      >
+        <HeroFlower />
+        <div className="relative">
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/85 mb-1">
+            {typeLabel}
+          </p>
+          <h2 className="text-3xl font-bold text-white leading-tight mb-4 pr-16">
+            {title}
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            <HeroPill>{exerciseCount} esercizi</HeroPill>
+            <HeroPill>~{durationMin} min</HeroPill>
+          </div>
+        </div>
+      </div>
+      <div className="bg-surface-elevated px-5 py-3 border-t-[2.5px] border-[#3A1248]">
+        <p className="text-sm text-text leading-relaxed">
+          <ExerciseDescription text={description} />
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function HeroPill({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      className="text-[10px] font-bold uppercase tracking-wider text-white px-3 py-1 border-[1.5px] border-white/50"
+      style={{
+        borderRadius: RADIUS.pill,
+        backgroundColor: 'rgba(255,255,255,0.15)'
+      }}
+    >
+      {children}
+    </span>
+  )
+}
+
+function HeroFlower() {
+  // Daisy-style: pointed almond petals radiating from a solid dome center
+  const cx = 50
+  const cy = 50
+  const petals = 11
+  return (
+    <svg
+      className="absolute -top-2 -right-1 pointer-events-none"
+      width="120"
+      height="120"
+      viewBox="0 0 100 100"
+    >
+      {/* Almond-shaped petals — bloom outward with a slight stagger */}
+      {Array.from({ length: petals }, (_, i) => {
+        const angle = (i * 360) / petals
+        return (
+          <g
+            key={`hf-p-${i}`}
+            transform={`translate(${cx} ${cy}) rotate(${angle})`}
+          >
+            <motion.path
+              d="M 0 -8 C -7 -14, -7 -28, 0 -32 C 7 -28, 7 -14, 0 -8 Z"
+              fill="#DCC8EC"
+              style={{
+                transformBox: 'fill-box',
+                transformOrigin: '50% 100%'
+              }}
+              initial={{ scale: 0, rotate: -20 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{
+                delay: 0.15 + i * 0.04,
+                type: 'spring',
+                stiffness: 180,
+                damping: 14
+              }}
+            />
+          </g>
+        )
+      })}
+      {/* Dome center — fades in after petals bloom */}
+      <motion.g
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.35, type: 'spring', stiffness: 220, damping: 16 }}
+        style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
+      >
+        <circle cx={cx} cy={cy} r="11" fill="#5A2878" />
+        <circle cx={cx - 1} cy={cy - 2} r="9" fill="#7B3A9E" opacity="0.85" />
+        <circle cx={cx - 3} cy={cy - 3} r="1.2" fill="#3A1248" opacity="0.6" />
+        <circle cx={cx + 3} cy={cy - 1} r="1.2" fill="#3A1248" opacity="0.6" />
+        <circle cx={cx + 1} cy={cy + 3} r="1.2" fill="#3A1248" opacity="0.55" />
+        <circle cx={cx - 4} cy={cy + 2} r="1" fill="#3A1248" opacity="0.5" />
+        <circle cx={cx + 4} cy={cy + 4} r="1" fill="#3A1248" opacity="0.5" />
+        <ellipse cx={cx - 3} cy={cy - 5} rx="3" ry="2" fill="white" opacity="0.35" />
+      </motion.g>
+    </svg>
+  )
+}
+
+// ──────────────────────────────────────────────────────────────
+// Exercise card
+// ──────────────────────────────────────────────────────────────
+
+const gripLabels: Record<string, string> = {
+  half_crimp: 'Half crimp',
+  open_hand: 'Mano aperta',
+  full_crimp: 'Arcuata',
+  three_finger_drag: 'Tre dita',
+  pinch: 'Pinch',
+  sloper: 'Sloper',
+  mixed: 'Mista'
+}
+
+const equipmentLabels: Record<string, string> = {
+  hangboard: 'Hangboard',
+  wooden_balls: 'Sfere legno',
+  pull_up_bar: 'Sbarra',
+  dumbbells: 'Manubri',
+  fitness_band: 'Elastico',
+  yoga_mat: 'Tappetino',
+  bodyweight: 'Corpo libero'
+}
+
+function getTechLine(ex: Exercise): string {
+  const parts: string[] = []
+  if (ex.grip) parts.push(gripLabels[ex.grip] ?? ex.grip)
+  if (ex.weight && ex.weight !== 'corpo libero') parts.push(ex.weight)
+  if (ex.type === 'repeaters') {
+    parts.push(`${ex.hangTime}s on / ${ex.restBetweenReps}s off`)
+  } else if (
+    ex.type === 'timed_hang' ||
+    ex.type === 'timed_hold' ||
+    ex.type === 'timed_stretch'
+  ) {
+    parts.push(`${ex.hangTime}s`)
+  }
+  if (parts.length === 0) {
+    parts.push(equipmentLabels[ex.equipment] ?? ex.equipment)
+  }
+  return parts.join(' · ')
+}
+
+function getVolume(ex: Exercise): { value: string; unit: string } {
+  if (ex.type === 'repeaters' || ex.type === 'reps') {
+    return { value: `${ex.sets}×${ex.repsPerSet}`, unit: 'SET × REP' }
+  }
+  return { value: `${ex.sets}×${ex.hangTime}s`, unit: 'SET × TEMPO' }
+}
+
+const tileColors = [
+  '#17A8A8',
+  '#D4541A',
+  '#E8B820',
+  '#7B3A9E',
+  '#5A9A1E',
+  '#E84830'
 ]
 
-function ExerciseFlowerNumber({ index }: { index: number }) {
-  const c = flowerColors[index % flowerColors.length]
-  // Each flower has a unique rotation offset for variety
-  const baseRotation = (index * 13) % 360
+function ExerciseTile({ index }: { index: number }) {
+  const color = tileColors[index % tileColors.length]
   return (
-    <div className="relative flex items-center justify-center w-11 h-11 shrink-0">
-      <svg
-        width="44"
-        height="44"
-        viewBox="0 0 44 44"
-        className="absolute inset-0"
+    <div
+      className="relative flex items-center justify-center w-12 h-12 shrink-0 border-[2.5px] border-[#3A1248]"
+      style={{
+        backgroundColor: color,
+        borderRadius: RADIUS.btnSm,
+        boxShadow: SHADOW.xs
+      }}
+    >
+      <span
+        className="text-xl font-bold font-timer text-[#FFFBF0]"
+        style={{ textShadow: '0 1px 2px rgba(58,18,72,0.6)' }}
       >
-        <g transform={`rotate(${baseRotation} 22 22)`}>
-          {/* Outer wavy petals — organic blob shapes */}
-          {Array.from({ length: 7 }, (_, i) => {
-            const angle = (i * 360) / 7
-            const rad = (angle * Math.PI) / 180
-            const px = 22 + Math.cos(rad) * 13
-            const py = 22 + Math.sin(rad) * 13
-            // Vary petal size for organic feel
-            const rx = 5.5 + (i % 3) * 0.8
-            const ry = 8 + (i % 2) * 2
-            return (
-              <ellipse
-                key={`o-${i}`}
-                cx={px}
-                cy={py}
-                rx={rx}
-                ry={ry}
-                fill={c.outer}
-                opacity={0.85}
-                transform={`rotate(${angle + 90} ${px} ${py})`}
-              />
-            )
-          })}
-          {/* Inner petals — offset, smaller, different color */}
-          {Array.from({ length: 7 }, (_, i) => {
-            const angle = (i * 360) / 7 + 25
-            const rad = (angle * Math.PI) / 180
-            const px = 22 + Math.cos(rad) * 9
-            const py = 22 + Math.sin(rad) * 9
-            const rx = 3.5 + (i % 2) * 0.6
-            const ry = 6 + (i % 3)
-            return (
-              <ellipse
-                key={`in-${i}`}
-                cx={px}
-                cy={py}
-                rx={rx}
-                ry={ry}
-                fill={c.inner}
-                opacity={0.9}
-                transform={`rotate(${angle + 90} ${px} ${py})`}
-              />
-            )
-          })}
-        </g>
-        {/* Center — concentric rings for depth */}
-        <circle cx="22" cy="22" r="9" fill={c.center} />
-        <circle cx="22" cy="22" r="9" fill="none" stroke={c.ring} strokeWidth="1.5" opacity={0.3} />
-        <circle cx="22" cy="22" r="6" fill={c.inner} opacity={0.5} />
-        <circle cx="22" cy="22" r="3.5" fill={c.ring} opacity={0.25} />
-        {/* Tiny highlight dot */}
-        <circle cx="20" cy="20" r="1.5" fill="white" opacity={0.45} />
-      </svg>
-      <span className="relative text-sm font-bold font-timer text-[#FFFBF0] z-10" style={{ textShadow: '0 1px 2px rgba(58,18,72,0.6)' }}>
         {index + 1}
       </span>
     </div>
@@ -270,57 +380,37 @@ function ExerciseCard({
   index: number
   onTap: () => void
 }) {
-  const equipmentLabels: Record<string, string> = {
-    hangboard: 'Hangboard',
-    wooden_balls: 'Sfere legno',
-    pull_up_bar: 'Sbarra',
-    dumbbells: 'Manubri',
-    fitness_band: 'Elastico',
-    yoga_mat: 'Tappetino',
-    bodyweight: 'Corpo libero'
-  }
-
+  const volume = getVolume(exercise)
   return (
     <Card onClick={onTap}>
-      <div className="flex items-start gap-3">
-        <ExerciseFlowerNumber index={index} />
+      <div className="flex items-center gap-3">
+        <ExerciseTile index={index} />
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-bold text-text">{exercise.name}</h3>
-          <p className="text-xs text-text-secondary mt-0.5 line-clamp-5">
-            <ExerciseDescription text={exercise.description} linkStopPropagation />
+          <h3 className="text-sm font-bold text-text truncate">
+            {exercise.name}
+          </h3>
+          <p className="text-xs text-text-secondary mt-0.5 truncate">
+            {getTechLine(exercise)}
           </p>
-
-          <div className="flex flex-wrap items-center gap-2 mt-2">
-            <span className="text-[11px] px-2 py-0.5 rounded-full bg-surface-elevated text-text-muted font-medium">
-              {equipmentLabels[exercise.equipment] ?? exercise.equipment}
-            </span>
-            {exercise.type === 'repeaters' ? (
-              <span className="text-[11px] px-2 py-0.5 rounded-full bg-primary-soft text-primary font-medium">
-                {exercise.hangTime}s/{exercise.restBetweenReps}s ×{' '}
-                {exercise.repsPerSet} rep × {exercise.sets} set
-              </span>
-            ) : exercise.type === 'reps' ? (
-              <span className="text-[11px] px-2 py-0.5 rounded-full bg-secondary-soft text-secondary font-medium">
-                {exercise.repsPerSet} rep × {exercise.sets} set
-              </span>
-            ) : (
-              <span className="text-[11px] px-2 py-0.5 rounded-full bg-accent-soft text-accent font-medium">
-                {exercise.hangTime}s × {exercise.sets} set
-              </span>
-            )}
-            {exercise.weight && exercise.weight !== 'corpo libero' && (
-              <span className="text-[11px] px-2 py-0.5 rounded-full bg-violet-soft text-violet font-medium">
-                {exercise.weight}
-              </span>
-            )}
-          </div>
+        </div>
+        <div className="text-right shrink-0">
+          <p className="text-base font-bold font-timer text-text leading-none">
+            {volume.value}
+          </p>
+          <p className="text-[10px] uppercase tracking-wider text-text-muted mt-1">
+            {volume.unit}
+          </p>
         </div>
       </div>
     </Card>
   )
 }
 
-const gripLabels: Record<string, string> = {
+// ──────────────────────────────────────────────────────────────
+// Exercise detail modal (unchanged)
+// ──────────────────────────────────────────────────────────────
+
+const gripLabelsModal: Record<string, string> = {
   half_crimp: 'Semi-arcuata',
   open_hand: 'Mano aperta',
   full_crimp: 'Arcuata piena',
@@ -328,16 +418,6 @@ const gripLabels: Record<string, string> = {
   pinch: 'Pinch',
   sloper: 'Sloper',
   mixed: 'Mista'
-}
-
-const equipmentLabelsModal: Record<string, string> = {
-  hangboard: 'Hangboard',
-  wooden_balls: 'Sfere legno',
-  pull_up_bar: 'Sbarra',
-  dumbbells: 'Manubri',
-  fitness_band: 'Elastico',
-  yoga_mat: 'Tappetino',
-  bodyweight: 'Corpo libero'
 }
 
 function ExerciseDetailModal({
@@ -510,11 +590,11 @@ function ExerciseDetailModal({
 
             <div className="flex flex-wrap gap-2 mb-5">
               <span className="text-xs px-3 py-1 rounded-full bg-surface-elevated text-text-muted font-medium">
-                {equipmentLabelsModal[exercise.equipment] ?? exercise.equipment}
+                {equipmentLabels[exercise.equipment] ?? exercise.equipment}
               </span>
               {exercise.grip && (
                 <span className="text-xs px-3 py-1 rounded-full bg-primary-soft text-primary font-medium">
-                  {gripLabels[exercise.grip] ?? exercise.grip}
+                  {gripLabelsModal[exercise.grip] ?? exercise.grip}
                 </span>
               )}
               {exercise.weight && exercise.weight !== 'corpo libero' && (
