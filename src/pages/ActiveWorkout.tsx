@@ -71,7 +71,8 @@ export default function ActiveWorkout() {
 
   return (
     <motion.div
-      className="h-dvh overflow-hidden bg-bg flex flex-col"
+      className="overflow-hidden overscroll-none bg-bg flex flex-col"
+      style={{ height: 'calc(100dvh - env(safe-area-inset-top, 0px))' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

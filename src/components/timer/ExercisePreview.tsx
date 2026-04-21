@@ -138,7 +138,7 @@ export default function ExercisePreview({
         transition={{ duration: 0.25 }}
       >
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto px-5 pt-4 pb-6">
+        <div className="flex-1 overflow-y-auto overscroll-contain px-5 pt-4 pb-6">
           {/* Top: badge + progress bar */}
           <div className="flex flex-col items-center mb-4">
             <Badge variant="accent" className="mb-3">
