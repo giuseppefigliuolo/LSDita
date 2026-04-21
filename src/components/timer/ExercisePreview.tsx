@@ -404,7 +404,7 @@ export default function ExercisePreview({
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
               <motion.div
-                className="absolute inset-y-0 right-0 z-0"
+                className="absolute inset-y-0 right-0 z-0 pointer-events-none"
                 style={{
                   width: fillWidth,
                   backgroundColor: 'rgba(244, 232, 196, 0.72)',
