@@ -3,18 +3,10 @@ import BottomNav from '../ui/BottomNav'
 
 export default function Layout() {
   return (
-    <div
-      className="flex flex-col min-h-dvh bg-bg relative overflow-x-hidden"
-      style={{ paddingTop: 'env(safe-area-inset-top)' }}
-    >
-      {/* ── Safe-area cover: opaque beige band painting the iOS status-bar area.
-          Fixed at viewport top so it never scrolls; sits above sticky headers
-          (z-40) but below modals (z-50). ── */}
-      <div
-        aria-hidden="true"
-        className="fixed top-0 left-0 right-0 bg-bg pointer-events-none"
-        style={{ height: 'env(safe-area-inset-top)', zIndex: 45 }}
-      />
+    <div className="flex flex-col min-h-dvh bg-bg relative overflow-x-hidden">
+      {/* Safe-area handling is global — see #root padding-top and body::before
+          cover in index.css. Works on ALL routes (incl. WorkoutDay/ActiveWorkout
+          which render outside this Layout). */}
 
       {/* ── Large psychedelic illustrations — fixed at screen edges ── */}
       <PsychedelicDecor />

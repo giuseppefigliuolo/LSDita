@@ -85,6 +85,24 @@ body::after {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  /* Global iOS PWA safe-area handling — applies to ALL routes,
+     including those that don't use the Layout wrapper. */
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Opaque safe-area cover — permanently paints the iOS status-bar area
+   with the app bg so the notch/Dynamic Island never overlaps content.
+   z-index below modals (9000) but above sticky headers (40) and content. */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top, 0px);
+  background-color: var(--color-bg);
+  z-index: 45;
+  pointer-events: none;
 }
 
 ::-webkit-scrollbar {
