@@ -117,4 +117,5 @@ export interface AppSettings {
   currentWeek: number | null
   customProgram: TrainingProgram | null
   dayOverrides: Record<string, TrainingDay>
+  lastBackupAt: string | null
 }

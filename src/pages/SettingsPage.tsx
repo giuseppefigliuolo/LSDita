@@ -22,15 +22,36 @@ export default function SettingsPage() {
     useState<ProgramFeedback | null>(null)
   const program = getProgram(settings.selectedProgram)
 
-  function handleExport() {
+  async function handleExport() {
     const data = workoutStore.exportData()
+    const filename = `LSDita-backup-${new Date().toISOString().split('T')[0]}.json`
     const blob = new Blob([data], { type: 'application/json' })
+    const file = new File([blob], filename, { type: 'application/json' })
+
+    const nav = navigator as Navigator & {
+      canShare?: (data: ShareData) => boolean
+    }
+    if (nav.canShare?.({ files: [file] })) {
+      try {
+        await nav.share({
+          files: [file],
+          title: 'Backup LSDita',
+          text: 'Backup dei progressi LSDita'
+        })
+        settings.markBackupDone()
+        return
+      } catch (err) {
+        if ((err as DOMException)?.name === 'AbortError') return
+      }
+    }
+
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `LSDita-backup-${new Date().toISOString().split('T')[0]}.json`
+    a.download = filename
     a.click()
     URL.revokeObjectURL(url)
+    settings.markBackupDone()
   }
 
   function handleImport() {
@@ -561,14 +582,12 @@ export default function SettingsPage() {
           </h2>
           <div className="space-y-2">
             <Card>
-              <div className="flex items-center justify-between">
-                <div>
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-text">
                     Esporta Progressi
                   </p>
-                  <p className="text-xs text-text-secondary">
-                    Salva un backup JSON
-                  </p>
+                  <BackupStatus lastBackupAt={settings.lastBackupAt} />
                 </div>
                 <Button variant="ghost" size="sm" onClick={handleExport}>
                   Esporta
@@ -642,6 +661,27 @@ export default function SettingsPage() {
         </div>
       </div>
     </motion.div>
+  )
+}
+
+function BackupStatus({ lastBackupAt }: { lastBackupAt: string | null }) {
+  if (!lastBackupAt) {
+    return (
+      <p className="text-xs mt-0.5" style={{ color: '#CC3020' }}>
+        Nessun backup effettuato
+      </p>
+    )
+  }
+  const days = Math.floor(
+    (Date.now() - new Date(lastBackupAt).getTime()) / 86400000
+  )
+  const color = days < 7 ? '#2E7D32' : days < 30 ? '#B8860B' : '#CC3020'
+  const label =
+    days === 0 ? 'oggi' : days === 1 ? '1 giorno fa' : `${days} giorni fa`
+  return (
+    <p className="text-xs mt-0.5" style={{ color }}>
+      Ultimo backup: {label}
+    </p>
   )
 }
 

@@ -12,7 +12,7 @@ import {
   getSessionLabel
 } from '../utils/programUtils'
 import { fireConfettiFromEvent } from '../utils/confetti'
-import { RADIUS, SHADOW } from '../styles/tokens'
+import { INK, RADIUS, SHADOW } from '../styles/tokens'
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -33,7 +33,8 @@ export default function Dashboard() {
     getStreak,
     completedWorkouts
   } = useWorkoutStore()
-  const { selectedProgram, currentWeek: overrideWeek } = useSettingsStore()
+  const { selectedProgram, currentWeek: overrideWeek, lastBackupAt } =
+    useSettingsStore()
   const program = getProgram(selectedProgram)
 
   const autoWeek = programStartDate
@@ -45,6 +46,13 @@ export default function Dashboard() {
   const currentWeek = program.weeks.find((w) => w.weekNumber === weekNumber)
 
   const todayDate = new Date().toISOString().split('T')[0]
+
+  const backupDaysAgo = lastBackupAt
+    ? Math.floor((Date.now() - new Date(lastBackupAt).getTime()) / 86400000)
+    : null
+  const showBackupReminder =
+    completedWorkouts.length > 0 &&
+    (backupDaysAgo === null || backupDaysAgo >= 10)
 
   function handleStartProgram(e: React.MouseEvent) {
     fireConfettiFromEvent(e)
@@ -70,6 +78,68 @@ export default function Dashboard() {
             : 'Il tuo programma di arrampicata'}
         </p>
       </motion.div>
+
+      {showBackupReminder && (
+        <motion.button
+          variants={fadeUp}
+          onClick={() => navigate('/settings')}
+          className="w-full mb-4 p-3 border-[3px] flex items-center gap-3 text-left"
+          style={{
+            borderColor: INK,
+            backgroundColor: '#FFF8E8',
+            borderRadius: RADIUS.blob,
+            boxShadow: SHADOW.sm
+          }}
+        >
+          <div
+            className="w-9 h-9 shrink-0 flex items-center justify-center border-[2.5px]"
+            style={{
+              borderColor: INK,
+              backgroundColor: '#E2F6F6',
+              borderRadius: RADIUS.blob,
+              boxShadow: SHADOW.xxs
+            }}
+            aria-hidden
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke={INK}
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-bold" style={{ color: INK }}>
+              Fai un backup dei progressi
+            </p>
+            <p className="text-xs" style={{ color: INK, opacity: 0.75 }}>
+              {backupDaysAgo === null
+                ? 'Nessun backup effettuato finora'
+                : `Ultimo backup: ${backupDaysAgo} giorni fa`}
+            </p>
+          </div>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={INK}
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </motion.button>
+      )}
 
       {!programStartDate && (
         <motion.div variants={fadeUp} className="mb-6">

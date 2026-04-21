@@ -35,6 +35,7 @@ interface SettingsStore extends AppSettings {
     weekNumber: number,
     dayOfWeek: string
   ) => void
+  markBackupDone: () => void
 }
 
 export const useSettingsStore = create<SettingsStore>()(
@@ -49,6 +50,7 @@ export const useSettingsStore = create<SettingsStore>()(
       currentWeek: null,
       customProgram: null,
       dayOverrides: {},
+      lastBackupAt: null,
 
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
       toggleVoice: () => set((s) => ({ voiceEnabled: !s.voiceEnabled })),
@@ -78,7 +80,8 @@ export const useSettingsStore = create<SettingsStore>()(
           const next = { ...s.dayOverrides }
           delete next[dayOverrideKey(programId, weekNumber, dayOfWeek)]
           return { dayOverrides: next }
-        })
+        }),
+      markBackupDone: () => set({ lastBackupAt: new Date().toISOString() })
     }),
     {
       name: 'LSDita-settings'
