@@ -27,7 +27,7 @@ const phaseColors: Record<string, {
   hanging:           { fill: '#D4541A', bg: '#FDEEE4', rays: '#E8B820',  textOnFill: '#FFFBF0' },
   resting:           { fill: '#17A8A8', bg: '#E2F6F6', rays: '#5A9A1E',  textOnFill: '#2D0E4A' },
   set_rest:          { fill: '#7B3A9E', bg: '#F2EAF8', rays: '#E84830',  textOnFill: '#FFFBF0' },
-  exercise_complete: { fill: '#E8B820', bg: '#FDF7E3', rays: '#D4541A',  textOnFill: '#2D0E4A' },
+  exercise_complete: { fill: '#2FA85C', bg: '#E3F5E8', rays: '#0E7A3A',  textOnFill: '#FFFFFF' },
   workout_complete:  { fill: '#5A9A1E', bg: '#EBF5E3', rays: '#17A8A8',  textOnFill: '#FFFBF0' },
   preview:           { fill: '#9C7B5C', bg: '#F4E8C4', rays: '#E8B820',  textOnFill: '#2D0E4A' },
   idle:              { fill: '#9C7B5C', bg: '#F4E8C4', rays: '#E8B820',  textOnFill: '#2D0E4A' },
@@ -48,6 +48,9 @@ export default function CircularTimer({ timeRemaining, totalTime, phase, label }
   const colors = phaseColors[phase] ?? phaseColors.idle
   const displayTime = Math.ceil(timeRemaining)
   const hideTime = phase === 'exercise_complete' || phase === 'workout_complete'
+  const isComplete = phase === 'exercise_complete'
+  const fillPaint = isComplete ? `url(#grad-${uid})` : colors.fill
+  const bgPaint = isComplete ? `url(#gradBg-${uid})` : colors.bg
 
   // Continuous organic blob morphing
   useEffect(() => {
@@ -75,6 +78,15 @@ export default function CircularTimer({ timeRemaining, totalTime, phase, label }
         style={{ overflow: 'visible' }}
       >
         <defs>
+          <linearGradient id={`grad-${uid}`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#4FD37A" />
+            <stop offset="50%" stopColor="#2FA85C" />
+            <stop offset="100%" stopColor="#0E7A3A" />
+          </linearGradient>
+          <linearGradient id={`gradBg-${uid}`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#EAFBEF" />
+            <stop offset="100%" stopColor="#C9EED4" />
+          </linearGradient>
           <clipPath id={`fill-${uid}`}>
             <motion.rect
               x={0} y={0} width={VIEW} height={VIEW}
@@ -114,12 +126,17 @@ export default function CircularTimer({ timeRemaining, totalTime, phase, label }
         {/* ── Blob body ── */}
 
         {/* 1. Background tint */}
-        <motion.path d={blobPath} fill={colors.bg} />
+        <motion.path d={blobPath} fill={bgPaint} />
 
-        {/* 2. Liquid fill — clipped to show "remaining" portion */}
-        <g clipPath={`url(#fill-${uid})`}>
-          <motion.path d={blobPath} fill={colors.fill} />
-        </g>
+        {/* 2. Liquid fill — clipped to show "remaining" portion.
+            On completion, fill the whole blob with the green gradient. */}
+        {isComplete ? (
+          <motion.path d={blobPath} fill={fillPaint} />
+        ) : (
+          <g clipPath={`url(#fill-${uid})`}>
+            <motion.path d={blobPath} fill={fillPaint} />
+          </g>
+        )}
 
         {/* 3. Bold plum border — retro psychedelic sticker outline */}
         <motion.path

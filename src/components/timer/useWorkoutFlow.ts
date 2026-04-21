@@ -89,7 +89,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
         setCurrentSet(1)
         setCurrentRep(1)
         setPhase('preview')
-      }, 2000)
+      }, 5000)
     } else {
       finishWorkout()
     }
