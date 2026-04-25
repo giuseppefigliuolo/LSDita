@@ -8,7 +8,7 @@ import {
   RADIUS,
   SHADOW,
   SURFACE,
-  SURFACE_ELEVATED,
+  SURFACE_ELEVATED
 } from '../../styles/tokens'
 
 interface ExerciseInfoModalProps {
@@ -20,10 +20,10 @@ interface ExerciseInfoModalProps {
 export default function ExerciseInfoModal({
   open,
   exercise,
-  onClose,
+  onClose
 }: ExerciseInfoModalProps) {
   const { body: descBody, refUrl } = parseExerciseDescription(
-    exercise.description,
+    exercise.description
   )
   const refHref = refUrl
     ? /^https?:\/\//i.test(refUrl)
@@ -55,7 +55,7 @@ export default function ExerciseInfoModal({
               backgroundColor: SURFACE_ELEVATED,
               borderRadius: RADIUS.card,
               boxShadow: SHADOW.lg,
-              maxHeight: '85dvh',
+              maxHeight: '85dvh'
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -66,7 +66,7 @@ export default function ExerciseInfoModal({
                   style={{
                     backgroundColor: '#E8B820',
                     borderRadius: RADIUS.blob,
-                    boxShadow: SHADOW.xs,
+                    boxShadow: SHADOW.xs
                   }}
                 >
                   <InfoGlyph size={18} color={INK} />
@@ -87,7 +87,7 @@ export default function ExerciseInfoModal({
                 style={{
                   backgroundColor: SURFACE,
                   borderRadius: RADIUS.btnSm,
-                  boxShadow: SHADOW.xs,
+                  boxShadow: SHADOW.xs
                 }}
               >
                 <svg
@@ -114,7 +114,7 @@ export default function ExerciseInfoModal({
                     borderColor: INK,
                     backgroundColor: SURFACE,
                     borderRadius: RADIUS.blob,
-                    boxShadow: SHADOW.sm,
+                    boxShadow: SHADOW.sm
                   }}
                 >
                   <ExerciseIllustration
@@ -128,7 +128,7 @@ export default function ExerciseInfoModal({
                     style={{
                       fontSize: 20,
                       fontFamily: 'var(--font-display)',
-                      overflowWrap: 'anywhere',
+                      overflowWrap: 'anywhere'
                     }}
                   >
                     {exercise.name}
@@ -177,7 +177,7 @@ export default function ExerciseInfoModal({
                     borderColor: INK,
                     backgroundColor: SURFACE,
                     borderRadius: RADIUS.card,
-                    boxShadow: SHADOW.xs,
+                    boxShadow: SHADOW.xs
                   }}
                 >
                   <div className="flex items-center gap-2 mb-2">
@@ -187,7 +187,7 @@ export default function ExerciseInfoModal({
                         borderColor: INK,
                         backgroundColor: '#E8B820',
                         color: INK,
-                        borderRadius: RADIUS.btnSm,
+                        borderRadius: RADIUS.btnSm
                       }}
                     >
                       i
@@ -212,7 +212,7 @@ export default function ExerciseInfoModal({
                   style={{
                     border: `1.5px dashed ${INK}`,
                     borderRadius: RADIUS.pill,
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'transparent'
                   }}
                 >
                   <svg
@@ -251,7 +251,7 @@ export default function ExerciseInfoModal({
                   style={{
                     borderColor: `${INK}66`,
                     borderRadius: RADIUS.btnSm,
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'transparent'
                   }}
                 >
                   <p className="text-xs text-text-muted italic leading-snug">
@@ -275,10 +275,15 @@ export default function ExerciseInfoModal({
                   backgroundColor: '#D4541A',
                   color: '#FFFBF0',
                   borderRadius: RADIUS.btnMd,
-                  boxShadow: SHADOW.md,
+                  boxShadow: SHADOW.md
                 }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <polygon points="5 3 19 12 5 21" />
                 </svg>
                 Riprendi
@@ -294,7 +299,7 @@ export default function ExerciseInfoModal({
 function Tag({
   children,
   bg,
-  color,
+  color
 }: {
   children: React.ReactNode
   bg: string
@@ -307,7 +312,7 @@ function Tag({
         borderColor: INK,
         backgroundColor: bg,
         color,
-        borderRadius: RADIUS.pill,
+        borderRadius: RADIUS.pill
       }}
     >
       {children}
@@ -315,7 +320,13 @@ function Tag({
   )
 }
 
-function InfoGlyph({ size = 18, color = INK }: { size?: number; color?: string }) {
+function InfoGlyph({
+  size = 18,
+  color = INK
+}: {
+  size?: number
+  color?: string
+}) {
   return (
     <svg
       width={size}

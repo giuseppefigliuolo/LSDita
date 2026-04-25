@@ -23,6 +23,7 @@ export interface Exercise {
   restBetweenSets: number
   weight?: string
   notes?: string
+  difficulty?: 'facile' | 'medio' | 'hard'
 }
 
 export interface TrainingDay {

@@ -32,11 +32,20 @@ function EditPencilButton({ onClick }: { onClick: () => void }) {
       style={{
         backgroundColor: SURFACE,
         borderRadius: RADIUS.backBtn,
-        boxShadow: SHADOW.xs,
+        boxShadow: SHADOW.xs
       }}
       whileTap={{ x: 2, y: 2, boxShadow: `0px 0px 0px ${INK}` }}
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={INK}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M12 20h9" />
         <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
       </svg>
@@ -147,6 +156,7 @@ export default function WorkoutDay() {
         {selectedExercise && (
           <ExerciseDetailModal
             exercise={selectedExercise}
+            sessionTitle={day.title}
             onClose={() => setSelectedExercise(null)}
           />
         )}
@@ -185,7 +195,7 @@ function HeroCard({
       className="relative overflow-hidden border-[3px] border-[#3A1248]"
       style={{
         borderRadius: RADIUS.card,
-        boxShadow: SHADOW.lg,
+        boxShadow: SHADOW.lg
       }}
     >
       <div
@@ -275,7 +285,12 @@ function HeroFlower() {
       <motion.g
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.35, type: 'spring', stiffness: 220, damping: 16 }}
+        transition={{
+          delay: 0.35,
+          type: 'spring',
+          stiffness: 220,
+          damping: 16
+        }}
         style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
       >
         <circle cx={cx} cy={cy} r="11" fill="#5A2878" />
@@ -285,7 +300,14 @@ function HeroFlower() {
         <circle cx={cx + 1} cy={cy + 3} r="1.2" fill="#3A1248" opacity="0.55" />
         <circle cx={cx - 4} cy={cy + 2} r="1" fill="#3A1248" opacity="0.5" />
         <circle cx={cx + 4} cy={cy + 4} r="1" fill="#3A1248" opacity="0.5" />
-        <ellipse cx={cx - 3} cy={cy - 5} rx="3" ry="2" fill="white" opacity="0.35" />
+        <ellipse
+          cx={cx - 3}
+          cy={cy - 5}
+          rx="3"
+          ry="2"
+          fill="white"
+          opacity="0.35"
+        />
       </motion.g>
     </svg>
   )
@@ -410,21 +432,22 @@ function ExerciseCard({
 // Exercise detail modal (unchanged)
 // ──────────────────────────────────────────────────────────────
 
-const gripLabelsModal: Record<string, string> = {
-  half_crimp: 'Semi-arcuata',
-  open_hand: 'Mano aperta',
-  full_crimp: 'Arcuata piena',
-  three_finger_drag: 'Tre dita',
-  pinch: 'Pinch',
-  sloper: 'Sloper',
-  mixed: 'Mista'
+const difficultyConfig: Record<
+  NonNullable<Exercise['difficulty']>,
+  { label: string; bg: string; fg: string }
+> = {
+  facile: { label: 'Facile', bg: '#5A9A1E', fg: '#FFFBF0' },
+  medio: { label: 'Medio', bg: '#E8B820', fg: INK },
+  hard: { label: 'Hard', bg: '#D4541A', fg: '#FFFBF0' }
 }
 
 function ExerciseDetailModal({
   exercise,
+  sessionTitle,
   onClose
 }: {
   exercise: Exercise
+  sessionTitle: string
   onClose: () => void
 }) {
   const dragY = useMotionValue(window.innerHeight)
@@ -555,7 +578,7 @@ function ExerciseDetailModal({
           boxShadow: `0 -4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.55)`,
           y: dragY,
           scale: sheetScale,
-          opacity: sheetOpacity,
+          opacity: sheetOpacity
         }}
       >
         <div className="bg-surface overflow-y-auto overscroll-contain max-h-[85dvh]">
@@ -565,109 +588,419 @@ function ExerciseDetailModal({
               style={{
                 borderRadius: RADIUS.btnSm,
                 backgroundColor: SURFACE,
-                boxShadow: SHADOW.xxs,
+                boxShadow: SHADOW.xxs
               }}
             />
           </div>
 
-          <div className="px-5 pb-8">
-            <div className="flex flex-col items-center text-center mb-5">
-              <div
-                className="w-28 h-28 bg-surface-elevated flex items-center justify-center mb-4 border-[2.5px] border-[#3A1248]"
-                style={{
-                  borderRadius: RADIUS.blob,
-                  boxShadow: SHADOW.sm,
-                }}
-              >
-                <ExerciseIllustration name={exercise.illustration} size={96} />
-              </div>
-              <h2 className="text-lg font-bold text-text">{exercise.name}</h2>
-            </div>
-
-            <p className="text-sm text-text-secondary leading-relaxed mb-5">
-              <ExerciseDescription text={exercise.description} />
-            </p>
-
-            <div className="flex flex-wrap gap-2 mb-5">
-              <span className="text-xs px-3 py-1 rounded-full bg-surface-elevated text-text-muted font-medium">
-                {equipmentLabels[exercise.equipment] ?? exercise.equipment}
-              </span>
-              {exercise.grip && (
-                <span className="text-xs px-3 py-1 rounded-full bg-primary-soft text-primary font-medium">
-                  {gripLabelsModal[exercise.grip] ?? exercise.grip}
-                </span>
-              )}
-              {exercise.weight && exercise.weight !== 'corpo libero' && (
-                <span className="text-xs px-3 py-1 rounded-full bg-violet-soft text-violet font-medium">
-                  {exercise.weight}
-                </span>
-              )}
-            </div>
-
-            <div className="grid grid-cols-2 gap-3 mb-5">
-              <DetailCell
-                label="Serie"
-                value={String(exercise.sets)}
-                color="text-primary"
-              />
-              <DetailCell
-                label="Ripetizioni"
-                value={String(exercise.repsPerSet)}
-                color="text-secondary"
-              />
-              <DetailCell
-                label="Tempo"
-                value={`${exercise.hangTime}s`}
-                color="text-accent"
-              />
-              <DetailCell
-                label="Recupero set"
-                value={`${exercise.restBetweenSets}s`}
-                color="text-text-muted"
-              />
-              {exercise.restBetweenReps > 0 && (
-                <DetailCell
-                  label="Recupero rep"
-                  value={`${exercise.restBetweenReps}s`}
-                  color="text-text-muted"
-                />
-              )}
-            </div>
-
-            {exercise.notes && (
-              <div className="bg-accent-soft border-[2px] border-[#3A1248] px-4 py-3 mb-5" style={{ borderRadius: RADIUS.btnSm, boxShadow: SHADOW.xs }}>
-                <p className="text-xs text-text font-semibold uppercase tracking-wider mb-1">
-                  Note
-                </p>
-                <p className="text-sm text-text">{exercise.notes}</p>
-              </div>
-            )}
-
-            <Button variant="ghost" size="md" fullWidth onClick={dismiss}>
-              Chiudi
-            </Button>
-          </div>
+          <ExerciseDetailBody
+            exercise={exercise}
+            sessionTitle={sessionTitle}
+          />
         </div>
+
+        <button
+          type="button"
+          onClick={dismiss}
+          aria-label="Chiudi"
+          className="absolute top-3 right-3 z-20 w-9 h-9 flex items-center justify-center border-[2.5px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+          style={{
+            borderColor: INK,
+            backgroundColor: '#FFF8E8',
+            borderRadius: RADIUS.backBtn,
+            boxShadow: SHADOW.xs
+          }}
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={INK}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
       </motion.div>
     </div>
   )
 }
 
-function DetailCell({
-  label,
-  value,
-  color
+function ExerciseDetailBody({
+  exercise,
+  sessionTitle
 }: {
-  label: string
-  value: string
-  color: string
+  exercise: Exercise
+  sessionTitle: string
 }) {
+  const equipmentLabel =
+    equipmentLabels[exercise.equipment] ?? exercise.equipment
+  const gripLabel = exercise.grip ? gripLabels[exercise.grip] : null
+  const isReps = exercise.type === 'reps'
+  const showTimeline = !isReps
+  const difficulty = exercise.difficulty
+    ? difficultyConfig[exercise.difficulty]
+    : null
+  const hasWeight = exercise.weight && exercise.weight !== 'corpo libero'
+
   return (
-    <div className="bg-surface-elevated border-[2px] border-[#3A1248] p-3 text-center" style={{ borderRadius: RADIUS.stat, boxShadow: SHADOW.xs }}>
-      <p className={`text-lg font-bold font-timer ${color}`}>{value}</p>
-      <p className="text-[11px] uppercase tracking-wider text-text-muted">
-        {label}
+    <div className="px-5 pb-8 pt-1">
+      {/* Top row: illustration + meta + close */}
+      <div className="flex items-start gap-4 mb-5">
+        <div
+          className="shrink-0 flex items-center justify-center border-[2.5px] border-[#3A1248]"
+          style={{
+            width: 84,
+            height: 84,
+            borderRadius: RADIUS.blob,
+            backgroundColor: '#FFF8E8',
+            boxShadow: SHADOW.sm
+          }}
+        >
+          <ExerciseIllustration name={exercise.illustration} size={62} />
+        </div>
+        <div className="flex-1 min-w-0 pr-10">
+          <p
+            className="text-[10px] font-bold uppercase tracking-[0.2em] mb-1"
+            style={{ color: '#D4541A' }}
+          >
+            {sessionTitle}
+          </p>
+          <h2
+            className="font-bold text-text leading-tight mb-2.5"
+            style={{
+              fontSize: 24,
+              fontFamily: 'var(--font-display)',
+              overflowWrap: 'anywhere'
+            }}
+          >
+            {exercise.name}
+          </h2>
+          <div className="flex flex-wrap gap-1.5">
+            <MetaPill variant="muted">{equipmentLabel}</MetaPill>
+            {gripLabel && <MetaPill variant="accent">{gripLabel}</MetaPill>}
+            {hasWeight && (
+              <MetaPill variant="muted">{exercise.weight}</MetaPill>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Protocol card */}
+      <div
+        className="mb-3 border-[2.5px] border-[#3A1248] overflow-hidden"
+        style={{
+          borderRadius: RADIUS.card,
+          backgroundColor: '#FFF8E8',
+          boxShadow: SHADOW.sm
+        }}
+      >
+        <div className="px-4 pt-3 pb-1">
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted">
+            Protocollo
+          </p>
+        </div>
+        <div className="flex items-stretch px-2 pb-2">
+          <ProtocolStat
+            value={`${exercise.sets}×${exercise.repsPerSet}`}
+            label={isReps ? 'Set × Rep' : 'Serie × Rep'}
+            color="#D4541A"
+          />
+          {!isReps && (
+            <>
+              <DashedDivider />
+              <ProtocolStat
+                value={`${exercise.hangTime}s`}
+                label="Tenuta"
+                color="#E8B820"
+              />
+            </>
+          )}
+          {!isReps && exercise.restBetweenReps > 0 && (
+            <>
+              <DashedDivider />
+              <ProtocolStat
+                value={`${exercise.restBetweenReps}s`}
+                label="Pausa rep"
+                color="#3FB6A8"
+              />
+            </>
+          )}
+        </div>
+        {showTimeline && (
+          <div className="px-4 pb-3 pt-1">
+            <RepTimeline
+              reps={exercise.repsPerSet}
+              hangTime={exercise.hangTime}
+              restBetweenReps={exercise.restBetweenReps}
+            />
+            <div className="flex items-center justify-between mt-2 text-[11px] text-text-muted font-timer">
+              <span>
+                1 serie = {exercise.repsPerSet} ripetizioni ×{' '}
+                {exercise.hangTime}s hang
+                {exercise.restBetweenReps > 0
+                  ? ` / ${exercise.restBetweenReps}s pausa`
+                  : ''}
+              </span>
+              <span className="flex items-center gap-1">
+                <span
+                  className="inline-block w-1.5 h-1.5 rounded-full"
+                  style={{ backgroundColor: '#E8B820' }}
+                />
+                hang
+              </span>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Side cards: rest set + difficulty */}
+      <div className="grid grid-cols-2 gap-3 mb-5">
+        <SideCard
+          icon={
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#FFFBF0"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="13" r="8" />
+              <path d="M12 9v4l2.5 2.5M9 2h6M12 5V2" />
+            </svg>
+          }
+          iconBg="#7B3A9E"
+          value={`${exercise.restBetweenSets}s`}
+          label="Recupero tra serie"
+        />
+        {difficulty && (
+          <SideCard
+            icon={
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke={difficulty.fg}
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="12" cy="12" r="1.5" fill={difficulty.fg} />
+              </svg>
+            }
+            iconBg={difficulty.bg}
+            value={difficulty.label}
+            label="Difficoltà"
+          />
+        )}
+      </div>
+
+      {/* Description */}
+      <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted mb-2">
+        Descrizione
       </p>
+      <div
+        className="mb-5 px-4 py-3.5 border-[2.5px] border-[#3A1248]"
+        style={{
+          borderRadius: RADIUS.card,
+          backgroundColor: '#FFF8E8',
+          boxShadow: SHADOW.sm
+        }}
+      >
+        <p
+          className="text-text"
+          style={{ fontSize: 14, lineHeight: 1.55 }}
+        >
+          <ExerciseDescription text={exercise.description} />
+        </p>
+      </div>
+
+      {/* Note pill */}
+      {exercise.notes && (
+        <div
+          className="inline-flex items-center gap-2 max-w-full px-3.5 py-2 text-xs font-medium text-text"
+          style={{
+            border: `1.5px dashed ${INK}`,
+            borderRadius: RADIUS.pill,
+            backgroundColor: 'transparent'
+          }}
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#E8B820"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="shrink-0"
+          >
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+          </svg>
+          <span className="font-bold uppercase tracking-wider text-[10px]">
+            Nota:
+          </span>
+          <span className="truncate min-w-0">{exercise.notes}</span>
+        </div>
+      )}
     </div>
   )
 }
+
+function MetaPill({
+  children,
+  variant
+}: {
+  children: React.ReactNode
+  variant: 'muted' | 'accent'
+}) {
+  const isAccent = variant === 'accent'
+  return (
+    <span
+      className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border-[1.5px] border-[#3A1248]"
+      style={{
+        borderRadius: RADIUS.pill,
+        backgroundColor: isAccent ? '#D4541A' : '#FFF8E8',
+        color: isAccent ? '#FFFBF0' : INK
+      }}
+    >
+      {children}
+    </span>
+  )
+}
+
+function ProtocolStat({
+  value,
+  label,
+  color
+}: {
+  value: string
+  label: string
+  color: string
+}) {
+  return (
+    <div className="flex-1 flex flex-col items-center justify-center py-2 px-2">
+      <span
+        className="font-bold font-timer leading-none"
+        style={{ color, fontSize: 26 }}
+      >
+        {value}
+      </span>
+      <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted mt-1.5">
+        {label}
+      </span>
+    </div>
+  )
+}
+
+function DashedDivider() {
+  return (
+    <div
+      className="self-stretch my-2"
+      style={{
+        width: 0,
+        borderLeft: `1.5px dashed ${INK}`,
+        opacity: 0.4
+      }}
+    />
+  )
+}
+
+function RepTimeline({
+  reps,
+  hangTime,
+  restBetweenReps
+}: {
+  reps: number
+  hangTime: number
+  restBetweenReps: number
+}) {
+  const hangColor = '#E8B820'
+  const restColor = '#3FB6A8'
+  const hasRest = restBetweenReps > 0
+  const segments: { weight: number; color: string }[] = []
+  for (let i = 0; i < reps; i++) {
+    segments.push({ weight: hangTime, color: hangColor })
+    if (hasRest && i < reps - 1) {
+      segments.push({ weight: restBetweenReps, color: restColor })
+    }
+  }
+  const total = segments.reduce((sum, s) => sum + s.weight, 0)
+
+  return (
+    <div
+      className="flex w-full overflow-hidden border-[2px] border-[#3A1248]"
+      style={{
+        height: 22,
+        borderRadius: RADIUS.pill,
+        boxShadow: SHADOW.xxs
+      }}
+    >
+      {segments.map((s, i) => (
+        <div
+          key={i}
+          style={{
+            width: `${(s.weight / total) * 100}%`,
+            backgroundColor: s.color,
+            borderRight:
+              i < segments.length - 1 ? `1.5px solid ${INK}` : 'none'
+          }}
+        />
+      ))}
+    </div>
+  )
+}
+
+function SideCard({
+  icon,
+  iconBg,
+  value,
+  label
+}: {
+  icon: React.ReactNode
+  iconBg: string
+  value: string
+  label: string
+}) {
+  return (
+    <div
+      className="flex items-center gap-3 px-3 py-3 border-[2.5px] border-[#3A1248]"
+      style={{
+        borderRadius: RADIUS.card,
+        backgroundColor: '#FFF8E8',
+        boxShadow: SHADOW.sm
+      }}
+    >
+      <div
+        className="shrink-0 w-10 h-10 flex items-center justify-center border-[2px] border-[#3A1248]"
+        style={{
+          backgroundColor: iconBg,
+          borderRadius: RADIUS.btnSm,
+          boxShadow: SHADOW.xs
+        }}
+      >
+        {icon}
+      </div>
+      <div className="min-w-0 flex-1">
+        <p className="text-base font-bold font-timer text-text leading-tight">
+          {value}
+        </p>
+        <p className="text-[11px] text-text-muted leading-tight mt-0.5">
+          {label}
+        </p>
+      </div>
+    </div>
+  )
+}
+

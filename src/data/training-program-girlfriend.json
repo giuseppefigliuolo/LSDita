@@ -30,7 +30,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 3-5 kg",
-              "notes": "Talloni piantati a terra. Petto sempre alto, schiena dritta"
+              "notes": "Talloni piantati a terra. Petto sempre alto, schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-mon-bulgarian",
@@ -45,7 +46,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 3-5 kg",
-              "notes": "2 set per gamba (alterna). Ginocchio NON verso l'interno"
+              "notes": "2 set per gamba (alterna). Ginocchio NON verso l'interno",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-mon-sl-rdl",
@@ -60,7 +62,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 3-5 kg",
-              "notes": "2 set per gamba (alterna). Schiena SEMPRE dritta"
+              "notes": "2 set per gamba (alterna). Schiena SEMPRE dritta",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-mon-hip-thrust",
@@ -75,7 +78,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 5 kg",
-              "notes": "Strizza i glutei in cima per 1s. Non arcuare la lombare"
+              "notes": "Strizza i glutei in cima per 1s. Non arcuare la lombare",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-mon-cossack",
@@ -89,7 +93,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "6 rep per lato (12 totali). Tallone della gamba piegata a terra"
+              "notes": "6 rep per lato (12 totali). Tallone della gamba piegata a terra",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-mon-calf",
@@ -103,7 +108,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba. Stretch completo sotto, contrazione massima sopra"
+              "notes": "Un set per gamba. Stretch completo sotto, contrazione massima sopra",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-mon-deadbug",
@@ -117,7 +123,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "10 tot (5 per lato). Lombare SEMPRE piatta a terra"
+              "notes": "10 tot (5 per lato). Lombare SEMPRE piatta a terra",
+              "difficulty": "facile"
             }
           ]
         },
@@ -140,7 +147,8 @@
               "hangTime": 3,
               "restBetweenReps": 2,
               "restBetweenSets": 60,
-              "notes": "Braccia SEMPRE tese. Movimento dalle scapole"
+              "notes": "Braccia SEMPRE tese. Movimento dalle scapole",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-tue-pullup",
@@ -155,7 +163,8 @@
               "restBetweenReps": 4,
               "restBetweenSets": 120,
               "weight": "corpo libero",
-              "notes": "Full ROM. Discesa 2-3s. Lascia margine — non andare a cedimento"
+              "notes": "Full ROM. Discesa 2-3s. Lascia margine — non andare a cedimento",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w1-tue-ring-row",
@@ -169,7 +178,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Più orizzontale il corpo = più difficile. Scapole unite in cima"
+              "notes": "Più orizzontale il corpo = più difficile. Scapole unite in cima",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-tue-tuck-fl",
@@ -183,7 +193,8 @@
               "hangTime": 12,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Braccia tese. Schiena parallela al pavimento"
+              "notes": "Braccia tese. Schiena parallela al pavimento",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-tue-leg-raises",
@@ -197,7 +208,8 @@
               "hangTime": 3,
               "restBetweenReps": 3,
               "restBetweenSets": 60,
-              "notes": "Zero slancio. Discesa controllata 2s"
+              "notes": "Zero slancio. Discesa controllata 2s",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-tue-hollow",
@@ -211,7 +223,8 @@
               "hangTime": 20,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "LOMBARE A TERRA. Se si stacca, piega un po' le ginocchia"
+              "notes": "LOMBARE A TERRA. Se si stacca, piega un po' le ginocchia",
+              "difficulty": "medio"
             }
           ]
         },
@@ -234,7 +247,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Atterraggio MORBIDO. Ginocchia che assorbono l'impatto"
+              "notes": "Atterraggio MORBIDO. Ginocchia che assorbono l'impatto",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-thu-skater",
@@ -248,7 +262,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "16 totali (8 per lato). Atterra stabile, no wobble del ginocchio"
+              "notes": "16 totali (8 per lato). Atterra stabile, no wobble del ginocchio",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-thu-pushup",
@@ -262,7 +277,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Gomiti 45°. Se troppo duro: sulle ginocchia con STESSA tecnica"
+              "notes": "Gomiti 45°. Se troppo duro: sulle ginocchia con STESSA tecnica",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w1-thu-ring-dip",
@@ -276,7 +292,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Gomiti vicini al corpo. Se troppo duro: piedi a terra per alleggerire"
+              "notes": "Gomiti vicini al corpo. Se troppo duro: piedi a terra per alleggerire",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w1-thu-shoulder-taps",
@@ -290,7 +307,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "12 totali (6 per lato). Bacino FERMO"
+              "notes": "12 totali (6 per lato). Bacino FERMO",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-thu-russian-twist",
@@ -305,7 +323,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 3-5 kg",
-              "notes": "16 tot (8 per lato). Rotazione dal BUSTO"
+              "notes": "16 tot (8 per lato). Rotazione dal BUSTO",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-thu-mountain-climber",
@@ -319,7 +338,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "Ritmo veloce ma bacino stabile"
+              "notes": "Ritmo veloce ma bacino stabile",
+              "difficulty": "medio"
             }
           ]
         },
@@ -342,7 +362,8 @@
               "hangTime": 4,
               "restBetweenReps": 2,
               "restBetweenSets": 15,
-              "notes": "Respiro sincronizzato col movimento"
+              "notes": "Respiro sincronizzato col movimento",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-hip-cars",
@@ -356,7 +377,8 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba. Cerchio ampio e lento"
+              "notes": "Un set per gamba. Cerchio ampio e lento",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-worlds-greatest",
@@ -370,7 +392,8 @@
               "hangTime": 5,
               "restBetweenReps": 2,
               "restBetweenSets": 30,
-              "notes": "8 tot (4 per lato). Movimento ampio e lento"
+              "notes": "8 tot (4 per lato). Movimento ampio e lento",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-deep-squat",
@@ -384,7 +407,8 @@
               "hangTime": 45,
               "restBetweenReps": 0,
               "restBetweenSets": 15,
-              "notes": "Talloni a terra! Oscilla se necessario"
+              "notes": "Talloni a terra! Oscilla se necessario",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-90-90",
@@ -398,7 +422,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Cuscino sotto il gluteo se non arrivi dritta"
+              "notes": "Un set per lato. Cuscino sotto il gluteo se non arrivi dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-pigeon",
@@ -412,7 +437,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Respira e rilassati"
+              "notes": "Un set per lato. Respira e rilassati",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-frog",
@@ -426,7 +452,8 @@
               "hangTime": 50,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Entra gradualmente. Non forzare"
+              "notes": "Entra gradualmente. Non forzare",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-butterfly",
@@ -440,7 +467,8 @@
               "hangTime": 50,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta. Flessione dalle anche"
+              "notes": "Schiena dritta. Flessione dalle anche",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-pancake",
@@ -454,7 +482,8 @@
               "hangTime": 50,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena DRITTA anche se meno profondo"
+              "notes": "Schiena DRITTA anche se meno profondo",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-thoracic",
@@ -468,7 +497,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Respira profondamente nella rotazione"
+              "notes": "Un set per lato. Respira profondamente nella rotazione",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w1-fri-forearm",
@@ -482,7 +512,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Flessori 1 set, estensori 1 set"
+              "notes": "Flessori 1 set, estensori 1 set",
+              "difficulty": "facile"
             }
           ]
         }
@@ -514,7 +545,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 5-7 kg",
-              "notes": "Talloni a terra, petto alto"
+              "notes": "Talloni a terra, petto alto",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-mon-bulgarian",
@@ -529,7 +561,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 5-7 kg",
-              "notes": "3 set per gamba (alterna). Ginocchio in linea col piede"
+              "notes": "3 set per gamba (alterna). Ginocchio in linea col piede",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-mon-sl-rdl",
@@ -544,7 +577,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 5-7 kg",
-              "notes": "3 set per gamba. Schiena dritta"
+              "notes": "3 set per gamba. Schiena dritta",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-mon-hip-thrust",
@@ -559,7 +593,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 7 kg",
-              "notes": "Squeeze dei glutei 1s in cima"
+              "notes": "Squeeze dei glutei 1s in cima",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-mon-cossack",
@@ -573,7 +608,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "6 per lato. Tallone a terra"
+              "notes": "6 per lato. Tallone a terra",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-mon-calf",
@@ -587,7 +623,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-mon-deadbug",
@@ -601,7 +638,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "12 tot (6 per lato). Lombare SEMPRE a terra"
+              "notes": "12 tot (6 per lato). Lombare SEMPRE a terra",
+              "difficulty": "facile"
             }
           ]
         },
@@ -624,7 +662,8 @@
               "hangTime": 3,
               "restBetweenReps": 2,
               "restBetweenSets": 60,
-              "notes": "Braccia sempre tese"
+              "notes": "Braccia sempre tese",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-tue-pullup",
@@ -639,7 +678,8 @@
               "restBetweenReps": 4,
               "restBetweenSets": 120,
               "weight": "corpo libero",
-              "notes": "Full ROM. Lascia 1-2 rep di margine"
+              "notes": "Full ROM. Lascia 1-2 rep di margine",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w2-tue-ring-row",
@@ -653,7 +693,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Scapole unite in cima, pausa 1s"
+              "notes": "Scapole unite in cima, pausa 1s",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-tue-tuck-fl",
@@ -667,7 +708,8 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Schiena parallela al pavimento"
+              "notes": "Schiena parallela al pavimento",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-tue-dead-hang",
@@ -682,7 +724,8 @@
               "hangTime": 25,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Spalle basse e attive, non al collo"
+              "notes": "Spalle basse e attive, non al collo",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-tue-leg-raises",
@@ -696,7 +739,8 @@
               "hangTime": 3,
               "restBetweenReps": 3,
               "restBetweenSets": 60,
-              "notes": "Niente slancio. Controllo totale"
+              "notes": "Niente slancio. Controllo totale",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-tue-hollow",
@@ -710,7 +754,8 @@
               "hangTime": 25,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Lombare SEMPRE a terra"
+              "notes": "Lombare SEMPRE a terra",
+              "difficulty": "medio"
             }
           ]
         },
@@ -733,7 +778,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Atterraggio morbido"
+              "notes": "Atterraggio morbido",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-thu-broad-jump",
@@ -747,7 +793,8 @@
               "hangTime": 3,
               "restBetweenReps": 5,
               "restBetweenSets": 60,
-              "notes": "Atterraggio stabile. Se scivolosa, togli calzini"
+              "notes": "Atterraggio stabile. Se scivolosa, togli calzini",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-thu-skater",
@@ -761,7 +808,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "20 tot (10 per lato)"
+              "notes": "20 tot (10 per lato)",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-thu-pushup",
@@ -775,7 +823,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Forma pulita > volume"
+              "notes": "Forma pulita > volume",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w2-thu-ring-dip",
@@ -789,7 +838,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Gomiti vicini al corpo"
+              "notes": "Gomiti vicini al corpo",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w2-thu-shoulder-taps",
@@ -803,7 +853,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Bacino fermo, anti-rotazione"
+              "notes": "Bacino fermo, anti-rotazione",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-thu-russian-twist",
@@ -818,7 +869,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 5 kg",
-              "notes": "20 tot (10 per lato)"
+              "notes": "20 tot (10 per lato)",
+              "difficulty": "facile"
             }
           ]
         },
@@ -841,7 +893,8 @@
               "hangTime": 4,
               "restBetweenReps": 2,
               "restBetweenSets": 15,
-              "notes": "Respiro sincrono"
+              "notes": "Respiro sincrono",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-hip-cars",
@@ -855,7 +908,8 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-worlds-greatest",
@@ -869,7 +923,8 @@
               "hangTime": 5,
               "restBetweenReps": 2,
               "restBetweenSets": 30,
-              "notes": "8 tot (4 per lato)"
+              "notes": "8 tot (4 per lato)",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-deep-squat",
@@ -883,7 +938,8 @@
               "hangTime": 50,
               "restBetweenReps": 0,
               "restBetweenSets": 15,
-              "notes": "Talloni a terra"
+              "notes": "Talloni a terra",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-90-90",
@@ -897,7 +953,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-pigeon",
@@ -911,7 +968,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-frog",
@@ -925,7 +983,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Entra gradualmente"
+              "notes": "Entra gradualmente",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-butterfly",
@@ -939,7 +998,8 @@
               "hangTime": 50,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-pancake",
@@ -953,7 +1013,8 @@
               "hangTime": 50,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta > profondità"
+              "notes": "Schiena dritta > profondità",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-thoracic",
@@ -967,7 +1028,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w2-fri-forearm",
@@ -981,7 +1043,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Flessori 1, estensori 1"
+              "notes": "Flessori 1, estensori 1",
+              "difficulty": "facile"
             }
           ]
         }
@@ -1013,7 +1076,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 7-9 kg",
-              "notes": "Talloni piantati, petto alto"
+              "notes": "Talloni piantati, petto alto",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-mon-bulgarian",
@@ -1028,7 +1092,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 7-9 kg",
-              "notes": "3 set per gamba"
+              "notes": "3 set per gamba",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-mon-sl-rdl",
@@ -1043,7 +1108,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 7-9 kg",
-              "notes": "3 set per gamba"
+              "notes": "3 set per gamba",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-mon-step-up",
@@ -1058,7 +1124,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 5 kg",
-              "notes": "Un set per gamba. Discesa controllata"
+              "notes": "Un set per gamba. Discesa controllata",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-mon-hip-thrust",
@@ -1073,7 +1140,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 9 kg",
-              "notes": "Squeeze 1s in cima"
+              "notes": "Squeeze 1s in cima",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-mon-calf",
@@ -1087,7 +1155,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             }
           ]
         },
@@ -1110,7 +1179,8 @@
               "hangTime": 3,
               "restBetweenReps": 2,
               "restBetweenSets": 60,
-              "notes": "Braccia tese"
+              "notes": "Braccia tese",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-tue-pullup",
@@ -1125,7 +1195,8 @@
               "restBetweenReps": 4,
               "restBetweenSets": 120,
               "weight": "corpo libero",
-              "notes": "Full ROM. Se non finisci i 5, fai quelle che puoi con forma pulita"
+              "notes": "Full ROM. Se non finisci i 5, fai quelle che puoi con forma pulita",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-tue-negatives",
@@ -1139,7 +1210,8 @@
               "hangTime": 5,
               "restBetweenReps": 8,
               "restBetweenSets": 90,
-              "notes": "5s di discesa. Risali saltando/con sedia"
+              "notes": "5s di discesa. Risali saltando/con sedia",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-tue-ring-row",
@@ -1153,7 +1225,8 @@
               "hangTime": 5,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Tempo 2-1-2. Pausa in cima"
+              "notes": "Tempo 2-1-2. Pausa in cima",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-tue-tuck-fl",
@@ -1167,7 +1240,8 @@
               "hangTime": 18,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Scapole depresse"
+              "notes": "Scapole depresse",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-tue-leg-raises",
@@ -1181,7 +1255,8 @@
               "hangTime": 3,
               "restBetweenReps": 3,
               "restBetweenSets": 60,
-              "notes": "Discesa 2s"
+              "notes": "Discesa 2s",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-tue-hollow",
@@ -1195,7 +1270,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Lombare SEMPRE a terra"
+              "notes": "Lombare SEMPRE a terra",
+              "difficulty": "medio"
             }
           ]
         },
@@ -1218,7 +1294,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Atterra morbida"
+              "notes": "Atterra morbida",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-thu-broad-jump",
@@ -1232,7 +1309,8 @@
               "hangTime": 3,
               "restBetweenReps": 5,
               "restBetweenSets": 60,
-              "notes": "Atterra in squat controllato"
+              "notes": "Atterra in squat controllato",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-thu-skater",
@@ -1246,7 +1324,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "24 tot (12 per lato)"
+              "notes": "24 tot (12 per lato)",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-thu-pushup",
@@ -1260,7 +1339,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Ginocchia se troppo"
+              "notes": "Ginocchia se troppo",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w3-thu-ring-dip",
@@ -1274,7 +1354,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Gomiti vicini"
+              "notes": "Gomiti vicini",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w3-thu-shoulder-taps",
@@ -1288,7 +1369,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "20 tot. Anti-rotazione"
+              "notes": "20 tot. Anti-rotazione",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-thu-burpee",
@@ -1302,7 +1384,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Forma > velocità. Senza push-up se troppo stanca"
+              "notes": "Forma > velocità. Senza push-up se troppo stanca",
+              "difficulty": "hard"
             }
           ]
         },
@@ -1325,7 +1408,8 @@
               "hangTime": 4,
               "restBetweenReps": 2,
               "restBetweenSets": 15,
-              "notes": "Respiro sincrono"
+              "notes": "Respiro sincrono",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-hip-cars",
@@ -1339,7 +1423,8 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-worlds-greatest",
@@ -1353,7 +1438,8 @@
               "hangTime": 5,
               "restBetweenReps": 2,
               "restBetweenSets": 30,
-              "notes": "4 per lato"
+              "notes": "4 per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-deep-squat",
@@ -1367,7 +1453,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 15,
-              "notes": "Talloni a terra"
+              "notes": "Talloni a terra",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-90-90",
@@ -1381,7 +1468,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-pigeon",
@@ -1395,7 +1483,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-frog",
@@ -1409,7 +1498,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Non forzare"
+              "notes": "Non forzare",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-butterfly",
@@ -1423,7 +1513,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-pancake",
@@ -1437,7 +1528,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-thoracic",
@@ -1451,7 +1543,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w3-fri-forearm",
@@ -1465,7 +1558,8 @@
               "hangTime": 40,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Flessori + estensori"
+              "notes": "Flessori + estensori",
+              "difficulty": "facile"
             }
           ]
         }
@@ -1497,7 +1591,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 75,
               "weight": "zaino 8-10 kg",
-              "notes": "Forma impeccabile anche pesante"
+              "notes": "Forma impeccabile anche pesante",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-mon-pistol-prog",
@@ -1511,7 +1606,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Un set per gamba. Scegli la progressione giusta"
+              "notes": "Un set per gamba. Scegli la progressione giusta",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-mon-bulgarian",
@@ -1526,7 +1622,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 8-10 kg",
-              "notes": "3 per gamba"
+              "notes": "3 per gamba",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-mon-sl-rdl",
@@ -1541,7 +1638,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 8-10 kg",
-              "notes": "3 per gamba"
+              "notes": "3 per gamba",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-mon-hip-thrust",
@@ -1556,7 +1654,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 10 kg",
-              "notes": "Squeeze in cima"
+              "notes": "Squeeze in cima",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w4-mon-calf",
@@ -1570,7 +1669,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             }
           ]
         },
@@ -1593,7 +1693,8 @@
               "hangTime": 3,
               "restBetweenReps": 2,
               "restBetweenSets": 60,
-              "notes": "Braccia tese"
+              "notes": "Braccia tese",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-tue-pullup-weighted",
@@ -1608,7 +1709,8 @@
               "restBetweenReps": 4,
               "restBetweenSets": 150,
               "weight": "zaino 2-3 kg",
-              "notes": "Se perdi la forma, togli peso"
+              "notes": "Se perdi la forma, togli peso",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-tue-negatives",
@@ -1622,7 +1724,8 @@
               "hangTime": 5,
               "restBetweenReps": 8,
               "restBetweenSets": 90,
-              "notes": "5s di eccentrica"
+              "notes": "5s di eccentrica",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-tue-ring-row",
@@ -1636,7 +1739,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "4 per lato. Se troppo duro: ring row standard più lente"
+              "notes": "4 per lato. Se troppo duro: ring row standard più lente",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-tue-advanced-tuck-fl",
@@ -1650,7 +1754,8 @@
               "hangTime": 12,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Allarga leggermente le ginocchia. Se troppo, fai tuck classico"
+              "notes": "Allarga leggermente le ginocchia. Se troppo, fai tuck classico",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-tue-leg-raises",
@@ -1664,7 +1769,8 @@
               "hangTime": 3,
               "restBetweenReps": 3,
               "restBetweenSets": 60,
-              "notes": "Progredisci verso gambe tese"
+              "notes": "Progredisci verso gambe tese",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-tue-hollow-rock",
@@ -1678,7 +1784,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Oscilla come una banana rigida"
+              "notes": "Oscilla come una banana rigida",
+              "difficulty": "medio"
             }
           ]
         },
@@ -1701,7 +1808,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Riposo corto"
+              "notes": "Riposo corto",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w4-thu-broad-jump",
@@ -1715,7 +1823,8 @@
               "hangTime": 3,
               "restBetweenReps": 5,
               "restBetweenSets": 60,
-              "notes": "Cerca la max distanza"
+              "notes": "Cerca la max distanza",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w4-thu-skater",
@@ -1729,7 +1838,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "24 tot"
+              "notes": "24 tot",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w4-thu-diamond-pushup",
@@ -1743,7 +1853,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Gomiti vicini al corpo"
+              "notes": "Gomiti vicini al corpo",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-thu-ring-dip",
@@ -1757,7 +1868,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Gomiti vicini"
+              "notes": "Gomiti vicini",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w4-thu-v-up",
@@ -1771,7 +1883,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Se troppo duro: piega le ginocchia"
+              "notes": "Se troppo duro: piega le ginocchia",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w4-thu-burpee",
@@ -1785,7 +1898,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Forma pulita"
+              "notes": "Forma pulita",
+              "difficulty": "hard"
             }
           ]
         },
@@ -1808,7 +1922,8 @@
               "hangTime": 4,
               "restBetweenReps": 2,
               "restBetweenSets": 15,
-              "notes": "Respiro sincrono"
+              "notes": "Respiro sincrono",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-hip-cars",
@@ -1822,7 +1937,8 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-couch",
@@ -1836,7 +1952,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Un set per lato. Cuscino sotto il ginocchio se scomodo"
+              "notes": "Un set per lato. Cuscino sotto il ginocchio se scomodo",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-deep-squat",
@@ -1850,7 +1967,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 15,
-              "notes": "Talloni a terra"
+              "notes": "Talloni a terra",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-90-90",
@@ -1864,7 +1982,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-pigeon",
@@ -1878,7 +1997,8 @@
               "hangTime": 75,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-frog",
@@ -1892,7 +2012,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Non forzare"
+              "notes": "Non forzare",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-pancake",
@@ -1906,7 +2027,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-thoracic",
@@ -1920,7 +2042,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w4-fri-forearm",
@@ -1934,7 +2057,8 @@
               "hangTime": 40,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Flessori + estensori"
+              "notes": "Flessori + estensori",
+              "difficulty": "facile"
             }
           ]
         }
@@ -1966,7 +2090,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "zaino 10+ kg",
-              "notes": "Riposo lungo, cerca il max"
+              "notes": "Riposo lungo, cerca il max",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-mon-pistol-prog",
@@ -1980,7 +2105,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "2 per gamba. Progressione massimale"
+              "notes": "2 per gamba. Progressione massimale",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-mon-bulgarian",
@@ -1995,7 +2121,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 75,
               "weight": "zaino 10+ kg",
-              "notes": "3 per gamba"
+              "notes": "3 per gamba",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-mon-sl-rdl",
@@ -2010,7 +2137,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 75,
               "weight": "zaino 10+ kg",
-              "notes": "3 per gamba"
+              "notes": "3 per gamba",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-mon-hip-thrust",
@@ -2025,7 +2153,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 75,
               "weight": "zaino 12+ kg",
-              "notes": "Squeeze massimo in cima"
+              "notes": "Squeeze massimo in cima",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-mon-calf",
@@ -2040,7 +2169,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "zaino 5 kg",
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "medio"
             }
           ]
         },
@@ -2063,7 +2193,8 @@
               "hangTime": 3,
               "restBetweenReps": 2,
               "restBetweenSets": 60,
-              "notes": "Warm-up"
+              "notes": "Warm-up",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-tue-pullup-amrap",
@@ -2078,7 +2209,8 @@
               "restBetweenReps": 4,
               "restBetweenSets": 180,
               "weight": "corpo libero",
-              "notes": "Fai quante ne riesci con forma pulita. Segna il PR"
+              "notes": "Fai quante ne riesci con forma pulita. Segna il PR",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-tue-negatives",
@@ -2092,7 +2224,8 @@
               "hangTime": 6,
               "restBetweenReps": 8,
               "restBetweenSets": 90,
-              "notes": "6s eccentrica"
+              "notes": "6s eccentrica",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-tue-ring-row-archer",
@@ -2106,7 +2239,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "notes": "5 per lato"
+              "notes": "5 per lato",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-tue-advanced-tuck-fl",
@@ -2120,7 +2254,8 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Massima apertura possibile"
+              "notes": "Massima apertura possibile",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-tue-leg-raises",
@@ -2134,7 +2269,8 @@
               "hangTime": 3,
               "restBetweenReps": 3,
               "restBetweenSets": 60,
-              "notes": "Zero slancio"
+              "notes": "Zero slancio",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-tue-hollow-rock",
@@ -2148,7 +2284,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Corpo rigido"
+              "notes": "Corpo rigido",
+              "difficulty": "medio"
             }
           ]
         },
@@ -2171,7 +2308,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "notes": "Max altezza ogni rep"
+              "notes": "Max altezza ogni rep",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-thu-broad-jump",
@@ -2185,7 +2323,8 @@
               "hangTime": 3,
               "restBetweenReps": 6,
               "restBetweenSets": 75,
-              "notes": "Segna la distanza — è un PR"
+              "notes": "Segna la distanza — è un PR",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-thu-pushup-amrap",
@@ -2199,7 +2338,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 150,
-              "notes": "Segna il PR"
+              "notes": "Segna il PR",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-thu-diamond",
@@ -2213,7 +2353,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "notes": "Gomiti vicini"
+              "notes": "Gomiti vicini",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-thu-ring-dip",
@@ -2227,7 +2368,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Qualità massima"
+              "notes": "Qualità massima",
+              "difficulty": "hard"
             },
             {
               "id": "gw-w5-thu-v-up",
@@ -2241,7 +2383,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Controllo totale"
+              "notes": "Controllo totale",
+              "difficulty": "medio"
             }
           ]
         },
@@ -2264,7 +2407,8 @@
               "hangTime": 4,
               "restBetweenReps": 2,
               "restBetweenSets": 15,
-              "notes": "Respiro sincrono"
+              "notes": "Respiro sincrono",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-hip-cars",
@@ -2278,7 +2422,8 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-couch",
@@ -2292,7 +2437,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-deep-squat",
@@ -2306,7 +2452,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 15,
-              "notes": "Talloni a terra"
+              "notes": "Talloni a terra",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-90-90",
@@ -2320,7 +2467,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-pigeon",
@@ -2334,7 +2482,8 @@
               "hangTime": 75,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-frog",
@@ -2348,7 +2497,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Non forzare"
+              "notes": "Non forzare",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-pancake",
@@ -2362,7 +2512,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-thoracic",
@@ -2376,7 +2527,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w5-fri-forearm",
@@ -2390,7 +2542,8 @@
               "hangTime": 40,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Flessori + estensori"
+              "notes": "Flessori + estensori",
+              "difficulty": "facile"
             }
           ]
         }
@@ -2422,7 +2575,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "zaino 3-5 kg",
-              "notes": "Muoviti lento e pulito"
+              "notes": "Muoviti lento e pulito",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-mon-bulgarian",
@@ -2437,7 +2591,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "corpo libero",
-              "notes": "2 per gamba"
+              "notes": "2 per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-mon-sl-rdl",
@@ -2452,7 +2607,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "weight": "corpo libero",
-              "notes": "2 per gamba"
+              "notes": "2 per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-mon-hip-thrust",
@@ -2466,7 +2622,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Squeeze in cima"
+              "notes": "Squeeze in cima",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-mon-deadbug",
@@ -2480,7 +2637,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 30,
-              "notes": "Lombare a terra"
+              "notes": "Lombare a terra",
+              "difficulty": "facile"
             }
           ]
         },
@@ -2503,7 +2661,8 @@
               "hangTime": 3,
               "restBetweenReps": 2,
               "restBetweenSets": 60,
-              "notes": "Movimento dalle scapole"
+              "notes": "Movimento dalle scapole",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-tue-pullup",
@@ -2518,7 +2677,8 @@
               "restBetweenReps": 4,
               "restBetweenSets": 120,
               "weight": "corpo libero",
-              "notes": "Forma perfetta, no fatica"
+              "notes": "Forma perfetta, no fatica",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w6-tue-ring-row",
@@ -2532,7 +2692,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Controllo totale"
+              "notes": "Controllo totale",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-tue-tuck-fl",
@@ -2546,7 +2707,8 @@
               "hangTime": 12,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "notes": "Pulito, non a cedimento"
+              "notes": "Pulito, non a cedimento",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w6-tue-hollow",
@@ -2560,7 +2722,8 @@
               "hangTime": 20,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "Lombare a terra"
+              "notes": "Lombare a terra",
+              "difficulty": "medio"
             }
           ]
         },
@@ -2583,7 +2746,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Forma pulita"
+              "notes": "Forma pulita",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w6-thu-skater",
@@ -2597,7 +2761,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "8 per lato"
+              "notes": "8 per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-thu-pushup",
@@ -2611,7 +2776,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "notes": "Non andare a cedimento"
+              "notes": "Non andare a cedimento",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-thu-ring-dip",
@@ -2625,7 +2791,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "notes": "Qualità > quantità"
+              "notes": "Qualità > quantità",
+              "difficulty": "medio"
             },
             {
               "id": "gw-w6-thu-shoulder-taps",
@@ -2639,7 +2806,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "notes": "6 per lato"
+              "notes": "6 per lato",
+              "difficulty": "facile"
             }
           ]
         },
@@ -2662,7 +2830,8 @@
               "hangTime": 4,
               "restBetweenReps": 2,
               "restBetweenSets": 15,
-              "notes": "Respiro sincrono"
+              "notes": "Respiro sincrono",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-hip-cars",
@@ -2676,7 +2845,8 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba"
+              "notes": "Un set per gamba",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-worlds-greatest",
@@ -2690,7 +2860,8 @@
               "hangTime": 5,
               "restBetweenReps": 2,
               "restBetweenSets": 30,
-              "notes": "4 per lato"
+              "notes": "4 per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-couch",
@@ -2704,7 +2875,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-deep-squat",
@@ -2718,7 +2890,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 15,
-              "notes": "Talloni a terra"
+              "notes": "Talloni a terra",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-90-90",
@@ -2732,7 +2905,8 @@
               "hangTime": 75,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-pigeon",
@@ -2746,7 +2920,8 @@
               "hangTime": 75,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-frog",
@@ -2760,7 +2935,8 @@
               "hangTime": 70,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Non forzare"
+              "notes": "Non forzare",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-butterfly",
@@ -2774,7 +2950,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-pancake",
@@ -2788,7 +2965,8 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Schiena dritta"
+              "notes": "Schiena dritta",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-thoracic",
@@ -2802,7 +2980,8 @@
               "hangTime": 35,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato"
+              "notes": "Un set per lato",
+              "difficulty": "facile"
             },
             {
               "id": "gw-w6-fri-forearm",
@@ -2816,7 +2995,8 @@
               "hangTime": 40,
               "restBetweenReps": 0,
               "restBetweenSets": 10,
-              "notes": "Flessori + estensori"
+              "notes": "Flessori + estensori",
+              "difficulty": "facile"
             }
           ]
         }
