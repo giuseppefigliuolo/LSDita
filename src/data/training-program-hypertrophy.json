@@ -1,7 +1,7 @@
 {
   "id": "hypertrophy",
   "name": "Ipertrofia Full Body 2 Settimane",
-  "description": "Programma di ipertrofia full body 2 settimane, costruito durante un'infiammazione alla puleggia A2 — ZERO carico sulle dita (no hangboard, no crimp). Pull-up consentite (presa aperta su jug). Split Push/Pull/Legs/Upper/Lower + Mobility, 6 giorni a settimana, max 50 min a sessione. Selezione esercizi evidence-based dai migliori riferimenti scientifici (Jeff Nippard, RP Strength, Built With Science, studi PMC 2024-2026). Periodizzazione: W1 RIR 2-3 (8-10 reps), W2 RIR 1-2 (10-12 reps).",
+  "description": "Programma di ipertrofia full body 2 settimane, costruito durante un'infiammazione alla puleggia A2 — ZERO carico sulle dita (no hangboard, no crimp). Pull-up consentite (presa aperta su jug). Attrezzatura: 2 manubri regolabili max 15kg ciascuno (combinabili in UNO solo da ~22kg per esercizi single-arm), elastico ~15kg, sbarra trazioni, tappetino, NIENTE panca/bench. Niente esercizi sdraiati a terra a causa di ROM limitato del torchio (sostituiti con varianti push-up e banded). Split Push/Pull/Legs/Upper/Lower + Mobility, 6 giorni a settimana, max 50 min a sessione. Selezione esercizi evidence-based (Jeff Nippard, RP Strength, Built With Science, studi PMC 2024-2026). Periodizzazione: W1 RIR 2-3, W2 RIR 1-2.",
   "durationWeeks": 2,
   "weeks": [
     {
@@ -18,10 +18,10 @@
           "description": "Sessione di spinta: petto (compound + stretch), deltoide anteriore/laterale (press + isolato), tricipiti (long head e laterale). Ordine HIGH→LOW intensità: prima i compound pesanti, poi isolati. Ref: jeffnippard.com/blogs/news/the-ultimate-push-workout-for-muscle-growth-chest-shoulders-triceps-2023",
           "exercises": [
             {
-              "id": "hw1-mon-floor-press",
-              "name": "DB Floor Press",
-              "description": "Sdraiato sul pavimento, manubri ai lati del petto, gomiti che toccano il pavimento (range limitato dal floor — più sicuro per le spalle del bench). Spingi i manubri in alto fino a estendere le braccia, poi scendi controllato (3s). I gomiti sono a circa 45° dal busto, NON 90°. Compound primario per pettorale (sterno-costale). Ref: builtwithscience.com/fitness-tips/dumbbell-tricep-exercises/",
-              "equipment": "dumbbells",
+              "id": "hw1-mon-archer-pushup",
+              "name": "Archer Push-up",
+              "description": "Push-up con braccia molto larghe: scendi SU UN LATO solo (il gomito di quel braccio si piega, l'altro braccio resta teso come 'a tirare la corda dell'arco'). Quasi tutto il peso viene caricato sul braccio che si flette — tappa intermedia verso il one-arm push-up. Alterna lato ad ogni rep. ROM completo del pettorale unilaterale + stabilità scapolare estrema — sostituisce alla grande il floor press che con la spalla pinata al suolo non avresti ROM. Se troppo duro: ginocchia a terra. Ref: blog.calimove.com/2026/02/04/push-up-progression/",
+              "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
               "sets": 4,
@@ -29,8 +29,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "weight": "20-22 kg per manubrio",
-              "notes": "Eccentrico 3s. Gomiti a 45°, NON 90°. RIR 2-3"
+              "weight": "corpo libero",
+              "notes": "5 per lato (alterna ad ogni rep). Braccio esteso DRITTO. Eccentrico 3s. RIR 2-3"
             },
             {
               "id": "hw1-mon-shoulder-press",
@@ -78,19 +78,19 @@
               "notes": "Guida col gomito. Fermati a 90°. Discesa lenta 2s"
             },
             {
-              "id": "hw1-mon-skullcrusher",
-              "name": "DB Skullcrusher (Floor)",
-              "description": "Sdraiato sul pavimento, manubri tenuti con presa neutra (palmi che si guardano), braccia estese verticali sopra le spalle. Piega SOLO i gomiti portando i manubri verso le tempie/sopra la testa, mantenendo i gomiti puntati verticalmente (non aprirli ai lati). Discesa 3s, salita potente. NON estendere completamente i gomiti in cima — mantieni leggera flessione per tenere tensione sul tricipite. Compound primario tricipiti. Ref: barbend.com/diamond-push-up",
-              "equipment": "dumbbells",
+              "id": "hw1-mon-banded-pushdown",
+              "name": "Banded Triceps Pushdown",
+              "description": "Fissa l'elastico in ALTO (sbarra trazioni o stipite alto). Afferra le estremità a larghezza spalle, gomiti CHIUSI al fianco (non muoverli per tutta la serie!), avambracci paralleli al pavimento. Spingi giù estendendo SOLO i gomiti fino ad avere le braccia tese lungo il corpo — squeeze massimo del tricipite a fine movimento. Risalita lenta 3s. Isolamento puro tricipiti senza necessità di sdraiarsi a terra. Ref: theclimbingdoctor.com/how-to-train-antagonist-muscle-strength-for-climbing/",
+              "equipment": "fitness_band",
               "type": "reps",
-              "illustration": "default",
+              "illustration": "band-shoulder",
               "sets": 4,
-              "repsPerSet": 12,
+              "repsPerSet": 15,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "weight": "10 kg per manubrio",
-              "notes": "Gomiti puntati su, NON aprirli. Mantieni flessione in cima"
+              "weight": "elastico ~15kg",
+              "notes": "Gomiti FERMI al fianco. Squeeze a fine spinta. Risalita 3s"
             },
             {
               "id": "hw1-mon-overhead-tri",
@@ -332,7 +332,7 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "weight": "20 kg per manubrio",
+              "weight": "15 kg per manubrio",
               "notes": "Range completo. Stretch sotto, contrazione 1s in cima"
             }
           ]
@@ -360,19 +360,19 @@
               "notes": "Presa neutra (asciugamano se non hai impugnature). Aperta, no crimp"
             },
             {
-              "id": "hw1-thu-floor-flye",
-              "name": "DB Floor Flye",
-              "description": "Sdraiato sul pavimento, manubri tenuti sopra il petto con braccia leggermente flesse (mantieni la flessione per tutto il movimento). Apri le braccia LATERALMENTE in arco — i gomiti scendono verso il pavimento. Sentirai uno stretch profondo nei pettorali. Risali in arco strizzando il petto (squeeze in cima). Range limitato dal pavimento — sicuro per le spalle. Ottimo stretch per ipertrofia pec. Ref: barbend.com/news/jeff-nippard-ranks-chest-exercises-for-hypertrophy/",
-              "equipment": "dumbbells",
+              "id": "hw1-thu-banded-flye",
+              "name": "Standing Banded Chest Flye",
+              "description": "In piedi, passa l'elastico DIETRO LA SCHIENA all'altezza delle scapole (tenuto con le mani aperte ai lati o passato attorno al corpo bloccandolo con i gomiti). Braccia leggermente flesse e FISSE per tutto il movimento. Parti con braccia aperte ai lati a 'T' (stretch del pettorale), poi UNISCI le mani davanti al petto in arco — squeeze massimo del pettorale a fine movimento. Apertura controllata 3s. Sostituisce il floor flye senza necessità di sdraiarsi (stretch superiore al floor flye perché non sei limitato dal pavimento). Ref: barbend.com/news/jeff-nippard-ranks-chest-exercises-for-hypertrophy/",
+              "equipment": "fitness_band",
               "type": "reps",
-              "illustration": "default",
+              "illustration": "band-shoulder",
               "sets": 3,
-              "repsPerSet": 12,
+              "repsPerSet": 15,
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "weight": "10 kg per manubrio",
-              "notes": "Braccia leggermente flesse FISSE. Squeeze in cima"
+              "weight": "elastico ~15kg",
+              "notes": "Braccia leggermente flesse FISSE. Squeeze massimo unendo le mani davanti"
             },
             {
               "id": "hw1-thu-arnold-press",
@@ -470,13 +470,13 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "weight": "20-22 kg per manubrio",
-              "notes": "Bacino INDIETRO, schiena neutra. Stretch a metà tibia"
+              "weight": "15 kg per manubrio",
+              "notes": "Bacino INDIETRO, schiena neutra. Stretch a metà tibia. Per più carico: rallenta eccentrico a 4s"
             },
             {
               "id": "hw1-fri-hip-thrust",
-              "name": "DB Hip Thrust (Floor)",
-              "description": "Sdraiato sul pavimento, scapole appoggiate (o sollevate su un divano basso/sedia per maggiore ROM se possibile), piedi piatti a terra a ~30 cm dai glutei. Manubri appoggiati sopra le anche/bacino (proteggi con un asciugamano piegato). Spingi i FIANCHI VERSO L'ALTO contraendo i glutei al massimo — corpo formerà una linea retta dalle ginocchia alle spalle. Pausa 1s in cima (squeeze massimo glutei), discesa controllata. Top exercise scientifico per ipertrofia gluteo (Journal of Sports Medicine). Ref: communitystrengthaustin-personaltraining.com/blog/glute-bridge-vs-hip-thrust/",
+              "name": "DB Hip Thrust (su divano)",
+              "description": "APPOGGIA LE SCAPOLE sul bordo del divano/letto basso (NON a terra — perderesti ROM). Piedi piatti a terra a ~30 cm dai glutei, ginocchia a 90° in cima. Manubrio combinato (~22kg) appoggiato sopra il bacino con un asciugamano piegato sotto per protezione. Spingi i FIANCHI verso l'alto contraendo i glutei al massimo — il corpo forma una linea retta dalle ginocchia alle spalle. Pausa 1s in cima (squeeze massimo), discesa controllata fino a sfiorare il pavimento col bacino. Top exercise scientifico per ipertrofia gluteo (Journal of Sports Medicine). Ref: communitystrengthaustin-personaltraining.com/blog/glute-bridge-vs-hip-thrust/",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
@@ -485,8 +485,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "weight": "20-22 kg per manubrio (sopra il bacino)",
-              "notes": "Spingi i FIANCHI in alto. Pausa 1s contraendo i glutei"
+              "weight": "22 kg un manubrio (combinato sopra il bacino)",
+              "notes": "Combina i pesi su UN solo manubrio (~22kg) e mettilo sopra il bacino con asciugamano. Spingi i FIANCHI in alto, pausa 1s"
             },
             {
               "id": "hw1-fri-sl-rdl",
@@ -743,10 +743,10 @@
           "description": "Stesso schema di Settimana 1: chest compound + shoulder compound + lateral isolation + triceps long head/lateral head. Più reps, RIR più basso. Ref: jeffnippard.com/blogs/news/the-ultimate-push-workout-for-muscle-growth-chest-shoulders-triceps-2023",
           "exercises": [
             {
-              "id": "hw2-mon-floor-press",
-              "name": "DB Floor Press",
-              "description": "Sdraiato sul pavimento, manubri ai lati del petto, gomiti al pavimento. Spingi verso l'alto, discesa controllata 3s, gomiti a 45°. Settimana 2: aumenta le reps o il carico. Ref: builtwithscience.com/fitness-tips/dumbbell-tricep-exercises/",
-              "equipment": "dumbbells",
+              "id": "hw2-mon-archer-pushup",
+              "name": "Archer Push-up",
+              "description": "Push-up con braccia molto larghe, scendi su un lato (gomito si flette, l'altro braccio resta teso 'a corda di arco'). Settimana 2: punta a +1 rep per lato vs W1, oppure rallenta l'eccentrico a 4s. Ref: blog.calimove.com/2026/02/04/push-up-progression/",
+              "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
               "sets": 4,
@@ -754,8 +754,8 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "weight": "20-22 kg per manubrio",
-              "notes": "RIR 1-2. Eccentrico 3s. Gomiti 45°"
+              "weight": "corpo libero",
+              "notes": "6 per lato (alterna). +1 rep o eccentrico 4s. RIR 1-2"
             },
             {
               "id": "hw2-mon-shoulder-press",
@@ -803,19 +803,19 @@
               "notes": "+3 reps vs settimana 1. Brucia il deltoide"
             },
             {
-              "id": "hw2-mon-skullcrusher",
-              "name": "DB Skullcrusher (Floor)",
-              "description": "Sdraiato, manubri presa neutra, braccia verticali. Piega solo i gomiti verso le tempie/sopra la testa, gomiti puntati su (non aperti). Discesa 3s. Mantieni leggera flessione in cima. Ref: barbend.com/diamond-push-up",
-              "equipment": "dumbbells",
+              "id": "hw2-mon-banded-pushdown",
+              "name": "Banded Triceps Pushdown",
+              "description": "Elastico fissato in alto (sbarra trazioni). Gomiti FERMI al fianco, parti con avambracci paralleli al pavimento. Spingi giù estendendo solo i gomiti fino a braccia tese — squeeze del tricipite. Risalita 3s. Ref: theclimbingdoctor.com/how-to-train-antagonist-muscle-strength-for-climbing/",
+              "equipment": "fitness_band",
               "type": "reps",
-              "illustration": "default",
+              "illustration": "band-shoulder",
               "sets": 4,
-              "repsPerSet": 14,
+              "repsPerSet": 18,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "weight": "10 kg per manubrio",
-              "notes": "+2 reps. Tensione costante sul tricipite"
+              "weight": "elastico ~15kg",
+              "notes": "+3 reps vs W1. Gomiti FERMI al fianco"
             },
             {
               "id": "hw2-mon-overhead-tri",
@@ -997,8 +997,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "14-16 kg per manubrio",
-              "notes": "3 set per gamba. +2 reps o +2kg"
+              "weight": "14-15 kg per manubrio",
+              "notes": "3 set per gamba. +2 reps o +1kg vs W1"
             },
             {
               "id": "hw2-wed-step-up",
@@ -1057,8 +1057,8 @@
               "hangTime": 2,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "weight": "20-22 kg per manubrio",
-              "notes": "+5 reps. Range pieno con pausa contrazione"
+              "weight": "15 kg per manubrio",
+              "notes": "+5 reps vs W1. Range pieno con pausa 1s contrazione"
             }
           ]
         },
@@ -1085,19 +1085,19 @@
               "notes": "+1 rep. Presa aperta no crimp"
             },
             {
-              "id": "hw2-thu-floor-flye",
-              "name": "DB Floor Flye",
-              "description": "Sdraiato, manubri sopra il petto braccia leggermente flesse. Apri ai lati in arco, gomiti scendono al pavimento (range limitato — sicuro). Squeeze in cima. Top stretch chest. Ref: barbend.com/news/jeff-nippard-ranks-chest-exercises-for-hypertrophy/",
-              "equipment": "dumbbells",
+              "id": "hw2-thu-banded-flye",
+              "name": "Standing Banded Chest Flye",
+              "description": "Elastico passato dietro la schiena all'altezza delle scapole. Braccia leggermente flesse fisse. Parti con braccia aperte ai lati a 'T' (stretch petto), unisci le mani davanti al petto in arco — squeeze massimo. Apertura controllata 3s. Ref: barbend.com/news/jeff-nippard-ranks-chest-exercises-for-hypertrophy/",
+              "equipment": "fitness_band",
               "type": "reps",
-              "illustration": "default",
+              "illustration": "band-shoulder",
               "sets": 3,
-              "repsPerSet": 14,
+              "repsPerSet": 18,
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "weight": "10-12 kg per manubrio",
-              "notes": "+2 reps. Squeeze in cima del movimento"
+              "weight": "elastico ~15kg",
+              "notes": "+3 reps. Squeeze massimo davanti al petto"
             },
             {
               "id": "hw2-thu-arnold-press",
@@ -1195,13 +1195,13 @@
               "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 90,
-              "weight": "22 kg per manubrio",
-              "notes": "+2 reps. Bacino indietro, NON curvare schiena"
+              "weight": "15 kg per manubrio",
+              "notes": "+2 reps vs W1. Bacino indietro, eccentrico 4s per più stimolo"
             },
             {
               "id": "hw2-fri-hip-thrust",
-              "name": "DB Hip Thrust (Floor)",
-              "description": "Sdraiato, scapole appoggiate, piedi a terra. Manubri sopra il bacino. Spingi i fianchi in alto contraendo i glutei al massimo, pausa 1s in cima. Top scientifico per ipertrofia gluteo. Ref: communitystrengthaustin-personaltraining.com/blog/glute-bridge-vs-hip-thrust/",
+              "name": "DB Hip Thrust (su divano)",
+              "description": "Scapole sul bordo del divano/letto, piedi a terra a ~30cm dai glutei. Manubrio combinato (~22kg) sopra il bacino con asciugamano. Spingi i fianchi in alto contraendo i glutei al massimo, pausa 1s in cima, discesa controllata. Ref: communitystrengthaustin-personaltraining.com/blog/glute-bridge-vs-hip-thrust/",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
@@ -1210,8 +1210,8 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 75,
-              "weight": "22 kg per manubrio",
-              "notes": "+3 reps. Pausa 1s in cima, squeeze massimo"
+              "weight": "22 kg un manubrio (combinato sopra il bacino)",
+              "notes": "+3 reps. Combina i pesi su UN manubrio. Pausa 1s in cima"
             },
             {
               "id": "hw2-fri-sl-rdl",
