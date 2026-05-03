@@ -90,7 +90,7 @@ export interface TimerState {
   isPaused: boolean
 }
 
-export type ProgramId = 'home' | 'travel' | 'girl_workout' | 'custom'
+export type ProgramId = 'home' | 'travel' | 'hypertrophy' | 'girl_workout' | 'custom'
 
 export type ClimbStyle = 'boulder' | 'sport' | 'multipitch' | 'trad' | 'gym'
 export type AscentType = 'onsight' | 'flash' | 'redpoint' | 'project'

@@ -1,5 +1,6 @@
 import homeProgram from '../data/training-program.json'
 import travelProgram from '../data/training-program-travel.json'
+import hypertrophyProgram from '../data/training-program-hypertrophy.json'
 import girlWorkoutProgram from '../data/training-program-girlfriend.json'
 import { dayOverrideKey, useSettingsStore } from '../store/useSettingsStore'
 import type { ProgramId, TrainingDay, TrainingProgram } from '../types'
@@ -7,6 +8,7 @@ import type { ProgramId, TrainingDay, TrainingProgram } from '../types'
 const builtInPrograms: Record<Exclude<ProgramId, 'custom'>, TrainingProgram> = {
   home: homeProgram as unknown as TrainingProgram,
   travel: travelProgram as unknown as TrainingProgram,
+  hypertrophy: hypertrophyProgram as unknown as TrainingProgram,
   girl_workout: girlWorkoutProgram as unknown as TrainingProgram,
 }
 
@@ -50,5 +52,6 @@ export function getOriginalDay(
 export const programOptions: { id: ProgramId; label: string; description: string }[] = [
   { id: 'home', label: 'Piano 4 Settimane', description: 'Programma completo con tutta l\'attrezzatura' },
   { id: 'travel', label: 'Trasferta 2 Settimane', description: 'Two Stones hangboard + manubrio 8kg' },
+  { id: 'hypertrophy', label: 'Ipertrofia 2 Settimane', description: 'Full body senza dita — recupero puleggia A2' },
   { id: 'girl_workout', label: 'Girl Workout 6 Settimane', description: 'Full body + climbing + atletismo (sbarra, anelli, zaino)' },
 ]
