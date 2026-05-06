@@ -794,7 +794,7 @@
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
-              "sets": 4,
+              "sets": 3,
               "repsPerSet": 14,
               "hangTime": 3,
               "restBetweenReps": 0,
@@ -869,13 +869,13 @@
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "corpo libero",
-              "notes": "+2 reps. Ultima goccia per i tricipiti"
+              "notes": "Finisher AMRAP — vai al cedimento. 2 set"
             }
           ]
         },
