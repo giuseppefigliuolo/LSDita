@@ -95,7 +95,7 @@
         "id": "lift_left",
         "label": "Lift 22 kg · mano sinistra",
         "unit": "s",
-        "howTo": "Trave a pentagono, presa da 25 mm a mano aperta, manubrio da 22 kg. Stop a 60\"."
+        "howTo": "Trave a pentagono, presa da 25 mm a mano aperta, manubrio da 22 kg. Stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra."
       },
       {
         "id": "lift_right",
@@ -347,7 +347,7 @@
               "title": "Test",
               "items": [
                 "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
-                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\".",
+                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
                 "Trazioni massime: ripetizioni massime a peso corporeo."
               ]
             },
@@ -592,8 +592,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -604,24 +604,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -1075,8 +1075,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1087,24 +1087,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -1558,8 +1558,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1570,24 +1570,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -2081,8 +2081,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -2093,24 +2093,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 2,
+              "sets": 1,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -2281,7 +2281,7 @@
               "title": "Test a inizio sessione",
               "items": [
                 "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
-                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\".",
+                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
                 "Trazioni massime: ripetizioni massime a peso corporeo."
               ]
             },
@@ -2570,8 +2570,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -2582,24 +2582,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -3058,8 +3058,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -3070,24 +3070,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -3546,8 +3546,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -3558,24 +3558,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -4030,8 +4030,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4042,24 +4042,24 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 2,
+              "sets": 1,
               "repsPerSet": 1,
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -4505,8 +4505,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4517,13 +4517,13 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4534,7 +4534,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -5014,8 +5014,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero. Una serie in più a sinistra.",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -5026,13 +5026,13 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Presa da 25 mm a mano aperta. 1' di recupero.",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -5043,7 +5043,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "22 kg",
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
               "difficulty": "medio"
             },
             {
@@ -5214,7 +5214,7 @@
               "title": "Test a inizio sessione",
               "items": [
                 "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
-                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\".",
+                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
                 "Trazioni massime: ripetizioni massime a peso corporeo."
               ]
             },
