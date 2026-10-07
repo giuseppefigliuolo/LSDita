@@ -43,7 +43,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
   const [ascentType, setAscentType] = useState<AscentType>(
     initial?.ascentType ?? 'flash',
   )
-  const [attempts, setAttempts] = useState<number>(initial?.attempts ?? 2)
+  const [attempts, setAttempts] = useState<string>(String(initial?.attempts ?? 2))
   const [location, setLocation] = useState(initial?.location ?? '')
   const [date, setDate] = useState(initial?.date ?? today)
   const [rating, setRating] = useState<1 | 2 | 3 | 4 | 5>(initial?.rating ?? 4)
@@ -165,7 +165,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
       grade,
       style,
       ascentType,
-      attempts: needsAttempts ? Math.max(1, attempts) : undefined,
+      attempts: needsAttempts ? Math.max(1, parseInt(attempts, 10) || 1) : undefined,
       location: location.trim(),
       rating,
       notes: notes.trim() === '' ? undefined : notes.trim(),
@@ -282,7 +282,10 @@ export default function AddClimbModal({ initial, onClose }: Props) {
                 <NumberInput
                   tone="coral"
                   value={attempts}
-                  onChange={(v) => setAttempts(Math.max(1, v))}
+                  onChange={setAttempts}
+                  onBlur={() =>
+                    setAttempts((a) => String(Math.max(1, parseInt(a, 10) || 1)))
+                  }
                 />
               </FieldBlock>
             )}
@@ -442,22 +445,22 @@ function TextArea({
 function NumberInput({
   value,
   onChange,
+  onBlur,
   tone = 'accent',
 }: {
-  value: number
-  onChange: (v: number) => void
+  value: string
+  onChange: (v: string) => void
+  onBlur?: () => void
   tone?: Tone
 }) {
   return (
     <input
-      type="number"
+      type="text"
       inputMode="numeric"
-      min={0}
+      pattern="[0-9]*"
       value={value}
-      onChange={(e) => {
-        const n = Number(e.target.value)
-        onChange(Number.isFinite(n) ? Math.max(0, n) : 0)
-      }}
+      onChange={(e) => onChange(e.target.value.replace(/\D/g, ''))}
+      onBlur={onBlur}
       className={`${inputBase} font-timer font-bold`}
       style={{
         ...inputStyle(tone),
