@@ -257,19 +257,19 @@
               "notes": "10–15 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -315,18 +315,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -383,19 +384,19 @@
               "notes": "10–15 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -441,18 +442,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -691,27 +693,27 @@
               "type": "reps",
               "illustration": "default",
               "sets": 3,
+              "repsPerSet": 15,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "15 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -757,18 +759,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -856,27 +859,27 @@
               "type": "reps",
               "illustration": "default",
               "sets": 3,
+              "repsPerSet": 15,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "15 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -922,18 +925,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -1165,9 +1169,9 @@
           "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-tempo",
+              "name": "Piegamenti lenti",
+              "description": "Piegamenti a terra, corpo in linea. Scendi in 3 secondi fino a sfiorare il petto a terra, poi risali spingendo con decisione.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1176,23 +1180,23 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "difficulty": "medio",
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -1238,18 +1242,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -1330,9 +1335,9 @@
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-tempo",
+              "name": "Piegamenti lenti",
+              "description": "Piegamenti a terra, corpo in linea. Scendi in 3 secondi fino a sfiorare il petto a terra, poi risali spingendo con decisione.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -1341,23 +1346,23 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "difficulty": "medio",
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -1403,18 +1408,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -1646,10 +1652,25 @@
           "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up",
+              "name": "Piegamenti con piedi rialzati",
+              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
               "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
@@ -1658,22 +1679,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -1719,18 +1725,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -1811,10 +1818,25 @@
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up",
+              "name": "Piegamenti con piedi rialzati",
+              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
               "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
@@ -1823,22 +1845,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -1884,18 +1891,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -2180,22 +2188,22 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 2,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -2241,18 +2249,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 1,
+              "illustration": "default",
+              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -2350,22 +2359,22 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 2,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -2411,18 +2420,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 1,
+              "illustration": "default",
+              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -2654,9 +2664,9 @@
           "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up",
+              "name": "Piegamenti con piedi rialzati",
+              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2665,23 +2675,23 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "difficulty": "medio",
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -2727,18 +2737,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -2824,9 +2835,9 @@
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up",
+              "name": "Piegamenti con piedi rialzati",
+              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -2835,23 +2846,23 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "difficulty": "medio",
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -2897,18 +2908,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -3140,10 +3152,25 @@
           "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up",
+              "name": "Piegamenti con piedi rialzati",
+              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
               "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
@@ -3152,22 +3179,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -3213,18 +3225,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -3310,10 +3323,25 @@
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up",
+              "name": "Piegamenti con piedi rialzati",
+              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
               "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
@@ -3322,22 +3350,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -3383,18 +3396,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -3626,10 +3640,25 @@
           "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up-pause",
+              "name": "Piegamenti piedi rialzati con pausa",
+              "description": "Piedi su una sedia o sul divano, corpo in linea. Scendi in 2 secondi, fermati 1 secondo con il petto a un palmo da terra senza rilassare nulla, poi risali con decisione.",
               "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
@@ -3638,22 +3667,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -3699,18 +3713,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -3796,10 +3811,25 @@
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up-pause",
+              "name": "Piegamenti piedi rialzati con pausa",
+              "description": "Piedi su una sedia o sul divano, corpo in linea. Scendi in 2 secondi, fermati 1 secondo con il petto a un palmo da terra senza rilassare nulla, poi risali con decisione.",
               "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
+            },
+            {
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
@@ -3808,22 +3838,7 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -3869,18 +3884,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -4120,22 +4136,22 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 2,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -4181,18 +4197,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 1,
+              "illustration": "default",
+              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -4281,22 +4298,22 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 2,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -4342,18 +4359,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 1,
+              "illustration": "default",
+              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -4581,9 +4599,9 @@
           "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up-pause",
+              "name": "Piegamenti piedi rialzati con pausa",
+              "description": "Piedi su una sedia o sul divano, corpo in linea. Scendi in 2 secondi, fermati 1 secondo con il petto a un palmo da terra senza rilassare nulla, poi risali con decisione.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -4592,23 +4610,23 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "difficulty": "medio",
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -4654,18 +4672,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -4728,9 +4747,9 @@
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-feet-up-pause",
+              "name": "Piegamenti piedi rialzati con pausa",
+              "description": "Piedi su una sedia o sul divano, corpo in linea. Scendi in 2 secondi, fermati 1 secondo con il petto a un palmo da terra senza rilassare nulla, poi risali con decisione.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
@@ -4739,23 +4758,23 @@
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "difficulty": "medio",
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -4801,18 +4820,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
@@ -5101,22 +5121,22 @@
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
+              "notes": "12 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 2,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -5162,18 +5182,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 1,
+              "illustration": "default",
+              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         },
@@ -5264,19 +5285,19 @@
               "notes": "10–15 ripetizioni"
             },
             {
-              "id": "la-casa-a-overhead-press",
-              "name": "Spinta sopra la testa con manubrio",
-              "description": "Un braccio alla volta: spingi il manubrio sopra la testa fino a braccio teso.",
+              "id": "la-casa-a-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "default",
               "sets": 3,
-              "repsPerSet": 8,
+              "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
               "difficulty": "facile",
-              "notes": "8 per braccio"
+              "notes": "12 ripetizioni"
             },
             {
               "id": "la-casa-a-external-rotation",
@@ -5322,18 +5343,19 @@
               "weight": "manubrio leggero"
             },
             {
-              "id": "la-casa-a-triceps",
-              "name": "Tricipiti con elastico",
-              "description": "Estensioni dei tricipiti con elastico, come nel vecchio programma.",
-              "equipment": "fitness_band",
+              "id": "la-casa-a-overhead-triceps",
+              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
+              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
+              "equipment": "dumbbells",
               "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
+              "illustration": "default",
+              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "notes": "12 per braccio"
             }
           ]
         }
