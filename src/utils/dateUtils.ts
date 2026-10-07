@@ -29,6 +29,17 @@ export function formatDateShort(date: Date): string {
   return `${date.getDate()} ${MONTHS_IT[date.getMonth()].slice(0, 3)}`
 }
 
+/** Parses "YYYY-MM-DD" as local midnight (new Date(iso) would be UTC) */
+export function parseLocalDate(iso: string): Date {
+  const [y, m, d] = iso.split('-').map(Number)
+  return new Date(y, m - 1, d)
+}
+
+/** "12 ott" */
+export function formatDayMonthIT(date: Date): string {
+  return `${date.getDate()} ${MONTHS_IT[date.getMonth()].slice(0, 3).toLowerCase()}`
+}
+
 export function getTodayString(): string {
   return new Date().toISOString().split('T')[0]
 }

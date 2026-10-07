@@ -502,7 +502,8 @@ function ExerciseEditCard({
                 tone="violet"
                 value={exercise.weight ?? ''}
                 onChange={(v) =>
-                  onChange({ weight: v.trim() === '' ? undefined : v })
+                  // A manual weight replaces the one computed from the CR
+                  onChange({ weight: v.trim() === '' ? undefined : v, load: undefined })
                 }
                 placeholder="es. 8kg, corpo libero"
               />

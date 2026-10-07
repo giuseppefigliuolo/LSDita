@@ -13,9 +13,15 @@ import ExerciseDescription from '../components/ui/ExerciseDescription'
 import Button from '../components/ui/Button'
 import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
 import EditDayModal from '../components/EditDayModal'
-import type { Exercise } from '../types'
+import GuideSectionCard from '../components/ui/GuideSectionCard'
+import LinkCard from '../components/ui/LinkCard'
+import LoadCard from '../components/LoadCard'
+import type { DayIntensity, Exercise } from '../types'
 import { useSettingsStore } from '../store/useSettingsStore'
+import { useWorkoutStore } from '../store/useWorkoutStore'
+import { useBenchmarkStore } from '../store/useBenchmarkStore'
 import { getProgram } from '../utils/getProgram'
+import { getDistinctLoads } from '../utils/benchmarks'
 import {
   getWorkoutForDay,
   getDayTypeLabel,
@@ -73,6 +79,10 @@ export default function WorkoutDay() {
   )
   const [editing, setEditing] = useState(false)
   const { selectedProgram } = useSettingsStore()
+  const { completedWorkouts, markComplete } = useWorkoutStore()
+  // Exercise loads are resolved from the benchmark results: re-render when they change
+  useBenchmarkStore((s) => s.results)
+  useBenchmarkStore((s) => s.bodyweightKg)
   const program = getProgram(selectedProgram)
 
   const week = Number(weekNumber)
@@ -92,6 +102,35 @@ export default function WorkoutDay() {
     : ''
   const totalMin = Math.round(getTotalExerciseDuration(day) / 60)
   const headerSubtitle = `Settimana ${week}${weekData ? ` · ${weekData.theme}` : ''}`
+  const guideBefore = day.guide?.filter((s) => !s.afterExercises) ?? []
+  const guideAfter = day.guide?.filter((s) => s.afterExercises) ?? []
+  const hasGuide = guideBefore.length + guideAfter.length > 0
+  const hasExercises = day.exercises.length > 0
+  const loads = program.benchmarks ? getDistinctLoads(day.exercises) : []
+  const isDone = completedWorkouts.some(
+    (w) =>
+      w.weekNumber === week &&
+      w.dayTitle === day.title &&
+      w.id.startsWith(`${week}-${day.dayOfWeek}-`)
+  )
+
+  function handleMarkDone() {
+    if (!day || isDone) return
+    const now = new Date()
+    const dateStr = now.toISOString().split('T')[0]
+    markComplete({
+      id: `${week}-${day.dayOfWeek}-${dateStr}`,
+      date: dateStr,
+      weekNumber: week,
+      dayType: day.type,
+      dayTitle: day.title,
+      completedAt: now.toISOString(),
+      durationSeconds: 0,
+      exercisesCompleted: 0,
+      exercisesTotal: 0,
+      skippedExercises: []
+    })
+  }
 
   return (
     <div className="bg-bg">
@@ -113,42 +152,135 @@ export default function WorkoutDay() {
             typeLabel={getDayTypeLabel(day.type)}
             title={day.title}
             description={day.description}
-            exerciseCount={day.exercises.length}
-            durationMin={totalMin}
+            exerciseCount={hasGuide ? null : day.exercises.length}
+            durationLabel={day.durationLabel ?? `~${totalMin} min`}
+            intensity={day.intensity}
           />
         </motion.div>
 
-        <motion.p
-          variants={fadeUp}
-          className="text-[11px] font-bold uppercase tracking-[0.25em] text-text-muted mt-6 mb-3"
-        >
-          Esercizi
-        </motion.p>
+        {(program.warmup && day.warmupNote) || (program.benchmarks && day.recordsTests) ? (
+          <div className="space-y-3 mt-4">
+            {program.warmup && day.warmupNote && (
+              <motion.div variants={fadeUp}>
+                <LinkCard
+                  variant="primary"
+                  eyebrow="Prima"
+                  title={program.warmup.title}
+                  subtitle={day.warmupNote}
+                  onClick={() => navigate('/warmup')}
+                />
+              </motion.div>
+            )}
+            {program.benchmarks && day.recordsTests && (
+              <motion.div variants={fadeUp}>
+                <LinkCard
+                  variant="secondary"
+                  eyebrow="Test"
+                  title="Registra i risultati"
+                  subtitle="CR, sfere, lift, circuito, trazioni, volo"
+                  onClick={() => navigate('/tests')}
+                />
+              </motion.div>
+            )}
+          </div>
+        ) : null}
 
-        <div className="space-y-3 mb-24">
-          {day.exercises.map((exercise, index) => (
-            <motion.div key={exercise.id} variants={fadeUp}>
-              <ExerciseCard
-                exercise={exercise}
-                index={index}
-                onTap={() => setSelectedExercise(exercise)}
-              />
+        {guideBefore.length > 0 && (
+          <div className="space-y-3 mt-6">
+            {guideBefore.map((section) => (
+              <motion.div key={section.title} variants={fadeUp}>
+                <GuideSectionCard section={section} />
+              </motion.div>
+            ))}
+          </div>
+        )}
+
+        {hasExercises && (
+          <>
+            <motion.div variants={fadeUp} className="mt-6 mb-3">
+              <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-text-muted">
+                {day.exercisesTitle ?? 'Esercizi'}
+              </p>
+              {day.exercisesNote && (
+                <p className="text-xs text-text-secondary leading-relaxed mt-1">
+                  {day.exercisesNote}
+                </p>
+              )}
             </motion.div>
-          ))}
-        </div>
+
+            {program.benchmarks && loads.length > 0 && (
+              <motion.div variants={fadeUp} className="mb-3">
+                <LoadCard
+                  programId={selectedProgram}
+                  config={program.benchmarks}
+                  loads={loads}
+                />
+              </motion.div>
+            )}
+
+            <div className="space-y-3">
+              {day.exercises.map((exercise, index) => (
+                <motion.div key={exercise.id} variants={fadeUp}>
+                  <ExerciseCard
+                    exercise={exercise}
+                    index={index}
+                    onTap={() => setSelectedExercise(exercise)}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {guideAfter.length > 0 && (
+          <div className="space-y-3 mt-6">
+            {guideAfter.map((section) => (
+              <motion.div key={section.title} variants={fadeUp}>
+                <GuideSectionCard section={section} />
+              </motion.div>
+            ))}
+          </div>
+        )}
+
+        {hasGuide && hasExercises && (
+          <motion.div variants={fadeUp} className="mt-6">
+            <Button
+              variant="ghost"
+              fullWidth
+              disabled={isDone}
+              onClick={handleMarkDone}
+            >
+              {isDone ? '✓ Sessione completata' : '✓ Segna la sessione come completata'}
+            </Button>
+          </motion.div>
+        )}
+
+        <div className="h-24" />
 
         {/* Fixed bottom button */}
         <div className="fixed bottom-1 left-0 right-0 z-40 px-4 pb-2 pt-3 max-w-lg mx-auto">
-          <Button
-            variant="primary"
-            size="lg"
-            fullWidth
-            onClick={() =>
-              navigate(`/workout/${weekNumber}/${dayOfWeek}/active`)
-            }
-          >
-            ▶ Inizia allenamento · {totalMin} min
-          </Button>
+          {hasExercises ? (
+            <Button
+              variant="primary"
+              size="lg"
+              fullWidth
+              onClick={() =>
+                navigate(`/workout/${weekNumber}/${dayOfWeek}/active`)
+              }
+            >
+              ▶ {hasGuide ? 'Avvia esercizi' : 'Inizia allenamento'} · {totalMin} min
+            </Button>
+          ) : (
+            <Button
+              variant="primary"
+              size="lg"
+              fullWidth
+              disabled={isDone}
+              onClick={handleMarkDone}
+            >
+              {isDone ? '✓ Sessione completata' : '✓ Segna come completata'}
+            </Button>
+          )}
         </div>
       </motion.div>
 
@@ -177,18 +309,27 @@ export default function WorkoutDay() {
 // Hero card
 // ──────────────────────────────────────────────────────────────
 
+const intensityLabels: Record<DayIntensity, string> = {
+  alta: 'Dita: alta',
+  media: 'Dita: media',
+  bassa: 'Dita: bassa'
+}
+
 function HeroCard({
   typeLabel,
   title,
   description,
   exerciseCount,
-  durationMin
+  durationLabel,
+  intensity
 }: {
   typeLabel: string
   title: string
   description: string
-  exerciseCount: number
-  durationMin: number
+  /** null hides the pill (sessions that are mostly read, not timed) */
+  exerciseCount: number | null
+  durationLabel: string
+  intensity?: DayIntensity
 }) {
   return (
     <div
@@ -214,8 +355,11 @@ function HeroCard({
             {title}
           </h2>
           <div className="flex flex-wrap gap-2">
-            <HeroPill>{exerciseCount} esercizi</HeroPill>
-            <HeroPill>~{durationMin} min</HeroPill>
+            {exerciseCount != null && (
+              <HeroPill>{exerciseCount} esercizi</HeroPill>
+            )}
+            <HeroPill>{durationLabel}</HeroPill>
+            {intensity && <HeroPill>{intensityLabels[intensity]}</HeroPill>}
           </div>
         </div>
       </div>

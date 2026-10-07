@@ -4,6 +4,7 @@ import { useSettingsStore } from '../store/useSettingsStore'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { getProgram, programOptions } from '../utils/getProgram'
 import { validateProgramJson } from '../utils/validateProgram'
+import { buildBackup, restoreBackup } from '../utils/backup'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import { INK, RADIUS, SHADOW } from '../styles/tokens'
@@ -23,7 +24,7 @@ export default function SettingsPage() {
   const program = getProgram(settings.selectedProgram)
 
   async function handleExport() {
-    const data = workoutStore.exportData()
+    const data = buildBackup()
     const filename = `LSDita-backup-${new Date().toISOString().split('T')[0]}.json`
     const blob = new Blob([data], { type: 'application/json' })
     const file = new File([blob], filename, { type: 'application/json' })
@@ -65,7 +66,7 @@ export default function SettingsPage() {
     const reader = new FileReader()
     reader.onload = (ev) => {
       const json = ev.target?.result as string
-      workoutStore.importData(json)
+      restoreBackup(json)
     }
     reader.readAsText(file)
     e.target.value = ''
@@ -586,6 +587,9 @@ export default function SettingsPage() {
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-text">
                     Esporta Progressi
+                  </p>
+                  <p className="text-xs text-text-secondary">
+                    Allenamenti, note, CR e test
                   </p>
                   <BackupStatus lastBackupAt={settings.lastBackupAt} />
                 </div>

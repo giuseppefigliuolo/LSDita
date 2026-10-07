@@ -56,8 +56,14 @@ export default function ProgressPage() {
                         Settimana {workout.weekNumber} — {new Date(workout.completedAt).toLocaleDateString('it-IT')}
                       </p>
                       <div className="flex items-center gap-3 mt-1 text-[11px] text-text-muted">
-                        <span>{workout.exercisesCompleted}/{workout.exercisesTotal} esercizi</span>
-                        <span>{formatSeconds(workout.durationSeconds)}</span>
+                        {workout.exercisesTotal === 0 ? (
+                          <span>Segnata come completata</span>
+                        ) : (
+                          <>
+                            <span>{workout.exercisesCompleted}/{workout.exercisesTotal} esercizi</span>
+                            <span>{formatSeconds(workout.durationSeconds)}</span>
+                          </>
+                        )}
                         {workout.skippedExercises.length > 0 && (
                           <span className="text-danger">{workout.skippedExercises.length} saltati</span>
                         )}

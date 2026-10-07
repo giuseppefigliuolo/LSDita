@@ -2,15 +2,19 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
+import LinkCard from '../components/ui/LinkCard'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useSettingsStore } from '../store/useSettingsStore'
+import { useBenchmarkStore } from '../store/useBenchmarkStore'
 import { getProgram } from '../utils/getProgram'
 import type { DayType } from '../types'
-import { getWeekNumber, formatSeconds } from '../utils/dateUtils'
 import {
-  getTotalExerciseDuration,
-  getSessionLabel
+  getActiveWeekNumber,
+  getDayDurationLabel,
+  getSessionLabel,
+  getWeekDateRange
 } from '../utils/programUtils'
+import { formatKg, getLatestResult } from '../utils/benchmarks'
 import { fireConfettiFromEvent } from '../utils/confetti'
 import { INK, RADIUS, SHADOW } from '../styles/tokens'
 
@@ -35,15 +39,26 @@ export default function Dashboard() {
   } = useWorkoutStore()
   const { selectedProgram, currentWeek: overrideWeek, lastBackupAt } =
     useSettingsStore()
+  const benchmarkResults = useBenchmarkStore((s) => s.results)
   const program = getProgram(selectedProgram)
 
-  const autoWeek = programStartDate
-    ? getWeekNumber(programStartDate, program.durationWeeks)
-    : 1
-  const weekNumber = overrideWeek != null
-    ? Math.min(Math.max(1, overrideWeek), program.durationWeeks)
-    : autoWeek
+  const weekNumber = getActiveWeekNumber(program, programStartDate, overrideWeek)
   const currentWeek = program.weeks.find((w) => w.weekNumber === weekNumber)
+  const weekRange = getWeekDateRange(program, weekNumber)
+  const crSummary = program.benchmarks
+    ? program.benchmarks.tests
+        .filter((t) => t.percentOfBodyweight)
+        .map((t) => {
+          const latest = getLatestResult(
+            program.benchmarks!,
+            benchmarkResults,
+            selectedProgram,
+            t.id
+          )
+          return latest ? `${formatKg(latest.value)} kg` : '—'
+        })
+        .join(' · ')
+    : ''
 
   const todayDate = new Date().toISOString().split('T')[0]
 
@@ -77,6 +92,9 @@ export default function Dashboard() {
             ? `Settimana ${weekNumber} — ${currentWeek.theme}`
             : 'Il tuo programma di arrampicata'}
         </p>
+        {weekRange && (
+          <p className="text-text-muted text-xs text-center">{weekRange}</p>
+        )}
       </motion.div>
 
       {showBackupReminder && (
@@ -141,7 +159,7 @@ export default function Dashboard() {
         </motion.button>
       )}
 
-      {!programStartDate && (
+      {!programStartDate && !program.startDate && (
         <motion.div variants={fadeUp} className="mb-6">
           <Card variant="primary" className="border-primary/30 bg-primary/5">
             <div className="text-center py-2">
@@ -176,6 +194,29 @@ export default function Dashboard() {
         />
       </motion.div>
 
+      {(program.warmup || program.benchmarks) && (
+        <motion.div variants={fadeUp} className="grid grid-cols-2 gap-3 mb-6">
+          {program.warmup && (
+            <LinkCard
+              variant="primary"
+              eyebrow="Fisso"
+              title="Riscaldamento"
+              subtitle="15–25' + rampa dita"
+              onClick={() => navigate('/warmup')}
+            />
+          )}
+          {program.benchmarks && (
+            <LinkCard
+              variant="secondary"
+              eyebrow="Test"
+              title="CR e test"
+              subtitle={crSummary}
+              onClick={() => navigate('/tests')}
+            />
+          )}
+        </motion.div>
+      )}
+
       <motion.div variants={fadeUp}>
         <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
           Questa settimana
@@ -208,8 +249,8 @@ export default function Dashboard() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] text-text-muted">
-                      ~{formatSeconds(getTotalExerciseDuration(day))}
+                    <span className="text-[11px] text-text-muted whitespace-nowrap">
+                      {getDayDurationLabel(day)}
                     </span>
                     <svg
                       width="16"
@@ -275,7 +316,12 @@ function DayDot({ type, completed }: { type: DayType; completed: boolean }) {
     pull_strength: 'bg-accent',
     power_endurance: 'bg-secondary',
     general_strength: 'bg-success',
-    mobility: 'bg-violet'
+    mobility: 'bg-violet',
+    climbing_gym: 'bg-success',
+    lead: 'bg-secondary',
+    boulder: 'bg-accent',
+    antagonists: 'bg-violet',
+    test: 'bg-primary'
   }
 
   if (completed) {

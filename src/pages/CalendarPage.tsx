@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { getProgram } from '../utils/getProgram'
-import { getMonthNameIT, getWeekNumber } from '../utils/dateUtils'
-import { getDayTypeColor } from '../utils/programUtils'
+import { getMonthNameIT } from '../utils/dateUtils'
+import { getActiveWeekNumber, getDayTypeColor } from '../utils/programUtils'
 import { RADIUS, SHADOW } from '../styles/tokens'
 
 const WEEKDAY_LABELS = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
@@ -16,10 +16,7 @@ export default function CalendarPage() {
   const { selectedProgram, currentWeek: overrideWeek } = useSettingsStore()
   const program = getProgram(selectedProgram)
 
-  const autoWeek = programStartDate ? getWeekNumber(programStartDate, program.durationWeeks) : 1
-  const activeWeek = overrideWeek != null
-    ? Math.min(Math.max(1, overrideWeek), program.durationWeeks)
-    : autoWeek
+  const activeWeek = getActiveWeekNumber(program, programStartDate, overrideWeek)
   const now = new Date()
   const year = now.getFullYear()
   const month = now.getMonth()

@@ -8,6 +8,8 @@ import TimerPage from './pages/TimerPage'
 import ProgressPage from './pages/ProgressPage'
 import LogbookPage from './pages/LogbookPage'
 import SettingsPage from './pages/SettingsPage'
+import WarmupPage from './pages/WarmupPage'
+import TestsPage from './pages/TestsPage'
 import ReloadPrompt from './components/ui/ReloadPrompt'
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
           </Route>
           <Route path="/workout/:weekNumber/:dayOfWeek" element={<WorkoutDay />} />
           <Route path="/workout/:weekNumber/:dayOfWeek/active" element={<ActiveWorkout />} />
+          <Route path="/warmup" element={<WarmupPage />} />
+          <Route path="/tests" element={<TestsPage />} />
         </Routes>
       </AnimatePresence>
       <ReloadPrompt />

@@ -33,6 +33,10 @@ const DAY_TYPE_VALUES: DayType[] = [
   'mobility',
   'rest',
   'climbing_gym',
+  'lead',
+  'boulder',
+  'antagonists',
+  'test',
 ]
 
 const GRIP_VALUES: GripType[] = [
