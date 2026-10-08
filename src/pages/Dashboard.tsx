@@ -7,7 +7,7 @@ import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { useBenchmarkStore } from '../store/useBenchmarkStore'
 import { getProgram } from '../utils/getProgram'
-import type { DayType } from '../types'
+import type { DayType, TrainingDay } from '../types'
 import {
   getActiveWeekNumber,
   getDayDurationLabel,
@@ -60,14 +60,59 @@ export default function Dashboard() {
         .join(' · ')
     : ''
 
-  const todayDate = new Date().toISOString().split('T')[0]
-
   const backupDaysAgo = lastBackupAt
     ? Math.floor((Date.now() - new Date(lastBackupAt).getTime()) / 86400000)
     : null
   const showBackupReminder =
     completedWorkouts.length > 0 &&
     (backupDaysAgo === null || backupDaysAgo >= 10)
+
+  const weekDays = currentWeek?.days ?? []
+  const weeklyDays = weekDays.filter((d) => !d.anytime)
+  const anytimeDays = weekDays.filter((d) => d.anytime)
+
+  function renderDayCard(day: TrainingDay) {
+    const dayCompleted = completedWorkouts.some(
+      (w) =>
+        w.weekNumber === weekNumber &&
+        w.id.startsWith(`${weekNumber}-${day.dayOfWeek}-`)
+    )
+    return (
+      <Card
+        key={day.dayOfWeek}
+        onClick={() => navigate(`/workout/${weekNumber}/${day.dayOfWeek}`)}
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <DayDot type={day.type} completed={dayCompleted} />
+            <div>
+              <p className="text-sm font-semibold text-text">
+                {getSessionLabel(weekDays, day.dayOfWeek)}
+              </p>
+              <p className="text-xs text-text-secondary">{day.title}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] text-text-muted whitespace-nowrap">
+              {getDayDurationLabel(day)}
+            </span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#8C7355"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </Card>
+    )
+  }
 
   function handleStartProgram(e: React.MouseEvent) {
     fireConfettiFromEvent(e)
@@ -222,55 +267,18 @@ export default function Dashboard() {
           Questa settimana
         </h2>
         <div className="space-y-2">
-          {currentWeek?.days.map((day) => {
-            const dayCompleted = completedWorkouts.some(
-              (w) =>
-                w.weekNumber === weekNumber &&
-                w.dayType === day.type &&
-                w.date === todayDate
-            )
-            return (
-              <Card
-                key={day.dayOfWeek}
-                onClick={() =>
-                  navigate(`/workout/${weekNumber}/${day.dayOfWeek}`)
-                }
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <DayDot type={day.type} completed={dayCompleted} />
-                    <div>
-                      <p className="text-sm font-semibold text-text">
-                        {currentWeek
-                          ? getSessionLabel(currentWeek.days, day.dayOfWeek)
-                          : ''}
-                      </p>
-                      <p className="text-xs text-text-secondary">{day.title}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[11px] text-text-muted whitespace-nowrap">
-                      {getDayDurationLabel(day)}
-                    </span>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#8C7355"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </div>
-                </div>
-              </Card>
-            )
-          })}
+          {weeklyDays.map(renderDayCard)}
         </div>
       </motion.div>
+
+      {anytimeDays.length > 0 && (
+        <motion.div variants={fadeUp} className="mt-6">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+            Da casa · quando vuoi
+          </h2>
+          <div className="space-y-2">{anytimeDays.map(renderDayCard)}</div>
+        </motion.div>
+      )}
     </motion.div>
   )
 }

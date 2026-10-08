@@ -87,7 +87,8 @@ export function getDayTypeColor(type: string): string {
 export function getSessionLabel(days: TrainingDay[], dayOfWeek: string): string {
   const index = days.findIndex((d) => d.dayOfWeek === dayOfWeek)
   if (index < 0) return dayOfWeek
-  const label = days[index].label
+  const { label, anytime, title } = days[index]
+  if (anytime) return label ?? title
   return label ? `${label} · ${getDayNameIT(dayOfWeek)}` : `Sessione ${index + 1}`
 }
 

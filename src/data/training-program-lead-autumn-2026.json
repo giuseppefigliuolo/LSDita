@@ -238,8 +238,45 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "exercises": []
+        },
+        {
+          "dayOfWeek": "thursday",
+          "label": "S3",
+          "type": "test",
+          "title": "Test svase e trazioni",
+          "icon": "boulder",
+          "description": "Sfere, mano sinistra contro destra, trazioni e video su boulder di svase. Dita riposate, pelle buona, il giorno dopo un riposo.",
+          "intensity": "media",
+          "durationLabel": "1,5–2 h",
+          "warmupNote": "20–25', senza rampa dita",
+          "recordsTests": true,
+          "guide": [
+            {
+              "title": "Test",
+              "items": [
+                "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
+                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
+                "Trazioni massime: ripetizioni massime a peso corporeo."
+              ]
+            },
+            {
+              "title": "Video",
+              "body": "Fatti filmare su un boulder di svase. A dicembre lo confronti."
+            }
+          ],
+          "exercises": []
+        },
+        {
+          "dayOfWeek": "casa-a",
+          "label": "Casa A",
+          "anytime": true,
+          "type": "antagonists",
+          "title": "Antagonisti e spalle",
+          "icon": "dumbbell",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "intensity": "bassa",
+          "durationLabel": "20'",
           "exercises": [
             {
               "id": "la-casa-a-pushups",
@@ -332,129 +369,95 @@
           ]
         },
         {
-          "dayOfWeek": "thursday",
-          "label": "S3",
-          "type": "test",
-          "title": "Test svase e trazioni",
-          "icon": "boulder",
-          "description": "Sfere, mano sinistra contro destra, trazioni e video su boulder di svase. Dita riposate, pelle buona, il giorno dopo un riposo.",
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
           "intensity": "media",
-          "durationLabel": "1,5–2 h",
-          "warmupNote": "20–25', senza rampa dita",
-          "recordsTests": true,
-          "guide": [
-            {
-              "title": "Test",
-              "items": [
-                "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
-                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
-                "Trazioni massime: ripetizioni massime a peso corporeo."
-              ]
-            },
-            {
-              "title": "Video",
-              "body": "Fatti filmare su un boulder di svase. A dicembre lo confronti."
-            }
-          ],
-          "exercises": []
-        },
-        {
-          "dayOfWeek": "friday",
-          "label": "Casa A",
-          "type": "antagonists",
-          "title": "Antagonisti e spalle",
-          "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "15–20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "10–15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "hammer-curl",
               "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -575,90 +578,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -682,98 +602,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "15 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -842,12 +671,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -938,6 +768,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -1058,90 +981,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -1165,98 +1005,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups-tempo",
-              "name": "Piegamenti lenti",
-              "description": "Piegamenti a terra, corpo in linea. Scendi in 3 secondi fino a sfiorare il petto a terra, poi risali spingendo con decisione.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "medio",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -1325,12 +1074,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -1421,6 +1171,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -1541,90 +1384,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -1648,98 +1408,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups-feet-up",
-              "name": "Piegamenti con piedi rialzati",
-              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 10,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "medio",
-              "notes": "10 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -1808,12 +1477,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -1904,6 +1574,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -2064,90 +1827,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 1,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 1,
-              "repsPerSet": 1,
-              "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "exercises": [],
           "recordsTests": true
         },
         {
@@ -2172,8 +1852,89 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "exercises": []
+        },
+        {
+          "dayOfWeek": "thursday",
+          "label": "S3",
+          "type": "boulder",
+          "title": "Boulder · svase e strapiombo",
+          "icon": "boulder",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 20'.",
+          "intensity": "media",
+          "durationLabel": "2–2,5 h",
+          "warmupNote": "20–25', senza rampa dita",
+          "exercisesTitle": "Parte fisica · 20'",
+          "guide": [
+            {
+              "title": "Test a inizio sessione",
+              "items": [
+                "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
+                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
+                "Trazioni massime: ripetizioni massime a peso corporeo."
+              ]
+            },
+            {
+              "title": "Blocco principale",
+              "duration": "60–80'",
+              "items": [
+                "Settimana di scarico, volume a metà: 6–8 boulder di svase in strapiombo, 2 gradi sotto il tuo massimo, curando la tecnica.",
+                "Poi 1–2 circuiti da circa 30 movimenti in strapiombo, ghisa 5 su 10, recupero 5'."
+              ]
+            },
+            {
+              "title": "Tecnica sulle svase",
+              "items": [
+                "Bacino sotto la presa e braccia tese. Tira verso il basso, non verso di te.",
+                "Polso sopra la presa: più pelle tocca la svasa, più attrito hai.",
+                "Quando lasci la destra e resti sulla sinistra: prepara prima la bandiera con un piede, poi muovi la mano libera in modo deciso. Sulla svasa il nemico è il tempo: più resti appeso, più l'avambraccio si svuota.",
+                "Svase fredde e asciutte tengono meglio. Magnesite e pelle asciutta prima dei tentativi seri.",
+                "Scegli di proposito i boulder dove la mano che tiene la svasa è la sinistra."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-s3-lockoffs",
+              "name": "Bloccaggi 45° · 90° · 120°",
+              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
+              "equipment": "pull_up_bar",
+              "type": "timed_hold",
+              "illustration": "lockoff",
+              "sets": 2,
+              "repsPerSet": 3,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-s3-knee-raises",
+              "name": "Ginocchia al petto appeso",
+              "description": "Appeso alla sbarra, braccia tese: porti le ginocchia al petto e scendi controllato.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "leg-raises",
+              "sets": 2,
+              "repsPerSet": 8,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "difficulty": "medio"
+            }
+          ],
+          "recordsTests": true
+        },
+        {
+          "dayOfWeek": "casa-a",
+          "label": "Casa A",
+          "anytime": true,
+          "type": "antagonists",
+          "title": "Antagonisti e spalle",
+          "icon": "dumbbell",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
           "exercises": [
             {
               "id": "la-casa-a-pushups",
@@ -2266,173 +2027,95 @@
           ]
         },
         {
-          "dayOfWeek": "thursday",
-          "label": "S3",
-          "type": "boulder",
-          "title": "Boulder · svase e strapiombo",
-          "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 20'.",
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
           "intensity": "media",
-          "durationLabel": "2–2,5 h",
-          "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 20'",
-          "guide": [
-            {
-              "title": "Test a inizio sessione",
-              "items": [
-                "Sfere da 12 cm, a inizio sessione: sospensione a due mani a peso corporeo, tempo massimo. È il tuo indice per le svase.",
-                "Mano sinistra contro destra: trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto, si solleva da terra con una mano. Presa da 25 mm a mano aperta, tempo massimo per mano, stop a 60\". Sempre sul 25 mm, anche se a casa ti alleni sul 20: i dati si confrontano solo così. Obiettivo per dicembre: sinistra almeno all'85% del tempo della destra.",
-                "Trazioni massime: ripetizioni massime a peso corporeo."
-              ]
-            },
-            {
-              "title": "Blocco principale",
-              "duration": "60–80'",
-              "items": [
-                "Settimana di scarico, volume a metà: 6–8 boulder di svase in strapiombo, 2 gradi sotto il tuo massimo, curando la tecnica.",
-                "Poi 1–2 circuiti da circa 30 movimenti in strapiombo, ghisa 5 su 10, recupero 5'."
-              ]
-            },
-            {
-              "title": "Tecnica sulle svase",
-              "items": [
-                "Bacino sotto la presa e braccia tese. Tira verso il basso, non verso di te.",
-                "Polso sopra la presa: più pelle tocca la svasa, più attrito hai.",
-                "Quando lasci la destra e resti sulla sinistra: prepara prima la bandiera con un piede, poi muovi la mano libera in modo deciso. Sulla svasa il nemico è il tempo: più resti appeso, più l'avambraccio si svuota.",
-                "Svase fredde e asciutte tengono meglio. Magnesite e pelle asciutta prima dei tentativi seri.",
-                "Scegli di proposito i boulder dove la mano che tiene la svasa è la sinistra."
-              ]
-            }
-          ],
-          "exercises": [
-            {
-              "id": "la-s3-lockoffs",
-              "name": "Bloccaggi 45° · 90° · 120°",
-              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
-              "equipment": "pull_up_bar",
-              "type": "timed_hold",
-              "illustration": "lockoff",
-              "sets": 2,
-              "repsPerSet": 3,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 120,
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-s3-knee-raises",
-              "name": "Ginocchia al petto appeso",
-              "description": "Appeso alla sbarra, braccia tese: porti le ginocchia al petto e scendi controllato.",
-              "equipment": "pull_up_bar",
-              "type": "reps",
-              "illustration": "leg-raises",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "difficulty": "medio"
-            }
-          ],
-          "recordsTests": true
-        },
-        {
-          "dayOfWeek": "friday",
-          "label": "Casa A",
-          "type": "antagonists",
-          "title": "Antagonisti e spalle",
-          "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "intensity": "bassa",
           "durationLabel": "10'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 1,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
               "equipment": "dumbbells",
               "type": "reps",
               "illustration": "hammer-curl",
               "sets": 2,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
               "repsPerSet": 12,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 1,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 1,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -2553,90 +2236,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -2660,98 +2260,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups-feet-up",
-              "name": "Piegamenti con piedi rialzati",
-              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "medio",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -2825,12 +2334,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -2921,6 +2431,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -3041,90 +2644,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -3148,98 +2668,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups-feet-up",
-              "name": "Piegamenti con piedi rialzati",
-              "description": "Piedi appoggiati su una sedia o sul divano, mani a terra alla larghezza delle spalle, corpo in linea. Scendi controllato fino a sfiorare il pavimento col petto e risali. Con i piedi in alto il carico sulle spalle e sul petto aumenta.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 10,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "medio",
-              "notes": "10 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -3313,12 +2742,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -3409,6 +2839,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -3529,90 +3052,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -3636,98 +3076,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups-feet-up-pause",
-              "name": "Piegamenti piedi rialzati con pausa",
-              "description": "Piedi su una sedia o sul divano, corpo in linea. Scendi in 2 secondi, fermati 1 secondo con il petto a un palmo da terra senza rilassare nulla, poi risali con decisione.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 4,
-              "repsPerSet": 10,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "medio",
-              "notes": "10 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -3801,12 +3150,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -3897,6 +3247,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -4013,90 +3456,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 1,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 1,
-              "repsPerSet": 1,
-              "hangTime": 15,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -4120,98 +3480,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 1,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 2,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -4276,12 +3545,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercises": [
@@ -4372,6 +3642,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "10'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 1,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 1,
+              "repsPerSet": 1,
+              "hangTime": 15,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -4488,90 +3851,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 1,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi."
+          "exercises": []
         },
         {
           "dayOfWeek": "wednesday",
@@ -4595,98 +3875,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups-feet-up-pause",
-              "name": "Piegamenti piedi rialzati con pausa",
-              "description": "Piedi su una sedia o sul divano, corpo in linea. Scendi in 2 secondi, fermati 1 secondo con il petto a un palmo da terra senza rilassare nulla, poi risali con decisione.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "medio",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 3,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -4737,12 +3926,13 @@
           ]
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -4833,6 +4023,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 1,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }
@@ -4997,90 +4280,7 @@
               ]
             }
           ],
-          "exercises": [
-            {
-              "id": "la-casa-b-wrist-flexion",
-              "name": "Flessione del polso con manubrio",
-              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
-              "equipment": "hangboard",
-              "type": "timed_hold",
-              "grip": "open_hand",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-left",
-              "name": "Sfere sbilanciate · sinistra sulla sfera",
-              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 2,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            },
-            {
-              "id": "la-casa-b-balls-right",
-              "name": "Sfere sbilanciate · destra sulla sfera",
-              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
-              "equipment": "wooden_balls",
-              "type": "timed_hang",
-              "grip": "sloper",
-              "illustration": "dead-hang-balls",
-              "sets": 1,
-              "repsPerSet": 1,
-              "hangTime": 20,
-              "restBetweenReps": 0,
-              "restBetweenSets": 60,
-              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
-            }
-          ],
-          "exercisesTitle": "Da casa · B",
-          "exercisesNote": "15–20'. La sera della S2 (o subito dopo la +1), mai in un giorno di riposo puro: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "exercises": [],
           "recordsTests": true
         },
         {
@@ -5105,98 +4305,7 @@
               ]
             }
           ],
-          "exercisesTitle": "Da casa · A",
-          "exercisesNote": "20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
-          "exercises": [
-            {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
-              "equipment": "bodyweight",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-lateral-raise",
-              "name": "Alzate laterali con manubri",
-              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 ripetizioni"
-            },
-            {
-              "id": "la-casa-a-external-rotation",
-              "name": "Extra rotazioni di spalla con elastico",
-              "description": "Gomito al fianco a 90°, ruoti l'avambraccio verso l'esterno contro l'elastico.",
-              "equipment": "fitness_band",
-              "type": "reps",
-              "illustration": "band-shoulder",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-ytw",
-              "name": "Y-T-W a pancia in giù",
-              "description": "Sdraiato a pancia in giù sul tappetino: braccia a Y, a T e a W, alzi e tieni 2\" in ogni posizione.",
-              "equipment": "yoga_mat",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 1,
-              "repsPerSet": 8,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile"
-            },
-            {
-              "id": "la-casa-a-wrist-extensors",
-              "name": "Estensori del polso",
-              "description": "Manubrio leggero, palmo verso il basso: sollevi il dorso della mano e scendi lento.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "hammer-curl",
-              "sets": 2,
-              "repsPerSet": 15,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "weight": "manubrio leggero"
-            },
-            {
-              "id": "la-casa-a-overhead-triceps",
-              "name": "Estensione tricipiti sopra la testa con manubrio a un braccio",
-              "description": "In piedi o seduto, un manubrio tenuto con una sola mano sopra la testa, gomito puntato in avanti (con l'altra mano puoi sostenere il gomito). Piega solo il gomito portando il manubrio dietro la testa, poi estendi controllato fino a braccio quasi teso.",
-              "equipment": "dumbbells",
-              "type": "reps",
-              "illustration": "default",
-              "sets": 2,
-              "repsPerSet": 12,
-              "hangTime": 3,
-              "restBetweenReps": 0,
-              "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "12 per braccio"
-            }
-          ]
+          "exercises": []
         },
         {
           "dayOfWeek": "thursday",
@@ -5260,12 +4369,13 @@
           "recordsTests": true
         },
         {
-          "dayOfWeek": "friday",
+          "dayOfWeek": "casa-a",
           "label": "Casa A",
+          "anytime": true,
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Il giorno prima della falesia: solo antagonisti a casa, senza dita. 20'. Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -5356,6 +4466,99 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "casa-b",
+          "label": "Casa B",
+          "anytime": true,
+          "type": "finger_strength",
+          "title": "Lift, sfere e avambracci",
+          "icon": "hangboard",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "intensity": "media",
+          "durationLabel": "15–20'",
+          "exercises": [
+            {
+              "id": "la-casa-b-wrist-flexion",
+              "name": "Flessione del polso con manubrio",
+              "description": "Palmo in su. Rinforza i muscoli che tengono fermo il polso sopra la svasa.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-casa-b-lift-left",
+              "name": "Lift 22 kg 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-lift-right",
+              "name": "Lift 22 kg 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "equipment": "hangboard",
+              "type": "timed_hold",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "weight": "22 kg",
+              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-left",
+              "name": "Sfere sbilanciate · sinistra sulla sfera",
+              "description": "Sfera da 12 cm per la mano sinistra, l'altra mano su un anello di corda più in basso per aiutarti.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-balls-right",
+              "name": "Sfere sbilanciate · destra sulla sfera",
+              "description": "Sfera da 12 cm per la mano destra, l'altra mano su un anello di corda più in basso per aiutarti. Una serie in meno a destra.",
+              "equipment": "wooden_balls",
+              "type": "timed_hang",
+              "grip": "sloper",
+              "illustration": "dead-hang-balls",
+              "sets": 1,
+              "repsPerSet": 1,
+              "hangTime": 20,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
+              "difficulty": "medio"
             }
           ]
         }

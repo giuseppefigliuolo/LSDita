@@ -62,6 +62,8 @@ export interface TrainingDay {
   dayOfWeek: string
   /** Short session name (e.g. "S1"); replaces the positional "Sessione N" */
   label?: string
+  /** Not tied to a weekday: `dayOfWeek` is just a route key (e.g. "casa-a") */
+  anytime?: boolean
   type: DayType
   title: string
   icon: string
