@@ -83,7 +83,10 @@
         "label": "CR mano aperta 20 mm",
         "unit": "kg",
         "percentOfBodyweight": true,
-        "howTo": "Stesso protocollo, a mano aperta con 4 dita."
+        "howTo": "Stesso protocollo, a mano aperta con 4 dita.",
+        "initial": {
+          "w0": "69.5"
+        }
       },
       {
         "id": "balls_12cm",
@@ -274,7 +277,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -373,11 +376,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -458,6 +461,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 2,
+              "repsPerSet": 12,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -677,24 +710,24 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
             {
-              "id": "la-casa-a-pushups",
-              "name": "Piegamenti",
-              "description": "Piegamenti a terra, corpo in linea.",
+              "id": "la-casa-a-pushups-tempo",
+              "name": "Piegamenti lenti",
+              "description": "Piegamenti a terra, corpo in linea. Scendi in 3 secondi fino a sfiorare il petto a terra, poi risali spingendo con decisione.",
               "equipment": "bodyweight",
               "type": "reps",
               "illustration": "default",
-              "sets": 3,
-              "repsPerSet": 15,
               "hangTime": 3,
               "restBetweenReps": 0,
               "restBetweenSets": 45,
-              "difficulty": "facile",
-              "notes": "15 ripetizioni"
+              "sets": 3,
+              "repsPerSet": 10,
+              "difficulty": "medio",
+              "notes": "10 ripetizioni"
             },
             {
               "id": "la-casa-a-lateral-raise",
@@ -776,11 +809,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -861,6 +894,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 3,
+              "repsPerSet": 15,
+              "difficulty": "facile",
+              "notes": "15 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -1080,7 +1143,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -1179,11 +1242,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -1264,6 +1327,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 3,
+              "repsPerSet": 18,
+              "difficulty": "facile",
+              "notes": "18 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -1483,7 +1576,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -1582,11 +1675,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -1667,6 +1760,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 3,
+              "repsPerSet": 20,
+              "difficulty": "facile",
+              "notes": "20 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -1932,7 +2055,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercises": [
@@ -2031,11 +2154,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "10'",
+          "durationLabel": "15'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -2116,6 +2239,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 2,
+              "repsPerSet": 12,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -2340,7 +2493,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -2439,11 +2592,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -2524,6 +2677,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups-close",
+              "name": "Piegamenti a mani strette",
+              "description": "Mani a terra alla larghezza delle spalle, gomiti che scendono stretti lungo i fianchi invece di aprirsi. Lavorano di più i tricipiti, gli stessi che usi per ristabilirti sopra una presa. Niente mani a diamante: piegano troppo il polso.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 3,
+              "repsPerSet": 12,
+              "difficulty": "medio",
+              "notes": "12 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -2748,7 +2931,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -2847,11 +3030,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -2932,6 +3115,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups-close",
+              "name": "Piegamenti a mani strette",
+              "description": "Mani a terra alla larghezza delle spalle, gomiti che scendono stretti lungo i fianchi invece di aprirsi. Lavorano di più i tricipiti, gli stessi che usi per ristabilirti sopra una presa. Niente mani a diamante: piegano troppo il polso.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 3,
+              "repsPerSet": 15,
+              "difficulty": "medio",
+              "notes": "15 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -3156,7 +3369,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -3255,11 +3468,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -3340,6 +3553,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups-close",
+              "name": "Piegamenti a mani strette",
+              "description": "Mani a terra alla larghezza delle spalle, gomiti che scendono stretti lungo i fianchi invece di aprirsi. Lavorano di più i tricipiti, gli stessi che usi per ristabilirti sopra una presa. Niente mani a diamante: piegano troppo il polso.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 4,
+              "repsPerSet": 15,
+              "difficulty": "medio",
+              "notes": "15 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -3551,7 +3794,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercises": [
@@ -3650,11 +3893,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "10'",
+          "durationLabel": "15'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -3735,6 +3978,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 2,
+              "repsPerSet": 12,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -3932,7 +4205,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -4031,11 +4304,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -4116,6 +4389,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups-close",
+              "name": "Piegamenti a mani strette",
+              "description": "Mani a terra alla larghezza delle spalle, gomiti che scendono stretti lungo i fianchi invece di aprirsi. Lavorano di più i tricipiti, gli stessi che usi per ristabilirti sopra una presa. Niente mani a diamante: piegano troppo il polso.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 3,
+              "repsPerSet": 15,
+              "difficulty": "medio",
+              "notes": "15 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
@@ -4375,7 +4678,7 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
           "intensity": "bassa",
           "durationLabel": "20'",
           "exercises": [
@@ -4474,11 +4777,11 @@
           "label": "Casa B",
           "anytime": true,
           "type": "finger_strength",
-          "title": "Lift, sfere e avambracci",
+          "title": "Lift, sfere, avambracci e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "15–20'",
+          "durationLabel": "20–25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -4559,6 +4862,36 @@
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-pushups",
+              "name": "Piegamenti",
+              "description": "Piegamenti a terra, mani poco più larghe delle spalle, corpo in linea dalla testa ai talloni. Petto a sfiorare il pavimento, poi braccia tese.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "sets": 2,
+              "repsPerSet": 15,
+              "difficulty": "facile",
+              "notes": "15 ripetizioni. Giorno di volume: ripetizioni pulite e costanti, lontano dal cedimento. Se l'ultima serie arriva con 5 o più ripetizioni di margine, la volta dopo aggiungine 2."
+            },
+            {
+              "id": "la-casa-b-lateral-raise",
+              "name": "Alzate laterali con manubri",
+              "description": "In piedi, manubri ai fianchi, gomiti leggermente flessi. Solleva le braccia lateralmente guidando con i gomiti fino all'altezza delle spalle, poi scendi controllato.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "notes": "12 ripetizioni"
             }
           ]
         }
