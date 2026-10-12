@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise, WorkoutPhase } from '../../types'
 import CircularTimer from './CircularTimer'
 import SetProgressDots from './SetProgressDots'
+import ExerciseNotesButton from './ExerciseNotesButton'
 import { INK, RADIUS, SHADOW } from '../../styles/tokens'
 
 interface TimedExerciseViewProps {
@@ -18,6 +19,7 @@ interface TimedExerciseViewProps {
   onSkipTimer: () => void
   onSkipExercise: () => void
   onOpenInfo: () => void
+  onOpenNotes: () => void
 }
 
 /**
@@ -38,6 +40,7 @@ export default function TimedExerciseView({
   onSkipTimer,
   onSkipExercise,
   onOpenInfo,
+  onOpenNotes,
 }: TimedExerciseViewProps) {
   const activePhase = phase === 'paused' ? (wasPausedPhase ?? 'hanging') : phase
   const isRepeaters = exercise.type === 'repeaters'
@@ -67,6 +70,11 @@ export default function TimedExerciseView({
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[80dvh] px-4">
+      <ExerciseNotesButton
+        exerciseId={exercise.id}
+        onClick={onOpenNotes}
+        className="absolute top-2 right-4 z-10"
+      />
 
       <AnimatePresence mode="wait">
         <motion.div

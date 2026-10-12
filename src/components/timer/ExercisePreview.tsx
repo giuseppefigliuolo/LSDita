@@ -12,7 +12,7 @@ import { parseExerciseDescription } from '../../utils/exerciseDescription'
 import Badge from '../ui/Badge'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
 import ExerciseNotesModal from './ExerciseNotesModal'
-import { useWorkoutStore } from '../../store/useWorkoutStore'
+import ExerciseNotesButton from './ExerciseNotesButton'
 import { INK, SURFACE, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
 
 function formatCountdown(seconds: number): string {
@@ -58,10 +58,6 @@ export default function ExercisePreview({
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
   const [showNotes, setShowNotes] = useState(false)
   const [autoCancelled, setAutoCancelled] = useState(false)
-
-  const notesCount = useWorkoutStore(
-    (state) => state.exerciseNotes.filter((n) => n.exerciseId === exercise.id).length
-  )
 
   const autoActive = !!autoStartSeconds && autoStartSeconds > 0 && !autoCancelled
 
@@ -197,38 +193,11 @@ export default function ExercisePreview({
             </div>
 
             {/* Notes button absolute top-right */}
-            <button
-              type="button"
+            <ExerciseNotesButton
+              exerciseId={exercise.id}
               onClick={openNotes}
-              aria-label={notesCount > 0 ? `Visualizza ${notesCount} note` : 'Aggiungi nota'}
-              className="absolute top-0 right-0 w-10 h-10 flex items-center justify-center border-[2.5px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
-              style={{
-                borderColor: INK,
-                backgroundColor: notesCount > 0 ? '#E8B820' : SURFACE,
-                borderRadius: RADIUS.blob,
-                boxShadow: SHADOW.sm,
-              }}
-            >
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke={INK} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 3h8l4 4v10H4z" />
-                <path d="M12 3v4h4" />
-                <path d="M7 11h6M7 14h4" />
-              </svg>
-              {notesCount > 0 && (
-                <span
-                  className="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 flex items-center justify-center text-[10px] font-bold border-[2px]"
-                  style={{
-                    borderColor: INK,
-                    backgroundColor: '#D4541A',
-                    color: '#FFFBF0',
-                    borderRadius: RADIUS.pill,
-                    boxShadow: SHADOW.xxs,
-                  }}
-                >
-                  {notesCount}
-                </span>
-              )}
-            </button>
+              className="absolute top-0 right-0"
+            />
           </div>
 
           {/* Stat row — single line with dashed dividers */}

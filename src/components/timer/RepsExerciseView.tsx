@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise } from '../../types'
 import SetProgressDots from './SetProgressDots'
+import ExerciseNotesButton from './ExerciseNotesButton'
 import { RADIUS, SHADOW } from '../../styles/tokens'
 
 interface RepsExerciseViewProps {
@@ -10,6 +11,7 @@ interface RepsExerciseViewProps {
   onSetDone: () => void
   onSkipExercise: () => void
   onOpenInfo: () => void
+  onOpenNotes: () => void
 }
 
 /** View for `reps`-type exercises (no timer, just a tap-to-complete button). */
@@ -20,11 +22,17 @@ export default function RepsExerciseView({
   onSetDone,
   onSkipExercise,
   onOpenInfo,
+  onOpenNotes,
 }: RepsExerciseViewProps) {
   const hasWeight = exercise.weight && exercise.weight !== 'corpo libero'
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[80dvh] px-4">
+      <ExerciseNotesButton
+        exerciseId={exercise.id}
+        onClick={onOpenNotes}
+        className="absolute top-2 right-4 z-10"
+      />
 
       <AnimatePresence mode="wait">
         <motion.div

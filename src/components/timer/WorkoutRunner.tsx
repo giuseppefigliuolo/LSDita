@@ -7,6 +7,7 @@ import RepsExerciseView from './RepsExerciseView'
 import TimedExerciseView from './TimedExerciseView'
 import SkipConfirmDialog from './SkipConfirmDialog'
 import ExerciseInfoModal from './ExerciseInfoModal'
+import ExerciseNotesModal from './ExerciseNotesModal'
 import { useWorkoutFlow } from './useWorkoutFlow'
 
 export interface WorkoutProgress {
@@ -104,6 +105,18 @@ export default function WorkoutRunner({
     resumeFromInfo()
   }, [resumeFromInfo])
 
+  const [showNotes, setShowNotes] = useState(false)
+
+  const openNotes = useCallback(() => {
+    pauseForInfo()
+    setShowNotes(true)
+  }, [pauseForInfo])
+
+  const closeNotes = useCallback(() => {
+    setShowNotes(false)
+    resumeFromInfo()
+  }, [resumeFromInfo])
+
   const confirmSkip = useCallback(() => {
     setShowSkipConfirm(false)
     skipExercise()
@@ -173,6 +186,7 @@ export default function WorkoutRunner({
           onSetDone={repsSetDone}
           onSkipExercise={() => setShowSkipConfirm(true)}
           onOpenInfo={openInfo}
+          onOpenNotes={openNotes}
         />
       ) : (
         <TimedExerciseView
@@ -189,6 +203,7 @@ export default function WorkoutRunner({
           onSkipTimer={skipTimer}
           onSkipExercise={() => setShowSkipConfirm(true)}
           onOpenInfo={openInfo}
+          onOpenNotes={openNotes}
         />
       )}
 
@@ -227,6 +242,13 @@ export default function WorkoutRunner({
         open={showInfo}
         exercise={exercise}
         onClose={closeInfo}
+      />
+
+      <ExerciseNotesModal
+        open={showNotes}
+        exerciseId={exercise.id}
+        exerciseName={exercise.name}
+        onClose={closeNotes}
       />
     </>
   )
