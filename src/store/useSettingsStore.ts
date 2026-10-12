@@ -18,6 +18,7 @@ export function dayOverrideKey(
 interface SettingsStore extends AppSettings {
   toggleSound: () => void
   toggleVoice: () => void
+  toggleMuted: () => void
   toggleVibration: () => void
   setVolume: (volume: number) => void
   setSelectedProgram: (program: ProgramId) => void
@@ -43,6 +44,7 @@ export const useSettingsStore = create<SettingsStore>()(
     (set) => ({
       soundEnabled: true,
       voiceEnabled: true,
+      muted: false,
       vibrationEnabled: true,
       volume: 0.8,
       selectedProgram: 'home',
@@ -54,6 +56,7 @@ export const useSettingsStore = create<SettingsStore>()(
 
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
       toggleVoice: () => set((s) => ({ voiceEnabled: !s.voiceEnabled })),
+      toggleMuted: () => set((s) => ({ muted: !s.muted })),
       toggleVibration: () =>
         set((s) => ({ vibrationEnabled: !s.vibrationEnabled })),
       setVolume: (volume) => set({ volume }),

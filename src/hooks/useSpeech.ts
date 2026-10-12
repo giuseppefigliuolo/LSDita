@@ -2,7 +2,7 @@ import { useCallback, useRef, useEffect } from 'react'
 import { useSettingsStore } from '../store/useSettingsStore'
 
 export function useSpeech() {
-  const voiceEnabled = useSettingsStore((s) => s.voiceEnabled)
+  const voiceEnabled = useSettingsStore((s) => s.voiceEnabled && !s.muted)
   const voiceRef = useRef<SpeechSynthesisVoice | null>(null)
 
   useEffect(() => {
@@ -18,6 +18,11 @@ export function useSpeech() {
     speechSynthesis.addEventListener('voiceschanged', loadVoice)
     return () => speechSynthesis.removeEventListener('voiceschanged', loadVoice)
   }, [])
+
+  // Silence an announcement already in progress as soon as audio is muted.
+  useEffect(() => {
+    if (!voiceEnabled && 'speechSynthesis' in window) speechSynthesis.cancel()
+  }, [voiceEnabled])
 
   const speak = useCallback(
     (text: string) => {

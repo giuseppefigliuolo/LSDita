@@ -35,7 +35,7 @@ function playTone(frequency: number, duration: number, volume: number) {
 }
 
 export function useAudio() {
-  const soundEnabled = useSettingsStore((s) => s.soundEnabled)
+  const soundEnabled = useSettingsStore((s) => s.soundEnabled && !s.muted)
   const volume = useSettingsStore((s) => s.volume)
   const initRef = useRef(false)
 

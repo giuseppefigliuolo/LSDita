@@ -514,8 +514,8 @@
     },
     {
       "weekNumber": 2,
-      "theme": "Blocco 1 · Base (80%)",
-      "description": "Prima la base: trave all'80% del CR, doppie in lead con almeno metà delle vie in strapiombo, svase e circuiti al boulder. Il blocco prepara quello dopo.",
+      "theme": "Blocco 1 · Base (85%)",
+      "description": "Prima la base: trave all'85% del CR, doppie in lead con almeno metà delle vie in strapiombo, svase e circuiti al boulder. Il blocco prepara quello dopo.",
       "volumeMultiplier": 1,
       "days": [
         {
@@ -546,16 +546,16 @@
               "type": "timed_hang",
               "grip": "half_crimp",
               "illustration": "max-hang",
-              "sets": 4,
+              "sets": 5,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
-              "restBetweenSets": 120,
+              "restBetweenSets": 90,
               "load": {
                 "test": "cr_half_crimp",
-                "percent": 80
+                "percent": 85
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -566,16 +566,16 @@
               "type": "timed_hang",
               "grip": "open_hand",
               "illustration": "max-hang-open",
-              "sets": 4,
+              "sets": 5,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
-              "restBetweenSets": 120,
+              "restBetweenSets": 90,
               "load": {
                 "test": "cr_open_hand",
-                "percent": 80
+                "percent": 85
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -963,8 +963,8 @@
     },
     {
       "weekNumber": 3,
-      "theme": "Blocco 1 · Base (85%)",
-      "description": "Prima la base: trave all'85% del CR, doppie in lead con almeno metà delle vie in strapiombo, svase e circuiti al boulder. Il blocco prepara quello dopo.",
+      "theme": "Blocco 1 · Base (88%)",
+      "description": "Prima la base: trave all'88% del CR, doppie in lead con almeno metà delle vie in strapiombo, svase e circuiti al boulder. Il blocco prepara quello dopo.",
       "volumeMultiplier": 1,
       "days": [
         {
@@ -995,16 +995,16 @@
               "type": "timed_hang",
               "grip": "half_crimp",
               "illustration": "max-hang",
-              "sets": 4,
+              "sets": 5,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
-              "restBetweenSets": 120,
+              "restBetweenSets": 90,
               "load": {
                 "test": "cr_half_crimp",
-                "percent": 85
+                "percent": 88
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -1015,16 +1015,16 @@
               "type": "timed_hang",
               "grip": "open_hand",
               "illustration": "max-hang-open",
-              "sets": 4,
+              "sets": 5,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
-              "restBetweenSets": 120,
+              "restBetweenSets": 90,
               "load": {
                 "test": "cr_open_hand",
-                "percent": 85
+                "percent": 88
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -1412,8 +1412,8 @@
     },
     {
       "weekNumber": 4,
-      "theme": "Blocco 1 · Base (88%)",
-      "description": "Prima la base: trave all'88% del CR, doppie in lead con almeno metà delle vie in strapiombo, svase e circuiti al boulder. Il blocco prepara quello dopo.",
+      "theme": "Blocco 1 · Base (90%)",
+      "description": "Prima la base: trave al 90% del CR, doppie in lead con almeno metà delle vie in strapiombo, svase e circuiti al boulder. Il blocco prepara quello dopo.",
       "volumeMultiplier": 1,
       "days": [
         {
@@ -1444,16 +1444,16 @@
               "type": "timed_hang",
               "grip": "half_crimp",
               "illustration": "max-hang",
-              "sets": 4,
+              "sets": 5,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
-              "restBetweenSets": 120,
+              "restBetweenSets": 90,
               "load": {
                 "test": "cr_half_crimp",
-                "percent": 88
+                "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -1464,16 +1464,16 @@
               "type": "timed_hang",
               "grip": "open_hand",
               "illustration": "max-hang-open",
-              "sets": 4,
+              "sets": 5,
               "repsPerSet": 1,
               "hangTime": 10,
               "restBetweenReps": 0,
-              "restBetweenSets": 120,
+              "restBetweenSets": 90,
               "load": {
                 "test": "cr_open_hand",
-                "percent": 88
+                "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -2357,8 +2357,8 @@
     },
     {
       "weekNumber": 6,
-      "theme": "Blocco 2 · Forza e potenza (88%)",
-      "description": "Trave al 88% del nuovo CR, boulder al limite e 4×4, tentativi a vista in strapiombo con la regola \"si vola, non ci si appende\".",
+      "theme": "Blocco 2 · Forza e potenza (90%)",
+      "description": "Trave al 90% del nuovo CR, boulder al limite e 4×4, tentativi a vista in strapiombo con la regola \"si vola, non ci si appende\".",
       "volumeMultiplier": 1,
       "days": [
         {
@@ -2396,9 +2396,9 @@
               "restBetweenSets": 120,
               "load": {
                 "test": "cr_half_crimp",
-                "percent": 88
+                "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -2416,9 +2416,9 @@
               "restBetweenSets": 120,
               "load": {
                 "test": "cr_open_hand",
-                "percent": 88
+                "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -2812,8 +2812,8 @@
     },
     {
       "weekNumber": 7,
-      "theme": "Blocco 2 · Forza e potenza (90%)",
-      "description": "Trave al 90% del nuovo CR, boulder al limite e 4×4, tentativi a vista in strapiombo con la regola \"si vola, non ci si appende\".",
+      "theme": "Blocco 2 · Forza e potenza (92%)",
+      "description": "Trave al 92% del nuovo CR, boulder al limite e 4×4, tentativi a vista in strapiombo con la regola \"si vola, non ci si appende\".",
       "volumeMultiplier": 1,
       "days": [
         {
@@ -2851,9 +2851,9 @@
               "restBetweenSets": 120,
               "load": {
                 "test": "cr_half_crimp",
-                "percent": 90
+                "percent": 92
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -2871,9 +2871,9 @@
               "restBetweenSets": 120,
               "load": {
                 "test": "cr_open_hand",
-                "percent": 90
+                "percent": 92
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -3267,8 +3267,8 @@
     },
     {
       "weekNumber": 8,
-      "theme": "Blocco 2 · Forza e potenza (92%)",
-      "description": "Trave al 92% del nuovo CR, boulder al limite e 4×4, tentativi a vista in strapiombo con la regola \"si vola, non ci si appende\".",
+      "theme": "Blocco 2 · Forza e potenza (94%)",
+      "description": "Trave al 94% del nuovo CR, boulder al limite e 4×4, tentativi a vista in strapiombo con la regola \"si vola, non ci si appende\".",
       "volumeMultiplier": 1,
       "days": [
         {
@@ -3306,9 +3306,9 @@
               "restBetweenSets": 120,
               "load": {
                 "test": "cr_half_crimp",
-                "percent": 92
+                "percent": 94
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -3326,9 +3326,9 @@
               "restBetweenSets": 120,
               "load": {
                 "test": "cr_open_hand",
-                "percent": 92
+                "percent": 94
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -4204,7 +4204,7 @@
                 "test": "cr_half_crimp",
                 "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -4224,7 +4224,7 @@
                 "test": "cr_open_hand",
                 "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]

@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { SURFACE_ELEVATED, RADIUS, SHADOW, INK } from '../styles/tokens'
+import MuteButton from '../components/ui/MuteButton'
 
 type TimerPhase = 'idle' | 'countdown' | 'work' | 'rest' | 'done'
 
@@ -15,7 +16,8 @@ export default function TimerPage() {
   const [currentRep, setCurrentRep] = useState(0)
   const [timeRemaining, setTimeRemaining] = useState(0)
 
-  const { soundEnabled, volume, countdownDuration } = useSettingsStore()
+  const { soundEnabled: soundSetting, muted, volume, countdownDuration } = useSettingsStore()
+  const soundEnabled = soundSetting && !muted
   const audioCtxRef = useRef<AudioContext | null>(null)
   const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined)
 
@@ -150,12 +152,15 @@ export default function TimerPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25 }}
     >
-      <h1
-        className="text-3xl mb-1"
-        style={{ fontFamily: 'var(--font-display)' }}
-      >
-        Timer
-      </h1>
+      <div className="flex items-center justify-between mb-1">
+        <h1
+          className="text-3xl"
+          style={{ fontFamily: 'var(--font-display)' }}
+        >
+          Timer
+        </h1>
+        <MuteButton />
+      </div>
       <p className="text-text-secondary text-sm mb-6">
         Timer personalizzato per repeaters
       </p>

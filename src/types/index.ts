@@ -200,6 +200,8 @@ export interface Climb {
 export interface AppSettings {
   soundEnabled: boolean
   voiceEnabled: boolean
+  /** Quick mute for beeps and voice, independent of the individual toggles. */
+  muted: boolean
   vibrationEnabled: boolean
   volume: number
   selectedProgram: ProgramId

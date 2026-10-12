@@ -9,6 +9,7 @@ import { useSettingsStore } from '../store/useSettingsStore'
 import { getProgram } from '../utils/getProgram'
 import type { CompletedWorkout, WorkoutNote } from '../types'
 import { getWorkoutForDay } from '../utils/programUtils'
+import MuteButton from '../components/ui/MuteButton'
 
 export default function ActiveWorkout() {
   const { weekNumber, dayOfWeek } = useParams<{ weekNumber: string; dayOfWeek: string }>()
@@ -104,6 +105,7 @@ export default function ActiveWorkout() {
         <p className="text-xs text-text-muted font-medium uppercase tracking-wider">
           Settimana {week}
         </p>
+        <MuteButton />
       </header>
 
       <div className="flex-1 min-h-0 flex items-center justify-center">
