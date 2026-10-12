@@ -44,6 +44,11 @@ export function getTodayString(): string {
   return new Date().toISOString().split('T')[0]
 }
 
+/** Whole days elapsed since an ISO timestamp. */
+export function daysSince(iso: string): number {
+  return Math.floor((Date.now() - new Date(iso).getTime()) / 86400000)
+}
+
 export function getDayOfWeekIndex(dayOfWeek: string): number {
   const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
   return days.indexOf(dayOfWeek)

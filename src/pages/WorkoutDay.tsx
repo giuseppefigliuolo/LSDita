@@ -109,6 +109,7 @@ export default function WorkoutDay() {
   const loads = program.benchmarks ? getDistinctLoads(day.exercises) : []
   const isDone = completedWorkouts.some(
     (w) =>
+      !w.partial &&
       w.weekNumber === week &&
       w.dayTitle === day.title &&
       w.id.startsWith(`${week}-${day.dayOfWeek}-`)

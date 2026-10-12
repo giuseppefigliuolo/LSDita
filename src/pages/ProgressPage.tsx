@@ -64,6 +64,9 @@ export default function ProgressPage() {
                             <span>{formatSeconds(workout.durationSeconds)}</span>
                           </>
                         )}
+                        {workout.partial && (
+                          <span className="text-primary font-semibold">Interrotta</span>
+                        )}
                         {workout.skippedExercises.length > 0 && (
                           <span className="text-danger">{workout.skippedExercises.length} saltati</span>
                         )}

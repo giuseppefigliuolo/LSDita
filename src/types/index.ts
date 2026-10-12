@@ -149,6 +149,8 @@ export interface CompletedWorkout {
   exercisesCompleted: number
   exercisesTotal: number
   skippedExercises: string[]
+  /** Session interrupted before reaching the end (app closed/crashed mid-workout). */
+  partial?: boolean
 }
 
 export interface WorkoutNote {

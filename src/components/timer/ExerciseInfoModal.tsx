@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Exercise } from '../../types'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
-import { parseExerciseDescription } from '../ui/ExerciseDescription'
+import { parseExerciseDescription } from '../../utils/exerciseDescription'
 import { getEquipmentLabel, getGripLabel } from '../../utils/exerciseLabels'
 import {
   INK,

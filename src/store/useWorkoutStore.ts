@@ -10,6 +10,7 @@ interface WorkoutStore {
 
   setProgramStartDate: (date: string) => void
   markComplete: (workout: CompletedWorkout) => void
+  upsertWorkout: (workout: CompletedWorkout) => void
   addNote: (note: WorkoutNote) => void
   addExerciseNote: (note: ExerciseNote) => void
   updateExerciseNote: (id: string, text: string) => void
@@ -41,6 +42,18 @@ export const useWorkoutStore = create<WorkoutStore>()(
         set((state) => ({
           completedWorkouts: [...state.completedWorkouts, workout]
         })),
+
+      upsertWorkout: (workout) =>
+        set((state) => {
+          const exists = state.completedWorkouts.some((w) => w.id === workout.id)
+          return {
+            completedWorkouts: exists
+              ? state.completedWorkouts.map((w) =>
+                  w.id === workout.id ? workout : w
+                )
+              : [...state.completedWorkouts, workout]
+          }
+        }),
 
       addNote: (note) =>
         set((state) => ({
@@ -78,7 +91,8 @@ export const useWorkoutStore = create<WorkoutStore>()(
         )
       },
 
-      getCompletedCount: () => get().completedWorkouts.length,
+      getCompletedCount: () =>
+        get().completedWorkouts.filter((w) => !w.partial).length,
 
       getStreak: () => {
         const workouts = get().completedWorkouts

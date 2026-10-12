@@ -22,22 +22,27 @@ export function useTimer(onComplete: () => void): UseTimerReturn {
   const rafRef = useRef<number>(0)
   const onCompleteRef = useRef(onComplete)
 
-  onCompleteRef.current = onComplete
+  useEffect(() => {
+    onCompleteRef.current = onComplete
+  }, [onComplete])
 
   const tick = useCallback(() => {
-    const elapsed = (performance.now() - startTimeRef.current) / 1000
-    const remaining = Math.max(0, durationRef.current - elapsed)
+    const loop = () => {
+      const elapsed = (performance.now() - startTimeRef.current) / 1000
+      const remaining = Math.max(0, durationRef.current - elapsed)
 
-    setTimeRemaining(remaining)
+      setTimeRemaining(remaining)
 
-    if (remaining <= 0) {
-      setIsRunning(false)
-      setTimeRemaining(0)
-      onCompleteRef.current()
-      return
+      if (remaining <= 0) {
+        setIsRunning(false)
+        setTimeRemaining(0)
+        onCompleteRef.current()
+        return
+      }
+
+      rafRef.current = requestAnimationFrame(loop)
     }
-
-    rafRef.current = requestAnimationFrame(tick)
+    loop()
   }, [])
 
   const start = useCallback((duration: number) => {

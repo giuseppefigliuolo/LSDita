@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Exercise } from '../../types'
 import ExercisePreview from './ExercisePreview'
@@ -9,24 +9,35 @@ import SkipConfirmDialog from './SkipConfirmDialog'
 import ExerciseInfoModal from './ExerciseInfoModal'
 import { useWorkoutFlow } from './useWorkoutFlow'
 
+export interface WorkoutProgress {
+  exercisesCompleted: number
+  exercisesTotal: number
+  duration: number
+  skippedExercises: string[]
+}
+
 interface WorkoutRunnerProps {
   exercises: Exercise[]
   dayTitle: string
   weekNumber?: number
-  onComplete: (data: {
-    exercisesCompleted: number
-    exercisesTotal: number
-    duration: number
-    skippedExercises: string[]
-    note: string
-    feeling: 1 | 2 | 3 | 4 | 5
-  }) => void
+  /**
+   * Called after every exercise ends (done or skipped) so progress survives a
+   * crash. `finished` is true once the final screen is reached.
+   */
+  onProgress?: (data: WorkoutProgress, finished: boolean) => void
+  onComplete: (
+    data: WorkoutProgress & {
+      note: string
+      feeling: 1 | 2 | 3 | 4 | 5
+    },
+  ) => void
   onExit: () => void
 }
 
 export default function WorkoutRunner({
   exercises,
   dayTitle,
+  onProgress,
   onComplete,
   onExit,
 }: WorkoutRunnerProps) {
@@ -51,9 +62,34 @@ export default function WorkoutRunner({
     resumeFromInfo,
     completedExercises,
     finalDuration,
+    getElapsedSeconds,
     skippedExercises,
     skipExerciseCompleteWait,
   } = flow
+
+  const onProgressRef = useRef(onProgress)
+  useEffect(() => {
+    onProgressRef.current = onProgress
+  }, [onProgress])
+
+  const isWorkoutComplete = phase === 'workout_complete'
+  const processedExercises = completedExercises + skippedExercises.length
+
+  // Checkpoint after each finished/skipped exercise, and once more on the
+  // final screen (with the final duration) before the feedback is entered.
+  useEffect(() => {
+    if (processedExercises === 0) return
+    onProgressRef.current?.(
+      {
+        exercisesCompleted: completedExercises,
+        exercisesTotal: exercises.length,
+        duration: isWorkoutComplete ? finalDuration : getElapsedSeconds(),
+        skippedExercises,
+      },
+      isWorkoutComplete,
+    )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [processedExercises, isWorkoutComplete])
 
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
   const [showInfo, setShowInfo] = useState(false)

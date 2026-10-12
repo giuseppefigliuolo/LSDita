@@ -54,45 +54,47 @@ export default function TimerPage() {
     }
   }, [])
 
+  // Latest phase-end handler, read by the interval so it never sees stale state.
+  const onPhaseEndRef = useRef<(p: TimerPhase) => void>(() => {})
+
   const startPhase = useCallback((p: TimerPhase, duration: number) => {
     stopTimer()
     setPhase(p)
     setTimeRemaining(duration)
 
+    let remaining = duration
     intervalRef.current = setInterval(() => {
-      setTimeRemaining(prev => {
-        if (prev <= 1) {
-          clearInterval(intervalRef.current)
-          intervalRef.current = undefined
-          return 0
-        }
-        return prev - 1
-      })
+      remaining -= 1
+      setTimeRemaining(Math.max(0, remaining))
+      if (remaining <= 0) {
+        stopTimer()
+        onPhaseEndRef.current(p)
+      }
     }, 1000)
   }, [stopTimer])
 
   // Phase transition logic
   useEffect(() => {
-    if (timeRemaining > 0 || phase === 'idle' || phase === 'done') return
-
-    if (phase === 'countdown') {
-      playBeep(1000, 300)
-      setCurrentRep(1)
-      startPhase('work', workTime)
-    } else if (phase === 'work') {
-      playBeep(600, 200)
-      if (currentRep >= reps) {
-        setPhase('done')
-        playBeep(1000, 500)
-      } else {
-        startPhase('rest', restTime)
+    onPhaseEndRef.current = (ended: TimerPhase) => {
+      if (ended === 'countdown') {
+        playBeep(1000, 300)
+        setCurrentRep(1)
+        startPhase('work', workTime)
+      } else if (ended === 'work') {
+        playBeep(600, 200)
+        if (currentRep >= reps) {
+          setPhase('done')
+          playBeep(1000, 500)
+        } else {
+          startPhase('rest', restTime)
+        }
+      } else if (ended === 'rest') {
+        playBeep(800, 150)
+        setCurrentRep(prev => prev + 1)
+        startPhase('work', workTime)
       }
-    } else if (phase === 'rest') {
-      playBeep(800, 150)
-      setCurrentRep(prev => prev + 1)
-      startPhase('work', workTime)
     }
-  }, [timeRemaining, phase, currentRep, reps, workTime, restTime, startPhase, playBeep])
+  })
 
   // Beep on last 3 seconds of work
   useEffect(() => {

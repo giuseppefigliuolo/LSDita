@@ -1,4 +1,5 @@
 import type { MouseEvent } from 'react'
+import { parseExerciseDescription } from '../../utils/exerciseDescription'
 
 /**
  * Renders exercise copy; a trailing "Ref: domain/path" (as in program JSON) becomes a real https link.
@@ -8,24 +9,6 @@ function refToHref(raw: string): string {
   if (/^https?:\/\//i.test(t)) return t
   if (t.startsWith('//')) return `https:${t}`
   return `https://${t}`
-}
-
-export function parseExerciseDescription(text: string): {
-  body: string
-  refUrl: string | null
-} {
-  const spaced = text.match(/\sRef:\s+(.+)$/)
-  if (spaced) {
-    return {
-      body: text.slice(0, spaced.index).trimEnd(),
-      refUrl: spaced[1].trim()
-    }
-  }
-  const only = text.match(/^Ref:\s+(.+)$/)
-  if (only) {
-    return { body: '', refUrl: only[1].trim() }
-  }
-  return { body: text, refUrl: null }
 }
 
 interface ExerciseDescriptionProps {

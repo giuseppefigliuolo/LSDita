@@ -5,6 +5,7 @@ import { useWorkoutStore } from '../store/useWorkoutStore'
 import { getProgram, programOptions } from '../utils/getProgram'
 import { validateProgramJson } from '../utils/validateProgram'
 import { buildBackup, restoreBackup } from '../utils/backup'
+import { daysSince } from '../utils/dateUtils'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import { INK, RADIUS, SHADOW } from '../styles/tokens'
@@ -676,9 +677,7 @@ function BackupStatus({ lastBackupAt }: { lastBackupAt: string | null }) {
       </p>
     )
   }
-  const days = Math.floor(
-    (Date.now() - new Date(lastBackupAt).getTime()) / 86400000
-  )
+  const days = daysSince(lastBackupAt)
   const color = days < 7 ? '#2E7D32' : days < 30 ? '#B8860B' : '#CC3020'
   const label =
     days === 0 ? 'oggi' : days === 1 ? '1 giorno fa' : `${days} giorni fa`

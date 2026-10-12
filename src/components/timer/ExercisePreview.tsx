@@ -8,7 +8,7 @@ import {
   animate as motionAnimate,
 } from 'framer-motion'
 import type { Exercise } from '../../types'
-import { parseExerciseDescription } from '../ui/ExerciseDescription'
+import { parseExerciseDescription } from '../../utils/exerciseDescription'
 import Badge from '../ui/Badge'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
 import ExerciseNotesModal from './ExerciseNotesModal'
@@ -80,7 +80,6 @@ export default function ExercisePreview({
   useEffect(() => {
     if (!autoActive || !autoStartSeconds) return
     autoProgress.set(0)
-    setRemainingSecs(autoStartSeconds)
     const controls = motionAnimate(autoProgress, 1, {
       duration: autoStartSeconds,
       ease: 'linear',
@@ -100,7 +99,9 @@ export default function ExercisePreview({
     onStart({ sets, repsPerSet: reps, hangTime: time })
   }
 
-  startRef.current = handleStart
+  useEffect(() => {
+    startRef.current = handleStart
+  })
 
   const toggleEditing = (field: 'sets' | 'reps' | 'time') => {
     cancelAuto()

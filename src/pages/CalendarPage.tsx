@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useWorkoutStore } from '../store/useWorkoutStore'
@@ -9,6 +8,20 @@ import { getActiveWeekNumber, getDayTypeColor } from '../utils/programUtils'
 import { RADIUS, SHADOW } from '../styles/tokens'
 
 const WEEKDAY_LABELS = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
+
+function buildMonthGrid(year: number, month: number) {
+  const firstDay = new Date(year, month, 1)
+  const lastDay = new Date(year, month + 1, 0)
+  let startOffset = firstDay.getDay() - 1
+  if (startOffset < 0) startOffset = 6
+
+  const days: Array<{ date: Date; dayNum: number; isCurrentMonth: boolean } | null> = []
+  for (let i = 0; i < startOffset; i++) days.push(null)
+  for (let d = 1; d <= lastDay.getDate(); d++) {
+    days.push({ date: new Date(year, month, d), dayNum: d, isCurrentMonth: true })
+  }
+  return days
+}
 
 export default function CalendarPage() {
   const navigate = useNavigate()
@@ -21,22 +34,12 @@ export default function CalendarPage() {
   const year = now.getFullYear()
   const month = now.getMonth()
 
-  const calendarDays = useMemo(() => {
-    const firstDay = new Date(year, month, 1)
-    const lastDay = new Date(year, month + 1, 0)
-    let startOffset = firstDay.getDay() - 1
-    if (startOffset < 0) startOffset = 6
-
-    const days: Array<{ date: Date; dayNum: number; isCurrentMonth: boolean } | null> = []
-    for (let i = 0; i < startOffset; i++) days.push(null)
-    for (let d = 1; d <= lastDay.getDate(); d++) {
-      days.push({ date: new Date(year, month, d), dayNum: d, isCurrentMonth: true })
-    }
-    return days
-  }, [year, month])
+  const calendarDays = buildMonthGrid(year, month)
 
   const today = now.toISOString().split('T')[0]
-  const completedDates = new Set(completedWorkouts.map((w) => w.date))
+  const completedDates = new Set(
+    completedWorkouts.filter((w) => !w.partial).map((w) => w.date)
+  )
 
   function getDayInfo(date: Date) {
     const dayOfWeekIndex = date.getDay()

@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import WorkoutRunner from '../components/timer/WorkoutRunner'
+import WorkoutRunner, {
+  type WorkoutProgress,
+} from '../components/timer/WorkoutRunner'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { getProgram } from '../utils/getProgram'
@@ -10,9 +13,19 @@ import { getWorkoutForDay } from '../utils/programUtils'
 export default function ActiveWorkout() {
   const { weekNumber, dayOfWeek } = useParams<{ weekNumber: string; dayOfWeek: string }>()
   const navigate = useNavigate()
-  const { markComplete, addNote } = useWorkoutStore()
+  const { upsertWorkout, addNote } = useWorkoutStore()
   const { selectedProgram } = useSettingsStore()
   const program = getProgram(selectedProgram)
+
+  // One record per run: repeating the same session on the same day adds a new
+  // entry instead of overwriting the previous one.
+  const [run] = useState(() => {
+    const startedAt = new Date()
+    return {
+      startedAt: startedAt.getTime(),
+      dateStr: startedAt.toISOString().split('T')[0],
+    }
+  })
 
   const week = Number(weekNumber)
   const day = getWorkoutForDay(program, week, dayOfWeek ?? '')
@@ -25,17 +38,10 @@ export default function ActiveWorkout() {
     )
   }
 
-  function handleComplete(data: {
-    exercisesCompleted: number
-    exercisesTotal: number
-    duration: number
-    skippedExercises: string[]
-    note: string
-    feeling: 1 | 2 | 3 | 4 | 5
-  }) {
+  function saveProgress(data: WorkoutProgress, finished: boolean) {
     const now = new Date()
-    const dateStr = now.toISOString().split('T')[0]
-    const workoutId = `${week}-${dayOfWeek}-${dateStr}`
+    const { dateStr } = run
+    const workoutId = `${week}-${dayOfWeek}-${dateStr}-${run.startedAt}`
 
     const completed: CompletedWorkout = {
       id: workoutId,
@@ -48,8 +54,16 @@ export default function ActiveWorkout() {
       exercisesCompleted: data.exercisesCompleted,
       exercisesTotal: data.exercisesTotal,
       skippedExercises: data.skippedExercises,
+      partial: !finished,
     }
-    markComplete(completed)
+    upsertWorkout(completed)
+    return { workoutId, dateStr }
+  }
+
+  function handleComplete(
+    data: WorkoutProgress & { note: string; feeling: 1 | 2 | 3 | 4 | 5 },
+  ) {
+    const { workoutId, dateStr } = saveProgress(data, true)
 
     if (data.note.trim()) {
       const noteObj: WorkoutNote = {
@@ -97,6 +111,7 @@ export default function ActiveWorkout() {
           exercises={day.exercises}
           dayTitle={day.title}
           weekNumber={week}
+          onProgress={saveProgress}
           onComplete={handleComplete}
           onExit={handleExit}
         />

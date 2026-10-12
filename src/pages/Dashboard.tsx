@@ -15,6 +15,7 @@ import {
   getWeekDateRange
 } from '../utils/programUtils'
 import { formatKg, getLatestResult } from '../utils/benchmarks'
+import { daysSince } from '../utils/dateUtils'
 import { fireConfettiFromEvent } from '../utils/confetti'
 import { INK, RADIUS, SHADOW } from '../styles/tokens'
 
@@ -60,9 +61,7 @@ export default function Dashboard() {
         .join(' · ')
     : ''
 
-  const backupDaysAgo = lastBackupAt
-    ? Math.floor((Date.now() - new Date(lastBackupAt).getTime()) / 86400000)
-    : null
+  const backupDaysAgo = lastBackupAt ? daysSince(lastBackupAt) : null
   const showBackupReminder =
     completedWorkouts.length > 0 &&
     (backupDaysAgo === null || backupDaysAgo >= 10)
@@ -72,11 +71,16 @@ export default function Dashboard() {
   const anytimeDays = weekDays.filter((d) => d.anytime)
 
   function renderDayCard(day: TrainingDay) {
-    const dayCompleted = completedWorkouts.some(
+    const dayRuns = completedWorkouts.filter(
       (w) =>
         w.weekNumber === weekNumber &&
         w.id.startsWith(`${weekNumber}-${day.dayOfWeek}-`)
     )
+    const status: DayStatus = dayRuns.some((w) => !w.partial)
+      ? 'done'
+      : dayRuns.length > 0
+        ? 'partial'
+        : 'todo'
     return (
       <Card
         key={day.dayOfWeek}
@@ -84,7 +88,7 @@ export default function Dashboard() {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <DayDot type={day.type} completed={dayCompleted} />
+            <DayDot type={day.type} status={status} />
             <div>
               <p className="text-sm font-semibold text-text">
                 {getSessionLabel(weekDays, day.dayOfWeek)}
@@ -318,7 +322,9 @@ function StatCard({
   )
 }
 
-function DayDot({ type, completed }: { type: DayType; completed: boolean }) {
+type DayStatus = 'done' | 'partial' | 'todo'
+
+function DayDot({ type, status }: { type: DayType; status: DayStatus }) {
   const colors: Record<string, string> = {
     finger_strength: 'bg-primary',
     pull_strength: 'bg-accent',
@@ -332,7 +338,22 @@ function DayDot({ type, completed }: { type: DayType; completed: boolean }) {
     test: 'bg-primary'
   }
 
-  if (completed) {
+  if (status === 'partial') {
+    // Half-filled circle: session started but interrupted before the end.
+    return (
+      <div
+        className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/15"
+        title="Sessione interrotta"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="#D4541A" strokeWidth="3" />
+          <path d="M12 3a9 9 0 0 1 0 18z" fill="#D4541A" />
+        </svg>
+      </div>
+    )
+  }
+
+  if (status === 'done') {
     return (
       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-success/20">
         <svg

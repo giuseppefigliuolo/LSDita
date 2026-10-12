@@ -63,6 +63,16 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     startTimeRef.current = performance.now()
   }, [])
 
+  // Keep the screen on for the whole session, previews included.
+  useEffect(() => {
+    void wakeLockRequest()
+  }, [wakeLockRequest])
+
+  const getElapsedSeconds = useCallback(
+    () => Math.floor((performance.now() - startTimeRef.current) / 1000),
+    [],
+  )
+
   const baseExercise = exercises[exerciseIndex]
   const exerciseOverride = overrides[exerciseIndex]
   const exercise = useMemo(() => {
@@ -421,6 +431,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     resumeFromInfo,
     skipExerciseCompleteWait,
     // workout summary helpers
+    getElapsedSeconds,
     completedExercises,
     finalDuration,
     skippedExercises,
