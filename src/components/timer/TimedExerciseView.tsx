@@ -73,7 +73,9 @@ export default function TimedExerciseView({
       <ExerciseNotesButton
         exerciseId={exercise.id}
         onClick={onOpenNotes}
-        className="absolute top-2 right-4 z-10"
+        subtle
+        className="fixed right-4 z-30"
+        style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 1.25rem)' }}
       />
 
       <AnimatePresence mode="wait">
