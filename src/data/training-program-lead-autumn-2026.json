@@ -277,9 +277,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-feet-up",
@@ -368,6 +368,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -378,9 +394,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -477,6 +493,21 @@
               "weight": "+8 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg. Settimana 0: carico di taratura, non un test. Le trazioni massime si misurano a peso corporeo.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups",
@@ -726,9 +757,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-feet-up",
@@ -817,6 +848,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -827,9 +874,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -926,6 +973,21 @@
               "weight": "+10 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups",
@@ -1175,9 +1237,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-feet-up-pause",
@@ -1266,6 +1328,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -1276,9 +1354,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -1375,6 +1453,21 @@
               "weight": "+12 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "hard"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups",
@@ -1624,9 +1717,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-weighted",
@@ -1716,6 +1809,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -1726,9 +1835,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -1825,6 +1934,21 @@
               "weight": "+13 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "hard"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups-tempo",
@@ -2120,9 +2244,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "10'",
+          "durationLabel": "15'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-feet-up",
@@ -2211,6 +2335,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -2221,9 +2361,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -2320,6 +2460,21 @@
               "weight": "+8 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups",
@@ -2574,9 +2729,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-weighted",
@@ -2666,6 +2821,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -2676,9 +2847,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -2775,6 +2946,21 @@
               "weight": "+14 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "hard"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups-close-feet-up",
@@ -3029,9 +3215,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-weighted",
@@ -3121,6 +3307,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -3131,9 +3333,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -3230,6 +3432,21 @@
               "weight": "+15 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "hard"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups-close-feet-up",
@@ -3484,9 +3701,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-weighted",
@@ -3576,6 +3793,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -3586,9 +3819,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -3685,6 +3918,21 @@
               "weight": "+16 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "hard"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups-close-feet-up",
@@ -3926,9 +4174,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "10'",
+          "durationLabel": "15'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-feet-up",
@@ -4017,6 +4265,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -4027,9 +4291,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -4126,6 +4390,21 @@
               "weight": "+8 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups",
@@ -4353,9 +4632,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-feet-up-pause",
@@ -4444,6 +4723,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -4454,9 +4749,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -4553,6 +4848,21 @@
               "weight": "+12 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "hard"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups-close-feet-up",
@@ -4842,9 +5152,9 @@
           "type": "antagonists",
           "title": "Antagonisti e spalle",
           "icon": "dumbbell",
-          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume.",
+          "description": "Antagonisti e spalle, senza dita: da fare quando vuoi, due volte a settimana (per esempio dopo la +1 e il giorno prima della falesia). Chi scala spinge pochissimo e tira sempre: lo squilibrio tra muscoli che tirano e muscoli che spingono è una causa frequente di dolori a spalla e gomito. I piegamenti qui sono il giorno duro (variante più difficile, meno ripetizioni); nella Casa B fai quelli di volume. In coda, tricipiti e curl a martello (utili per il gomito); i curl più pesanti sono nella Casa B.",
           "intensity": "bassa",
-          "durationLabel": "20'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-a-pushups-weighted",
@@ -4934,6 +5244,22 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 per braccio"
+            },
+            {
+              "id": "la-casa-a-hammer-curl",
+              "name": "Hammer curl con manubri",
+              "description": "In piedi, un manubrio per mano con presa neutra (pollici verso l'alto), gomiti fermi lungo i fianchi. Sali fino a portare il manubrio alla spalla, scendi in 2–3 secondi senza dondolare il busto. Allena brachiale e brachioradiale, i muscoli che proteggono il gomito di chi tira tutto il giorno. È il curl a cedimento: peso medio, tante ripetizioni. La forza la fai nella Casa B con il curl supinato pesante.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "facile",
+              "weight": "manubri medi",
+              "notes": "12–15 ripetizioni, a cedimento tecnico: ti fermi quando non riesci più a salire senza dondolare il busto o staccare i gomiti dai fianchi. Arrivi a 15 in tutte le serie? La volta dopo +1–2 kg."
             }
           ]
         },
@@ -4944,9 +5270,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
-          "durationLabel": "30'",
+          "durationLabel": "35'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -5043,6 +5369,21 @@
               "weight": "+12 kg",
               "notes": "Chiudi ogni serie con circa 2 ripetizioni di margine. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Salti una ripetizione o perdi la discesa controllata? −2 kg.",
               "difficulty": "medio"
+            },
+            {
+              "id": "la-casa-b-supinated-curl",
+              "name": "Curl supinato pesante",
+              "description": "In piedi, un manubrio per mano con palmi verso l'alto, gomiti fermi lungo i fianchi. Sali in 1 secondo fino alla spalla, scendi in 3 secondi fino a braccio quasi teso. È il curl di forza: carico pesante, poche ripetizioni, mai a cedimento. Quello a cedimento è il hammer curl della Casa A.",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "hammer-curl",
+              "sets": 2,
+              "repsPerSet": 6,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "medio",
+              "notes": "6 ripetizioni con 2 di margine: è forza, non va a cedimento. Tutte le serie pulite per 2 sedute di fila? +1–2 kg. Arrivato a 15 kg (il massimo dei manubri) e ancora facile? Allunga la discesa a 5 secondi. Se le dita sono stanche, tieni il manubrio con presa morbida: non è un esercizio di presa."
             },
             {
               "id": "la-casa-b-pushups",
