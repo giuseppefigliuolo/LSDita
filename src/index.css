@@ -216,6 +216,31 @@ body::before {
   }
 }
 
+/* Completed session tile: pressed in — shadow gone, tile sunk by the
+   shadow offset. No hover lift on purpose. */
+@utility poster-pressed {
+  translate: 4px 4px;
+  box-shadow: 0 0 0 var(--color-plum);
+  transition: translate 180ms ease-out, box-shadow 180ms ease-out;
+  cursor: pointer;
+  &:focus-visible {
+    outline: 3px solid var(--color-violet);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
+  }
+}
+
+/* Diagonal hatching over a completed tile; light enough to keep text ≥4.5:1 */
+@utility poster-hatch {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(59 23 70 / 0.17) 0 6px,
+    transparent 6px 14px
+  );
+}
+
 /* Full-bleed band that clips the sunburst, softened at the bottom edge */
 @utility poster-sunburst-frame {
   overflow: hidden;

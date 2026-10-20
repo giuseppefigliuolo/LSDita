@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import { useWorkoutStore } from '../store/useWorkoutStore'
@@ -86,14 +86,32 @@ export default function Dashboard() {
   }
 
   function renderSessionTile(day: TrainingDay, index: number) {
+    const status = getDayStatus(day)
+    const done = status === 'done'
     return (
       <button
         key={day.dayOfWeek}
         type="button"
         onClick={() => openDay(day)}
-        className={`poster-card poster-lift flex min-h-[150px] flex-col justify-between rounded-[22px] p-3.5 text-left text-plum ${SESSION_PASTEL[day.type] ?? 'bg-paper'}`}
+        className={`relative flex min-h-[150px] flex-col justify-between rounded-[22px] p-3.5 text-left text-plum ${
+          done
+            ? 'poster-pressed border-2 border-plum'
+            : 'poster-card poster-lift'
+        } ${SESSION_PASTEL[day.type] ?? 'bg-paper'}`}
       >
-        <div className="flex items-start justify-between gap-2">
+        <AnimatePresence>
+          {done && (
+            <motion.span
+              aria-hidden
+              className="poster-hatch pointer-events-none absolute inset-0 rounded-[20px]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+          )}
+        </AnimatePresence>
+        <div className="relative flex items-start justify-between gap-2">
           <span className="font-poster text-[30px] leading-none">
             {day.label ?? `S${index + 1}`}
           </span>
@@ -101,16 +119,30 @@ export default function Dashboard() {
             {getDayDurationLabel(day)}
           </span>
         </div>
-        <div>
-          <div className="flex items-center justify-between gap-2">
-            <p className="text-base font-extrabold leading-tight">
-              {getDayNameIT(day.dayOfWeek)}
+        <div className="relative flex items-end gap-2">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-base font-extrabold leading-tight">
+                {getDayNameIT(day.dayOfWeek)}
+                {done && <span className="sr-only">, fatto</span>}
+              </p>
+              {status === 'partial' && <StatusBadge status={status} />}
+            </div>
+            <p className="mt-0.5 text-[13px] leading-snug text-plum-soft">
+              {day.title}
             </p>
-            <StatusBadge status={getDayStatus(day)} />
           </div>
-          <p className="mt-0.5 text-[13px] leading-snug text-plum-soft">
-            {day.title}
-          </p>
+          {/* Reserved slot so text never runs under the stamp */}
+          <AnimatePresence>
+            {done && (
+              <motion.div
+                key="stamp-slot"
+                className="relative h-[34px] w-[34px] flex-none"
+              >
+                <DoneStamp />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </button>
     )
@@ -412,6 +444,37 @@ function PosterLinkCard({
 }
 
 type DayStatus = 'done' | 'partial' | 'todo'
+
+/** "Fatto" stamp: pops in like an ink stamp, overhanging its slot upwards. */
+function DoneStamp() {
+  const reduceMotion = useReducedMotion()
+  return (
+    <motion.span
+      aria-hidden="true"
+      className="absolute -left-2 -top-[30px] h-[54px] w-[54px] rounded-full border-2 border-plum bg-mustard p-[3px] shadow-[2px_2px_0_var(--color-plum)]"
+      initial={
+        reduceMotion
+          ? { opacity: 0, scale: 1, rotate: -14 }
+          : { opacity: 1, scale: 0, rotate: -60 }
+      }
+      animate={{ opacity: 1, scale: 1, rotate: -14 }}
+      exit={
+        reduceMotion
+          ? { opacity: 0 }
+          : { opacity: 1, scale: 0, rotate: -60 }
+      }
+      transition={
+        reduceMotion
+          ? { duration: 0.2 }
+          : { duration: 0.34, ease: [0.3, 1.6, 0.5, 1] }
+      }
+    >
+      <span className="flex h-full w-full items-center justify-center whitespace-nowrap rounded-full border-[1.5px] border-dashed border-plum font-poster text-[15px] leading-none text-plum">
+        Fatto
+      </span>
+    </motion.span>
+  )
+}
 
 function StatusBadge({ status }: { status: DayStatus }) {
   if (status === 'todo') return null
