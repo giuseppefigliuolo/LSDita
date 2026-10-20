@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   motion,
@@ -7,8 +7,9 @@ import {
   useTransform,
   animate as motionAnimate
 } from 'framer-motion'
-import PageHeader from '../components/ui/PageHeader'
-import Card from '../components/ui/Card'
+import PosterIconButton from '../components/ui/PosterIconButton'
+import PosterPill from '../components/ui/PosterPill'
+import Sunburst from '../components/ui/Sunburst'
 import ExerciseDescription from '../components/ui/ExerciseDescription'
 import Button from '../components/ui/Button'
 import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
@@ -29,35 +30,8 @@ import {
   getSessionLabel
 } from '../utils/programUtils'
 import { INK, SURFACE, RADIUS, SHADOW } from '../styles/tokens'
-
-function EditPencilButton({ onClick }: { onClick: () => void }) {
-  return (
-    <motion.button
-      onClick={onClick}
-      className="flex items-center justify-center w-9 h-9 border-[2.5px] border-[#3A1248] cursor-pointer"
-      style={{
-        backgroundColor: SURFACE,
-        borderRadius: RADIUS.backBtn,
-        boxShadow: SHADOW.xs
-      }}
-      whileTap={{ x: 2, y: 2, boxShadow: `0px 0px 0px ${INK}` }}
-    >
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke={INK}
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
-      </svg>
-    </motion.button>
-  )
-}
+import { getExerciseColor } from '../utils/exerciseColors'
+import { getExerciseVolume } from '../utils/exerciseLabels'
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -78,6 +52,22 @@ export default function WorkoutDay() {
     null
   )
   const [editing, setEditing] = useState(false)
+  // The router keeps the previous page's scroll offset: always open a session from the top
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [weekNumber, dayOfWeek])
+  const barRef = useRef<HTMLDivElement>(null)
+  // The fixed CTA bar must never cover the last exercise: pad the page by its height.
+  const [barHeight, setBarHeight] = useState(104)
+  useEffect(() => {
+    const el = barRef.current
+    if (!el) return
+    const update = () => setBarHeight(el.offsetHeight)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
   const { selectedProgram } = useSettingsStore()
   const { completedWorkouts, markComplete } = useWorkoutStore()
   // Exercise loads are resolved from the benchmark results: re-render when they change
@@ -134,16 +124,28 @@ export default function WorkoutDay() {
   }
 
   return (
-    <div className="bg-bg">
-      <PageHeader
-        title={sessionLabel}
-        subtitle={headerSubtitle}
-        backButton
-        rightAction={<EditPencilButton onClick={() => setEditing(true)} />}
-      />
+    <div className="min-h-dvh bg-cream text-plum">
+      <header className="flex items-center gap-3 px-5 pt-4 pb-4">
+        <PosterIconButton onClick={() => navigate(-1)} aria-label="Indietro">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </PosterIconButton>
+        <div className="min-w-0 flex-1 text-center">
+          <h1 className="font-poster text-[22px] leading-[1.1]">{sessionLabel}</h1>
+          <p className="text-[13px] font-semibold text-plum-muted">{headerSubtitle}</p>
+        </div>
+        <PosterIconButton onClick={() => setEditing(true)} aria-label="Modifica sessione">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+          </svg>
+        </PosterIconButton>
+      </header>
 
       <motion.div
-        className="px-4 pt-2 pb-8 max-w-lg mx-auto"
+        className="px-5 pt-2 max-w-lg mx-auto"
+        style={{ paddingBottom: barHeight }}
         variants={stagger}
         initial="hidden"
         animate="show"
@@ -198,12 +200,17 @@ export default function WorkoutDay() {
 
         {hasExercises && (
           <>
-            <motion.div variants={fadeUp} className="mt-6 mb-3">
-              <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-text-muted">
-                {day.exercisesTitle ?? 'Esercizi'}
-              </p>
+            <motion.div variants={fadeUp} className="mt-8 mb-3">
+              <div className="flex items-baseline justify-between gap-3">
+                <h2 className="font-poster text-[22px] leading-tight">
+                  {day.exercisesTitle ?? 'Esercizi'}
+                </h2>
+                <span className="shrink-0 font-mono text-[11px] uppercase text-brown">
+                  set × rep
+                </span>
+              </div>
               {day.exercisesNote && (
-                <p className="text-xs text-text-secondary leading-relaxed mt-1">
+                <p className="mt-1 text-xs leading-relaxed text-plum-soft">
                   {day.exercisesNote}
                 </p>
               )}
@@ -219,16 +226,22 @@ export default function WorkoutDay() {
               </motion.div>
             )}
 
-            <div className="space-y-3">
-              {day.exercises.map((exercise, index) => (
-                <motion.div key={exercise.id} variants={fadeUp}>
-                  <ExerciseCard
-                    exercise={exercise}
-                    index={index}
-                    onTap={() => setSelectedExercise(exercise)}
-                  />
-                </motion.div>
-              ))}
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute bottom-[30px] top-[30px] left-[22px] border-l-2 border-dashed border-plum"
+              />
+              <ul className="relative">
+                {day.exercises.map((exercise, index) => (
+                  <motion.li key={exercise.id} variants={fadeUp}>
+                    <ExerciseRow
+                      exercise={exercise}
+                      index={index}
+                      onTap={() => setSelectedExercise(exercise)}
+                    />
+                  </motion.li>
+                ))}
+              </ul>
             </div>
           </>
         )}
@@ -256,10 +269,14 @@ export default function WorkoutDay() {
           </motion.div>
         )}
 
-        <div className="h-24" />
+      </motion.div>
 
-        {/* Fixed bottom button */}
-        <div className="fixed bottom-1 left-0 right-0 z-40 px-4 pb-2 pt-3 max-w-lg mx-auto">
+      {/* Fixed bottom bar; the list above is padded by its measured height */}
+      <div
+        ref={barRef}
+        className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-plum bg-cream px-5 pt-3.5 pb-[calc(14px+env(safe-area-inset-bottom,0px))]"
+      >
+        <div className="mx-auto max-w-lg">
           {hasExercises ? (
             <Button
               variant="primary"
@@ -283,7 +300,7 @@ export default function WorkoutDay() {
             </Button>
           )}
         </div>
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {selectedExercise && (
@@ -307,7 +324,7 @@ export default function WorkoutDay() {
 }
 
 // ──────────────────────────────────────────────────────────────
-// Hero card
+// Poster card
 // ──────────────────────────────────────────────────────────────
 
 const intensityLabels: Record<DayIntensity, string> = {
@@ -315,6 +332,9 @@ const intensityLabels: Record<DayIntensity, string> = {
   media: 'Dita: media',
   bassa: 'Dita: bassa'
 }
+
+const SUN_GRADIENT =
+  'radial-gradient(circle, #FDF5E4 0 30%, #E98A5C 30% 46%, #E9B425 46% 62%, #7A3B9B 62% 70%, transparent 70%)'
 
 function HeroCard({
   typeLabel,
@@ -327,134 +347,41 @@ function HeroCard({
   typeLabel: string
   title: string
   description: string
-  /** null hides the pill (sessions that are mostly read, not timed) */
+  /** null hides the chip (sessions that are mostly read, not timed) */
   exerciseCount: number | null
   durationLabel: string
   intensity?: DayIntensity
 }) {
   return (
-    <div
-      className="relative overflow-hidden border-[3px] border-[#3A1248]"
-      style={{
-        borderRadius: RADIUS.card,
-        boxShadow: SHADOW.lg
-      }}
-    >
-      <div
-        className="relative px-5 pt-5 pb-5"
-        style={{
-          background:
-            'linear-gradient(135deg, #17A8A8 0%, #3E6FA8 50%, #7B3A9E 100%)'
-        }}
-      >
-        <HeroFlower />
-        <div className="relative">
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/85 mb-1">
-            {typeLabel}
-          </p>
-          <h2 className="text-3xl font-bold text-white leading-tight mb-4 pr-16">
-            {title}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {exerciseCount != null && (
-              <HeroPill>{exerciseCount} esercizi</HeroPill>
-            )}
-            <HeroPill>{durationLabel}</HeroPill>
-            {intensity && <HeroPill>{intensityLabels[intensity]}</HeroPill>}
-          </div>
+    <div className="overflow-hidden rounded-3xl border-2 border-plum bg-paper shadow-[4px_4px_0_#3b1746]">
+      <div className="relative isolate flex flex-col gap-3 overflow-hidden border-b-2 border-plum bg-pastel-lavender px-5 pt-[22px] pb-5">
+        <Sunburst
+          ray="#C7A6CF"
+          base="#D9C2E0"
+          size={420}
+          center={{ right: 60, top: 60 }}
+        />
+        <div
+          aria-hidden="true"
+          className="absolute right-[18px] top-[18px] size-[84px] rounded-full"
+          style={{ background: SUN_GRADIENT }}
+        />
+        <p className="relative font-mono text-[11px] font-bold uppercase tracking-[0.14em]">
+          {typeLabel}
+        </p>
+        <h2 className="relative max-w-[230px] font-poster text-[34px] leading-[1.05]">
+          {title}
+        </h2>
+        <div className="relative flex flex-wrap gap-2">
+          {exerciseCount != null && <PosterPill>{exerciseCount} esercizi</PosterPill>}
+          <PosterPill>{durationLabel}</PosterPill>
+          {intensity && <PosterPill>{intensityLabels[intensity]}</PosterPill>}
         </div>
       </div>
-      <div className="bg-surface-elevated px-5 py-3 border-t-[2.5px] border-[#3A1248]">
-        <p className="text-sm text-text leading-relaxed">
-          <ExerciseDescription text={description} />
-        </p>
-      </div>
+      <p className="px-5 pt-4 pb-5 text-[15px] leading-[1.55] text-plum-soft [text-wrap:pretty]">
+        <ExerciseDescription text={description} />
+      </p>
     </div>
-  )
-}
-
-function HeroPill({ children }: { children: React.ReactNode }) {
-  return (
-    <span
-      className="text-[10px] font-bold uppercase tracking-wider text-white px-3 py-1 border-[1.5px] border-white/50"
-      style={{
-        borderRadius: RADIUS.pill,
-        backgroundColor: 'rgba(255,255,255,0.15)'
-      }}
-    >
-      {children}
-    </span>
-  )
-}
-
-function HeroFlower() {
-  // Daisy-style: pointed almond petals radiating from a solid dome center
-  const cx = 50
-  const cy = 50
-  const petals = 11
-  return (
-    <svg
-      className="absolute -top-2 -right-1 pointer-events-none"
-      width="120"
-      height="120"
-      viewBox="0 0 100 100"
-    >
-      {/* Almond-shaped petals — bloom outward with a slight stagger */}
-      {Array.from({ length: petals }, (_, i) => {
-        const angle = (i * 360) / petals
-        return (
-          <g
-            key={`hf-p-${i}`}
-            transform={`translate(${cx} ${cy}) rotate(${angle})`}
-          >
-            <motion.path
-              d="M 0 -8 C -7 -14, -7 -28, 0 -32 C 7 -28, 7 -14, 0 -8 Z"
-              fill="#DCC8EC"
-              style={{
-                transformBox: 'fill-box',
-                transformOrigin: '50% 100%'
-              }}
-              initial={{ scale: 0, rotate: -20 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{
-                delay: 0.15 + i * 0.04,
-                type: 'spring',
-                stiffness: 180,
-                damping: 14
-              }}
-            />
-          </g>
-        )
-      })}
-      {/* Dome center — fades in after petals bloom */}
-      <motion.g
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{
-          delay: 0.35,
-          type: 'spring',
-          stiffness: 220,
-          damping: 16
-        }}
-        style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
-      >
-        <circle cx={cx} cy={cy} r="11" fill="#5A2878" />
-        <circle cx={cx - 1} cy={cy - 2} r="9" fill="#7B3A9E" opacity="0.85" />
-        <circle cx={cx - 3} cy={cy - 3} r="1.2" fill="#3A1248" opacity="0.6" />
-        <circle cx={cx + 3} cy={cy - 1} r="1.2" fill="#3A1248" opacity="0.6" />
-        <circle cx={cx + 1} cy={cy + 3} r="1.2" fill="#3A1248" opacity="0.55" />
-        <circle cx={cx - 4} cy={cy + 2} r="1" fill="#3A1248" opacity="0.5" />
-        <circle cx={cx + 4} cy={cy + 4} r="1" fill="#3A1248" opacity="0.5" />
-        <ellipse
-          cx={cx - 3}
-          cy={cy - 5}
-          rx="3"
-          ry="2"
-          fill="white"
-          opacity="0.35"
-        />
-      </motion.g>
-    </svg>
   )
 }
 
@@ -501,44 +428,7 @@ function getTechLine(ex: Exercise): string {
   return parts.join(' · ')
 }
 
-function getVolume(ex: Exercise): { value: string; unit: string } {
-  if (ex.type === 'repeaters' || ex.type === 'reps') {
-    return { value: `${ex.sets}×${ex.repsPerSet}`, unit: 'SET × REP' }
-  }
-  return { value: `${ex.sets}×${ex.hangTime}s`, unit: 'SET × TEMPO' }
-}
-
-const tileColors = [
-  '#17A8A8',
-  '#D4541A',
-  '#E8B820',
-  '#7B3A9E',
-  '#5A9A1E',
-  '#E84830'
-]
-
-function ExerciseTile({ index }: { index: number }) {
-  const color = tileColors[index % tileColors.length]
-  return (
-    <div
-      className="relative flex items-center justify-center w-12 h-12 shrink-0 border-[2.5px] border-[#3A1248]"
-      style={{
-        backgroundColor: color,
-        borderRadius: RADIUS.btnSm,
-        boxShadow: SHADOW.xs
-      }}
-    >
-      <span
-        className="text-xl font-bold font-timer text-[#FFFBF0]"
-        style={{ textShadow: '0 1px 2px rgba(58,18,72,0.6)' }}
-      >
-        {index + 1}
-      </span>
-    </div>
-  )
-}
-
-function ExerciseCard({
+function ExerciseRow({
   exercise,
   index,
   onTap
@@ -547,29 +437,29 @@ function ExerciseCard({
   index: number
   onTap: () => void
 }) {
-  const volume = getVolume(exercise)
   return (
-    <Card onClick={onTap}>
-      <div className="flex items-center gap-3">
-        <ExerciseTile index={index} />
-        <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-bold text-text truncate">
-            {exercise.name}
-          </h3>
-          <p className="text-xs text-text-secondary mt-0.5 truncate">
-            {getTechLine(exercise)}
-          </p>
-        </div>
-        <div className="text-right shrink-0">
-          <p className="text-base font-bold font-timer text-text leading-none">
-            {volume.value}
-          </p>
-          <p className="text-[10px] uppercase tracking-wider text-text-muted mt-1">
-            {volume.unit}
-          </p>
-        </div>
-      </div>
-    </Card>
+    <button
+      type="button"
+      onClick={onTap}
+      className="flex w-full min-h-11 cursor-pointer items-center gap-3.5 py-2.5 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-violet"
+    >
+      <span
+        aria-hidden="true"
+        className="relative flex size-[46px] shrink-0 items-center justify-center rounded-full border-2 border-plum font-poster text-xl leading-none"
+        style={{ backgroundColor: getExerciseColor(index).bg }}
+      >
+        {index + 1}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-base font-extrabold leading-tight">
+          {exercise.name}
+        </span>
+        <span className="mt-0.5 block text-[13px] text-plum-muted">
+          {getTechLine(exercise)}
+        </span>
+      </span>
+      <PosterPill className="text-sm">{getExerciseVolume(exercise)}</PosterPill>
+    </button>
   )
 }
 

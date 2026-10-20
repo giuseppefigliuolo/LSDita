@@ -27,3 +27,15 @@ export function getEquipmentLabel(equipment: Equipment | string): string {
 export function getGripLabel(grip: GripType | string): string {
   return gripLabels[grip as GripType] ?? grip
 }
+
+/** Compact sets × work label shown in pills: "3×10" or "3×30s" for timed work. */
+export function getExerciseVolume(ex: {
+  type: string
+  sets: number
+  repsPerSet: number
+  hangTime: number
+}): string {
+  return ex.type === 'repeaters' || ex.type === 'reps'
+    ? `${ex.sets}×${ex.repsPerSet}`
+    : `${ex.sets}×${ex.hangTime}s`
+}

@@ -9,6 +9,8 @@ interface ExerciseNotesButtonProps {
   style?: CSSProperties
   /** Smaller, low-contrast variant for the runner views, where it must not compete with the timer. */
   subtle?: boolean
+  /** Paper circle (40px) used in the poster-style exercise preview. */
+  round?: boolean
 }
 
 /** Notes shortcut with a counter badge, shared by the preview and the runner views. */
@@ -18,6 +20,7 @@ export default function ExerciseNotesButton({
   className = '',
   style: styleOverride,
   subtle = false,
+  round = false,
 }: ExerciseNotesButtonProps) {
   const notesCount = useWorkoutStore(
     (state) => state.exerciseNotes.filter((n) => n.exerciseId === exerciseId).length
@@ -29,12 +32,16 @@ export default function ExerciseNotesButton({
       onClick={onClick}
       aria-label={notesCount > 0 ? `Visualizza ${notesCount} note` : 'Aggiungi nota'}
       className={
-        subtle
+        round
+          ? `relative size-10 flex items-center justify-center rounded-full border-2 border-plum bg-paper active:translate-x-[2px] active:translate-y-[2px] transition-transform motion-reduce:transition-none ${className}`
+          : subtle
           ? `w-8 h-8 flex items-center justify-center border-[1.5px] opacity-60 active:opacity-100 transition-opacity ${className}`
           : `w-10 h-10 flex items-center justify-center border-[2.5px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all ${className}`
       }
       style={
-        subtle
+        round
+          ? styleOverride
+          : subtle
           ? {
               borderColor: INK,
               backgroundColor: 'transparent',
@@ -50,7 +57,7 @@ export default function ExerciseNotesButton({
             }
       }
     >
-      <svg width={subtle ? 15 : 18} height={subtle ? 15 : 18} viewBox="0 0 20 20" fill="none" stroke={INK} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+      <svg aria-hidden="true" width={subtle ? 15 : 18} height={subtle ? 15 : 18} viewBox="0 0 20 20" fill="none" stroke={INK} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 3h8l4 4v10H4z" />
         <path d="M12 3v4h4" />
         <path d="M7 11h6M7 14h4" />

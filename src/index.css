@@ -43,6 +43,8 @@
   --color-sand:             #E0CFA6;   /* dashed dividers */
   --color-sun:              #F2D98A;   /* sunburst rays */
   --color-mustard:          #E9B425;
+  --color-plum-muted:       #6B4A5E;   /* tertiary text on cream/paper */
+  --color-poster-red:       #E2572B;   /* CTA + big exercise number */
   --color-pastel-peach:     #F2B8A0;
   --color-pastel-mint:      #9FD8D0;
   --color-pastel-sage:      #CFE0A8;
@@ -248,16 +250,29 @@ body::before {
   mask-image: linear-gradient(to bottom, #000 85%, transparent);
 }
 
-/* Slow-turning sunburst behind the Home logo */
+/* Slow-turning sunburst behind the Home logo.
+   Override --sb-ray / --sb-base to tint it (session + exercise headers). */
 @utility poster-sunburst {
   background: repeating-conic-gradient(
     from 0deg,
-    var(--color-sun) 0deg 7.5deg,
-    var(--color-cream) 7.5deg 15deg
+    var(--sb-ray, var(--color-sun)) 0deg 7.5deg,
+    var(--sb-base, var(--color-cream)) 7.5deg 15deg
   );
   animation: poster-spin 90s linear infinite;
   @media (prefers-reduced-motion: reduce) {
     animation: none !important;
+  }
+}
+
+/* Hard-shadow button press: slides onto its shadow. --press matches the shadow offset. */
+@utility poster-press {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  &:active {
+    transform: translate(var(--press, 4px), var(--press, 4px));
+    box-shadow: 0 0 0 var(--color-plum);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none !important;
   }
 }
 

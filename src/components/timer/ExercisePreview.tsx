@@ -9,27 +9,22 @@ import {
 } from 'framer-motion'
 import type { Exercise } from '../../types'
 import { parseExerciseDescription } from '../../utils/exerciseDescription'
-import Badge from '../ui/Badge'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
 import ExerciseNotesModal from './ExerciseNotesModal'
 import ExerciseNotesButton from './ExerciseNotesButton'
-import { INK, SURFACE, SURFACE_ELEVATED, RADIUS, SHADOW } from '../../styles/tokens'
+import MuteButton from '../ui/MuteButton'
+import PosterIconButton from '../ui/PosterIconButton'
+import PosterPill from '../ui/PosterPill'
+import Sunburst from '../ui/Sunburst'
+import { getExerciseColor } from '../../utils/exerciseColors'
+import { getEquipmentLabel, getExerciseVolume } from '../../utils/exerciseLabels'
+import { RADIUS, SHADOW } from '../../styles/tokens'
 
 function formatCountdown(seconds: number): string {
   const s = Math.max(0, Math.ceil(seconds))
   const m = Math.floor(s / 60)
   const r = s % 60
   return m > 0 ? `${m}:${r.toString().padStart(2, '0')}` : `${r}s`
-}
-
-const equipmentLabels: Record<string, string> = {
-  hangboard: 'Hangboard',
-  wooden_balls: 'Sfere legno',
-  pull_up_bar: 'Sbarra',
-  dumbbells: 'Manubri',
-  fitness_band: 'Elastico',
-  yoga_mat: 'Tappetino',
-  bodyweight: 'Corpo libero',
 }
 
 interface ExercisePreviewProps {
@@ -40,6 +35,8 @@ interface ExercisePreviewProps {
   onStart: (overrides: { sets: number; repsPerSet: number; hangTime: number }) => void
   onSkip: () => void
   autoStartSeconds?: number
+  weekNumber?: number
+  onClose: () => void
 }
 
 export default function ExercisePreview({
@@ -50,6 +47,8 @@ export default function ExercisePreview({
   onStart,
   onSkip,
   autoStartSeconds,
+  weekNumber,
+  onClose,
 }: ExercisePreviewProps) {
   const [sets, setSets] = useState(exercise.sets)
   const [reps, setReps] = useState(exercise.repsPerSet)
@@ -120,291 +119,213 @@ export default function ExercisePreview({
     : null
   const refLabel = refUrl ? refUrl.replace(/^https?:\/\//i, '') : null
 
-  const equipmentLabel = equipmentLabels[exercise.equipment] ?? exercise.equipment
+  const equipmentLabel = getEquipmentLabel(exercise.equipment)
   const hasWeight = exercise.weight && exercise.weight !== 'corpo libero'
-
-  const progressPct = totalExercises > 0 ? ((exerciseIndex + 1) / totalExercises) * 100 : 0
+  const color = getExerciseColor(exerciseIndex)
 
   return (
     <>
       <motion.div
-        className="flex flex-col self-stretch w-full overflow-hidden"
+        className="flex flex-col flex-1 min-h-0 self-stretch w-full overflow-hidden bg-cream text-plum"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
       >
-        {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-5 pt-4 pb-6">
-          {/* Top: badge + progress bar */}
-          <div className="flex flex-col items-center mb-4">
-            <Badge variant="accent" className="mb-3">
-              Esercizio {exerciseIndex + 1} di {totalExercises}
-            </Badge>
-            <div
-              className="w-full max-w-md h-1.5 relative overflow-hidden border-[1.5px]"
-              style={{
-                backgroundColor: SURFACE,
-                borderColor: INK,
-                borderRadius: RADIUS.pill,
-              }}
-            >
-              <div
-                className="absolute inset-y-0 left-0"
-                style={{
-                  width: `${progressPct}%`,
-                  backgroundColor: '#D4541A',
-                  transition: 'width 0.3s ease',
-                }}
-              />
+        {/* Scrollable content (the coloured header scrolls with it) */}
+        <div className="flex-1 overflow-y-auto overscroll-contain">
+          <header
+            className="relative isolate flex flex-col gap-[18px] overflow-hidden rounded-b-[36px] border-b-2 border-plum px-5 pt-14 pb-6"
+            style={{ backgroundColor: color.bg }}
+          >
+            <div className="relative flex items-center justify-between">
+              <PosterIconButton shape="round" onClick={onClose} aria-label="Chiudi">
+                <svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+                  <path d="M4.5 4.5l9 9M13.5 4.5l-9 9" />
+                </svg>
+              </PosterIconButton>
+              {weekNumber != null && (
+                <p className="font-mono text-xs font-bold uppercase tracking-[0.14em]">
+                  Settimana {weekNumber}
+                </p>
+              )}
+              <MuteButton variant="poster" />
             </div>
-          </div>
 
-          {/* Title row: illustration + name */}
-          <div className="flex items-start gap-3 mb-4 relative">
-            <div
-              className="shrink-0 flex items-center justify-center border-[2.5px]"
-              style={{
-                width: 76,
-                height: 76,
-                borderColor: INK,
-                backgroundColor: SURFACE_ELEVATED,
-                borderRadius: RADIUS.blob,
-                boxShadow: SHADOW.sm,
-              }}
-            >
-              <ExerciseIllustration name={exercise.illustration} size={56} />
+            {/* Big number + illustration. Screen readers get one plain sentence. */}
+            <p className="sr-only">
+              Esercizio {exerciseIndex + 1} di {totalExercises}
+            </p>
+            <div className="relative flex items-end justify-between gap-3" aria-hidden="true">
+              <div className="flex min-w-0 items-end gap-2">
+                <span
+                  className={`relative font-poster leading-[0.9] text-poster-red ${
+                    exerciseIndex + 1 >= 10 ? 'text-[96px]' : 'text-[120px]'
+                  }`}
+                  style={{
+                    WebkitTextStroke: '2.5px #3b1746',
+                    textShadow: '5px 5px 0 #3b1746',
+                  }}
+                >
+                  <Sunburst
+                    ray={color.ray}
+                    base={color.bg}
+                    size={700}
+                    center={{ left: '50%', top: '50%' }}
+                  />
+                  {exerciseIndex + 1}
+                </span>
+                <span className="pb-2 font-mono text-sm font-bold">
+                  di {totalExercises}
+                </span>
+              </div>
+              <div className="flex size-24 shrink-0 items-center justify-center rounded-3xl border-2 border-plum bg-paper shadow-[4px_4px_0_#3b1746]">
+                <ExerciseIllustration name={exercise.illustration} size={72} />
+              </div>
             </div>
-            <div className="flex-1 min-w-0 pr-12">
+
+            <div className="relative flex flex-col items-start gap-2">
+              <PosterPill variant="ink">
+                {equipmentLabel}
+                {hasWeight && <> · {exercise.weight}</>}
+              </PosterPill>
               <h2
-                className="font-bold text-text leading-tight mb-1"
-                style={{
-                  fontSize: 30,
-                  fontFamily: 'var(--font-display)',
-                  overflowWrap: 'anywhere',
-                }}
+                className="font-poster text-[30px] leading-[1.1] [text-wrap:pretty]"
+                style={{ overflowWrap: 'anywhere' }}
               >
                 {exercise.name}
               </h2>
-              <p className="text-xs font-bold uppercase tracking-wider" style={{ color: '#D4541A' }}>
-                {equipmentLabel}
-                {hasWeight && <> · {exercise.weight}</>}
-              </p>
             </div>
+          </header>
 
-            {/* Notes button absolute top-right */}
-            <ExerciseNotesButton
-              exerciseId={exercise.id}
-              onClick={openNotes}
-              className="absolute top-0 right-0"
-            />
-          </div>
-
-          {/* Stat row — single line with dashed dividers */}
-          <div
-            className="flex items-stretch mb-4 border-[2.5px]"
-            style={{
-              borderColor: INK,
-              backgroundColor: SURFACE_ELEVATED,
-              borderRadius: RADIUS.btnMd,
-              boxShadow: SHADOW.sm,
-            }}
-          >
-            <StatCell
-              value={sets}
-              label="Serie"
-              colorClass="text-primary"
-              active={editing === 'sets'}
-              onClick={() => toggleEditing('sets')}
-            />
-            <DashedDivider />
-            <StatCell
-              value={reps}
-              label="Rep"
-              colorClass="text-secondary"
-              active={editing === 'reps'}
-              onClick={() => toggleEditing('reps')}
-            />
-            {exercise.type !== 'reps' && (
-              <>
-                <DashedDivider />
-                <StatCell
+          <div className="px-5 py-6">
+            {/* Sets / reps (/ time) — tap a tile to edit it */}
+            <div className="grid grid-cols-2 gap-3.5">
+              <StatTile
+                value={sets}
+                label="Serie"
+                bg="#E98A5C"
+                rotate="-rotate-2"
+                active={editing === 'sets'}
+                onClick={() => toggleEditing('sets')}
+              />
+              <StatTile
+                value={reps}
+                label="Rep"
+                bg="#9FD8D0"
+                rotate="rotate-2"
+                active={editing === 'reps'}
+                onClick={() => toggleEditing('reps')}
+              />
+              {exercise.type !== 'reps' && (
+                <StatTile
                   value={time}
                   suffix="s"
                   label="Tempo"
-                  colorClass="text-accent"
+                  bg="#F5D77A"
+                  className="col-span-2"
                   active={editing === 'time'}
                   onClick={() => toggleEditing('time')}
                 />
-              </>
+              )}
+            </div>
+
+            <AnimatePresence mode="wait">
+              {editing === 'sets' && (
+                <NumberEditor key="sets" value={sets} onChange={setSets} min={1} max={12} color="primary" />
+              )}
+              {editing === 'reps' && (
+                <NumberEditor key="reps" value={reps} onChange={setReps} min={1} max={20} color="secondary" />
+              )}
+              {editing === 'time' && (
+                <TimeTickerEditor key="time" value={time} onChange={setTime} min={3} max={120} />
+              )}
+            </AnimatePresence>
+
+            {/* Execution + notes */}
+            <div className="mt-6 flex items-center justify-between">
+              <h3 className="font-poster text-[22px] leading-tight">Esecuzione</h3>
+              <ExerciseNotesButton
+                round
+                exerciseId={exercise.id}
+                onClick={openNotes}
+              />
+            </div>
+            {descBody && (
+              <p className="mt-3 text-base leading-[1.55]">{descBody}</p>
+            )}
+
+            {/* Ref link as dashed chip */}
+            {refHref && refLabel && (
+              <a
+                href={refHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex min-h-11 max-w-full items-center gap-2 rounded-full border-[1.5px] border-dashed border-plum px-3.5 py-2 text-xs font-bold text-plum"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+                </svg>
+                <span className="truncate min-w-0">{refLabel}</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </a>
+            )}
+
+            {exercise.notes && (
+              <p className="mt-4 rounded-[18px] border-2 border-plum bg-pastel-butter px-3.5 py-3 text-sm leading-normal">
+                {exercise.notes}
+              </p>
+            )}
+
+            {/* Dopo questo */}
+            {upcomingExercises.length > 0 && (
+              <section className="mt-8" aria-label="Dopo questo">
+                <h3 className="font-poster text-[22px] leading-tight">Dopo questo</h3>
+                <ul className="-mx-5 mt-3 flex gap-3 overflow-x-auto px-5 pb-1.5 [scrollbar-width:none]">
+                  {upcomingExercises.map((ex, i) => (
+                    <UpcomingCard
+                      key={ex.id}
+                      exercise={ex}
+                      number={exerciseIndex + 2 + i}
+                    />
+                  ))}
+                </ul>
+              </section>
             )}
           </div>
-
-          <AnimatePresence mode="wait">
-            {editing === 'sets' && (
-              <NumberEditor key="sets" value={sets} onChange={setSets} min={1} max={12} color="primary" />
-            )}
-            {editing === 'reps' && (
-              <NumberEditor key="reps" value={reps} onChange={setReps} min={1} max={20} color="secondary" />
-            )}
-            {editing === 'time' && (
-              <TimeTickerEditor key="time" value={time} onChange={setTime} min={3} max={120} />
-            )}
-          </AnimatePresence>
-
-          {/* Description card */}
-          {descBody && (
-            <div
-              className="mb-4 p-4 border-[2.5px]"
-              style={{
-                borderColor: INK,
-                backgroundColor: SURFACE_ELEVATED,
-                borderRadius: RADIUS.card,
-                boxShadow: SHADOW.sm,
-              }}
-            >
-              <div className="flex items-center gap-2 mb-2.5">
-                <span
-                  className="inline-flex items-center justify-center w-6 h-6 text-[13px] font-bold border-[2px] italic"
-                  style={{
-                    borderColor: INK,
-                    backgroundColor: '#E8B820',
-                    color: INK,
-                    borderRadius: RADIUS.btnSm,
-                  }}
-                >
-                  i
-                </span>
-                <span className="font-bold text-text">Esecuzione</span>
-              </div>
-              <p
-                className="text-text"
-                style={{ fontSize: 14, lineHeight: 1.55 }}
-              >
-                {descBody}
-              </p>
-            </div>
-          )}
-
-          {/* Ref link as dashed chip */}
-          {refHref && refLabel && (
-            <a
-              href={refHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-2 mb-5 text-xs font-medium text-primary max-w-full"
-              style={{
-                border: `1.5px dashed ${INK}`,
-                borderRadius: RADIUS.pill,
-                backgroundColor: 'transparent',
-              }}
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
-                <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
-              </svg>
-              <span className="truncate min-w-0">{refLabel}</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </a>
-          )}
-
-          {exercise.notes && (
-            <p className="text-xs text-text-muted italic mb-5 max-w-lg">
-              {exercise.notes}
-            </p>
-          )}
-
-          {/* Dopo questo */}
-          {upcomingExercises.length > 0 && (
-            <div className="mt-2">
-              <p className="text-[11px] font-bold uppercase tracking-widest text-text-muted mb-2.5">
-                Dopo questo
-              </p>
-              <div className="flex flex-col gap-2">
-                {upcomingExercises.map((ex, i) => (
-                  <UpcomingRow
-                    key={ex.id}
-                    exercise={ex}
-                    number={exerciseIndex + 2 + i}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
         </div>
 
-        {/* Sticky bottom CTA bar */}
-        <div
-          className="shrink-0 w-full px-4 pt-3 pb-4 flex gap-3 border-t-[2.5px]"
-          style={{
-            borderColor: INK,
-            backgroundColor: SURFACE,
-            boxShadow: '0 -4px 0 rgba(58,18,72,0.06)',
-          }}
-        >
+        {/* Fixed bottom action bar */}
+        <div className="flex shrink-0 gap-3 border-t-2 border-plum bg-cream px-5 pt-3.5 pb-[calc(14px+env(safe-area-inset-bottom,0px))]">
           <button
             type="button"
             onClick={openSkipConfirm}
-            className="shrink-0 h-14 px-5 font-semibold text-sm text-text border-[2.5px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
-            style={{
-              flexBasis: '38%',
-              borderColor: INK,
-              backgroundColor: SURFACE_ELEVATED,
-              borderRadius: RADIUS.btnMd,
-              boxShadow: SHADOW.sm,
-            }}
+            className="poster-press h-[60px] flex-1 cursor-pointer rounded-full border-2 border-plum bg-paper text-[17px] font-extrabold text-plum shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet"
           >
             Salta
           </button>
-          {autoActive ? (
-            <motion.button
-              onClick={handleStart}
-              className="relative overflow-hidden flex-1 inline-flex items-center justify-center gap-2 font-bold border-[3px] text-lg cursor-pointer"
-              style={{
-                height: 56,
-                backgroundColor: '#D4541A',
-                color: '#FFFBF0',
-                borderColor: INK,
-                borderRadius: RADIUS.btnLg,
-                boxShadow: `4px 4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.4)`,
-              }}
-              whileTap={{ x: 4, y: 4, boxShadow: SHADOW.pressed }}
-              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-            >
+          <button
+            type="button"
+            onClick={handleStart}
+            className="poster-press relative flex h-[60px] flex-[2] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-plum bg-poster-red font-poster text-[22px] text-paper shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet"
+          >
+            {autoActive && (
               <motion.div
-                className="absolute inset-y-0 right-0 z-0 pointer-events-none"
-                style={{
-                  width: fillWidth,
-                  backgroundColor: 'rgba(244, 232, 196, 0.72)',
-                }}
+                aria-hidden="true"
+                className="absolute inset-y-0 right-0 z-0 pointer-events-none bg-plum/35"
+                style={{ width: fillWidth }}
               />
-              <span className="relative z-10">
-                Inizia tra {formatCountdown(remainingSecs)}
-              </span>
-            </motion.button>
-          ) : (
-            <motion.button
-              onClick={handleStart}
-              whileTap={{ x: 4, y: 4, boxShadow: SHADOW.pressed }}
-              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-              className="flex-1 inline-flex items-center justify-center gap-2 font-bold border-[3px] text-lg cursor-pointer"
-              style={{
-                height: 56,
-                backgroundColor: '#D4541A',
-                color: '#FFFBF0',
-                borderColor: INK,
-                borderRadius: RADIUS.btnLg,
-                boxShadow: `4px 4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.4)`,
-              }}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            )}
+            <span className="relative z-10 inline-flex items-center gap-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <polygon points="5 3 19 12 5 21" />
               </svg>
-              Inizia
-            </motion.button>
-          )}
+              {autoActive ? `Inizia tra ${formatCountdown(remainingSecs)}` : 'Inizia'}
+            </span>
+          </button>
         </div>
       </motion.div>
 
@@ -461,11 +382,13 @@ export default function ExercisePreview({
   )
 }
 
-function StatCell({ value, suffix, label, colorClass, active, onClick }: {
+function StatTile({ value, suffix, label, bg, rotate = '', className = '', active, onClick }: {
   value: number
   suffix?: string
   label: string
-  colorClass: string
+  bg: string
+  rotate?: string
+  className?: string
   active: boolean
   onClick: () => void
 }) {
@@ -473,70 +396,33 @@ function StatCell({ value, suffix, label, colorClass, active, onClick }: {
     <button
       type="button"
       onClick={onClick}
-      className={`flex-1 flex flex-col items-center justify-center py-2.5 px-2 transition-colors ${active ? 'bg-surface' : ''}`}
-      style={{ borderRadius: 'inherit' }}
+      aria-pressed={active}
+      aria-label={`${label}: ${value}${suffix ?? ''}. Tocca per modificare`}
+      className={`flex min-h-11 cursor-pointer items-baseline gap-2 rounded-[20px] border-2 border-plum px-4 py-3 text-left text-plum shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet ${rotate} ${
+        active ? 'outline-3 outline-offset-2 outline-plum' : ''
+      } ${className}`}
+      style={{ backgroundColor: bg }}
     >
-      <span className={`text-xl font-bold font-timer leading-none ${colorClass}`}>
+      <span className="font-poster text-[44px] leading-none" aria-hidden="true">
         {value}{suffix}
       </span>
-      <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted mt-1">
-        {label}
-      </span>
+      <span className="font-mono text-xs font-bold uppercase" aria-hidden="true">{label}</span>
     </button>
   )
 }
 
-function DashedDivider() {
+function UpcomingCard({ exercise, number }: { exercise: Exercise; number: number }) {
   return (
-    <div
-      className="self-stretch my-1.5"
-      style={{
-        width: 0,
-        borderLeft: `1.5px dashed ${INK}`,
-        opacity: 0.4,
-      }}
-    />
-  )
-}
-
-function UpcomingRow({ exercise, number }: { exercise: Exercise; number: number }) {
-  const colors = ['#3FB6A8', '#9B6BCE', '#D4541A', '#E8B820']
-  const bg = colors[(number - 1) % colors.length]
-  const hasWeight = exercise.weight && exercise.weight !== 'corpo libero'
-  const isReps = exercise.type === 'reps'
-
-  const metric = isReps
-    ? `${exercise.sets} × ${exercise.repsPerSet}`
-    : `${exercise.sets} × ${exercise.repsPerSet} · ${exercise.hangTime}s`
-
-  return (
-    <div
-      className="flex items-center gap-3 px-3 py-2 border-[2px]"
-      style={{
-        borderColor: INK,
-        backgroundColor: SURFACE_ELEVATED,
-        borderRadius: RADIUS.btnSm,
-        boxShadow: SHADOW.xs,
-      }}
+    <li
+      className="flex min-h-[140px] w-[150px] flex-none flex-col justify-between rounded-[20px] border-2 border-plum p-3 text-plum shadow-[3px_3px_0_#3b1746]"
+      style={{ backgroundColor: getExerciseColor(number - 1).bg }}
     >
-      <div
-        className="shrink-0 w-9 h-9 flex items-center justify-center border-[2px] text-sm font-bold font-timer"
-        style={{
-          borderColor: INK,
-          backgroundColor: bg,
-          color: '#FFFBF0',
-          borderRadius: RADIUS.btnSm,
-        }}
-      >
-        {number}
+      <div className="flex items-start justify-between gap-2">
+        <span className="font-poster text-[28px] leading-none">{number}</span>
+        <PosterPill>{getExerciseVolume(exercise)}</PosterPill>
       </div>
-      <div className="min-w-0 flex-1">
-        <p className="text-sm font-bold text-text truncate">{exercise.name}</p>
-        <p className="text-[11px] text-text-muted font-timer">
-          {metric}{hasWeight && ` · ${exercise.weight}`}
-        </p>
-      </div>
-    </div>
+      <p className="text-sm font-extrabold leading-tight">{exercise.name}</p>
+    </li>
   )
 }
 

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Exercise } from '../../types'
 import ExercisePreview from './ExercisePreview'
@@ -22,6 +22,11 @@ interface WorkoutRunnerProps {
   dayTitle: string
   weekNumber?: number
   /**
+   * Navigation bar shown above every phase except the exercise preview, which
+   * carries its own close/audio buttons in its coloured header.
+   */
+  header?: ReactNode
+  /**
    * Called after every exercise ends (done or skipped) so progress survives a
    * crash. `finished` is true once the final screen is reached.
    */
@@ -38,6 +43,8 @@ interface WorkoutRunnerProps {
 export default function WorkoutRunner({
   exercises,
   dayTitle,
+  weekNumber,
+  header,
   onProgress,
   onComplete,
   onExit,
@@ -142,8 +149,17 @@ export default function WorkoutRunner({
     ],
   )
 
+  const shell = (content: ReactNode) => (
+    <>
+      {header}
+      <div className="flex-1 min-h-0 flex items-center justify-center">
+        {content}
+      </div>
+    </>
+  )
+
   if (phase === 'workout_complete') {
-    return (
+    return shell(
       <WorkoutComplete
         dayTitle={dayTitle}
         exercisesCompleted={completedExercises}
@@ -152,7 +168,7 @@ export default function WorkoutRunner({
         skippedExercises={skippedExercises}
         onSave={handleSave}
         onClose={onExit}
-      />
+      />,
     )
   }
 
@@ -167,16 +183,18 @@ export default function WorkoutRunner({
         onStart={startExercise}
         onSkip={skipExercise}
         autoStartSeconds={pendingAutoStartSeconds ?? undefined}
+        weekNumber={weekNumber}
+        onClose={onExit}
       />
     )
   }
 
-  if (!exercise) return null
+  if (!exercise) return shell(null)
 
   const isRepsExercise = exercise.type === 'reps'
   const showRepsView = isRepsExercise && phase === 'hanging'
 
-  return (
+  return shell(
     <>
       {showRepsView ? (
         <RepsExerciseView
@@ -250,6 +268,6 @@ export default function WorkoutRunner({
         exerciseName={exercise.name}
         onClose={closeNotes}
       />
-    </>
+    </>,
   )
 }
