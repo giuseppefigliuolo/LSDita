@@ -114,15 +114,9 @@ export default function WorkoutRunner({
 
   const [showNotes, setShowNotes] = useState(false)
 
-  const openNotes = useCallback(() => {
-    pauseForInfo()
-    setShowNotes(true)
-  }, [pauseForInfo])
-
-  const closeNotes = useCallback(() => {
-    setShowNotes(false)
-    resumeFromInfo()
-  }, [resumeFromInfo])
+  // Notes are written mid-set, so the timer keeps running (unlike the info sheet).
+  const openNotes = useCallback(() => setShowNotes(true), [])
+  const closeNotes = useCallback(() => setShowNotes(false), [])
 
   const confirmSkip = useCallback(() => {
     setShowSkipConfirm(false)
