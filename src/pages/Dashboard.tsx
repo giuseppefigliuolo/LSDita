@@ -150,26 +150,53 @@ export default function Dashboard() {
 
   function renderAnytimeRow(day: TrainingDay, index: number) {
     const letter = day.label?.split(' ').pop() ?? String.fromCharCode(65 + index)
+    const status = getDayStatus(day)
+    const done = status === 'done'
     return (
       <button
         key={day.dayOfWeek}
         type="button"
         onClick={() => openDay(day)}
-        className="flex min-h-[60px] w-full items-center gap-3 rounded-[20px] border-2 border-dashed border-plum bg-paper px-3.5 py-2.5 text-left text-plum transition-colors active:bg-cream focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet"
+        className={`relative flex w-full items-center gap-3 rounded-[20px] border-2 border-dashed border-plum bg-paper px-3.5 py-2.5 text-left text-plum transition-colors active:bg-cream focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet ${
+          done ? 'min-h-[72px]' : 'min-h-[60px]'
+        }`}
       >
+        <AnimatePresence>
+          {done && (
+            <motion.span
+              aria-hidden
+              className="poster-hatch pointer-events-none absolute inset-0 rounded-[18px]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+          )}
+        </AnimatePresence>
         <span
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-plum bg-pastel-lavender font-poster text-xl leading-none"
+          className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-plum bg-pastel-lavender font-poster text-xl leading-none"
           aria-hidden
         >
           {letter}
         </span>
-        <p className="min-w-0 flex-1 text-[15px] font-extrabold leading-tight">
+        <p className="relative min-w-0 flex-1 text-[15px] font-extrabold leading-tight">
           {day.title}
+          {done && <span className="sr-only">, fatto</span>}
         </p>
-        <StatusBadge status={getDayStatus(day)} />
-        <span className="shrink-0 whitespace-nowrap font-mono text-[11px] text-brown">
+        {status === 'partial' && <StatusBadge status={status} />}
+        <span className="relative shrink-0 whitespace-nowrap font-mono text-[11px] text-brown">
           {getDayDurationLabel(day)}
         </span>
+        <AnimatePresence>
+          {done && (
+            <motion.div
+              key="stamp-slot"
+              className="relative h-[46px] w-[46px] flex-none"
+            >
+              <DoneStamp className="-left-1 -top-1" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </button>
     )
   }
@@ -446,12 +473,17 @@ function PosterLinkCard({
 type DayStatus = 'done' | 'partial' | 'todo'
 
 /** "Fatto" stamp: pops in like an ink stamp, overhanging its slot upwards. */
-function DoneStamp() {
+function DoneStamp({
+  className = '-left-2 -top-[30px]'
+}: {
+  /** Offset of the stamp inside its slot */
+  className?: string
+}) {
   const reduceMotion = useReducedMotion()
   return (
     <motion.span
       aria-hidden="true"
-      className="absolute -left-2 -top-[30px] h-[54px] w-[54px] rounded-full border-2 border-plum bg-mustard p-[3px] shadow-[2px_2px_0_var(--color-plum)]"
+      className={`absolute ${className} h-[54px] w-[54px] rounded-full border-2 border-plum bg-mustard p-[3px] shadow-[2px_2px_0_var(--color-plum)]`}
       initial={
         reduceMotion
           ? { opacity: 0, scale: 1, rotate: -14 }
