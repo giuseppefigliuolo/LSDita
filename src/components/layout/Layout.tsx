@@ -1,7 +1,9 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import BottomNav from '../ui/BottomNav'
 
 export default function Layout() {
+  const { pathname } = useLocation()
+
   return (
     <div className="flex flex-col min-h-dvh bg-bg relative overflow-x-hidden">
       {/* Safe-area handling is global — see #root padding-top and body::before
@@ -9,7 +11,8 @@ export default function Layout() {
           which render outside this Layout). */}
 
       {/* ── Large psychedelic illustrations — fixed at screen edges ── */}
-      <PsychedelicDecor />
+      {/* Home keeps a clean background behind its sunburst header */}
+      {pathname !== '/' && <PsychedelicDecor />}
 
       {/* ── Page content ── */}
       <main className="flex-1 pb-28 relative z-10">

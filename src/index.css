@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Shrikhand&family=Nunito:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -34,10 +34,27 @@
   --color-text-secondary:   #5C3A20;
   --color-text-muted:       #9C7B5C;
 
+  /* ── Poster palette (Home) ── */
+  --color-plum:             #3B1746;   /* poster ink — text, borders, shadows */
+  --color-plum-soft:        #4B2A52;   /* secondary text on pastels */
+  --color-cream:            #F4E7C5;
+  --color-paper:            #FDF5E4;
+  --color-brown:            #7A5A3A;   /* secondary text on cream/paper (≥5:1) */
+  --color-sand:             #E0CFA6;   /* dashed dividers */
+  --color-sun:              #F2D98A;   /* sunburst rays */
+  --color-mustard:          #E9B425;
+  --color-pastel-peach:     #F2B8A0;
+  --color-pastel-mint:      #9FD8D0;
+  --color-pastel-sage:      #CFE0A8;
+  --color-pastel-butter:    #F5D77A;
+  --color-pastel-lavender:  #D9C2E0;
+  --color-pastel-coral:     #E98A5C;
+
   /* Fonts */
   --font-sans:    "Nunito", system-ui, -apple-system, sans-serif;
   --font-display: "Righteous", "Nunito", sans-serif;
   --font-mono:    "Space Mono", "SF Mono", monospace;
+  --font-poster:  "Shrikhand", "Righteous", cursive;
 
   /* Organic radii */
   --radius-sm:   0.75rem;
@@ -168,6 +185,59 @@ body::before {
   font-family: var(--font-mono);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+}
+
+/* ─── Poster style (Home) ─── */
+
+/* Paper card: 2px ink border + flat offset shadow, no blur */
+@utility poster-card {
+  border: 2px solid var(--color-plum);
+  box-shadow: 4px 4px 0 var(--color-plum);
+}
+
+/* Lift on hover/press. Uses the standalone `translate` property so it
+   composes with any `rotate` set on the same element. */
+@utility poster-lift {
+  transition: translate 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  &:active {
+    translate: -2px -2px;
+    box-shadow: 6px 6px 0 var(--color-plum);
+  }
+  @media (hover: hover) {
+    &:hover {
+      translate: -2px -2px;
+      box-shadow: 6px 6px 0 var(--color-plum);
+    }
+  }
+  &:focus-visible {
+    outline: 3px solid var(--color-violet);
+    outline-offset: 3px;
+  }
+}
+
+/* Full-bleed band that clips the sunburst, softened at the bottom edge */
+@utility poster-sunburst-frame {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 85%, transparent);
+  mask-image: linear-gradient(to bottom, #000 85%, transparent);
+}
+
+/* Slow-turning sunburst behind the Home logo */
+@utility poster-sunburst {
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--color-sun) 0deg 7.5deg,
+    var(--color-cream) 7.5deg 15deg
+  );
+  animation: poster-spin 90s linear infinite;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+  }
+}
+
+@keyframes poster-spin {
+  to { rotate: 360deg; }
 }
 
 @media (prefers-reduced-motion: reduce) {
