@@ -22,8 +22,8 @@ interface WorkoutRunnerProps {
   dayTitle: string
   weekNumber?: number
   /**
-   * Navigation bar shown above every phase except the exercise preview, which
-   * carries its own close/audio buttons in its coloured header.
+   * Navigation bar shown above the final screen. The exercise preview and the
+   * in-progress views carry their own close/audio buttons.
    */
   header?: ReactNode
   /**
@@ -59,7 +59,6 @@ export default function WorkoutRunner({
     wasPausedPhase,
     pendingAutoStartSeconds,
     timer,
-    countdownDuration,
     startExercise,
     skipExercise,
     skipTimer,
@@ -188,34 +187,37 @@ export default function WorkoutRunner({
   const isRepsExercise = exercise.type === 'reps'
   const showRepsView = isRepsExercise && phase === 'hanging'
 
-  return shell(
+  return (
     <>
       {showRepsView ? (
         <RepsExerciseView
           exercise={exercise}
           exerciseIndex={exerciseIndex}
+          weekNumber={weekNumber}
           currentSet={currentSet}
           onSetDone={repsSetDone}
           onSkipExercise={() => setShowSkipConfirm(true)}
           onOpenInfo={openInfo}
           onOpenNotes={openNotes}
+          onClose={onExit}
         />
       ) : (
         <TimedExerciseView
           exercise={exercise}
           exerciseIndex={exerciseIndex}
+          weekNumber={weekNumber}
           phase={phase}
           wasPausedPhase={wasPausedPhase}
           currentSet={currentSet}
           currentRep={currentRep}
           timeRemaining={timer.timeRemaining}
-          countdownDuration={countdownDuration}
           onPause={pauseTimer}
           onResume={resumeTimer}
           onSkipTimer={skipTimer}
           onSkipExercise={() => setShowSkipConfirm(true)}
           onOpenInfo={openInfo}
           onOpenNotes={openNotes}
+          onClose={onExit}
         />
       )}
 
@@ -253,6 +255,7 @@ export default function WorkoutRunner({
       <ExerciseInfoModal
         open={showInfo}
         exercise={exercise}
+        exerciseIndex={exerciseIndex}
         onClose={closeInfo}
       />
 
@@ -262,6 +265,6 @@ export default function WorkoutRunner({
         exerciseName={exercise.name}
         onClose={closeNotes}
       />
-    </>,
+    </>
   )
 }

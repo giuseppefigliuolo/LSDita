@@ -97,7 +97,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
       speak('Preparati!')
     } else {
       setPhase('hanging')
-      speak('Tieni!')
+      speak('Vai!')
       beepStart()
       vibrateShort()
     }
@@ -161,7 +161,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
 
     if (phase === 'countdown') {
       setPhase('hanging')
-      speak('Tieni!')
+      speak('Vai!')
       beepStart()
       vibrateShort()
       return
@@ -187,7 +187,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
         setPhase('resting')
       } else {
         setCurrentRep((r) => r + 1)
-        speak('Tieni!')
+        speak('Vai!')
         beepStart()
       }
       return
@@ -208,7 +208,7 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
       } else {
         setPhase('hanging')
         speak(
-          phase === 'set_rest' ? `Serie ${currentSet + 1}. Tieni!` : 'Tieni!',
+          phase === 'set_rest' ? `Serie ${currentSet + 1}. Vai!` : 'Vai!',
         )
         beepStart()
         vibrateShort()
