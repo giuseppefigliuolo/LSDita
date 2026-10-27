@@ -1,4 +1,11 @@
-import confetti from 'canvas-confetti'
+export interface ConfettiOrigin {
+  x: number
+  y: number
+}
+
+type ConfettiListener = (origin: ConfettiOrigin) => void
+
+const listeners = new Set<ConfettiListener>()
 
 function prefersReducedMotion(): boolean {
   return !!(
@@ -7,24 +14,21 @@ function prefersReducedMotion(): boolean {
   )
 }
 
+/** Subscribes to bursts (used by ConfettiLayer). Returns the unsubscribe function. */
+export function onConfetti(listener: ConfettiListener) {
+  listeners.add(listener)
+  return () => {
+    listeners.delete(listener)
+  }
+}
+
 /**
- * Multi-burst confetti explosion from a normalized origin point.
+ * Confetti burst from a normalized origin point, drawn by ConfettiLayer.
  * origin.x and origin.y are 0–1 ratios of viewport width/height.
  */
-export function fireConfetti(origin: { x: number; y: number } = { x: 0.5, y: 0.5 }) {
+export function fireConfetti(origin: ConfettiOrigin = { x: 0.5, y: 0.5 }) {
   if (prefersReducedMotion()) return
-
-  const base = {
-    origin,
-    ticks: 260,
-    gravity: 1.15,
-    scalar: 1,
-    drift: 0,
-  }
-
-  confetti({ ...base, particleCount: 120, spread: 70, startVelocity: 50, decay: 0.9 })
-  confetti({ ...base, particleCount: 55, spread: 110, startVelocity: 40, decay: 0.92, scalar: 0.9 })
-  confetti({ ...base, particleCount: 35, spread: 140, startVelocity: 32, decay: 0.94, scalar: 0.8 })
+  listeners.forEach((listener) => listener(origin))
 }
 
 /**

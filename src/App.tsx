@@ -11,6 +11,7 @@ import SettingsPage from './pages/SettingsPage'
 import WarmupPage from './pages/WarmupPage'
 import TestsPage from './pages/TestsPage'
 import ReloadPrompt from './components/ui/ReloadPrompt'
+import { ConfettiLayer } from './components/ui/Confetti'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         </Routes>
       </AnimatePresence>
       <ReloadPrompt />
+      <ConfettiLayer />
     </>
   )
 }

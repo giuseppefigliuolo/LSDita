@@ -22,8 +22,8 @@ interface WorkoutRunnerProps {
   dayTitle: string
   weekNumber?: number
   /**
-   * Navigation bar shown above the final screen. The exercise preview and the
-   * in-progress views carry their own close/audio buttons.
+   * Navigation bar shown when there is no exercise to run. The preview, the
+   * in-progress views and the final screen carry their own close/audio buttons.
    */
   header?: ReactNode
   /**
@@ -152,16 +152,17 @@ export default function WorkoutRunner({
   )
 
   if (phase === 'workout_complete') {
-    return shell(
+    return (
       <WorkoutComplete
         dayTitle={dayTitle}
+        weekNumber={weekNumber}
         exercisesCompleted={completedExercises}
         exercisesTotal={exercises.length}
         duration={finalDuration}
         skippedExercises={skippedExercises}
         onSave={handleSave}
         onClose={onExit}
-      />,
+      />
     )
   }
 
