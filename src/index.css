@@ -264,18 +264,6 @@ body::before {
   }
 }
 
-/* Hard-shadow button press: slides onto its shadow. --press matches the shadow offset. */
-@utility poster-press {
-  transition: transform 120ms ease, box-shadow 120ms ease;
-  &:active {
-    transform: translate(var(--press, 4px), var(--press, 4px));
-    box-shadow: 0 0 0 var(--color-plum);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    transition: none !important;
-  }
-}
-
 @keyframes poster-spin {
   to { rotate: 360deg; }
 }

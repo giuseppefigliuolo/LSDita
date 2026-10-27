@@ -7,7 +7,7 @@ import {
   useTransform,
   animate as motionAnimate
 } from 'framer-motion'
-import PosterIconButton from '../components/ui/PosterIconButton'
+import IconButton from '../components/ui/IconButton'
 import PosterPill from '../components/ui/PosterPill'
 import Sunburst from '../components/ui/Sunburst'
 import ExerciseDescription from '../components/ui/ExerciseDescription'
@@ -126,21 +126,21 @@ export default function WorkoutDay() {
   return (
     <div className="min-h-dvh bg-cream text-plum">
       <header className="flex items-center gap-3 px-5 pt-4 pb-4">
-        <PosterIconButton onClick={() => navigate(-1)} aria-label="Indietro">
+        <IconButton onClick={() => navigate(-1)} aria-label="Indietro">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polyline points="15 18 9 12 15 6" />
           </svg>
-        </PosterIconButton>
+        </IconButton>
         <div className="min-w-0 flex-1 text-center">
           <h1 className="font-poster text-[22px] leading-[1.1]">{sessionLabel}</h1>
           <p className="text-[13px] font-semibold text-plum-muted">{headerSubtitle}</p>
         </div>
-        <PosterIconButton onClick={() => setEditing(true)} aria-label="Modifica sessione">
+        <IconButton onClick={() => setEditing(true)} aria-label="Modifica sessione">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 20h9" />
             <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
           </svg>
-        </PosterIconButton>
+        </IconButton>
       </header>
 
       <motion.div
@@ -333,8 +333,11 @@ const intensityLabels: Record<DayIntensity, string> = {
   bassa: 'Dita: bassa'
 }
 
-const SUN_GRADIENT =
-  'radial-gradient(circle, #FDF5E4 0 30%, #E98A5C 30% 46%, #E9B425 46% 62%, #7A3B9B 62% 70%, transparent 70%)'
+const SUN_STYLE = {
+  background: 'radial-gradient(circle at 36% 34%, #f9e6a8 0 20%, #f5d77a 21%)',
+  boxShadow:
+    '3px 3px 0 #3b1746, 0 0 0 12px rgba(253,245,228,0.3), 0 0 0 24px rgba(253,245,228,0.14)'
+}
 
 function HeroCard({
   typeLabel,
@@ -363,8 +366,8 @@ function HeroCard({
         />
         <div
           aria-hidden="true"
-          className="absolute right-[18px] top-[18px] size-[84px] rounded-full"
-          style={{ background: SUN_GRADIENT }}
+          className="pointer-events-none absolute right-[28px] top-[28px] size-[64px] rounded-full border-2 border-plum"
+          style={SUN_STYLE}
         />
         <p className="relative font-mono text-[11px] font-bold uppercase tracking-[0.14em]">
           {typeLabel}

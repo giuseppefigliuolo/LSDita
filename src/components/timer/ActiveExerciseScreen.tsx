@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Exercise } from '../../types'
+import Button from '../ui/Button'
 import MuteButton from '../ui/MuteButton'
-import PosterIconButton from '../ui/PosterIconButton'
+import IconButton from '../ui/IconButton'
 import PosterPill from '../ui/PosterPill'
 import Sunburst from '../ui/Sunburst'
 import HourglassTimer from './HourglassTimer'
@@ -79,17 +80,17 @@ export default function ActiveExerciseScreen({
     >
       <div className="flex flex-col gap-[22px] px-5 pt-14">
         <div className="flex items-center justify-between">
-          <PosterIconButton shape="round" onClick={onClose} aria-label="Chiudi">
+          <IconButton onClick={onClose} aria-label="Chiudi">
             <svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
               <path d="M4.5 4.5l9 9M13.5 4.5l-9 9" />
             </svg>
-          </PosterIconButton>
+          </IconButton>
           {weekNumber != null && (
             <p className="font-mono text-xs font-bold uppercase tracking-[0.14em]">
               Settimana {weekNumber}
             </p>
           )}
-          <MuteButton variant="poster" />
+          <MuteButton variant="blob" />
         </div>
 
         <SetProgressDots
@@ -203,19 +204,19 @@ export default function ActiveExerciseScreen({
   )
 }
 
-/** Cream 60px "×" circle that opens the skip confirmation. */
+/** Cream 60px "×" button that opens the skip confirmation. */
 export function SkipExerciseButton({ onClick }: { onClick: () => void }) {
   return (
-    <PosterIconButton shape="round" size="lg" tone="cream" onClick={onClick} aria-label="Serie non fatta">
+    <IconButton size="lg" tone="cream" onClick={onClick} aria-label="Serie non fatta">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
         <line x1="18" y1="6" x2="6" y2="18" />
         <line x1="6" y1="6" x2="18" y2="18" />
       </svg>
-    </PosterIconButton>
+    </IconButton>
   )
 }
 
-/** Wide red pill: the main action of the bar. */
+/** Wide primary button: the main action of the bar. */
 export function PrimaryBarButton({
   onClick,
   'aria-label': ariaLabel,
@@ -226,13 +227,8 @@ export function PrimaryBarButton({
   children: ReactNode
 }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={ariaLabel}
-      className="poster-press flex h-[60px] min-w-0 flex-1 cursor-pointer items-center justify-center gap-2 rounded-full border-2 border-plum bg-poster-red font-poster text-xl text-paper shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet"
-    >
+    <Button size="lg" onClick={onClick} aria-label={ariaLabel} className="h-[60px] min-w-0 flex-1">
       {children}
-    </button>
+    </Button>
   )
 }

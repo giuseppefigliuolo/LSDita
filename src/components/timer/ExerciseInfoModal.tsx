@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import type { Exercise } from '../../types'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
-import PosterIconButton from '../ui/PosterIconButton'
+import Button from '../ui/Button'
+import IconButton from '../ui/IconButton'
 import PosterPill from '../ui/PosterPill'
 import Sunburst from '../ui/Sunburst'
 import { getExerciseColor } from '../../utils/exerciseColors'
@@ -140,16 +141,11 @@ export default function ExerciseInfoModal({
                 <ExerciseIllustration name={exercise.illustration} size={52} />
               </div>
               <div ref={closeRef} className="absolute top-3 right-3">
-                <PosterIconButton
-                  shape="round"
-                  size="sm"
-                  onClick={onClose}
-                  aria-label="Chiudi info"
-                >
+                <IconButton size="sm" onClick={onClose} aria-label="Chiudi info">
                   <svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
                     <path d="M4.5 4.5l9 9M13.5 4.5l-9 9" />
                   </svg>
-                </PosterIconButton>
+                </IconButton>
               </div>
             </div>
 
@@ -232,19 +228,19 @@ export default function ExerciseInfoModal({
               </svg>
               Timer in pausa
             </p>
-            <button
-              type="button"
+            <Button
+              size="lg"
               onClick={(e) => {
                 e.stopPropagation()
                 onClose()
               }}
-              className="poster-press inline-flex h-14 shrink-0 cursor-pointer items-center gap-2 rounded-full border-2 border-plum bg-poster-red px-6 font-poster text-xl text-paper shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-cream"
+              className="shrink-0"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <polygon points="5 3 19 12 5 21" />
               </svg>
               Riprendi
-            </button>
+            </Button>
           </div>
         </motion.div>
       )}

@@ -1,6 +1,6 @@
 import type { Exercise, WorkoutPhase } from '../../types'
 import ExerciseNotesButton from './ExerciseNotesButton'
-import PosterIconButton from '../ui/PosterIconButton'
+import IconButton from '../ui/IconButton'
 import ActiveExerciseScreen, { PrimaryBarButton, SkipExerciseButton } from './ActiveExerciseScreen'
 
 interface TimedExerciseViewProps {
@@ -126,13 +126,13 @@ export default function TimedExerciseView({
               </svg>
             </PrimaryBarButton>
           )}
-          <PosterIconButton shape="round" size="lg" tone="cream" onClick={onSkipTimer} aria-label="Salta timer">
+          <IconButton size="lg" tone="cream" onClick={onSkipTimer} aria-label="Salta timer">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <polygon points="5 4 15 12 5 20" />
               <line x1="19" y1="5" x2="19" y2="19" />
             </svg>
-          </PosterIconButton>
-          <ExerciseNotesButton bar exerciseId={exercise.id} onClick={onOpenNotes} />
+          </IconButton>
+          <ExerciseNotesButton size="lg" exerciseId={exercise.id} onClick={onOpenNotes} />
         </>
       }
     />

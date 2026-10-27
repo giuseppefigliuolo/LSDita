@@ -10,6 +10,7 @@ interface ButtonProps {
   fullWidth?: boolean
   disabled?: boolean
   className?: string
+  'aria-label'?: string
 }
 
 // Contrast ratios verified: all ≥ 4.5:1 for normal text
@@ -36,15 +37,18 @@ export default function Button({
   fullWidth = false,
   disabled = false,
   className = '',
+  ...rest
 }: ButtonProps) {
   const v = variants[variant]
   const s = sizes[size]
 
   return (
     <motion.button
+      type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`inline-flex items-center justify-center gap-2 font-bold border-[3px] border-[#3A1248] transition-colors cursor-pointer
+      aria-label={rest['aria-label']}
+      className={`inline-flex items-center justify-center gap-2 font-bold border-[3px] border-[#3A1248] transition-colors cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet
         ${s.padding}
         ${fullWidth ? 'w-full' : ''}
         ${disabled ? 'opacity-40 pointer-events-none' : ''}

@@ -12,8 +12,9 @@ import { parseExerciseDescription } from '../../utils/exerciseDescription'
 import ExerciseIllustration from '../illustrations/ExerciseIllustration'
 import ExerciseNotesModal from './ExerciseNotesModal'
 import ExerciseNotesButton from './ExerciseNotesButton'
+import Button from '../ui/Button'
 import MuteButton from '../ui/MuteButton'
-import PosterIconButton from '../ui/PosterIconButton'
+import IconButton from '../ui/IconButton'
 import PosterPill from '../ui/PosterPill'
 import Sunburst from '../ui/Sunburst'
 import { getExerciseColor } from '../../utils/exerciseColors'
@@ -139,17 +140,17 @@ export default function ExercisePreview({
             style={{ backgroundColor: color.bg }}
           >
             <div className="relative flex items-center justify-between">
-              <PosterIconButton shape="round" onClick={onClose} aria-label="Chiudi">
+              <IconButton onClick={onClose} aria-label="Chiudi">
                 <svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
                   <path d="M4.5 4.5l9 9M13.5 4.5l-9 9" />
                 </svg>
-              </PosterIconButton>
+              </IconButton>
               {weekNumber != null && (
                 <p className="font-mono text-xs font-bold uppercase tracking-[0.14em]">
                   Settimana {weekNumber}
                 </p>
               )}
-              <MuteButton variant="poster" />
+              <MuteButton variant="blob" />
             </div>
 
             {/* Big number + illustration. Screen readers get one plain sentence. */}
@@ -245,11 +246,7 @@ export default function ExercisePreview({
             {/* Execution + notes */}
             <div className="mt-6 flex items-center justify-between">
               <h3 className="font-poster text-[22px] leading-tight">Esecuzione</h3>
-              <ExerciseNotesButton
-                round
-                exerciseId={exercise.id}
-                onClick={openNotes}
-              />
+              <ExerciseNotesButton exerciseId={exercise.id} onClick={openNotes} />
             </div>
             {descBody && (
               <p className="mt-3 text-base leading-[1.55]">{descBody}</p>
@@ -300,18 +297,10 @@ export default function ExercisePreview({
 
         {/* Fixed bottom action bar */}
         <div className="flex shrink-0 gap-3 border-t-2 border-plum bg-cream px-5 pt-3.5 pb-[calc(14px+env(safe-area-inset-bottom,0px))]">
-          <button
-            type="button"
-            onClick={openSkipConfirm}
-            className="poster-press h-[60px] flex-1 cursor-pointer rounded-full border-2 border-plum bg-paper text-[17px] font-extrabold text-plum shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet"
-          >
+          <Button variant="ghost" size="lg" onClick={openSkipConfirm} className="h-[60px] flex-1">
             Salta
-          </button>
-          <button
-            type="button"
-            onClick={handleStart}
-            className="poster-press relative flex h-[60px] flex-[2] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-plum bg-poster-red font-poster text-[22px] text-paper shadow-[4px_4px_0_#3b1746] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-violet"
-          >
+          </Button>
+          <Button size="lg" onClick={handleStart} className="relative h-[60px] flex-[2] overflow-hidden">
             {autoActive && (
               <motion.div
                 aria-hidden="true"
@@ -325,7 +314,7 @@ export default function ExercisePreview({
               </svg>
               {autoActive ? `Inizia tra ${formatCountdown(remainingSecs)}` : 'Inizia'}
             </span>
-          </button>
+          </Button>
         </div>
       </motion.div>
 

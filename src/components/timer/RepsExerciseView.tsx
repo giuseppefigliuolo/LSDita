@@ -52,7 +52,7 @@ export default function RepsExerciseView({
             </svg>
             Allez
           </PrimaryBarButton>
-          <ExerciseNotesButton bar exerciseId={exercise.id} onClick={onOpenNotes} />
+          <ExerciseNotesButton size="lg" exerciseId={exercise.id} onClick={onOpenNotes} />
         </>
       }
     />
