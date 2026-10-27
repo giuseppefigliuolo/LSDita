@@ -280,6 +280,19 @@ body::before {
   to { rotate: 360deg; }
 }
 
+/* Falling sand stream of the hourglass timer (dash pattern 8 4 = 12, two cycles) */
+@utility hourglass-stream {
+  animation: hourglass-stream 0.6s linear infinite;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+  }
+}
+
+@keyframes hourglass-stream {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -24; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

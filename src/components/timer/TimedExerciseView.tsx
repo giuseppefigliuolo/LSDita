@@ -12,6 +12,8 @@ interface TimedExerciseViewProps {
   currentSet: number
   currentRep: number
   timeRemaining: number
+  /** Length of the running timer, in seconds */
+  timerDuration: number
   onPause: () => void
   onResume: () => void
   onSkipTimer: () => void
@@ -19,12 +21,13 @@ interface TimedExerciseViewProps {
   onOpenInfo: () => void
   onOpenNotes: () => void
   onClose: () => void
+  actionsHidden?: boolean
 }
 
 /**
  * View for timer-based exercises (`timed_hang`, `timed_hold`, `repeaters`,
  * `timed_stretch`), also used for the rest between sets of `reps` exercises.
- * Displays the seconds left plus pause/skip controls.
+ * Displays the seconds left as an hourglass plus pause/skip controls.
  */
 export default function TimedExerciseView({
   exercise,
@@ -35,6 +38,7 @@ export default function TimedExerciseView({
   currentSet,
   currentRep,
   timeRemaining,
+  timerDuration,
   onPause,
   onResume,
   onSkipTimer,
@@ -42,6 +46,7 @@ export default function TimedExerciseView({
   onOpenInfo,
   onOpenNotes,
   onClose,
+  actionsHidden,
 }: TimedExerciseViewProps) {
   const activePhase = phase === 'paused' ? (wasPausedPhase ?? 'hanging') : phase
   const isRepeaters = exercise.type === 'repeaters'
@@ -62,11 +67,13 @@ export default function TimedExerciseView({
     phase === 'countdown' ||
     (phase === 'paused' && wasPausedPhase === 'countdown')
 
-  const caption = isCountdownPhase
-    ? 'Posizionati!'
-    : isRepeaters
-      ? `Serie ${currentSet} di ${exercise.sets}`
-      : undefined
+  const caption = phase === 'paused'
+    ? 'In pausa'
+    : isCountdownPhase
+      ? 'Posizionati!'
+      : isRepeaters
+        ? `Serie ${currentSet} di ${exercise.sets}`
+        : undefined
 
   return (
     <ActiveExerciseScreen
@@ -75,15 +82,32 @@ export default function TimedExerciseView({
       weekNumber={weekNumber}
       onClose={onClose}
       onOpenInfo={onOpenInfo}
+      actionsHidden={actionsHidden}
       progress={{
         total: progressTotal,
         current: progressCurrent,
         state: progressState,
         unit: isRepeaters ? 'Rep' : 'Serie',
       }}
-      contentKey={`${exerciseIndex}-${phase}`}
-      value={phase === 'exercise_complete' ? null : Math.ceil(timeRemaining)}
-      label={getPhaseLabel(phase)}
+      // A paused timer keeps its phase's key, so the hourglass freezes instead of re-mounting
+      contentKey={`${exerciseIndex}-${activePhase}`}
+      timer={
+        phase === 'exercise_complete'
+          ? undefined
+          : {
+              kind:
+                activePhase === 'resting' || activePhase === 'set_rest'
+                  ? 'rest'
+                  : activePhase === 'countdown'
+                    ? 'prep'
+                    : 'work',
+              remaining: timeRemaining,
+              total: timerDuration,
+              running: phase !== 'paused',
+            }
+      }
+      value={null}
+      label="Completato"
       caption={caption}
       actions={
         <>
@@ -113,23 +137,4 @@ export default function TimedExerciseView({
       }
     />
   )
-}
-
-function getPhaseLabel(phase: WorkoutPhase): string {
-  switch (phase) {
-    case 'countdown':
-      return 'Preparati'
-    case 'hanging':
-      return 'Tieni'
-    case 'resting':
-      return 'Riposa'
-    case 'set_rest':
-      return 'Riposo tra serie'
-    case 'paused':
-      return 'Pausa'
-    case 'exercise_complete':
-      return 'Completato'
-    default:
-      return ''
-  }
 }

@@ -200,6 +200,7 @@ export default function WorkoutRunner({
           onOpenInfo={openInfo}
           onOpenNotes={openNotes}
           onClose={onExit}
+          actionsHidden={showInfo}
         />
       ) : (
         <TimedExerciseView
@@ -211,6 +212,7 @@ export default function WorkoutRunner({
           currentSet={currentSet}
           currentRep={currentRep}
           timeRemaining={timer.timeRemaining}
+          timerDuration={timer.duration}
           onPause={pauseTimer}
           onResume={resumeTimer}
           onSkipTimer={skipTimer}
@@ -218,6 +220,7 @@ export default function WorkoutRunner({
           onOpenInfo={openInfo}
           onOpenNotes={openNotes}
           onClose={onExit}
+          actionsHidden={showInfo}
         />
       )}
 

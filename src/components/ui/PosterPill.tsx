@@ -1,12 +1,17 @@
 import type { ReactNode } from 'react'
 
 interface PosterPillProps {
-  /** paper: outlined chip on a coloured block; ink: solid plum label */
-  variant?: 'paper' | 'ink'
+  /**
+   * paper: outlined chip on a coloured block; ink: solid plum label;
+   * status: bordered uppercase label filled with `bg` (runner timer state)
+   */
+  variant?: 'paper' | 'ink' | 'status'
   /** sm 11px (default), md 12px with roomier padding (runner + info sheet chips) */
   size?: 'sm' | 'md'
-  /** Fill for the paper variant, e.g. a pastel chip */
+  /** Fill for the paper and status variants, e.g. a pastel chip */
   bg?: string
+  /** Text colour for the status variant (defaults to plum) */
+  color?: string
   className?: string
   children: ReactNode
 }
@@ -16,18 +21,22 @@ export default function PosterPill({
   variant = 'paper',
   size = 'sm',
   bg,
+  color,
   className = '',
   children,
 }: PosterPillProps) {
+  const tracking = size === 'md' ? 'tracking-[0.14em]' : 'tracking-[0.12em]'
   const look =
     variant === 'ink'
-      ? `bg-plum text-cream uppercase ${size === 'md' ? 'tracking-[0.14em]' : 'tracking-[0.12em]'}`
-      : 'border-[1.5px] border-plum bg-paper text-plum'
+      ? `bg-plum text-cream uppercase ${tracking}`
+      : variant === 'status'
+        ? `border-2 border-plum bg-paper text-plum uppercase ${tracking}`
+        : 'border-[1.5px] border-plum bg-paper text-plum'
   const scale = size === 'md' ? 'px-3 py-[5px] text-xs' : 'px-2.5 py-1 text-[11px]'
   return (
     <span
       className={`inline-block whitespace-nowrap rounded-full font-mono font-bold ${look} ${scale} ${className}`}
-      style={bg ? { backgroundColor: bg } : undefined}
+      style={bg || color ? { backgroundColor: bg, color } : undefined}
     >
       {children}
     </span>

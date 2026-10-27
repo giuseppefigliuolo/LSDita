@@ -5,8 +5,25 @@ import MuteButton from '../ui/MuteButton'
 import PosterIconButton from '../ui/PosterIconButton'
 import PosterPill from '../ui/PosterPill'
 import Sunburst from '../ui/Sunburst'
+import HourglassTimer from './HourglassTimer'
 import SetProgressDots from './SetProgressDots'
 import { getExerciseColor } from '../../utils/exerciseColors'
+
+export interface ActiveTimer {
+  /** rest: recovery between reps/sets; prep: lead-in countdown; work: the timed effort */
+  kind: 'rest' | 'prep' | 'work'
+  /** Seconds left, as reported by the timer */
+  remaining: number
+  total: number
+  running: boolean
+}
+
+/** Sand, number and pill colours per timer kind */
+const TIMER_LOOK = {
+  rest: { label: 'Recupero', color: '#9fd8d0', text: '#3b1746' },
+  prep: { label: 'Preparati', color: '#f0901e', text: '#3b1746' },
+  work: { label: 'Esecuzione', color: '#e2572b', text: '#fdf5e4' },
+} as const
 
 interface ActiveExerciseScreenProps {
   exercise: Exercise
@@ -22,12 +39,16 @@ interface ActiveExerciseScreenProps {
   }
   /** Re-keys the centre so it fades in on every set / phase change */
   contentKey: string
-  /** Big number (reps or seconds); null shows a check instead */
-  value: number | null
-  label: string
+  /** Running timer: drawn as an hourglass with the seconds left, in place of `value` and `label` */
+  timer?: ActiveTimer
+  /** Big number (reps); null shows a check instead */
+  value?: number | null
+  label?: string
   caption?: ReactNode
   /** Contents of the bottom action bar */
   actions: ReactNode
+  /** Hides the bar (keeping its space) while the info sheet's resume row sits on top of it */
+  actionsHidden?: boolean
 }
 
 /** Full-colour "exercise in progress" screen shared by the reps and the timed views. */
@@ -39,13 +60,17 @@ export default function ActiveExerciseScreen({
   onOpenInfo,
   progress,
   contentKey,
-  value,
+  timer,
+  value = null,
   label,
   caption,
   actions,
+  actionsHidden = false,
 }: ActiveExerciseScreenProps) {
   const color = getExerciseColor(exerciseIndex)
   const digits = value == null ? 0 : String(value).length
+  const timerLook = timer ? TIMER_LOOK[timer.kind] : null
+  const seconds = timer ? Math.ceil(timer.remaining) : 0
 
   return (
     <div
@@ -99,9 +124,38 @@ export default function ActiveExerciseScreen({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18 }}
-            className="flex flex-col items-center gap-3.5"
+            className="flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-3.5"
           >
-            {value == null ? (
+            {timer && timerLook ? (
+              <>
+                {/* 180×280, shrinking only when a short screen has no room for it */}
+                <div className="relative max-h-[280px] min-h-0 w-full flex-1">
+                  <HourglassTimer
+                    remaining={timer.remaining}
+                    total={timer.total}
+                    color={timerLook.color}
+                    running={timer.running}
+                    className="absolute inset-0 m-auto h-full w-auto"
+                  />
+                </div>
+                <span
+                  role="timer"
+                  aria-live="off"
+                  aria-label={`${timerLook.label}, ${seconds} secondi rimanenti`}
+                  className="font-poster text-[96px] leading-[0.9] tabular-nums"
+                  style={{
+                    color: timerLook.color,
+                    WebkitTextStroke: '3px #3b1746',
+                    textShadow: '5px 5px 0 #3b1746',
+                  }}
+                >
+                  {seconds}
+                </span>
+                <PosterPill variant="status" size="md" bg={timerLook.color} color={timerLook.text}>
+                  {timerLook.label}
+                </PosterPill>
+              </>
+            ) : value == null ? (
               <span
                 aria-hidden="true"
                 className="flex size-36 items-center justify-center rounded-full border-2 border-plum bg-poster-red text-paper shadow-[6px_6px_0_#3b1746]"
@@ -123,11 +177,14 @@ export default function ActiveExerciseScreen({
                 {value}
               </span>
             )}
-            <PosterPill variant="ink" size="md">
-              {label}
-            </PosterPill>
-            {caption && (
-              <p className="font-mono text-xs font-bold uppercase tracking-[0.14em]">
+            {!timer && (
+              <PosterPill variant="ink" size="md">
+                {label}
+              </PosterPill>
+            )}
+            {/* With a timer the line is always reserved, so a caption coming or going doesn't move the hourglass */}
+            {(caption || timer) && (
+              <p className="min-h-[1lh] font-mono text-xs font-bold uppercase tracking-[0.14em]">
                 {caption}
               </p>
             )}
@@ -135,7 +192,11 @@ export default function ActiveExerciseScreen({
         </AnimatePresence>
       </div>
 
-      <div className="flex shrink-0 items-center gap-3 rounded-t-[32px] border-t-2 border-plum bg-paper px-5 pt-[18px] pb-[calc(34px+env(safe-area-inset-bottom,0px))]">
+      <div
+        className={`flex shrink-0 items-center gap-3 rounded-t-[32px] border-t-2 border-plum bg-paper px-5 pt-[18px] pb-[calc(34px+env(safe-area-inset-bottom,0px))] ${
+          actionsHidden ? 'invisible' : ''
+        }`}
+      >
         {actions}
       </div>
     </div>

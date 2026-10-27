@@ -2,6 +2,8 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 
 interface UseTimerReturn {
   timeRemaining: number
+  /** Length of the timer last started, in seconds */
+  duration: number
   isRunning: boolean
   progress: number
   start: (duration: number) => void
@@ -88,5 +90,5 @@ export function useTimer(onComplete: () => void): UseTimerReturn {
 
   const progress = totalDuration > 0 ? timeRemaining / totalDuration : 1
 
-  return { timeRemaining, isRunning, progress, start, pause, resume, stop, reset }
+  return { timeRemaining, duration: totalDuration, isRunning, progress, start, pause, resume, stop, reset }
 }

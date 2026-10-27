@@ -12,6 +12,7 @@ interface RepsExerciseViewProps {
   onOpenInfo: () => void
   onOpenNotes: () => void
   onClose: () => void
+  actionsHidden?: boolean
 }
 
 /** View for `reps`-type exercises (no timer, just a tap-to-complete button). */
@@ -25,6 +26,7 @@ export default function RepsExerciseView({
   onOpenInfo,
   onOpenNotes,
   onClose,
+  actionsHidden,
 }: RepsExerciseViewProps) {
   const hasWeight = exercise.weight && exercise.weight !== 'corpo libero'
 
@@ -35,6 +37,7 @@ export default function RepsExerciseView({
       weekNumber={weekNumber}
       onClose={onClose}
       onOpenInfo={onOpenInfo}
+      actionsHidden={actionsHidden}
       progress={{ total: exercise.sets, current: currentSet, state: 'active' }}
       contentKey={`${exerciseIndex}-reps-${currentSet}`}
       value={exercise.repsPerSet}
