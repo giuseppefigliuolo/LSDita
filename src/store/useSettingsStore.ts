@@ -47,7 +47,7 @@ export const useSettingsStore = create<SettingsStore>()(
       muted: false,
       vibrationEnabled: true,
       volume: 0.8,
-      selectedProgram: 'home',
+      selectedProgram: 'lead_autumn_2026',
       countdownDuration: 3,
       currentWeek: null,
       customProgram: null,
@@ -68,7 +68,7 @@ export const useSettingsStore = create<SettingsStore>()(
           customProgram: program,
           selectedProgram:
             program == null && s.selectedProgram === 'custom'
-              ? 'home'
+              ? 'lead_autumn_2026'
               : s.selectedProgram
         })),
       setDayOverride: (programId, weekNumber, dayOfWeek, day) =>
