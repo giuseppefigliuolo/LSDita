@@ -14,8 +14,25 @@ export type ExerciseOverride = {
   hangTime: number
 }
 
+/** Progress to restore when resuming an interrupted session. */
+export interface WorkoutResumeState {
+  exerciseIndex: number
+  currentSet: number
+  overrides: Record<number, ExerciseOverride>
+  skippedExercises: string[]
+  completedExercises: number
+  elapsedSeconds: number
+}
+
+/** The set the session would restart from if it were interrupted now. */
+export interface WorkoutResumePoint {
+  exerciseIndex: number
+  currentSet: number
+}
+
 interface UseWorkoutFlowArgs {
   exercises: Exercise[]
+  initialState?: WorkoutResumeState
 }
 
 /**
@@ -25,19 +42,25 @@ interface UseWorkoutFlowArgs {
  * The exposed handlers are the only "actions" the UI should call; all state
  * derivations (labels, totals, etc.) belong to the view components.
  */
-export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
+export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) {
   const [phase, setPhase] = useState<WorkoutPhase>('preview')
-  const [exerciseIndex, setExerciseIndex] = useState(0)
-  const [currentSet, setCurrentSet] = useState(1)
+  const [exerciseIndex, setExerciseIndex] = useState(
+    initialState?.exerciseIndex ?? 0,
+  )
+  const [currentSet, setCurrentSet] = useState(initialState?.currentSet ?? 1)
   const [currentRep, setCurrentRep] = useState(1)
   const [wasPausedPhase, setWasPausedPhase] = useState<WorkoutPhase | null>(
     null,
   )
   const [overrides, setOverrides] = useState<Record<number, ExerciseOverride>>(
-    {},
+    initialState?.overrides ?? {},
   )
-  const [skippedExercises, setSkippedExercises] = useState<string[]>([])
-  const [completedExercises, setCompletedExercises] = useState(0)
+  const [skippedExercises, setSkippedExercises] = useState<string[]>(
+    initialState?.skippedExercises ?? [],
+  )
+  const [completedExercises, setCompletedExercises] = useState(
+    initialState?.completedExercises ?? 0,
+  )
   const [finalDuration, setFinalDuration] = useState(0)
   const [pendingAutoStartSeconds, setPendingAutoStartSeconds] = useState<
     number | null
@@ -59,8 +82,12 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
   const { vibrateShort, vibrateMedium, vibrateLong } = useVibration()
   const { request: wakeLockRequest, release: wakeLockRelease } = useWakeLock()
 
+  const initialElapsedRef = useRef(initialState?.elapsedSeconds ?? 0)
+
+  // A resumed session keeps counting from where it stopped; the time spent
+  // away is not included.
   useEffect(() => {
-    startTimeRef.current = performance.now()
+    startTimeRef.current = performance.now() - initialElapsedRef.current * 1000
   }, [])
 
   // Keep the screen on for the whole session, previews included.
@@ -82,6 +109,20 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
   }, [baseExercise, exerciseOverride])
 
   const isRepsExercise = exercise?.type === 'reps'
+
+  // A set counts as done once its rest (or the exercise-complete screen)
+  // begins; anything earlier restarts the set from its first rep.
+  const effectivePhase = phase === 'paused' ? wasPausedPhase : phase
+  const resumePoint = useMemo<WorkoutResumePoint | null>(() => {
+    if (effectivePhase === 'workout_complete') return null
+    if (effectivePhase === 'exercise_complete') {
+      return { exerciseIndex: exerciseIndex + 1, currentSet: 1 }
+    }
+    if (effectivePhase === 'set_rest') {
+      return { exerciseIndex, currentSet: currentSet + 1 }
+    }
+    return { exerciseIndex, currentSet }
+  }, [effectivePhase, exerciseIndex, currentSet])
 
   /**
    * Enters the next active work phase. Inserts a `countdown` preparation
@@ -420,6 +461,8 @@ export function useWorkoutFlow({ exercises }: UseWorkoutFlowArgs) {
     pendingAutoStartSeconds,
     timer,
     countdownDuration,
+    resumePoint,
+    overrides,
     // actions
     startExercise,
     skipExercise,

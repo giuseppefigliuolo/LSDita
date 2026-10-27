@@ -1,11 +1,16 @@
 import { useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import WorkoutRunner, {
+  type WorkoutCheckpoint,
   type WorkoutProgress,
 } from '../components/timer/WorkoutRunner'
 import { useWorkoutStore } from '../store/useWorkoutStore'
-import { useSettingsStore } from '../store/useSettingsStore'
+import { dayOverrideKey, useSettingsStore } from '../store/useSettingsStore'
+import {
+  resumableSession,
+  useSessionProgressStore,
+} from '../store/useSessionProgressStore'
 import { getProgram } from '../utils/getProgram'
 import type { CompletedWorkout, WorkoutNote } from '../types'
 import { getWorkoutForDay } from '../utils/programUtils'
@@ -14,22 +19,40 @@ import MuteButton from '../components/ui/MuteButton'
 export default function ActiveWorkout() {
   const { weekNumber, dayOfWeek } = useParams<{ weekNumber: string; dayOfWeek: string }>()
   const navigate = useNavigate()
+  const location = useLocation()
   const { upsertWorkout, addNote } = useWorkoutStore()
+  const { sessions, saveSession, clearSession } = useSessionProgressStore()
   const { selectedProgram } = useSettingsStore()
   const program = getProgram(selectedProgram)
 
+  const week = Number(weekNumber)
+  const day = getWorkoutForDay(program, week, dayOfWeek ?? '')
+  const sessionKey = dayOverrideKey(selectedProgram, week, dayOfWeek ?? '')
+
+  // Picked once on mount: the WorkoutDay "Riprendi" button asks for it.
+  const [resumed] = useState(() => {
+    const wantsResume = (location.state as { resume?: boolean } | null)?.resume
+    return wantsResume && day
+      ? resumableSession(
+          sessions[sessionKey],
+          day.exercises.map((e) => e.id),
+        )
+      : null
+  })
+
   // One record per run: repeating the same session on the same day adds a new
-  // entry instead of overwriting the previous one.
+  // entry instead of overwriting the previous one. A resumed run keeps its
+  // original identity so it keeps updating the same record.
   const [run] = useState(() => {
+    if (resumed) {
+      return { startedAt: resumed.startedAt, dateStr: resumed.dateStr }
+    }
     const startedAt = new Date()
     return {
       startedAt: startedAt.getTime(),
       dateStr: startedAt.toISOString().split('T')[0],
     }
   })
-
-  const week = Number(weekNumber)
-  const day = getWorkoutForDay(program, week, dayOfWeek ?? '')
 
   if (!day) {
     return (
@@ -59,6 +82,20 @@ export default function ActiveWorkout() {
     }
     upsertWorkout(completed)
     return { workoutId, dateStr }
+  }
+
+  function saveCheckpoint(checkpoint: WorkoutCheckpoint) {
+    if (!checkpoint) {
+      clearSession(sessionKey)
+      return
+    }
+    saveSession(sessionKey, {
+      ...checkpoint,
+      exerciseIds: day!.exercises.map((e) => e.id),
+      startedAt: run.startedAt,
+      dateStr: run.dateStr,
+      updatedAt: new Date().toISOString(),
+    })
   }
 
   function handleComplete(
@@ -113,7 +150,9 @@ export default function ActiveWorkout() {
             <MuteButton />
           </header>
         }
+        initialState={resumed ?? undefined}
         onProgress={saveProgress}
+        onCheckpoint={saveCheckpoint}
         onComplete={handleComplete}
         onExit={handleExit}
       />

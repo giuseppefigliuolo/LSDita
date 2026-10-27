@@ -18,7 +18,11 @@ import GuideSectionCard from '../components/ui/GuideSectionCard'
 import LinkCard from '../components/ui/LinkCard'
 import LoadCard from '../components/LoadCard'
 import type { DayIntensity, Exercise } from '../types'
-import { useSettingsStore } from '../store/useSettingsStore'
+import { dayOverrideKey, useSettingsStore } from '../store/useSettingsStore'
+import {
+  resumableSession,
+  useSessionProgressStore,
+} from '../store/useSessionProgressStore'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useBenchmarkStore } from '../store/useBenchmarkStore'
 import { getProgram } from '../utils/getProgram'
@@ -70,6 +74,9 @@ export default function WorkoutDay() {
   }, [])
   const { selectedProgram } = useSettingsStore()
   const { completedWorkouts, markComplete } = useWorkoutStore()
+  const sessionKey = dayOverrideKey(selectedProgram, Number(weekNumber), dayOfWeek ?? '')
+  const savedSession = useSessionProgressStore((s) => s.sessions[sessionKey])
+  const clearSession = useSessionProgressStore((s) => s.clearSession)
   // Exercise loads are resolved from the benchmark results: re-render when they change
   useBenchmarkStore((s) => s.results)
   useBenchmarkStore((s) => s.bodyweightKg)
@@ -97,6 +104,10 @@ export default function WorkoutDay() {
   const hasGuide = guideBefore.length + guideAfter.length > 0
   const hasExercises = day.exercises.length > 0
   const loads = program.benchmarks ? getDistinctLoads(day.exercises) : []
+  const resumable = resumableSession(
+    savedSession,
+    day.exercises.map((e) => e.id)
+  )
   const isDone = completedWorkouts.some(
     (w) =>
       !w.partial &&
@@ -277,7 +288,33 @@ export default function WorkoutDay() {
         className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-plum bg-cream px-5 pt-3.5 pb-[calc(14px+env(safe-area-inset-bottom,0px))]"
       >
         <div className="mx-auto max-w-lg">
-          {hasExercises ? (
+          {hasExercises && resumable ? (
+            <div className="flex gap-3">
+              <Button
+                variant="ghost"
+                size="lg"
+                className="flex-1"
+                onClick={() => {
+                  clearSession(sessionKey)
+                  navigate(`/workout/${weekNumber}/${dayOfWeek}/active`)
+                }}
+              >
+                Ricomincia
+              </Button>
+              <Button
+                variant="primary"
+                size="lg"
+                className="flex-[2]"
+                onClick={() =>
+                  navigate(`/workout/${weekNumber}/${dayOfWeek}/active`, {
+                    state: { resume: true }
+                  })
+                }
+              >
+                ▶ Riprendi · {resumable.exerciseIndex + 1}/{day.exercises.length}
+              </Button>
+            </div>
+          ) : hasExercises ? (
             <Button
               variant="primary"
               size="lg"

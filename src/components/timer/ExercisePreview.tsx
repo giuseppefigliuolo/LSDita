@@ -35,6 +35,8 @@ interface ExercisePreviewProps {
   upcomingExercises?: Exercise[]
   onStart: (overrides: { sets: number; repsPerSet: number; hangTime: number }) => void
   onSkip: () => void
+  /** Set to restart from when resuming an interrupted exercise. */
+  resumeFromSet?: number
   autoStartSeconds?: number
   weekNumber?: number
   onClose: () => void
@@ -47,6 +49,7 @@ export default function ExercisePreview({
   upcomingExercises = [],
   onStart,
   onSkip,
+  resumeFromSet,
   autoStartSeconds,
   weekNumber,
   onClose,
@@ -312,7 +315,11 @@ export default function ExercisePreview({
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <polygon points="5 3 19 12 5 21" />
               </svg>
-              {autoActive ? `Inizia tra ${formatCountdown(remainingSecs)}` : 'Inizia'}
+              {autoActive
+                ? `Inizia tra ${formatCountdown(remainingSecs)}`
+                : resumeFromSet
+                  ? `Riprendi · serie ${resumeFromSet}`
+                  : 'Inizia'}
             </span>
           </Button>
         </div>

@@ -8,7 +8,7 @@ import TimedExerciseView from './TimedExerciseView'
 import SkipConfirmDialog from './SkipConfirmDialog'
 import ExerciseInfoModal from './ExerciseInfoModal'
 import ExerciseNotesModal from './ExerciseNotesModal'
-import { useWorkoutFlow } from './useWorkoutFlow'
+import { useWorkoutFlow, type WorkoutResumeState } from './useWorkoutFlow'
 
 export interface WorkoutProgress {
   exercisesCompleted: number
@@ -16,6 +16,9 @@ export interface WorkoutProgress {
   duration: number
   skippedExercises: string[]
 }
+
+/** Where to pick the session up again, or `null` when there is nothing to resume. */
+export type WorkoutCheckpoint = WorkoutResumeState | null
 
 interface WorkoutRunnerProps {
   exercises: Exercise[]
@@ -31,6 +34,10 @@ interface WorkoutRunnerProps {
    * crash. `finished` is true once the final screen is reached.
    */
   onProgress?: (data: WorkoutProgress, finished: boolean) => void
+  /** Progress to restore when resuming an interrupted session. */
+  initialState?: WorkoutResumeState
+  /** Called whenever the resume point moves (set done, exercise done/skipped). */
+  onCheckpoint?: (checkpoint: WorkoutCheckpoint) => void
   onComplete: (
     data: WorkoutProgress & {
       note: string
@@ -46,10 +53,12 @@ export default function WorkoutRunner({
   weekNumber,
   header,
   onProgress,
+  initialState,
+  onCheckpoint,
   onComplete,
   onExit,
 }: WorkoutRunnerProps) {
-  const flow = useWorkoutFlow({ exercises })
+  const flow = useWorkoutFlow({ exercises, initialState })
   const {
     phase,
     exercise,
@@ -72,12 +81,16 @@ export default function WorkoutRunner({
     getElapsedSeconds,
     skippedExercises,
     skipExerciseCompleteWait,
+    resumePoint,
+    overrides,
   } = flow
 
   const onProgressRef = useRef(onProgress)
+  const onCheckpointRef = useRef(onCheckpoint)
   useEffect(() => {
     onProgressRef.current = onProgress
-  }, [onProgress])
+    onCheckpointRef.current = onCheckpoint
+  }, [onProgress, onCheckpoint])
 
   const isWorkoutComplete = phase === 'workout_complete'
   const processedExercises = completedExercises + skippedExercises.length
@@ -97,6 +110,28 @@ export default function WorkoutRunner({
     )
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processedExercises, isWorkoutComplete])
+
+  // Save the resume point whenever it moves. Nothing is saved until the
+  // session has actually progressed past the very first set.
+  const resumeExerciseIndex = resumePoint?.exerciseIndex
+  const resumeSet = resumePoint?.currentSet
+  useEffect(() => {
+    if (resumeExerciseIndex === undefined || resumeSet === undefined) {
+      onCheckpointRef.current?.(null)
+      return
+    }
+    if (resumeExerciseIndex === 0 && resumeSet === 1 && processedExercises === 0)
+      return
+    onCheckpointRef.current?.({
+      exerciseIndex: resumeExerciseIndex,
+      currentSet: resumeSet,
+      overrides,
+      skippedExercises,
+      completedExercises,
+      elapsedSeconds: getElapsedSeconds(),
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [resumeExerciseIndex, resumeSet, processedExercises])
 
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
   const [showInfo, setShowInfo] = useState(false)
@@ -176,6 +211,7 @@ export default function WorkoutRunner({
         upcomingExercises={exercises.slice(exerciseIndex + 1, exerciseIndex + 4)}
         onStart={startExercise}
         onSkip={skipExercise}
+        resumeFromSet={currentSet > 1 ? currentSet : undefined}
         autoStartSeconds={pendingAutoStartSeconds ?? undefined}
         weekNumber={weekNumber}
         onClose={onExit}
