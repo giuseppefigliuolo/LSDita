@@ -414,8 +414,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -431,8 +431,8 @@
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -894,8 +894,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -911,8 +911,8 @@
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla. Prima seduta sul 20 mm: prima delle serie fai una tenuta massima con questa mano (stop a 60\") per tarare il lavoro, poi 3' di recupero.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1374,8 +1374,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1391,8 +1391,8 @@
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1855,8 +1855,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1866,14 +1866,14 @@
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "24 kg",
+              "notes": "Da questa settimana il peso non è più fisso: i 22 kg per 10\" erano troppo leggeri. Parti da 24 kg. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -1883,8 +1883,8 @@
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "24 kg",
+              "notes": "Da questa settimana il peso non è più fisso: i 22 kg per 10\" erano troppo leggeri. Parti da 24 kg. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -2209,16 +2209,18 @@
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
-              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
+              "description": "Alla sbarra. Ogni serie sono 3 tenute da 5\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "lockoff",
               "sets": 2,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 5,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "weight": "corpo libero",
+              "notes": "Settimana di scarico: 5\" per angolo a corpo libero, per abituarti alla durata del blocco 2."
             },
             {
               "id": "la-s3-knee-raises",
@@ -2381,8 +2383,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -2392,14 +2394,14 @@
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -2409,8 +2411,8 @@
               "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -2694,17 +2696,18 @@
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
-              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
+              "description": "Alla sbarra. Ogni serie sono 3 tenute da 5\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "lockoff",
               "sets": 3,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 5,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "medio",
-              "weight": "+2–5 kg"
+              "weight": "+4 kg",
+              "notes": "Zavorra alla cintura o nello zaino, come per le trazioni. Obiettivo: l'ultima tenuta a 120° della terza serie pulita, con il gomito fermo fino al segnale. Ci arrivi con margine? +2 kg la volta dopo. Il gomito si apre prima del segnale? −2 kg. Segna la zavorra nelle note dell'esercizio."
             },
             {
               "id": "la-s3-tuck-front-lever",
@@ -2715,10 +2718,11 @@
               "illustration": "hollow-body",
               "sets": 3,
               "repsPerSet": 1,
-              "hangTime": 5,
+              "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
           ]
         },
@@ -2867,8 +2871,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -2878,14 +2882,14 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Prima seduta a 15\": parti da 2 kg in meno del peso con cui chiudevi i 10\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -2895,8 +2899,8 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Prima seduta a 15\": parti da 2 kg in meno del peso con cui chiudevi i 10\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -3180,17 +3184,18 @@
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
-              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
+              "description": "Alla sbarra. Ogni serie sono 3 tenute da 5\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "lockoff",
               "sets": 3,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 5,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "medio",
-              "weight": "+2–5 kg"
+              "weight": "ultima zavorra",
+              "notes": "Zavorra alla cintura o nello zaino, come per le trazioni. Obiettivo: l'ultima tenuta a 120° della terza serie pulita, con il gomito fermo fino al segnale. Ci arrivi con margine? +2 kg la volta dopo. Il gomito si apre prima del segnale? −2 kg. Segna la zavorra nelle note dell'esercizio."
             },
             {
               "id": "la-s3-tuck-front-lever",
@@ -3201,10 +3206,11 @@
               "illustration": "hollow-body",
               "sets": 3,
               "repsPerSet": 1,
-              "hangTime": 5,
+              "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
           ]
         },
@@ -3353,8 +3359,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -3364,14 +3370,14 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso",
+              "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -3381,8 +3387,8 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso",
+              "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -3666,17 +3672,18 @@
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
-              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
+              "description": "Alla sbarra. Ogni serie sono 3 tenute da 5\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "lockoff",
               "sets": 3,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 5,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "medio",
-              "weight": "+2–5 kg"
+              "weight": "ultima zavorra",
+              "notes": "Zavorra alla cintura o nello zaino, come per le trazioni. Obiettivo: l'ultima tenuta a 120° della terza serie pulita, con il gomito fermo fino al segnale. Ci arrivi con margine? +2 kg la volta dopo. Il gomito si apre prima del segnale? −2 kg. Segna la zavorra nelle note dell'esercizio."
             },
             {
               "id": "la-s3-tuck-front-lever",
@@ -3687,10 +3694,11 @@
               "illustration": "hollow-body",
               "sets": 3,
               "repsPerSet": 1,
-              "hangTime": 5,
+              "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
           ]
         },
@@ -3839,8 +3847,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -3850,14 +3858,14 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso",
+              "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -3867,8 +3875,8 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso",
+              "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -4140,16 +4148,18 @@
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
-              "description": "Alla sbarra. Ogni serie sono 3 tenute da 3\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
+              "description": "Alla sbarra. Ogni serie sono 3 tenute da 5\" di fila, una per angolo del gomito: 45° (in alto), 90°, 120°. Al segnale passi all'angolo successivo. Recupero 2' tra le serie.",
               "equipment": "pull_up_bar",
               "type": "timed_hold",
               "illustration": "lockoff",
               "sets": 2,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 5,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "weight": "metà zavorra",
+              "notes": "Settimana di scarico: metà della zavorra dell'ultima seduta, niente aumenti."
             },
             {
               "id": "la-s3-tuck-front-lever",
@@ -4160,10 +4170,11 @@
               "illustration": "hollow-body",
               "sets": 2,
               "repsPerSet": 1,
-              "hangTime": 5,
+              "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "notes": "Settimana di scarico: resta al livello dell'ultima seduta, niente passaggi di livello."
             }
           ]
         },
@@ -4311,8 +4322,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4322,14 +4333,14 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4339,8 +4350,8 @@
               "hangTime": 15,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -4618,10 +4629,11 @@
               "illustration": "hollow-body",
               "sets": 2,
               "repsPerSet": 1,
-              "hangTime": 5,
+              "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
           ]
         },
@@ -4769,8 +4781,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4780,14 +4792,14 @@
               "hangTime": 20,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Prima seduta a 20\": parti da 2 kg in meno del peso con cui chiudevi i 15\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -4797,8 +4809,8 @@
               "hangTime": 20,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso −2 kg",
+              "notes": "Prima seduta a 20\": parti da 2 kg in meno del peso con cui chiudevi i 15\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
@@ -5137,10 +5149,11 @@
               "illustration": "hollow-body",
               "sets": 2,
               "repsPerSet": 1,
-              "hangTime": 5,
+              "hangTime": 10,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
           ],
           "recordsTests": true
@@ -5290,8 +5303,8 @@
             },
             {
               "id": "la-casa-b-lift-left",
-              "name": "Lift 22 kg 20 mm · mano sinistra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
+              "name": "Lift 20 mm · mano sinistra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Più serie a sinistra: è la mano indietro.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -5301,14 +5314,14 @@
               "hangTime": 20,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso",
+              "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
               "id": "la-casa-b-lift-right",
-              "name": "Lift 22 kg 20 mm · mano destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio da 22 kg sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
+              "name": "Lift 20 mm · mano destra",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano. Listello da 20 mm a mano aperta, lo stesso della trave. 1' di recupero. Meno serie della sinistra: sul 25 mm tiene già 54\", qui basta mantenerla.",
               "equipment": "hangboard",
               "type": "timed_hold",
               "grip": "open_hand",
@@ -5318,8 +5331,8 @@
               "hangTime": 20,
               "restBetweenReps": 0,
               "restBetweenSets": 60,
-              "weight": "22 kg",
-              "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
+              "weight": "ultimo peso",
+              "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
               "difficulty": "medio"
             },
             {
