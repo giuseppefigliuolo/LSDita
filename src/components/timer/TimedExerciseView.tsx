@@ -1,5 +1,6 @@
 import type { Exercise, WorkoutPhase } from '../../types'
 import ExerciseNotesButton from './ExerciseNotesButton'
+import Button from '../ui/Button'
 import IconButton from '../ui/IconButton'
 import ActiveExerciseScreen, { PrimaryBarButton, SkipExerciseButton } from './ActiveExerciseScreen'
 
@@ -18,6 +19,8 @@ interface TimedExerciseViewProps {
   onResume: () => void
   onSkipTimer: () => void
   onSkipExercise: () => void
+  /** Ends the exercise as completed; offered only when `exercise.canFinishEarly` */
+  onFinishExercise: () => void
   onOpenInfo: () => void
   onOpenNotes: () => void
   onClose: () => void
@@ -43,6 +46,7 @@ export default function TimedExerciseView({
   onResume,
   onSkipTimer,
   onSkipExercise,
+  onFinishExercise,
   onOpenInfo,
   onOpenNotes,
   onClose,
@@ -50,6 +54,14 @@ export default function TimedExerciseView({
 }: TimedExerciseViewProps) {
   const activePhase = phase === 'paused' ? (wasPausedPhase ?? 'hanging') : phase
   const isRepeaters = exercise.type === 'repeaters'
+
+  // Offered between sets once at least one is done, never mid-hang
+  const setsDone = activePhase === 'set_rest' ? currentSet : currentSet - 1
+  const showFinish =
+    exercise.canFinishEarly === true &&
+    setsDone >= 1 &&
+    activePhase !== 'hanging' &&
+    activePhase !== 'exercise_complete'
 
   const progressTotal = isRepeaters ? exercise.repsPerSet : exercise.sets
   const progressCurrent = isRepeaters ? currentRep : currentSet
@@ -109,6 +121,16 @@ export default function TimedExerciseView({
       value={null}
       label="Completato"
       caption={caption}
+      footer={
+        showFinish ? (
+          <Button variant="ghost" size="md" onClick={onFinishExercise}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Ho finito
+          </Button>
+        ) : undefined
+      }
       actions={
         <>
           <SkipExerciseButton onClick={onSkipExercise} />

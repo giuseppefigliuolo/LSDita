@@ -409,6 +409,17 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
     timerResume,
   ])
 
+  /** End the current exercise as completed, dropping the sets still to do. */
+  const finishExerciseEarly = useCallback(() => {
+    if (!exercise) return
+    timerStop()
+    setWasPausedPhase(null)
+    setCompletedExercises((c) => c + 1)
+    speak('Esercizio completato!')
+    vibrateMedium()
+    advanceToNextExercise()
+  }, [exercise, timerStop, speak, vibrateMedium, advanceToNextExercise])
+
   /** Mark the current set as done for a reps-counted exercise. */
   const repsSetDone = useCallback(() => {
     if (!exercise) return
@@ -466,6 +477,7 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
     // actions
     startExercise,
     skipExercise,
+    finishExerciseEarly,
     skipTimer,
     pauseTimer,
     resumeTimer,

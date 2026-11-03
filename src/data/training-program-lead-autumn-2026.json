@@ -176,8 +176,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "da peso corporeo, +2–3 kg a serie",
-              "notes": "4–8 serie: quando arrivi a ~3\" di margine salta le serie restanti e inserisci il CR nei Test.",
-              "difficulty": "hard"
+              "notes": "4–8 serie: quando arrivi a ~3\" di margine tocca \"Ho finito\" durante il recupero e inserisci il CR nei Test.",
+              "difficulty": "hard",
+              "canFinishEarly": true
             },
             {
               "id": "la-test-cr-oh",
@@ -193,8 +194,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "da peso corporeo, +2–3 kg a serie",
-              "notes": "4–8 serie: quando arrivi a ~3\" di margine salta le serie restanti e inserisci il CR nei Test.",
-              "difficulty": "hard"
+              "notes": "4–8 serie: quando arrivi a ~3\" di margine tocca \"Ho finito\" durante il recupero e inserisci il CR nei Test.",
+              "difficulty": "hard",
+              "canFinishEarly": true
             }
           ]
         },
@@ -2031,8 +2033,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "da peso corporeo, +2–3 kg a serie",
-              "notes": "4–8 serie: quando arrivi a ~3\" di margine salta le serie restanti e inserisci il CR nei Test.",
-              "difficulty": "hard"
+              "notes": "4–8 serie: quando arrivi a ~3\" di margine tocca \"Ho finito\" durante il recupero e inserisci il CR nei Test.",
+              "difficulty": "hard",
+              "canFinishEarly": true
             },
             {
               "id": "la-test-cr-oh",
@@ -2048,8 +2051,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "da peso corporeo, +2–3 kg a serie",
-              "notes": "4–8 serie: quando arrivi a ~3\" di margine salta le serie restanti e inserisci il CR nei Test.",
-              "difficulty": "hard"
+              "notes": "4–8 serie: quando arrivi a ~3\" di margine tocca \"Ho finito\" durante il recupero e inserisci il CR nei Test.",
+              "difficulty": "hard",
+              "canFinishEarly": true
             },
             {
               "id": "la-s1-trave-hc",
@@ -4957,8 +4961,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "da peso corporeo, +2–3 kg a serie",
-              "notes": "4–8 serie: quando arrivi a ~3\" di margine salta le serie restanti e inserisci il CR nei Test.",
-              "difficulty": "hard"
+              "notes": "4–8 serie: quando arrivi a ~3\" di margine tocca \"Ho finito\" durante il recupero e inserisci il CR nei Test.",
+              "difficulty": "hard",
+              "canFinishEarly": true
             },
             {
               "id": "la-test-cr-oh",
@@ -4974,8 +4979,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "weight": "da peso corporeo, +2–3 kg a serie",
-              "notes": "4–8 serie: quando arrivi a ~3\" di margine salta le serie restanti e inserisci il CR nei Test.",
-              "difficulty": "hard"
+              "notes": "4–8 serie: quando arrivi a ~3\" di margine tocca \"Ho finito\" durante il recupero e inserisci il CR nei Test.",
+              "difficulty": "hard",
+              "canFinishEarly": true
             },
             {
               "id": "la-s1-trave-hc",

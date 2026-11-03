@@ -70,6 +70,7 @@ export default function WorkoutRunner({
     timer,
     startExercise,
     skipExercise,
+    finishExerciseEarly,
     skipTimer,
     pauseTimer,
     resumeTimer,
@@ -134,6 +135,7 @@ export default function WorkoutRunner({
   }, [resumeExerciseIndex, resumeSet, processedExercises])
 
   const [showSkipConfirm, setShowSkipConfirm] = useState(false)
+  const [showFinishConfirm, setShowFinishConfirm] = useState(false)
   const [showInfo, setShowInfo] = useState(false)
 
   const openInfo = useCallback(() => {
@@ -156,6 +158,11 @@ export default function WorkoutRunner({
     setShowSkipConfirm(false)
     skipExercise()
   }, [skipExercise])
+
+  const confirmFinish = useCallback(() => {
+    setShowFinishConfirm(false)
+    finishExerciseEarly()
+  }, [finishExerciseEarly])
 
   const handleSave = useCallback(
     (note: string, feeling: 1 | 2 | 3 | 4 | 5) => {
@@ -254,6 +261,7 @@ export default function WorkoutRunner({
           onResume={resumeTimer}
           onSkipTimer={skipTimer}
           onSkipExercise={() => setShowSkipConfirm(true)}
+          onFinishExercise={() => setShowFinishConfirm(true)}
           onOpenInfo={openInfo}
           onOpenNotes={openNotes}
           onClose={onExit}
@@ -290,6 +298,16 @@ export default function WorkoutRunner({
         open={showSkipConfirm}
         onConfirm={confirmSkip}
         onCancel={() => setShowSkipConfirm(false)}
+      />
+
+      <SkipConfirmDialog
+        open={showFinishConfirm}
+        title="Esercizio finito?"
+        message="Le serie rimanenti non servono: l'esercizio verrà segnato come completato."
+        confirmLabel="Completato"
+        tone="positive"
+        onConfirm={confirmFinish}
+        onCancel={() => setShowFinishConfirm(false)}
       />
 
       <ExerciseInfoModal

@@ -185,6 +185,9 @@ function validateExercise(ex: unknown, ctx: string): string | null {
   if (ex.notes !== undefined && typeof ex.notes !== 'string') {
     return `${ctx}.notes deve essere una stringa.`
   }
+  if (ex.canFinishEarly !== undefined && typeof ex.canFinishEarly !== 'boolean') {
+    return `${ctx}.canFinishEarly deve essere true o false.`
+  }
   return null
 }
 

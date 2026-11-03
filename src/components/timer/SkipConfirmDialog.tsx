@@ -5,12 +5,21 @@ interface SkipConfirmDialogProps {
   open: boolean
   onConfirm: () => void
   onCancel: () => void
+  title?: string
+  message?: string
+  confirmLabel?: string
+  /** danger: red confirm (skipping); positive: teal confirm (finishing) */
+  tone?: 'danger' | 'positive'
 }
 
 export default function SkipConfirmDialog({
   open,
   onConfirm,
   onCancel,
+  title = 'Saltare esercizio?',
+  message = "L'esercizio verrà segnato come saltato.",
+  confirmLabel = 'Salta',
+  tone = 'danger',
 }: SkipConfirmDialogProps) {
   return (
     <AnimatePresence>
@@ -31,10 +40,8 @@ export default function SkipConfirmDialog({
             style={{ borderRadius: RADIUS.card, boxShadow: SHADOW.lg }}
             onClick={(e) => e.stopPropagation()}
           >
-            <p className="text-text font-semibold mb-1">Saltare esercizio?</p>
-            <p className="text-sm text-text-muted mb-5">
-              L&apos;esercizio verrà segnato come saltato.
-            </p>
+            <p className="text-text font-semibold mb-1">{title}</p>
+            <p className="text-sm text-text-muted mb-5">{message}</p>
             <div className="flex gap-3">
               <button
                 onClick={onCancel}
@@ -45,10 +52,12 @@ export default function SkipConfirmDialog({
               </button>
               <button
                 onClick={onConfirm}
-                className="flex-1 h-11 bg-danger/15 border-[2.5px] border-[#3A1248] text-sm font-medium text-danger active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+                className={`flex-1 h-11 border-[2.5px] border-[#3A1248] text-sm font-medium active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all ${
+                  tone === 'danger' ? 'bg-danger/15 text-danger' : 'bg-[#17A8A8] text-[#2D0E4A] font-bold'
+                }`}
                 style={{ borderRadius: RADIUS.btnSm, boxShadow: SHADOW.sm }}
               >
-                Salta
+                {confirmLabel}
               </button>
             </div>
           </motion.div>

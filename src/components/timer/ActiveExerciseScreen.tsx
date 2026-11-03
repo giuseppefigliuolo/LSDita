@@ -46,6 +46,8 @@ interface ActiveExerciseScreenProps {
   value?: number | null
   label?: string
   caption?: ReactNode
+  /** Optional control under the centre content, above the action bar */
+  footer?: ReactNode
   /** Contents of the bottom action bar */
   actions: ReactNode
   /** Hides the bar (keeping its space) while the info sheet's resume row sits on top of it */
@@ -65,6 +67,7 @@ export default function ActiveExerciseScreen({
   value = null,
   label,
   caption,
+  footer,
   actions,
   actionsHidden = false,
 }: ActiveExerciseScreenProps) {
@@ -190,6 +193,20 @@ export default function ActiveExerciseScreen({
               </p>
             )}
           </motion.div>
+        </AnimatePresence>
+        <AnimatePresence>
+          {footer && (
+            <motion.div
+              key="footer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18 }}
+              className={`shrink-0 pb-5 pt-3 ${actionsHidden ? 'invisible' : ''}`}
+            >
+              {footer}
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
 

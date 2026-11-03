@@ -39,6 +39,8 @@ export interface Exercise {
   difficulty?: 'facile' | 'medio' | 'hard'
   /** Load derived from a benchmark (e.g. CR): resolved into `weight` at runtime */
   load?: ExerciseLoad
+  /** `sets` is an upper bound (e.g. a ramp-up test): the runner lets you end it as completed after any set */
+  canFinishEarly?: boolean
 }
 
 export interface ExerciseLoad {
