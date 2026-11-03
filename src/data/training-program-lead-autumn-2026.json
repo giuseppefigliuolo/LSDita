@@ -2665,18 +2665,19 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 20'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
           "intensity": "alta",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 20'",
+          "exercisesTitle": "Parte fisica · 25'",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "5–6 boulder al limite, solo svase e strapiombo, 4–6 tentativi ciascuno, recupero 3'.",
-                "Poi 4×4: 4 boulder 2–3 gradi sotto il limite, fatti di fila, 4 giri, 4' tra un giro e l'altro."
+                "4–5 boulder al limite vero, solo svase e strapiombo: almeno 2 devono essere boulder che non hai mai chiuso. Il grado giusto è quello in cui ti servono più tentativi solo per fare i singoli movimenti. Massimo 6 tentativi ciascuno, recupero 3–4': ogni tentativo è al 100%, se due volte di fila cadi prima del punto più alto che hai raggiunto, cambia boulder.",
+                "Poi 4×4: 4 boulder 2 gradi sotto il limite, fatti di fila, 4 giri, 4' tra un giro e l'altro.",
+                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutti e 16 i passaggi con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi già al secondo giro? Erano troppo duri: scendi di un grado."
               ]
             },
             {
@@ -2699,6 +2700,22 @@
             }
           ],
           "exercises": [
+            {
+              "id": "la-s3-explosive-pullups",
+              "name": "Trazioni esplosive",
+              "description": "Alla sbarra, presa prona alla larghezza delle spalle. Da braccia tese tira il più veloce possibile, cercando di portare il petto a toccare la sbarra. Scendi controllato in 2–3\", 1\" fermo a braccia tese senza slancio, poi riparti. Allena la potenza di tirata che serve per i lanci e per prendere la presa lontana prima che la svasa ti scappi. Conta la velocità, non la fatica: quando una ripetizione rallenta, la serie è finita.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 4,
+              "repsPerSet": 3,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "hard",
+              "weight": "corpo libero",
+              "notes": "Si parte a corpo libero. Petto alla sbarra in tutte le ripetizioni per 2 sedute di fila? +2 kg alla cintura o nello zaino. Il petto non arriva più alla sbarra? −2 kg. Segna la zavorra nelle note dell'esercizio."
+            },
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
@@ -3153,18 +3170,19 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 20'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
           "intensity": "alta",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 20'",
+          "exercisesTitle": "Parte fisica · 25'",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "5–6 boulder al limite, solo svase e strapiombo, 4–6 tentativi ciascuno, recupero 3'.",
-                "Poi 4×4: 4 boulder 2–3 gradi sotto il limite, fatti di fila, 4 giri, 3' tra un giro e l'altro."
+                "4–5 boulder al limite vero, solo svase e strapiombo: almeno 2 devono essere boulder che non hai mai chiuso. Il grado giusto è quello in cui ti servono più tentativi solo per fare i singoli movimenti. Massimo 6 tentativi ciascuno, recupero 3–4': ogni tentativo è al 100%, se due volte di fila cadi prima del punto più alto che hai raggiunto, cambia boulder.",
+                "Poi 4×4: 4 boulder 2 gradi sotto il limite, fatti di fila, 4 giri, 3' tra un giro e l'altro.",
+                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutti e 16 i passaggi con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi già al secondo giro? Erano troppo duri: scendi di un grado."
               ]
             },
             {
@@ -3187,6 +3205,22 @@
             }
           ],
           "exercises": [
+            {
+              "id": "la-s3-explosive-pullups",
+              "name": "Trazioni esplosive",
+              "description": "Alla sbarra, presa prona alla larghezza delle spalle. Da braccia tese tira il più veloce possibile, cercando di portare il petto a toccare la sbarra. Scendi controllato in 2–3\", 1\" fermo a braccia tese senza slancio, poi riparti. Allena la potenza di tirata che serve per i lanci e per prendere la presa lontana prima che la svasa ti scappi. Conta la velocità, non la fatica: quando una ripetizione rallenta, la serie è finita.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 4,
+              "repsPerSet": 3,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "hard",
+              "weight": "corpo libero",
+              "notes": "Si parte a corpo libero. Petto alla sbarra in tutte le ripetizioni per 2 sedute di fila? +2 kg alla cintura o nello zaino. Il petto non arriva più alla sbarra? −2 kg. Segna la zavorra nelle note dell'esercizio."
+            },
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
@@ -3641,18 +3675,19 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 20'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
           "intensity": "alta",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 20'",
+          "exercisesTitle": "Parte fisica · 25'",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "5–6 boulder al limite, solo svase e strapiombo, 4–6 tentativi ciascuno, recupero 3'.",
-                "Poi 4×4: 4 boulder 2–3 gradi sotto il limite, fatti di fila, 4 giri, 3' tra un giro e l'altro."
+                "4–5 boulder al limite vero, solo svase e strapiombo: almeno 2 devono essere boulder che non hai mai chiuso. Il grado giusto è quello in cui ti servono più tentativi solo per fare i singoli movimenti. Massimo 6 tentativi ciascuno, recupero 3–4': ogni tentativo è al 100%, se due volte di fila cadi prima del punto più alto che hai raggiunto, cambia boulder.",
+                "Poi 4×4: 4 boulder fatti di fila, 4 giri, 3' tra un giro e l'altro. Uno dei 4 è solo 1 grado sotto il limite, gli altri 2 gradi sotto.",
+                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutti e 16 i passaggi con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi già al secondo giro? Erano troppo duri: scendi di un grado."
               ]
             },
             {
@@ -3675,6 +3710,22 @@
             }
           ],
           "exercises": [
+            {
+              "id": "la-s3-explosive-pullups",
+              "name": "Trazioni esplosive",
+              "description": "Alla sbarra, presa prona alla larghezza delle spalle. Da braccia tese tira il più veloce possibile, cercando di portare il petto a toccare la sbarra. Scendi controllato in 2–3\", 1\" fermo a braccia tese senza slancio, poi riparti. Allena la potenza di tirata che serve per i lanci e per prendere la presa lontana prima che la svasa ti scappi. Conta la velocità, non la fatica: quando una ripetizione rallenta, la serie è finita.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 4,
+              "repsPerSet": 3,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "hard",
+              "weight": "corpo libero",
+              "notes": "Si parte a corpo libero. Petto alla sbarra in tutte le ripetizioni per 2 sedute di fila? +2 kg alla cintura o nello zaino. Il petto non arriva più alla sbarra? −2 kg. Segna la zavorra nelle note dell'esercizio."
+            },
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
@@ -4125,11 +4176,11 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 20'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
           "intensity": "media",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 20'",
+          "exercisesTitle": "Parte fisica · 25'",
           "guide": [
             {
               "title": "Blocco principale",
@@ -4151,6 +4202,22 @@
             }
           ],
           "exercises": [
+            {
+              "id": "la-s3-explosive-pullups",
+              "name": "Trazioni esplosive",
+              "description": "Alla sbarra, presa prona alla larghezza delle spalle. Da braccia tese tira il più veloce possibile, cercando di portare il petto a toccare la sbarra. Scendi controllato in 2–3\", 1\" fermo a braccia tese senza slancio, poi riparti. Allena la potenza di tirata che serve per i lanci e per prendere la presa lontana prima che la svasa ti scappi. Conta la velocità, non la fatica: quando una ripetizione rallenta, la serie è finita.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 2,
+              "repsPerSet": 3,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "difficulty": "hard",
+              "weight": "metà zavorra",
+              "notes": "Settimana di scarico: metà della zavorra dell'ultima seduta, niente aumenti."
+            },
             {
               "id": "la-s3-lockoffs",
               "name": "Bloccaggi 45° · 90° · 120°",
