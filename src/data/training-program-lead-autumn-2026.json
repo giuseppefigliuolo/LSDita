@@ -2539,7 +2539,7 @@
             {
               "title": "Moonboard",
               "duration": "20'",
-              "body": "Al limite: 3–4 problemi da 6B+/6C, 4–6 tentativi ciascuno, recupero 3'. 2024 come principale, scegli svase e pinze.",
+              "body": "Al limite: 2–3 problemi da 6B+/6C, 6–7 tentativi in tutto con 3' di recupero. In 20' non ne stanno di più, e ogni tentativo deve essere al 100%. 2024 come principale, scegli svase e pinze.",
               "afterExercises": true
             }
           ],
@@ -2561,7 +2561,7 @@
                 "test": "cr_half_crimp",
                 "percent": 92
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -2581,7 +2581,7 @@
                 "test": "cr_open_hand",
                 "percent": 92
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -2653,6 +2653,7 @@
                 "20–30 minuti di scalata continua in verticale su prese buone, ghisa al massimo 3 su 10.",
                 "Esercizi di piedi: \"piedi silenziosi\" (appoggi il piede senza rumore) e \"piede fermo\" (una volta appoggiato non lo aggiusti più).",
                 "10 minuti di svase facili, solo tecnica.",
+                "10 minuti di strapiombo facile su prese grandi, solo tecnica: tallonaggi, agganci di punta e lolotte, con il bacino vicino alla parete. In strapiombo i piedi che tirano tolgono peso alle braccia.",
                 "Niente trave, niente Moonboard."
               ]
             }
@@ -2665,19 +2666,20 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80' con le trazioni esplosive a metà, parte fisica 15'.",
           "intensity": "alta",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 25'",
+          "exercisesTitle": "Parte fisica",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "4–5 boulder al limite vero, solo svase e strapiombo: almeno 2 devono essere boulder che non hai mai chiuso. Il grado giusto è quello in cui ti servono più tentativi solo per fare i singoli movimenti. Massimo 6 tentativi ciascuno, recupero 3–4': ogni tentativo è al 100%, se due volte di fila cadi prima del punto più alto che hai raggiunto, cambia boulder.",
-                "Poi 4×4: 4 boulder 2 gradi sotto il limite, fatti di fila, 4 giri, 4' tra un giro e l'altro.",
-                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutti e 16 i passaggi con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi già al secondo giro? Erano troppo duri: scendi di un grado."
+                "Boulder al limite, 35–40': 3–4 boulder di svase e strapiombo, almeno 2 che non hai mai chiuso. 10–12 tentativi in tutto, 3' di recupero tra uno e l'altro, ognuno al 100%. Se cadi due volte di fila prima del punto più alto che hai raggiunto, passa a un altro boulder.",
+                "Trazioni esplosive, 8': sono la prima voce del timer qui sotto. Falle adesso, finché sei fresco, poi esci dal timer: a fine sessione «Riprendi» riparte dai bloccaggi.",
+                "4×4, 25': 4 boulder 2 gradi sotto il limite, fatti di fila, 4 giri, 4' tra un giro e l'altro.",
+                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutte e 16 le salite con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi al terzo o al quarto giro? È il carico giusto. Cadi già al secondo? Quel boulder è troppo duro: la volta dopo cambialo con uno di un grado più facile."
               ]
             },
             {
@@ -2709,7 +2711,7 @@
               "illustration": "weighted-pullup",
               "sets": 4,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "hard",
@@ -2747,7 +2749,8 @@
               "difficulty": "hard",
               "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
-          ]
+          ],
+          "exercisesNote": "Le trazioni esplosive vanno fatte tra i boulder al limite e il 4×4, da fresco. Bloccaggi e front lever restano a fine sessione."
         },
         {
           "dayOfWeek": "casa-a",
@@ -2874,7 +2877,7 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare la sera della S2, quando le dita hanno già lavorato: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Non dopo la +1: martedì, mercoledì e giovedì diventerebbero 3 giorni di fila a intensità media o alta, e il giovedì ti servono braccia fresche per trazioni esplosive e bloccaggi zavorrati. Se martedì sera non ci riesci, saltala: una Casa B persa costa meno di un giovedì fatto stanco. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
           "durationLabel": "35'",
           "exercises": [
@@ -3044,7 +3047,7 @@
             {
               "title": "Moonboard",
               "duration": "20'",
-              "body": "Al limite: 3–4 problemi da 6B+/6C, 4–6 tentativi ciascuno, recupero 3'. 2024 come principale, scegli svase e pinze.",
+              "body": "Al limite: 2–3 problemi da 6B+/6C, 6–7 tentativi in tutto con 3' di recupero. In 20' non ne stanno di più, e ogni tentativo deve essere al 100%. 2024 come principale, scegli svase e pinze.",
               "afterExercises": true
             }
           ],
@@ -3066,7 +3069,7 @@
                 "test": "cr_half_crimp",
                 "percent": 95
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -3086,7 +3089,7 @@
                 "test": "cr_open_hand",
                 "percent": 95
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -3158,6 +3161,7 @@
                 "20–30 minuti di scalata continua in verticale su prese buone, ghisa al massimo 3 su 10.",
                 "Esercizi di piedi: \"piedi silenziosi\" (appoggi il piede senza rumore) e \"piede fermo\" (una volta appoggiato non lo aggiusti più).",
                 "10 minuti di svase facili, solo tecnica.",
+                "10 minuti di strapiombo facile su prese grandi, solo tecnica: tallonaggi, agganci di punta e lolotte, con il bacino vicino alla parete. In strapiombo i piedi che tirano tolgono peso alle braccia.",
                 "Niente trave, niente Moonboard."
               ]
             }
@@ -3170,19 +3174,20 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80' con le trazioni esplosive a metà, parte fisica 15'.",
           "intensity": "alta",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 25'",
+          "exercisesTitle": "Parte fisica",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "4–5 boulder al limite vero, solo svase e strapiombo: almeno 2 devono essere boulder che non hai mai chiuso. Il grado giusto è quello in cui ti servono più tentativi solo per fare i singoli movimenti. Massimo 6 tentativi ciascuno, recupero 3–4': ogni tentativo è al 100%, se due volte di fila cadi prima del punto più alto che hai raggiunto, cambia boulder.",
-                "Poi 4×4: 4 boulder 2 gradi sotto il limite, fatti di fila, 4 giri, 3' tra un giro e l'altro.",
-                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutti e 16 i passaggi con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi già al secondo giro? Erano troppo duri: scendi di un grado."
+                "Boulder al limite, 35–40': 3–4 boulder di svase e strapiombo, almeno 2 che non hai mai chiuso. 10–12 tentativi in tutto, 3' di recupero tra uno e l'altro, ognuno al 100%. Se cadi due volte di fila prima del punto più alto che hai raggiunto, passa a un altro boulder.",
+                "Trazioni esplosive, 8': sono la prima voce del timer qui sotto. Falle adesso, finché sei fresco, poi esci dal timer: a fine sessione «Riprendi» riparte dai bloccaggi.",
+                "4×4, 25': 4 boulder 2 gradi sotto il limite, fatti di fila, 4 giri, 3' tra un giro e l'altro.",
+                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutte e 16 le salite con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi al terzo o al quarto giro? È il carico giusto. Cadi già al secondo? Quel boulder è troppo duro: la volta dopo cambialo con uno di un grado più facile."
               ]
             },
             {
@@ -3214,11 +3219,11 @@
               "illustration": "weighted-pullup",
               "sets": 4,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "hard",
-              "weight": "corpo libero",
+              "weight": "ultima zavorra",
               "notes": "Si parte a corpo libero. Petto alla sbarra in tutte le ripetizioni per 2 sedute di fila? +2 kg alla cintura o nello zaino. Il petto non arriva più alla sbarra? −2 kg. Segna la zavorra nelle note dell'esercizio."
             },
             {
@@ -3252,7 +3257,8 @@
               "difficulty": "hard",
               "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
-          ]
+          ],
+          "exercisesNote": "Le trazioni esplosive vanno fatte tra i boulder al limite e il 4×4, da fresco. Bloccaggi e front lever restano a fine sessione."
         },
         {
           "dayOfWeek": "casa-a",
@@ -3379,7 +3385,7 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare la sera della S2, quando le dita hanno già lavorato: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Non dopo la +1: martedì, mercoledì e giovedì diventerebbero 3 giorni di fila a intensità media o alta, e il giovedì ti servono braccia fresche per trazioni esplosive e bloccaggi zavorrati. Se martedì sera non ci riesci, saltala: una Casa B persa costa meno di un giovedì fatto stanco. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
           "durationLabel": "35'",
           "exercises": [
@@ -3549,7 +3555,7 @@
             {
               "title": "Moonboard",
               "duration": "20'",
-              "body": "Al limite: 3–4 problemi da 6B+/6C, 4–6 tentativi ciascuno, recupero 3'. 2024 come principale, scegli svase e pinze.",
+              "body": "Al limite: 2–3 problemi da 6B+/6C, 6–7 tentativi in tutto con 3' di recupero. In 20' non ne stanno di più, e ogni tentativo deve essere al 100%. 2024 come principale, scegli svase e pinze.",
               "afterExercises": true
             }
           ],
@@ -3571,7 +3577,7 @@
                 "test": "cr_half_crimp",
                 "percent": 97
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -3591,7 +3597,7 @@
                 "test": "cr_open_hand",
                 "percent": 97
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -3663,6 +3669,7 @@
                 "20–30 minuti di scalata continua in verticale su prese buone, ghisa al massimo 3 su 10.",
                 "Esercizi di piedi: \"piedi silenziosi\" (appoggi il piede senza rumore) e \"piede fermo\" (una volta appoggiato non lo aggiusti più).",
                 "10 minuti di svase facili, solo tecnica.",
+                "10 minuti di strapiombo facile su prese grandi, solo tecnica: tallonaggi, agganci di punta e lolotte, con il bacino vicino alla parete. In strapiombo i piedi che tirano tolgono peso alle braccia.",
                 "Niente trave, niente Moonboard."
               ]
             }
@@ -3675,19 +3682,20 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80' con le trazioni esplosive a metà, parte fisica 15'.",
           "intensity": "alta",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 25'",
+          "exercisesTitle": "Parte fisica",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "4–5 boulder al limite vero, solo svase e strapiombo: almeno 2 devono essere boulder che non hai mai chiuso. Il grado giusto è quello in cui ti servono più tentativi solo per fare i singoli movimenti. Massimo 6 tentativi ciascuno, recupero 3–4': ogni tentativo è al 100%, se due volte di fila cadi prima del punto più alto che hai raggiunto, cambia boulder.",
-                "Poi 4×4: 4 boulder fatti di fila, 4 giri, 3' tra un giro e l'altro. Uno dei 4 è solo 1 grado sotto il limite, gli altri 2 gradi sotto.",
-                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutti e 16 i passaggi con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi già al secondo giro? Erano troppo duri: scendi di un grado."
+                "Boulder al limite, 35–40': 3–4 boulder di svase e strapiombo, almeno 2 che non hai mai chiuso. 10–12 tentativi in tutto, 3' di recupero tra uno e l'altro, ognuno al 100%. Se cadi due volte di fila prima del punto più alto che hai raggiunto, passa a un altro boulder.",
+                "Trazioni esplosive, 8': sono la prima voce del timer qui sotto. Falle adesso, finché sei fresco, poi esci dal timer: a fine sessione «Riprendi» riparte dai bloccaggi.",
+                "4×4, 25': 4 boulder fatti di fila, 4 giri, 3' tra un giro e l'altro. Uno dei 4 è solo 1 grado sotto il limite, gli altri 2 gradi sotto.",
+                "Regola del 4×4: l'ultimo giro deve essere al limite. Chiudi tutte e 16 le salite con margine? La volta dopo sostituisci il boulder più facile con uno di un grado più duro. Cadi al terzo o al quarto giro? È il carico giusto. Cadi già al secondo? Quel boulder è troppo duro: la volta dopo cambialo con uno di un grado più facile."
               ]
             },
             {
@@ -3719,11 +3727,11 @@
               "illustration": "weighted-pullup",
               "sets": 4,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "hard",
-              "weight": "corpo libero",
+              "weight": "ultima zavorra",
               "notes": "Si parte a corpo libero. Petto alla sbarra in tutte le ripetizioni per 2 sedute di fila? +2 kg alla cintura o nello zaino. Il petto non arriva più alla sbarra? −2 kg. Segna la zavorra nelle note dell'esercizio."
             },
             {
@@ -3757,7 +3765,8 @@
               "difficulty": "hard",
               "notes": "Come progredire: tieni 10\" puliti in tutte le serie (busto orizzontale, bacino che non scende)? La volta dopo passa al livello successivo: 1) raccolto, 2) raccolto a schiena piatta, con le ginocchia sopra le anche e lontane dal petto, 3) una gamba tesa, alternando la gamba a ogni serie. Al livello nuovo non arrivi a 10\"? Fermati quando perdi la posizione: il tempo cresce di seduta in seduta. Segna il livello nelle note dell'esercizio."
             }
-          ]
+          ],
+          "exercisesNote": "Le trazioni esplosive vanno fatte tra i boulder al limite e il 4×4, da fresco. Bloccaggi e front lever restano a fine sessione."
         },
         {
           "dayOfWeek": "casa-a",
@@ -3884,7 +3893,7 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare la sera della S2, quando le dita hanno già lavorato: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Non dopo la +1: martedì, mercoledì e giovedì diventerebbero 3 giorni di fila a intensità media o alta, e il giovedì ti servono braccia fresche per trazioni esplosive e bloccaggi zavorrati. Se martedì sera non ci riesci, saltala: una Casa B persa costa meno di un giovedì fatto stanco. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
           "durationLabel": "35'",
           "exercises": [
@@ -4076,7 +4085,7 @@
                 "test": "cr_half_crimp",
                 "percent": 80
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Settimana di scarico: deve sembrarti facile, ed è giusto così. Non aggiungere peso: è quando il carico cala che i tendini consolidano il lavoro. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -4096,7 +4105,7 @@
                 "test": "cr_open_hand",
                 "percent": 80
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Settimana di scarico: deve sembrarti facile, ed è giusto così. Non aggiungere peso: è quando il carico cala che i tendini consolidano il lavoro. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             }
           ]
@@ -4164,6 +4173,7 @@
                 "10–15 minuti di scalata continua in verticale su prese buone, ghisa al massimo 3 su 10.",
                 "Esercizi di piedi: \"piedi silenziosi\" (appoggi il piede senza rumore) e \"piede fermo\" (una volta appoggiato non lo aggiusti più).",
                 "5 minuti di svase facili, solo tecnica.",
+                "5 minuti di strapiombo facile su prese grandi, solo tecnica: tallonaggi, agganci di punta e lolotte, con il bacino vicino alla parete. In strapiombo i piedi che tirano tolgono peso alle braccia.",
                 "Niente trave, niente Moonboard."
               ]
             }
@@ -4176,17 +4186,18 @@
           "type": "boulder",
           "title": "Boulder · svase e strapiombo",
           "icon": "boulder",
-          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80', parte fisica 25'.",
+          "description": "Qui alleni la mano aperta e la mano sinistra sulla parete, poi la capacità di fare tanti movimenti duri di fila. Struttura: riscaldamento 20', blocco principale 60–80' con le trazioni esplosive a metà, parte fisica 15'.",
           "intensity": "media",
           "durationLabel": "2–2,5 h",
           "warmupNote": "20–25', senza rampa dita",
-          "exercisesTitle": "Parte fisica · 25'",
+          "exercisesTitle": "Parte fisica",
           "guide": [
             {
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "Settimana di scarico, volume a metà: 2–3 boulder al limite, solo svase e strapiombo.",
+                "Settimana di scarico, volume a metà: 2–3 boulder al limite, solo svase e strapiombo, 5–6 tentativi in tutto con 3' di recupero.",
+                "Poi le trazioni esplosive: sono la prima voce del timer qui sotto. Falle adesso, poi esci dal timer: a fine sessione «Riprendi» riparte dai bloccaggi.",
                 "Poi 4×4 a 2 giri invece di 4, 4' tra un giro e l'altro."
               ]
             },
@@ -4211,7 +4222,7 @@
               "illustration": "weighted-pullup",
               "sets": 2,
               "repsPerSet": 3,
-              "hangTime": 3,
+              "hangTime": 4,
               "restBetweenReps": 0,
               "restBetweenSets": 120,
               "difficulty": "hard",
@@ -4249,7 +4260,8 @@
               "difficulty": "hard",
               "notes": "Settimana di scarico: resta al livello dell'ultima seduta, niente passaggi di livello."
             }
-          ]
+          ],
+          "exercisesNote": "Le trazioni esplosive vanno fatte tra i boulder al limite e il 4×4, da fresco. Bloccaggi e front lever restano a fine sessione."
         },
         {
           "dayOfWeek": "casa-a",
@@ -4375,7 +4387,7 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare la sera della S2, quando le dita hanno già lavorato: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Non dopo la +1: martedì, mercoledì e giovedì diventerebbero 3 giorni di fila a intensità media o alta, e il giovedì ti servono braccia fresche per trazioni esplosive e bloccaggi zavorrati. Se martedì sera non ci riesci, saltala: una Casa B persa costa meno di un giovedì fatto stanco. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
           "durationLabel": "25'",
           "exercises": [
@@ -4567,7 +4579,7 @@
                 "test": "cr_half_crimp",
                 "percent": 92
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -4587,7 +4599,7 @@
                 "test": "cr_open_hand",
                 "percent": 92
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva riparti da quel peso. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
               "difficulty": "hard"
             }
           ]
@@ -4655,6 +4667,7 @@
                 "20–30 minuti di scalata continua in verticale su prese buone, ghisa al massimo 3 su 10.",
                 "Esercizi di piedi: \"piedi silenziosi\" (appoggi il piede senza rumore) e \"piede fermo\" (una volta appoggiato non lo aggiusti più).",
                 "10 minuti di svase facili, solo tecnica.",
+                "10 minuti di strapiombo facile su prese grandi, solo tecnica: tallonaggi, agganci di punta e lolotte, con il bacino vicino alla parete. In strapiombo i piedi che tirano tolgono peso alle braccia.",
                 "Niente trave, niente Moonboard."
               ]
             }
@@ -4677,8 +4690,8 @@
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "4×4 più duro, oppure \"1:1\": 1' di scalata e 1' di pausa, 6–8 volte, in strapiombo.",
-                "Più 2–3 boulder al limite per non perdere forza."
+                "Prima 2–3 boulder al limite, da fresco, per non perdere forza: 6–8 tentativi in tutto con 3' di recupero.",
+                "Poi 4×4 più duro (2 dei 4 boulder solo 1 grado sotto il limite, 3' tra un giro e l'altro), oppure \"1:1\": 1' di scalata e 1' di pausa, 6–8 volte, in strapiombo."
               ]
             },
             {
@@ -4834,7 +4847,7 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare la sera della S2, quando le dita hanno già lavorato: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Non dopo la +1: martedì, mercoledì e giovedì diventerebbero 3 giorni di fila a intensità media o alta, e il giovedì ti servono braccia fresche per trazioni esplosive e bloccaggi zavorrati. Se martedì sera non ci riesci, saltala: una Casa B persa costa meno di un giovedì fatto stanco. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
           "intensity": "media",
           "durationLabel": "35'",
           "exercises": [
@@ -5067,7 +5080,7 @@
                 "test": "cr_half_crimp",
                 "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg.",
+              "notes": "Settimana del test finale: dopo il test, 2 serie solide senza cercare il massimo e senza aggiungere peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             },
             {
@@ -5087,7 +5100,7 @@
                 "test": "cr_open_hand",
                 "percent": 90
               },
-              "notes": "Non tieni 10\" puliti? Togli 2 kg. L'ultima serie ti lascia 5\" di margine per 2 sessioni di fila? Aggiungi 1–2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Settimana del test finale: dopo il test, 2 serie solide senza cercare il massimo e senza aggiungere peso. Non tieni 10\" puliti? Togli 2 kg.",
               "difficulty": "hard"
             }
           ],
@@ -5165,6 +5178,7 @@
                 "10–15 minuti di scalata continua in verticale su prese buone, ghisa al massimo 3 su 10.",
                 "Esercizi di piedi: \"piedi silenziosi\" (appoggi il piede senza rumore) e \"piede fermo\" (una volta appoggiato non lo aggiusti più).",
                 "5 minuti di svase facili, solo tecnica.",
+                "5 minuti di strapiombo facile su prese grandi, solo tecnica: tallonaggi, agganci di punta e lolotte, con il bacino vicino alla parete. In strapiombo i piedi che tirano tolgono peso alle braccia.",
                 "Niente trave, niente Moonboard."
               ]
             }
@@ -5195,8 +5209,8 @@
               "title": "Blocco principale",
               "duration": "60–80'",
               "items": [
-                "Metà volume: 4×4 più duro a 2 giri, oppure 1:1 (1' di scalata e 1' di pausa) 3–4 volte, in strapiombo.",
-                "1–2 boulder al limite per non perdere forza."
+                "Dopo i test, 1–2 boulder al limite per non perdere forza, 3–4 tentativi in tutto.",
+                "Poi metà volume: 4×4 più duro a 2 giri, oppure 1:1 (1' di scalata e 1' di pausa) 3–4 volte, in strapiombo."
               ]
             },
             {
@@ -5358,9 +5372,9 @@
           "type": "finger_strength",
           "title": "Lift, sfere, trazioni e spinta",
           "icon": "hangboard",
-          "description": "Da fare quando vuoi, ma sempre in un giorno in cui hai già caricato le dita: la sera della S2 o subito dopo la +1, mai in un giorno di riposo puro. Concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali.",
+          "description": "Da fare la sera della S2, quando le dita hanno già lavorato: concentrare il carico sulle dita negli stessi giorni lascia i riposi davvero riposi. Non dopo la +1: martedì, mercoledì e giovedì diventerebbero 3 giorni di fila a intensità media o alta, e il giovedì ti servono braccia fresche per trazioni esplosive e bloccaggi zavorrati. Se martedì sera non ci riesci, saltala: una Casa B persa costa meno di un giovedì fatto stanco. Dopo le sfere vengono le trazioni zavorrate, la forza di tirata pesante del ciclo. Subito dopo, un curl supinato pesante per la forza del bicipite. In coda, senza dita: piegamenti di volume (variante più facile, più ripetizioni, mentre la Casa A fa quelli duri) e alzate laterali. Settimana dei test: serie ridotte, così giovedì arrivi fresco ai test del lift e delle sfere.",
           "intensity": "media",
-          "durationLabel": "35'",
+          "durationLabel": "25'",
           "exercises": [
             {
               "id": "la-casa-b-wrist-flexion",
@@ -5384,7 +5398,7 @@
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 3,
+              "sets": 2,
               "repsPerSet": 1,
               "hangTime": 20,
               "restBetweenReps": 0,
@@ -5401,7 +5415,7 @@
               "type": "timed_hold",
               "grip": "open_hand",
               "illustration": "default",
-              "sets": 2,
+              "sets": 1,
               "repsPerSet": 1,
               "hangTime": 20,
               "restBetweenReps": 0,
