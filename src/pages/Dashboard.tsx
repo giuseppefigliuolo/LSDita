@@ -13,7 +13,7 @@ import {
   getWeekDateRange
 } from '../utils/programUtils'
 import { formatKg, getLatestResult } from '../utils/benchmarks'
-import { daysSince, getDayNameIT } from '../utils/dateUtils'
+import { daysSince, getDayNameIT, getTodayString } from '../utils/dateUtils'
 import { fireConfettiFromEvent } from '../utils/confetti'
 import { INK, RADIUS, SHADOW } from '../styles/tokens'
 
@@ -68,11 +68,18 @@ export default function Dashboard() {
   const weeklyDays = weekDays.filter((d) => !d.anytime)
   const anytimeDays = weekDays.filter((d) => d.anytime)
 
-  function getDayStatus(day: TrainingDay): DayStatus {
-    const dayRuns = completedWorkouts.filter(
+  function getWeekRuns(day: TrainingDay) {
+    return completedWorkouts.filter(
       (w) =>
         w.weekNumber === weekNumber &&
         w.id.startsWith(`${weekNumber}-${day.dayOfWeek}-`)
+    )
+  }
+
+  function getDayStatus(day: TrainingDay): DayStatus {
+    const today = getTodayString()
+    const dayRuns = getWeekRuns(day).filter(
+      (w) => !day.daily || w.date === today
     )
     return dayRuns.some((w) => !w.partial)
       ? 'done'
@@ -149,9 +156,19 @@ export default function Dashboard() {
   }
 
   function renderAnytimeRow(day: TrainingDay, index: number) {
-    const letter = day.label?.split(' ').pop() ?? String.fromCharCode(65 + index)
+    // "Casa A" → "A"; a one-word label ("Dita") shows its initial
+    const lastWord = day.label?.split(' ').pop()
+    const letter = lastWord
+      ? lastWord.length > 2
+        ? lastWord[0]
+        : lastWord
+      : String.fromCharCode(65 + index)
     const status = getDayStatus(day)
     const done = status === 'done'
+    const daysThisWeek = day.daily
+      ? new Set(getWeekRuns(day).filter((w) => !w.partial).map((w) => w.date))
+          .size
+      : 0
     return (
       <button
         key={day.dayOfWeek}
@@ -182,6 +199,12 @@ export default function Dashboard() {
         <p className="relative min-w-0 flex-1 text-[15px] font-extrabold leading-tight">
           {day.title}
           {done && <span className="sr-only">, fatto</span>}
+          {daysThisWeek > 0 && (
+            <span className="mt-0.5 block font-mono text-[11px] font-normal text-brown">
+              {daysThisWeek} {daysThisWeek === 1 ? 'volta' : 'volte'} questa
+              settimana
+            </span>
+          )}
         </p>
         {status === 'partial' && <StatusBadge status={status} />}
         <span className="relative shrink-0 whitespace-nowrap font-mono text-[11px] text-brown">

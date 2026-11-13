@@ -47,7 +47,10 @@ export default function WarmupPage() {
   const weekNumber = getActiveWeekNumber(program, programStartDate, overrideWeek)
   const week = program.weeks.find((w) => w.weekNumber === weekNumber)
   const config = program.benchmarks
-  const weekLoads = week ? getDistinctLoads(week.days.flatMap((d) => d.exercises)) : []
+  // Daily low-load routines need no ramp: only the sessions' working loads count
+  const weekLoads = week
+    ? getDistinctLoads(week.days.filter((d) => !d.daily).flatMap((d) => d.exercises))
+    : []
   const showRamp = Boolean(warmup.rampPercents && config && weekLoads.length > 0)
 
   return (

@@ -36,6 +36,7 @@ import {
 import { INK, SURFACE, RADIUS, SHADOW } from '../styles/tokens'
 import { getExerciseColor } from '../utils/exerciseColors'
 import { getExerciseVolume } from '../utils/exerciseLabels'
+import { getTodayString } from '../utils/dateUtils'
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -113,7 +114,8 @@ export default function WorkoutDay() {
       !w.partial &&
       w.weekNumber === week &&
       w.dayTitle === day.title &&
-      w.id.startsWith(`${week}-${day.dayOfWeek}-`)
+      w.id.startsWith(`${week}-${day.dayOfWeek}-`) &&
+      (!day.daily || w.date === getTodayString())
   )
 
   function handleMarkDone() {

@@ -3023,6 +3023,159 @@
               "notes": "12 ripetizioni"
             }
           ]
+        },
+        {
+          "dayOfWeek": "dita",
+          "label": "Dita",
+          "anytime": true,
+          "daily": true,
+          "type": "finger_strength",
+          "title": "Abrahangs · dita ogni giorno",
+          "icon": "hangboard",
+          "description": "10' di appese leggere con i piedi a terra, una volta al giorno, circa 5 giorni a settimana. È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar). Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
+          "exercisesTitle": "Trave · listello 20 mm, piedi a terra",
+          "exercisesNote": "10\" di appesa e 20\" di recupero, 20 appese in tutto. La bilancia sotto i piedi deve segnare il peso da togliere.",
+          "guide": [
+            {
+              "title": "Carico",
+              "body": "Leggero per davvero: solo una leggera tensione negli avambracci. Sulle prese a 3 e 4 dita è circa il 30% del CR, su quelle a 2 dita circa la metà. Niente ghisa, niente tremore, piedi sempre a terra. Il carico non sale mai, nemmeno quando ti sembra troppo facile: esagerare è l'unico modo di farsi male con questo protocollo. Con la bilancia sotto i piedi bastano 2–3 sedute per prendere la mano, poi puoi andare a sensazione."
+            },
+            {
+              "title": "Quando",
+              "items": [
+                "Una volta al giorno, circa 5 giorni a settimana. Emil lo faceva due volte al giorno, ma non ci sono dati che dicano che serva.",
+                "Sempre ad almeno 6 ore da trave e scalata.",
+                "Lunedì la sera, perché la trave è a pranzo. Da martedì a venerdì la mattina, prima della scalata della sera.",
+                "Mai nei giorni di falesia. Il venerdì invece va bene: non affatica.",
+                "Dito giallo (dolore 2–3 o fastidio al mattino): salta le prese a 2 dita finché torna verde. Dito rosso: stop.",
+                "Facoltativo: 15 g di gelatina con un po' di vitamina C 30–60' prima, come suggerisce Baar. Le prove sono deboli ed Emil non la usava."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-dita-hc4",
+              "name": "Semi-arcuata 4 dita",
+              "description": "Due mani, semi-arcuata a 4 dita sul listello da 20 mm, piedi sempre a terra. Bilancia pesapersone sotto i piedi: durante l'appesa deve segnare il peso da togliere. Spalle attive, gomiti appena flessi. Se le dita si aprono o si spostano, scarica più peso sui piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "max-hang",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 32
+              },
+              "notes": "Il carico non sale mai: è leggero apposta. Se aggiorni il CR nei Test, il carico si aggiorna da solo.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f3-open",
+              "name": "3 dita anteriori aperte",
+              "description": "Indice, medio e anulare in mano aperta, mignolo fuori. Stesso listello da 20 mm, piedi a terra, bilancia sotto i piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "three_finger_drag",
+              "illustration": "max-hang-open",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 30
+              },
+              "notes": "Il riferimento è il CR mano aperta a 4 dita: con 3 dita la percentuale è un po' più bassa.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-open",
+              "name": "2 dita anteriori aperte",
+              "description": "Indice e medio in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-open",
+              "name": "2 dita centrali aperte",
+              "description": "Medio e anulare in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-hc",
+              "name": "2 dita anteriori semi-arcuata",
+              "description": "Indice e medio in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-hc",
+              "name": "2 dita centrali semi-arcuata",
+              "description": "Medio e anulare in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            }
+          ]
         }
       ]
     },
@@ -3529,6 +3682,159 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 ripetizioni"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "dita",
+          "label": "Dita",
+          "anytime": true,
+          "daily": true,
+          "type": "finger_strength",
+          "title": "Abrahangs · dita ogni giorno",
+          "icon": "hangboard",
+          "description": "10' di appese leggere con i piedi a terra, una volta al giorno, circa 5 giorni a settimana. È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar). Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
+          "exercisesTitle": "Trave · listello 20 mm, piedi a terra",
+          "exercisesNote": "10\" di appesa e 20\" di recupero, 20 appese in tutto. La bilancia sotto i piedi deve segnare il peso da togliere.",
+          "guide": [
+            {
+              "title": "Carico",
+              "body": "Leggero per davvero: solo una leggera tensione negli avambracci. Sulle prese a 3 e 4 dita è circa il 30% del CR, su quelle a 2 dita circa la metà. Niente ghisa, niente tremore, piedi sempre a terra. Il carico non sale mai, nemmeno quando ti sembra troppo facile: esagerare è l'unico modo di farsi male con questo protocollo. Con la bilancia sotto i piedi bastano 2–3 sedute per prendere la mano, poi puoi andare a sensazione."
+            },
+            {
+              "title": "Quando",
+              "items": [
+                "Una volta al giorno, circa 5 giorni a settimana. Emil lo faceva due volte al giorno, ma non ci sono dati che dicano che serva.",
+                "Sempre ad almeno 6 ore da trave e scalata.",
+                "Lunedì la sera, perché la trave è a pranzo. Da martedì a venerdì la mattina, prima della scalata della sera.",
+                "Mai nei giorni di falesia. Il venerdì invece va bene: non affatica.",
+                "Dito giallo (dolore 2–3 o fastidio al mattino): salta le prese a 2 dita finché torna verde. Dito rosso: stop.",
+                "Facoltativo: 15 g di gelatina con un po' di vitamina C 30–60' prima, come suggerisce Baar. Le prove sono deboli ed Emil non la usava."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-dita-hc4",
+              "name": "Semi-arcuata 4 dita",
+              "description": "Due mani, semi-arcuata a 4 dita sul listello da 20 mm, piedi sempre a terra. Bilancia pesapersone sotto i piedi: durante l'appesa deve segnare il peso da togliere. Spalle attive, gomiti appena flessi. Se le dita si aprono o si spostano, scarica più peso sui piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "max-hang",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 32
+              },
+              "notes": "Il carico non sale mai: è leggero apposta. Se aggiorni il CR nei Test, il carico si aggiorna da solo.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f3-open",
+              "name": "3 dita anteriori aperte",
+              "description": "Indice, medio e anulare in mano aperta, mignolo fuori. Stesso listello da 20 mm, piedi a terra, bilancia sotto i piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "three_finger_drag",
+              "illustration": "max-hang-open",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 30
+              },
+              "notes": "Il riferimento è il CR mano aperta a 4 dita: con 3 dita la percentuale è un po' più bassa.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-open",
+              "name": "2 dita anteriori aperte",
+              "description": "Indice e medio in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-open",
+              "name": "2 dita centrali aperte",
+              "description": "Medio e anulare in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-hc",
+              "name": "2 dita anteriori semi-arcuata",
+              "description": "Indice e medio in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-hc",
+              "name": "2 dita centrali semi-arcuata",
+              "description": "Medio e anulare in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
             }
           ]
         }
@@ -4039,6 +4345,159 @@
               "notes": "12 ripetizioni"
             }
           ]
+        },
+        {
+          "dayOfWeek": "dita",
+          "label": "Dita",
+          "anytime": true,
+          "daily": true,
+          "type": "finger_strength",
+          "title": "Abrahangs · dita ogni giorno",
+          "icon": "hangboard",
+          "description": "10' di appese leggere con i piedi a terra, una volta al giorno, circa 5 giorni a settimana. È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar). Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
+          "exercisesTitle": "Trave · listello 20 mm, piedi a terra",
+          "exercisesNote": "10\" di appesa e 20\" di recupero, 20 appese in tutto. La bilancia sotto i piedi deve segnare il peso da togliere.",
+          "guide": [
+            {
+              "title": "Carico",
+              "body": "Leggero per davvero: solo una leggera tensione negli avambracci. Sulle prese a 3 e 4 dita è circa il 30% del CR, su quelle a 2 dita circa la metà. Niente ghisa, niente tremore, piedi sempre a terra. Il carico non sale mai, nemmeno quando ti sembra troppo facile: esagerare è l'unico modo di farsi male con questo protocollo. Con la bilancia sotto i piedi bastano 2–3 sedute per prendere la mano, poi puoi andare a sensazione."
+            },
+            {
+              "title": "Quando",
+              "items": [
+                "Una volta al giorno, circa 5 giorni a settimana. Emil lo faceva due volte al giorno, ma non ci sono dati che dicano che serva.",
+                "Sempre ad almeno 6 ore da trave e scalata.",
+                "Lunedì la sera, perché la trave è a pranzo. Da martedì a venerdì la mattina, prima della scalata della sera.",
+                "Mai nei giorni di falesia. Il venerdì invece va bene: non affatica.",
+                "Dito giallo (dolore 2–3 o fastidio al mattino): salta le prese a 2 dita finché torna verde. Dito rosso: stop.",
+                "Facoltativo: 15 g di gelatina con un po' di vitamina C 30–60' prima, come suggerisce Baar. Le prove sono deboli ed Emil non la usava."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-dita-hc4",
+              "name": "Semi-arcuata 4 dita",
+              "description": "Due mani, semi-arcuata a 4 dita sul listello da 20 mm, piedi sempre a terra. Bilancia pesapersone sotto i piedi: durante l'appesa deve segnare il peso da togliere. Spalle attive, gomiti appena flessi. Se le dita si aprono o si spostano, scarica più peso sui piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "max-hang",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 32
+              },
+              "notes": "Il carico non sale mai: è leggero apposta. Se aggiorni il CR nei Test, il carico si aggiorna da solo.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f3-open",
+              "name": "3 dita anteriori aperte",
+              "description": "Indice, medio e anulare in mano aperta, mignolo fuori. Stesso listello da 20 mm, piedi a terra, bilancia sotto i piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "three_finger_drag",
+              "illustration": "max-hang-open",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 30
+              },
+              "notes": "Il riferimento è il CR mano aperta a 4 dita: con 3 dita la percentuale è un po' più bassa.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-open",
+              "name": "2 dita anteriori aperte",
+              "description": "Indice e medio in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-open",
+              "name": "2 dita centrali aperte",
+              "description": "Medio e anulare in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-hc",
+              "name": "2 dita anteriori semi-arcuata",
+              "description": "Indice e medio in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-hc",
+              "name": "2 dita centrali semi-arcuata",
+              "description": "Medio e anulare in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            }
+          ]
         }
       ]
     },
@@ -4533,6 +4992,160 @@
               "notes": "12 ripetizioni"
             }
           ]
+        },
+        {
+          "dayOfWeek": "dita",
+          "label": "Dita",
+          "anytime": true,
+          "daily": true,
+          "type": "finger_strength",
+          "title": "Abrahangs · dita ogni giorno",
+          "icon": "hangboard",
+          "description": "10' di appese leggere con i piedi a terra, una volta al giorno, circa 5 giorni a settimana. È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar). Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
+          "exercisesTitle": "Trave · listello 20 mm, piedi a terra",
+          "exercisesNote": "10\" di appesa e 20\" di recupero, 20 appese in tutto. La bilancia sotto i piedi deve segnare il peso da togliere.",
+          "guide": [
+            {
+              "title": "Carico",
+              "body": "Leggero per davvero: solo una leggera tensione negli avambracci. Sulle prese a 3 e 4 dita è circa il 30% del CR, su quelle a 2 dita circa la metà. Niente ghisa, niente tremore, piedi sempre a terra. Il carico non sale mai, nemmeno quando ti sembra troppo facile: esagerare è l'unico modo di farsi male con questo protocollo. Con la bilancia sotto i piedi bastano 2–3 sedute per prendere la mano, poi puoi andare a sensazione."
+            },
+            {
+              "title": "Quando",
+              "items": [
+                "Una volta al giorno, circa 5 giorni a settimana. Emil lo faceva due volte al giorno, ma non ci sono dati che dicano che serva.",
+                "Sempre ad almeno 6 ore da trave e scalata.",
+                "Lunedì la sera, perché la trave è a pranzo. Da martedì a venerdì la mattina, prima della scalata della sera.",
+                "Mai nei giorni di falesia. Il venerdì invece va bene: non affatica.",
+                "Settimana di scarico: lo fai uguale, è già sotto la soglia di fatica.",
+                "Dito giallo (dolore 2–3 o fastidio al mattino): salta le prese a 2 dita finché torna verde. Dito rosso: stop.",
+                "Facoltativo: 15 g di gelatina con un po' di vitamina C 30–60' prima, come suggerisce Baar. Le prove sono deboli ed Emil non la usava."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-dita-hc4",
+              "name": "Semi-arcuata 4 dita",
+              "description": "Due mani, semi-arcuata a 4 dita sul listello da 20 mm, piedi sempre a terra. Bilancia pesapersone sotto i piedi: durante l'appesa deve segnare il peso da togliere. Spalle attive, gomiti appena flessi. Se le dita si aprono o si spostano, scarica più peso sui piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "max-hang",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 32
+              },
+              "notes": "Il carico non sale mai: è leggero apposta. Se aggiorni il CR nei Test, il carico si aggiorna da solo.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f3-open",
+              "name": "3 dita anteriori aperte",
+              "description": "Indice, medio e anulare in mano aperta, mignolo fuori. Stesso listello da 20 mm, piedi a terra, bilancia sotto i piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "three_finger_drag",
+              "illustration": "max-hang-open",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 30
+              },
+              "notes": "Il riferimento è il CR mano aperta a 4 dita: con 3 dita la percentuale è un po' più bassa.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-open",
+              "name": "2 dita anteriori aperte",
+              "description": "Indice e medio in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-open",
+              "name": "2 dita centrali aperte",
+              "description": "Medio e anulare in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-hc",
+              "name": "2 dita anteriori semi-arcuata",
+              "description": "Indice e medio in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-hc",
+              "name": "2 dita centrali semi-arcuata",
+              "description": "Medio e anulare in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            }
+          ]
         }
       ]
     },
@@ -4991,6 +5604,160 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 ripetizioni"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "dita",
+          "label": "Dita",
+          "anytime": true,
+          "daily": true,
+          "type": "finger_strength",
+          "title": "Abrahangs · dita ogni giorno",
+          "icon": "hangboard",
+          "description": "10' di appese leggere con i piedi a terra, una volta al giorno, circa 5 giorni a settimana. È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar). Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
+          "exercisesTitle": "Trave · listello 20 mm, piedi a terra",
+          "exercisesNote": "10\" di appesa e 20\" di recupero, 20 appese in tutto. La bilancia sotto i piedi deve segnare il peso da togliere.",
+          "guide": [
+            {
+              "title": "Carico",
+              "body": "Leggero per davvero: solo una leggera tensione negli avambracci. Sulle prese a 3 e 4 dita è circa il 30% del CR, su quelle a 2 dita circa la metà. Niente ghisa, niente tremore, piedi sempre a terra. Il carico non sale mai, nemmeno quando ti sembra troppo facile: esagerare è l'unico modo di farsi male con questo protocollo. Con la bilancia sotto i piedi bastano 2–3 sedute per prendere la mano, poi puoi andare a sensazione."
+            },
+            {
+              "title": "Quando",
+              "items": [
+                "Una volta al giorno, circa 5 giorni a settimana. Emil lo faceva due volte al giorno, ma non ci sono dati che dicano che serva.",
+                "Sempre ad almeno 6 ore da trave e scalata.",
+                "Lunedì la sera, perché la trave è a pranzo. Da martedì a venerdì la mattina, prima della scalata della sera.",
+                "Mai nei giorni di falesia. Il venerdì invece va bene: non affatica.",
+                "Domenica 13 dicembre saltalo: lunedì c'è il test finale del CR.",
+                "Dito giallo (dolore 2–3 o fastidio al mattino): salta le prese a 2 dita finché torna verde. Dito rosso: stop.",
+                "Facoltativo: 15 g di gelatina con un po' di vitamina C 30–60' prima, come suggerisce Baar. Le prove sono deboli ed Emil non la usava."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-dita-hc4",
+              "name": "Semi-arcuata 4 dita",
+              "description": "Due mani, semi-arcuata a 4 dita sul listello da 20 mm, piedi sempre a terra. Bilancia pesapersone sotto i piedi: durante l'appesa deve segnare il peso da togliere. Spalle attive, gomiti appena flessi. Se le dita si aprono o si spostano, scarica più peso sui piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "max-hang",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 32
+              },
+              "notes": "Il carico non sale mai: è leggero apposta. Se aggiorni il CR nei Test, il carico si aggiorna da solo.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f3-open",
+              "name": "3 dita anteriori aperte",
+              "description": "Indice, medio e anulare in mano aperta, mignolo fuori. Stesso listello da 20 mm, piedi a terra, bilancia sotto i piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "three_finger_drag",
+              "illustration": "max-hang-open",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 30
+              },
+              "notes": "Il riferimento è il CR mano aperta a 4 dita: con 3 dita la percentuale è un po' più bassa.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-open",
+              "name": "2 dita anteriori aperte",
+              "description": "Indice e medio in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-open",
+              "name": "2 dita centrali aperte",
+              "description": "Medio e anulare in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-hc",
+              "name": "2 dita anteriori semi-arcuata",
+              "description": "Indice e medio in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-hc",
+              "name": "2 dita centrali semi-arcuata",
+              "description": "Medio e anulare in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
             }
           ]
         }
@@ -5516,6 +6283,160 @@
               "restBetweenSets": 45,
               "difficulty": "facile",
               "notes": "12 ripetizioni"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "dita",
+          "label": "Dita",
+          "anytime": true,
+          "daily": true,
+          "type": "finger_strength",
+          "title": "Abrahangs · dita ogni giorno",
+          "icon": "hangboard",
+          "description": "10' di appese leggere con i piedi a terra, una volta al giorno, circa 5 giorni a settimana. È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar). Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "intensity": "bassa",
+          "durationLabel": "10'",
+          "exercisesTitle": "Trave · listello 20 mm, piedi a terra",
+          "exercisesNote": "10\" di appesa e 20\" di recupero, 20 appese in tutto. La bilancia sotto i piedi deve segnare il peso da togliere.",
+          "guide": [
+            {
+              "title": "Carico",
+              "body": "Leggero per davvero: solo una leggera tensione negli avambracci. Sulle prese a 3 e 4 dita è circa il 30% del CR, su quelle a 2 dita circa la metà. Niente ghisa, niente tremore, piedi sempre a terra. Il carico non sale mai, nemmeno quando ti sembra troppo facile: esagerare è l'unico modo di farsi male con questo protocollo. Con la bilancia sotto i piedi bastano 2–3 sedute per prendere la mano, poi puoi andare a sensazione."
+            },
+            {
+              "title": "Quando",
+              "items": [
+                "Una volta al giorno, circa 5 giorni a settimana. Emil lo faceva due volte al giorno, ma non ci sono dati che dicano che serva.",
+                "Sempre ad almeno 6 ore da trave e scalata.",
+                "Lunedì la sera, perché la trave è a pranzo. Da martedì a venerdì la mattina, prima della scalata della sera.",
+                "Mai nei giorni di falesia. Il venerdì invece va bene: non affatica.",
+                "Settimana dei test: saltalo lunedì 14 (CR), mercoledì 16 e giovedì 17 (sfere e lift), così i test restano confrontabili con la settimana 0.",
+                "Dito giallo (dolore 2–3 o fastidio al mattino): salta le prese a 2 dita finché torna verde. Dito rosso: stop.",
+                "Facoltativo: 15 g di gelatina con un po' di vitamina C 30–60' prima, come suggerisce Baar. Le prove sono deboli ed Emil non la usava."
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "id": "la-dita-hc4",
+              "name": "Semi-arcuata 4 dita",
+              "description": "Due mani, semi-arcuata a 4 dita sul listello da 20 mm, piedi sempre a terra. Bilancia pesapersone sotto i piedi: durante l'appesa deve segnare il peso da togliere. Spalle attive, gomiti appena flessi. Se le dita si aprono o si spostano, scarica più peso sui piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "max-hang",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 32
+              },
+              "notes": "Il carico non sale mai: è leggero apposta. Se aggiorni il CR nei Test, il carico si aggiorna da solo.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f3-open",
+              "name": "3 dita anteriori aperte",
+              "description": "Indice, medio e anulare in mano aperta, mignolo fuori. Stesso listello da 20 mm, piedi a terra, bilancia sotto i piedi.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "three_finger_drag",
+              "illustration": "max-hang-open",
+              "sets": 6,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 30
+              },
+              "notes": "Il riferimento è il CR mano aperta a 4 dita: con 3 dita la percentuale è un po' più bassa.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-open",
+              "name": "2 dita anteriori aperte",
+              "description": "Indice e medio in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-open",
+              "name": "2 dita centrali aperte",
+              "description": "Medio e anulare in mano aperta sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_open_hand",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-f2-hc",
+              "name": "2 dita anteriori semi-arcuata",
+              "description": "Indice e medio in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "la-dita-m2-hc",
+              "name": "2 dita centrali semi-arcuata",
+              "description": "Medio e anulare in semi-arcuata sul listello da 20 mm, piedi a terra. Sulle 2 dita il carico è circa la metà: la bilancia deve segnare più peso.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "half_crimp",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 10,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "load": {
+                "test": "cr_half_crimp",
+                "percent": 18
+              },
+              "notes": "Dito giallo: salta questa presa finché torna verde.",
+              "difficulty": "facile"
             }
           ]
         }

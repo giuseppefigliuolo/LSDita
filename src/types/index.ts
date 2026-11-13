@@ -66,6 +66,8 @@ export interface TrainingDay {
   label?: string
   /** Not tied to a weekday: `dayOfWeek` is just a route key (e.g. "casa-a") */
   anytime?: boolean
+  /** Repeated on most days: "done" means done today, not this week */
+  daily?: boolean
   type: DayType
   title: string
   icon: string
