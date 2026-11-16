@@ -1,6 +1,7 @@
 import type { Exercise } from '../../types'
 import ExerciseNotesButton from './ExerciseNotesButton'
 import ActiveExerciseScreen, { PrimaryBarButton, SkipExerciseButton } from './ActiveExerciseScreen'
+import { getLimb, getSideAt } from '../../utils/sides'
 
 interface RepsExerciseViewProps {
   exercise: Exercise
@@ -39,6 +40,8 @@ export default function RepsExerciseView({
       onOpenInfo={onOpenInfo}
       actionsHidden={actionsHidden}
       progress={{ total: exercise.sets, current: currentSet, state: 'active' }}
+      side={getSideAt(exercise, currentSet, 1)}
+      limb={getLimb(exercise)}
       contentKey={`${exerciseIndex}-reps-${currentSet}`}
       value={exercise.repsPerSet}
       label="Ripetizioni"

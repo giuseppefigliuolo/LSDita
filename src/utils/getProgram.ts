@@ -41,10 +41,28 @@ export function getProgram(id: ProgramId): TrainingProgram {
       ...week,
       days: week.days.map((day) => {
         const override = overrides[dayOverrideKey(id, week.weekNumber, day.dayOfWeek)]
-        return override ?? day
+        return override ? withSides(override, day) : day
       }),
     })),
   })
+}
+
+/**
+ * An edited day is a snapshot saved before exercises had a side: take the
+ * side marker from the program's exercise with the same id (the edit form
+ * doesn't touch it).
+ */
+function withSides(edited: TrainingDay, original: TrainingDay): TrainingDay {
+  const originals = new Map(original.exercises.map((e) => [e.id, e]))
+  return {
+    ...edited,
+    exercises: edited.exercises.map((e) => {
+      const source = originals.get(e.id)
+      return e.side === undefined && source?.side
+        ? { ...e, side: source.side, limb: source.limb }
+        : e
+    }),
+  }
 }
 
 export function getOriginalDay(

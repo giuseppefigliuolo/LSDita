@@ -431,7 +431,8 @@
               "restBetweenSets": 60,
               "weight": "22 kg",
               "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -448,7 +449,8 @@
               "restBetweenSets": 60,
               "weight": "22 kg",
               "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -464,7 +466,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -480,7 +483,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -911,7 +915,8 @@
               "restBetweenSets": 60,
               "weight": "22 kg",
               "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -928,7 +933,8 @@
               "restBetweenSets": 60,
               "weight": "22 kg",
               "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -944,7 +950,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -960,7 +967,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -1391,7 +1399,8 @@
               "restBetweenSets": 60,
               "weight": "22 kg",
               "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -1408,7 +1417,8 @@
               "restBetweenSets": 60,
               "weight": "22 kg",
               "notes": "Niente cedimento: chiudi ogni serie con circa 3\" di margine. Se una mano non arriva al tempo indicato con quel margine, accorcia la serie e resta sul 20 mm. Il test invece si fa sempre sul 25 mm.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -1424,7 +1434,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -1440,7 +1451,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -1872,7 +1884,8 @@
               "restBetweenSets": 60,
               "weight": "24 kg",
               "notes": "Da questa settimana il peso non è più fisso: i 22 kg per 10\" erano troppo leggeri. Parti da 24 kg. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -1889,7 +1902,8 @@
               "restBetweenSets": 60,
               "weight": "24 kg",
               "notes": "Da questa settimana il peso non è più fisso: i 22 kg per 10\" erano troppo leggeri. Parti da 24 kg. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -1905,7 +1919,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -1921,7 +1936,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -2402,7 +2418,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -2419,7 +2436,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -2435,7 +2453,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -2451,7 +2470,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -2910,7 +2930,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Prima seduta a 15\": parti da 2 kg in meno del peso con cui chiudevi i 10\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -2927,7 +2948,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Prima seduta a 15\": parti da 2 kg in meno del peso con cui chiudevi i 10\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -2943,7 +2965,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -2959,7 +2982,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -3571,7 +3595,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso",
               "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -3588,7 +3613,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso",
               "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -3604,7 +3630,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -3620,7 +3647,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -3693,11 +3721,11 @@
           "type": "finger_strength",
           "title": "Abrahangs · dita ogni giorno",
           "icon": "hangboard",
-          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra e subito destra, poi 10\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra, 2\" per cambiare mano, destra, poi 8\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercisesTitle": "Lift · listello 20 mm, sinistra poi destra",
-          "exercisesNote": "Ogni serie: 10\" sinistra, subito 10\" destra, poi 10\" di pausa. 20 tenute per mano, sempre 12 kg.",
+          "exercisesNote": "Ogni serie: 10\" sinistra, 2\" per cambiare mano, 10\" destra, poi 8\" di pausa. 20 tenute per mano, sempre 12 kg.",
           "guide": [
             {
               "title": "Carico",
@@ -3719,7 +3747,7 @@
             {
               "id": "la-dita-lift-hc4-alt",
               "name": "Semi-arcuata 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "half_crimp",
@@ -3727,16 +3755,17 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             },
             {
               "id": "la-dita-lift-oh4-alt",
               "name": "Mano aperta 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "open_hand",
@@ -3744,11 +3773,12 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             }
           ]
         }
@@ -4146,7 +4176,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso",
               "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -4163,7 +4194,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso",
               "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -4179,7 +4211,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -4195,7 +4228,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -4268,11 +4302,11 @@
           "type": "finger_strength",
           "title": "Abrahangs · dita ogni giorno",
           "icon": "hangboard",
-          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra e subito destra, poi 10\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra, 2\" per cambiare mano, destra, poi 8\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercisesTitle": "Lift · listello 20 mm, sinistra poi destra",
-          "exercisesNote": "Ogni serie: 10\" sinistra, subito 10\" destra, poi 10\" di pausa. 20 tenute per mano, sempre 12 kg.",
+          "exercisesNote": "Ogni serie: 10\" sinistra, 2\" per cambiare mano, 10\" destra, poi 8\" di pausa. 20 tenute per mano, sempre 12 kg.",
           "guide": [
             {
               "title": "Carico",
@@ -4294,7 +4328,7 @@
             {
               "id": "la-dita-lift-hc4-alt",
               "name": "Semi-arcuata 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "half_crimp",
@@ -4302,16 +4336,17 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             },
             {
               "id": "la-dita-lift-oh4-alt",
               "name": "Mano aperta 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "open_hand",
@@ -4319,11 +4354,12 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             }
           ]
         }
@@ -4707,7 +4743,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -4724,7 +4761,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Settimana di scarico: metà delle serie e 2 kg in meno dell'ultima seduta, niente aumenti. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -4740,7 +4778,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -4756,7 +4795,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -4829,11 +4869,11 @@
           "type": "finger_strength",
           "title": "Abrahangs · dita ogni giorno",
           "icon": "hangboard",
-          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra e subito destra, poi 10\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra, 2\" per cambiare mano, destra, poi 8\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercisesTitle": "Lift · listello 20 mm, sinistra poi destra",
-          "exercisesNote": "Ogni serie: 10\" sinistra, subito 10\" destra, poi 10\" di pausa. 20 tenute per mano, sempre 12 kg.",
+          "exercisesNote": "Ogni serie: 10\" sinistra, 2\" per cambiare mano, 10\" destra, poi 8\" di pausa. 20 tenute per mano, sempre 12 kg.",
           "guide": [
             {
               "title": "Carico",
@@ -4856,7 +4896,7 @@
             {
               "id": "la-dita-lift-hc4-alt",
               "name": "Semi-arcuata 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "half_crimp",
@@ -4864,16 +4904,17 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             },
             {
               "id": "la-dita-lift-oh4-alt",
               "name": "Mano aperta 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "open_hand",
@@ -4881,11 +4922,12 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             }
           ]
         }
@@ -5235,7 +5277,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Prima seduta a 20\": parti da 2 kg in meno del peso con cui chiudevi i 15\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -5252,7 +5295,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso −2 kg",
               "notes": "Prima seduta a 20\": parti da 2 kg in meno del peso con cui chiudevi i 15\", poi aggiusta con la regola. Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -5268,7 +5312,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -5284,7 +5329,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -5357,11 +5403,11 @@
           "type": "finger_strength",
           "title": "Abrahangs · dita ogni giorno",
           "icon": "hangboard",
-          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra e subito destra, poi 10\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra, 2\" per cambiare mano, destra, poi 8\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercisesTitle": "Lift · listello 20 mm, sinistra poi destra",
-          "exercisesNote": "Ogni serie: 10\" sinistra, subito 10\" destra, poi 10\" di pausa. 20 tenute per mano, sempre 12 kg.",
+          "exercisesNote": "Ogni serie: 10\" sinistra, 2\" per cambiare mano, 10\" destra, poi 8\" di pausa. 20 tenute per mano, sempre 12 kg.",
           "guide": [
             {
               "title": "Carico",
@@ -5384,7 +5430,7 @@
             {
               "id": "la-dita-lift-hc4-alt",
               "name": "Semi-arcuata 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "half_crimp",
@@ -5392,16 +5438,17 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             },
             {
               "id": "la-dita-lift-oh4-alt",
               "name": "Mano aperta 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "open_hand",
@@ -5409,11 +5456,12 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             }
           ]
         }
@@ -5828,7 +5876,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso",
               "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-lift-right",
@@ -5845,7 +5894,8 @@
               "restBetweenSets": 60,
               "weight": "ultimo peso",
               "notes": "Scegli il peso con cui chiudi il tempo indicato con circa 3\" di margine: ogni mano ha il suo. Già dopo la prima serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, e la volta successiva riparti da quel peso. Non arrivi al tempo pulito? −2 kg. Mai più di +2 kg a seduta: i tendini si adattano più lentamente dei muscoli. Segna il peso nelle note dell'esercizio. Il test invece si fa sempre con 22 kg sul 25 mm, altrimenti non si confronta con la settimana 0.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-balls-left",
@@ -5861,7 +5911,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "left"
             },
             {
               "id": "la-casa-b-balls-right",
@@ -5877,7 +5928,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "notes": "Come progredire: prima aggiungi secondi fino a 20\", poi rendi la presa più piccola o togli aiuto con la mano bassa.",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "right"
             },
             {
               "id": "la-casa-b-weighted-pullups",
@@ -5950,11 +6002,11 @@
           "type": "finger_strength",
           "title": "Abrahangs · dita ogni giorno",
           "icon": "hangboard",
-          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra e subito destra, poi 10\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
+          "description": "10' di carichi leggeri sul lift, una volta al giorno (circa 5 giorni a settimana). È il protocollo di Emil Abrahamsson nella versione dello studio del 2024 (Gilmore, Klimek, Abrahamsson e Baar), fatto con la trave a pentagono invece che appesi: il peso lo sai al chilo. Solo due prese a 4 dita, semi-arcuata e mano aperta, con lo stesso manubrio: non cambi mai i dischi. Ogni mano fa 20 tenute da 10\", il volume dello studio: sinistra, 2\" per cambiare mano, destra, poi 8\" di pausa, così resti nei 10' e ogni mano recupera 20\". Non allena il muscolo: carica tendini e pulegge spesso e con poco peso. Su legamenti coltivati in laboratorio anche un carico leggero fa produrre collagene; dopo circa 10' le cellule smettono di rispondere e ripartono dopo circa 6 ore. Nello studio chi lo aggiungeva ai max hang migliorava di più di chi faceva solo max hang (+5,8% contro +3,2% di forza/peso), ma non era randomizzato: aspettati dita più robuste e al massimo 1–2 kg in più sul CR, non un salto di grado.",
           "intensity": "bassa",
           "durationLabel": "10'",
           "exercisesTitle": "Lift · listello 20 mm, sinistra poi destra",
-          "exercisesNote": "Ogni serie: 10\" sinistra, subito 10\" destra, poi 10\" di pausa. 20 tenute per mano, sempre 12 kg.",
+          "exercisesNote": "Ogni serie: 10\" sinistra, 2\" per cambiare mano, 10\" destra, poi 8\" di pausa. 20 tenute per mano, sempre 12 kg.",
           "guide": [
             {
               "title": "Carico",
@@ -5977,7 +6029,7 @@
             {
               "id": "la-dita-lift-hc4-alt",
               "name": "Semi-arcuata 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm in semi-arcuata a 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "half_crimp",
@@ -5985,16 +6037,17 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             },
             {
               "id": "la-dita-lift-oh4-alt",
               "name": "Mano aperta 4 dita · sinistra poi destra",
-              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1) e appena finisci subito 10\" con la destra (rep 2), poi 10\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
+              "description": "Trave portatile a pentagono appesa a un cordino, manubrio sotto: lo sollevi da terra con una mano, braccio teso lungo il fianco e spalla attiva. Basta staccarlo di qualche centimetro e tenerlo fermo: non tirare col braccio e non piegare il polso. Listello da 20 mm a mano aperta con 4 dita. Ogni serie: 10\" con la sinistra (rep 1), 2\" per cambiare mano, 10\" con la destra (rep 2), poi 8\" di pausa. Così ogni mano lavora 10\" e recupera 20\", come nello studio.",
               "equipment": "hangboard",
               "type": "repeaters",
               "grip": "open_hand",
@@ -6002,11 +6055,12 @@
               "sets": 10,
               "repsPerSet": 2,
               "hangTime": 10,
-              "restBetweenReps": 0,
-              "restBetweenSets": 10,
+              "restBetweenReps": 2,
+              "restBetweenSets": 8,
               "weight": "manubrio 12 kg",
               "notes": "Solo una leggera tensione nell'avambraccio. Se la sinistra sente di più, usa 10 kg per tutta la sessione. Il carico non sale mai.",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_reps"
             }
           ]
         }

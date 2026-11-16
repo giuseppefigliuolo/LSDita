@@ -120,7 +120,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "12-14 kg un manubrio",
-              "notes": "3 set per braccio (alterna). Gomito FISSO puntato avanti, non aperto"
+              "notes": "3 set per braccio (alterna). Gomito FISSO puntato avanti, non aperto",
+              "side": "alternate_sets"
             },
             {
               "id": "hw1-mon-diamond-pushup",
@@ -174,7 +175,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "20-22 kg un manubrio",
-              "notes": "3 set per lato (alterna). Tira verso l'ANCA, non il petto"
+              "notes": "3 set per lato (alterna). Tira verso l'ANCA, non il petto",
+              "side": "alternate_sets"
             },
             {
               "id": "hw1-tue-eccentric-pullup",
@@ -288,7 +290,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "14 kg per manubrio",
-              "notes": "3 set per gamba (alterna). 70% peso sulla gamba davanti"
+              "notes": "3 set per gamba (alterna). 70% peso sulla gamba davanti",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-wed-pistol-squat",
@@ -303,7 +307,9 @@
               "restBetweenReps": 5,
               "restBetweenSets": 75,
               "weight": "corpo libero",
-              "notes": "3 set per gamba (alterna). Progressioni: assistito → su sedia → negativa 5s"
+              "notes": "3 set per gamba (alterna). Progressioni: assistito → su sedia → negativa 5s",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-wed-sissy-squat",
@@ -516,7 +522,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "12-14 kg un manubrio",
-              "notes": "3 set per gamba (alterna). Manubrio in mano OPPOSTA"
+              "notes": "3 set per gamba (alterna). Manubrio in mano OPPOSTA",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-fri-sumo-squat",
@@ -546,7 +554,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 30,
               "weight": "14 kg un manubrio",
-              "notes": "4 set per gamba (alterna). Range pieno con stretch e contrazione"
+              "notes": "4 set per gamba (alterna). Range pieno con stretch e contrazione",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-fri-lateral-lunge",
@@ -561,7 +571,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "10 kg per manubrio",
-              "notes": "2 set per gamba. Gamba opposta tesa, piede a terra"
+              "notes": "2 set per gamba. Gamba opposta tesa, piede a terra",
+              "side": "alternate_sets",
+              "limb": "foot"
             }
           ]
         },
@@ -612,7 +624,9 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba. Cerchio ampio ma controllato"
+              "notes": "Un set per gamba. Cerchio ampio ma controllato",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-sat-deep-squat",
@@ -640,7 +654,9 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Se non riesci a stare dritto, cuscino sotto il gluteo"
+              "notes": "Un set per lato. Se non riesci a stare dritto, cuscino sotto il gluteo",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-sat-pigeon",
@@ -654,7 +670,9 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Rilassati, respira profondamente"
+              "notes": "Un set per lato. Rilassati, respira profondamente",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw1-sat-frog",
@@ -710,7 +728,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Respira profondamente nella rotazione"
+              "notes": "Un set per lato. Respira profondamente nella rotazione",
+              "side": "alternate_sets"
             },
             {
               "id": "hw1-sat-shoulder-dislocates",
@@ -860,7 +879,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "12-14 kg un manubrio",
-              "notes": "3 set per braccio (alterna). +2 reps vs W1"
+              "notes": "3 set per braccio (alterna). +2 reps vs W1",
+              "side": "alternate_sets"
             },
             {
               "id": "hw2-mon-diamond-pushup",
@@ -914,7 +934,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "20-22 kg un manubrio",
-              "notes": "3 set per lato. +2 reps vs W1"
+              "notes": "3 set per lato. +2 reps vs W1",
+              "side": "alternate_sets"
             },
             {
               "id": "hw2-tue-eccentric-pullup",
@@ -1028,7 +1049,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "14-15 kg per manubrio",
-              "notes": "3 set per gamba. +2 reps o +1kg vs W1"
+              "notes": "3 set per gamba. +2 reps o +1kg vs W1",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-wed-pistol-squat",
@@ -1043,7 +1066,9 @@
               "restBetweenReps": 5,
               "restBetweenSets": 75,
               "weight": "corpo libero",
-              "notes": "3 set per gamba. +2 reps vs W1. Spingi vicino al cedimento"
+              "notes": "3 set per gamba. +2 reps vs W1. Spingi vicino al cedimento",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-wed-sissy-squat",
@@ -1256,7 +1281,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "14-16 kg un manubrio",
-              "notes": "3 set per gamba. +2 reps"
+              "notes": "3 set per gamba. +2 reps",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-fri-sumo-squat",
@@ -1286,7 +1313,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 30,
               "weight": "16 kg un manubrio",
-              "notes": "4 set per gamba. +3 reps"
+              "notes": "4 set per gamba. +3 reps",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-fri-lateral-lunge",
@@ -1301,7 +1330,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 60,
               "weight": "10-12 kg per manubrio",
-              "notes": "2 set per gamba. +2 reps"
+              "notes": "2 set per gamba. +2 reps",
+              "side": "alternate_sets",
+              "limb": "foot"
             }
           ]
         },
@@ -1352,7 +1383,9 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba. Cerchio ampio ma controllato"
+              "notes": "Un set per gamba. Cerchio ampio ma controllato",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-sat-deep-squat",
@@ -1380,7 +1413,9 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Se non riesci a stare dritto, cuscino sotto il gluteo"
+              "notes": "Un set per lato. Se non riesci a stare dritto, cuscino sotto il gluteo",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-sat-pigeon",
@@ -1394,7 +1429,9 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Rilassati, respira profondamente"
+              "notes": "Un set per lato. Rilassati, respira profondamente",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "hw2-sat-frog",
@@ -1450,7 +1487,8 @@
               "hangTime": 30,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Respira profondamente nella rotazione"
+              "notes": "Un set per lato. Respira profondamente nella rotazione",
+              "side": "alternate_sets"
             },
             {
               "id": "hw2-sat-shoulder-dislocates",

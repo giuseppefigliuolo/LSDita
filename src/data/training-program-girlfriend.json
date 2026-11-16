@@ -47,7 +47,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 3-5 kg",
               "notes": "2 set per gamba (alterna). Ginocchio NON verso l'interno",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w1-mon-sl-rdl",
@@ -63,7 +65,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 3-5 kg",
               "notes": "2 set per gamba (alterna). Schiena SEMPRE dritta",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w1-mon-hip-thrust",
@@ -109,7 +113,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 30,
               "notes": "Un set per gamba. Stretch completo sotto, contrazione massima sopra",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w1-mon-deadbug",
@@ -378,7 +384,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba. Cerchio ampio e lento",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w1-fri-worlds-greatest",
@@ -423,7 +431,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato. Cuscino sotto il gluteo se non arrivi dritta",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w1-fri-pigeon",
@@ -438,7 +448,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato. Respira e rilassati",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w1-fri-frog",
@@ -498,7 +510,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato. Respira profondamente nella rotazione",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "gw-w1-fri-forearm",
@@ -562,7 +575,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 5-7 kg",
               "notes": "3 set per gamba (alterna). Ginocchio in linea col piede",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w2-mon-sl-rdl",
@@ -578,7 +593,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 5-7 kg",
               "notes": "3 set per gamba. Schiena dritta",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w2-mon-hip-thrust",
@@ -909,7 +926,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w2-fri-worlds-greatest",
@@ -954,7 +973,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w2-fri-pigeon",
@@ -969,7 +990,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w2-fri-frog",
@@ -1029,7 +1052,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "gw-w2-fri-forearm",
@@ -1093,7 +1117,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 7-9 kg",
               "notes": "3 set per gamba",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w3-mon-sl-rdl",
@@ -1109,7 +1135,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 7-9 kg",
               "notes": "3 set per gamba",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w3-mon-step-up",
@@ -1424,7 +1452,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w3-fri-worlds-greatest",
@@ -1469,7 +1499,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w3-fri-pigeon",
@@ -1484,7 +1516,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w3-fri-frog",
@@ -1544,7 +1578,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "gw-w3-fri-forearm",
@@ -1623,7 +1658,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 8-10 kg",
               "notes": "3 per gamba",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w4-mon-sl-rdl",
@@ -1639,7 +1676,9 @@
               "restBetweenSets": 45,
               "weight": "zaino 8-10 kg",
               "notes": "3 per gamba",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w4-mon-hip-thrust",
@@ -1938,7 +1977,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w4-fri-couch",
@@ -1953,7 +1994,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 10,
               "notes": "Un set per lato. Cuscino sotto il ginocchio se scomodo",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w4-fri-deep-squat",
@@ -1983,7 +2026,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w4-fri-pigeon",
@@ -1998,7 +2043,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w4-fri-frog",
@@ -2043,7 +2090,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "gw-w4-fri-forearm",
@@ -2106,7 +2154,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 90,
               "notes": "2 per gamba. Progressione massimale",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-mon-bulgarian",
@@ -2122,7 +2172,9 @@
               "restBetweenSets": 75,
               "weight": "zaino 10+ kg",
               "notes": "3 per gamba",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-mon-sl-rdl",
@@ -2138,7 +2190,9 @@
               "restBetweenSets": 75,
               "weight": "zaino 10+ kg",
               "notes": "3 per gamba",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-mon-hip-thrust",
@@ -2423,7 +2477,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-fri-couch",
@@ -2438,7 +2494,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 10,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-fri-deep-squat",
@@ -2468,7 +2526,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-fri-pigeon",
@@ -2483,7 +2543,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w5-fri-frog",
@@ -2528,7 +2590,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "gw-w5-fri-forearm",
@@ -2592,7 +2655,9 @@
               "restBetweenSets": 45,
               "weight": "corpo libero",
               "notes": "2 per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w6-mon-sl-rdl",
@@ -2608,7 +2673,9 @@
               "restBetweenSets": 45,
               "weight": "corpo libero",
               "notes": "2 per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w6-mon-hip-thrust",
@@ -2846,7 +2913,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w6-fri-worlds-greatest",
@@ -2876,7 +2945,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 10,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w6-fri-deep-squat",
@@ -2906,7 +2977,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w6-fri-pigeon",
@@ -2921,7 +2994,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "gw-w6-fri-frog",
@@ -2981,7 +3056,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "gw-w6-fri-forearm",

@@ -279,7 +279,9 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Un set per gamba, per direzione (avanti e indietro). Lento e controllato!"
+              "notes": "Un set per gamba, per direzione (avanti e indietro). Lento e controllato!",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "t1s3-deep-squat",
@@ -307,7 +309,9 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Se non riesci a sederti dritto, metti un cuscino sotto il gluteo"
+              "notes": "Un set per lato. Se non riesci a sederti dritto, metti un cuscino sotto il gluteo",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "t1s3-pigeon-pose",
@@ -321,7 +325,9 @@
               "hangTime": 60,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Un set per lato. Rilassati nella posizione, respira profondamente"
+              "notes": "Un set per lato. Rilassati nella posizione, respira profondamente",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "t1s3-frog-stretch",
@@ -819,7 +825,9 @@
               "hangTime": 6,
               "restBetweenReps": 3,
               "restBetweenSets": 30,
-              "notes": "Rep aumentate, cerchi più ampi rispetto a settimana 1"
+              "notes": "Rep aumentate, cerchi più ampi rispetto a settimana 1",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "t2s3-deep-squat",
@@ -847,7 +855,9 @@
               "hangTime": 75,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Tempo aumentato a 75s per lato. Inclina di più il busto"
+              "notes": "Tempo aumentato a 75s per lato. Inclina di più il busto",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "t2s3-pigeon-pose",
@@ -861,7 +871,9 @@
               "hangTime": 75,
               "restBetweenReps": 0,
               "restBetweenSets": 5,
-              "notes": "Tempo aumentato a 75s per lato"
+              "notes": "Tempo aumentato a 75s per lato",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "t2s3-frog-stretch",

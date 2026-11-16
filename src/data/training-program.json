@@ -153,7 +153,8 @@
               "restBetweenReps": 10,
               "restBetweenSets": 120,
               "notes": "Alterna dx e sx. Spalle basse, core attivo",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_reps"
             },
             {
               "id": "w1-tue-negatives",
@@ -375,7 +376,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Un set per gamba. Cerchio ampio ma controllato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w1-fri-deep-squat",
@@ -405,7 +408,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato. Se non riesci a stare dritto, cuscino sotto il gluteo",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w1-fri-pigeon",
@@ -420,7 +425,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato. Rilassati, respira profondamente",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w1-fri-frog",
@@ -480,7 +487,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "Un set per lato. Respira profondamente nella rotazione",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "w1-fri-shoulder-dislocates",
@@ -535,7 +543,9 @@
               "restBetweenSets": 45,
               "weight": "10 kg per manubrio",
               "notes": "3 set per gamba (alterna ad ogni set). Discesa 2s controllata",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w1-sat-pushup",
@@ -567,7 +577,9 @@
               "restBetweenSets": 45,
               "weight": "10 kg un manubrio",
               "notes": "3 set per gamba (alterna). Manubrio in mano OPPOSTA alla gamba d'appoggio",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w1-sat-diamond",
@@ -615,7 +627,9 @@
               "restBetweenSets": 30,
               "weight": "10 kg un manubrio",
               "notes": "3 set per gamba (alterna). Stretch sotto il gradino, contrazione in cima",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w1-sat-face-pull",
@@ -802,7 +816,8 @@
               "restBetweenReps": 10,
               "restBetweenSets": 120,
               "notes": "Tempo 8s. Alterna braccia",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_reps"
             },
             {
               "id": "w2-tue-negatives",
@@ -1024,7 +1039,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Cerchi più ampi. Un set per gamba",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w2-fri-deep-squat",
@@ -1054,7 +1071,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "65s per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w2-fri-pigeon",
@@ -1069,7 +1088,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "65s per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w2-fri-frog",
@@ -1129,7 +1150,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "35s per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "w2-fri-shoulder-dislocates",
@@ -1184,7 +1206,9 @@
               "restBetweenSets": 60,
               "weight": "14 kg per manubrio",
               "notes": "3 set per gamba (alterna ad ogni set). Discesa 2s, salita esplosiva",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w2-sat-decline-pushup",
@@ -1216,7 +1240,9 @@
               "restBetweenSets": 60,
               "weight": "14 kg un manubrio",
               "notes": "3 set per gamba (alterna). Movimento lento, cerca lo stretch",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w2-sat-diamond",
@@ -1264,7 +1290,9 @@
               "restBetweenSets": 30,
               "weight": "14 kg un manubrio",
               "notes": "3 set per gamba (alterna). Range pieno, contrazione totale",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w2-sat-face-pull",
@@ -1468,7 +1496,8 @@
               "restBetweenReps": 10,
               "restBetweenSets": 120,
               "notes": "10s di lock-off. Alterna braccia",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_reps"
             },
             {
               "id": "w3-tue-negatives",
@@ -1690,7 +1719,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Cerchi massimi possibili",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w3-fri-deep-squat",
@@ -1720,7 +1751,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "75s per lato. Inclinati dalle anche",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w3-fri-pigeon",
@@ -1735,7 +1768,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "75s per lato. Rilassati",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w3-fri-frog",
@@ -1795,7 +1830,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "40s per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "w3-fri-shoulder-dislocates",
@@ -1850,7 +1886,9 @@
               "restBetweenSets": 60,
               "weight": "18 kg per manubrio",
               "notes": "4 set per gamba (alterna). Settimana di picco: spingi",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w3-sat-archer",
@@ -1882,7 +1920,9 @@
               "restBetweenSets": 60,
               "weight": "18 kg un manubrio",
               "notes": "4 set per gamba (alterna). Cerca il massimo stretch",
-              "difficulty": "hard"
+              "difficulty": "hard",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w3-sat-pseudo-planche",
@@ -1930,7 +1970,9 @@
               "restBetweenSets": 30,
               "weight": "18 kg un manubrio",
               "notes": "4 set per gamba (alterna). Stretch sotto, contrazione totale sopra",
-              "difficulty": "medio"
+              "difficulty": "medio",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w3-sat-face-pull",
@@ -2276,7 +2318,9 @@
               "restBetweenReps": 3,
               "restBetweenSets": 30,
               "notes": "Cerchi controllati",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w4-fri-deep-squat",
@@ -2306,7 +2350,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "60s per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w4-fri-pigeon",
@@ -2321,7 +2367,9 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "60s per lato. Goditi lo stretch",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w4-fri-frog",
@@ -2381,7 +2429,8 @@
               "restBetweenReps": 0,
               "restBetweenSets": 5,
               "notes": "30s per lato",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets"
             },
             {
               "id": "w4-fri-shoulder-dislocates",
@@ -2436,7 +2485,9 @@
               "restBetweenSets": 45,
               "weight": "10 kg per manubrio",
               "notes": "2 set per gamba (alterna). Solo richiamo tecnico",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w4-sat-pushup",
@@ -2468,7 +2519,9 @@
               "restBetweenSets": 45,
               "weight": "10 kg un manubrio",
               "notes": "2 set per gamba (alterna). Movimento lento",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w4-sat-lateral-raise",
@@ -2500,7 +2553,9 @@
               "restBetweenSets": 30,
               "weight": "10 kg un manubrio",
               "notes": "2 set per gamba (alterna). Range completo",
-              "difficulty": "facile"
+              "difficulty": "facile",
+              "side": "alternate_sets",
+              "limb": "foot"
             },
             {
               "id": "w4-sat-face-pull",

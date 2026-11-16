@@ -41,7 +41,19 @@ export interface Exercise {
   load?: ExerciseLoad
   /** `sets` is an upper bound (e.g. a ramp-up test): the runner lets you end it as completed after any set */
   canFinishEarly?: boolean
+  /** One-sided exercise: which side works, shown by the runner's left/right marker */
+  side?: ExerciseSide
+  /** What the side marker draws (default hand) */
+  limb?: Limb
 }
+
+/**
+ * left/right: the whole exercise on that side. alternate_sets: set 1 left,
+ * set 2 right… alternate_reps: rep 1 left, rep 2 right… within every set.
+ */
+export type ExerciseSide = 'left' | 'right' | 'alternate_sets' | 'alternate_reps'
+
+export type Limb = 'hand' | 'foot'
 
 export interface ExerciseLoad {
   /** Id of the benchmark test the percentage refers to */

@@ -3,6 +3,7 @@ import ExerciseNotesButton from './ExerciseNotesButton'
 import Button from '../ui/Button'
 import IconButton from '../ui/IconButton'
 import ActiveExerciseScreen, { PrimaryBarButton, SkipExerciseButton } from './ActiveExerciseScreen'
+import { getLimb, getRunnerSide } from '../../utils/sides'
 
 interface TimedExerciseViewProps {
   exercise: Exercise
@@ -53,7 +54,7 @@ export default function TimedExerciseView({
   actionsHidden,
 }: TimedExerciseViewProps) {
   const activePhase = phase === 'paused' ? (wasPausedPhase ?? 'hanging') : phase
-  const isRepeaters = exercise.type === 'repeaters'
+  const hasReps = exercise.repsPerSet > 1
 
   // Offered between sets once at least one is done, never mid-hang
   const setsDone = activePhase === 'set_rest' ? currentSet : currentSet - 1
@@ -63,28 +64,22 @@ export default function TimedExerciseView({
     activePhase !== 'hanging' &&
     activePhase !== 'exercise_complete'
 
-  const progressTotal = isRepeaters ? exercise.repsPerSet : exercise.sets
-  const progressCurrent = isRepeaters ? currentRep : currentSet
-  const progressState: 'active' | 'resting' | 'complete' = isRepeaters
-    ? activePhase === 'hanging' || activePhase === 'countdown'
-      ? 'active'
-      : 'resting'
-    : activePhase === 'hanging' || activePhase === 'countdown'
-      ? 'active'
-      : activePhase === 'set_rest' || activePhase === 'exercise_complete'
-        ? 'complete'
-        : 'resting'
+  // The circles count sets; a rest between reps still belongs to the set under way
+  const progressState: 'active' | 'complete' =
+    activePhase === 'set_rest' || activePhase === 'exercise_complete' ? 'complete' : 'active'
 
   const isCountdownPhase =
     phase === 'countdown' ||
     (phase === 'paused' && wasPausedPhase === 'countdown')
 
+  // During the rest between reps, the rep coming next
+  const shownRep = activePhase === 'resting' ? currentRep + 1 : currentRep
   const caption = phase === 'paused'
     ? 'In pausa'
     : isCountdownPhase
       ? 'Posizionati!'
-      : isRepeaters
-        ? `Serie ${currentSet} di ${exercise.sets}`
+      : hasReps && (activePhase === 'hanging' || activePhase === 'resting')
+        ? `Rep ${shownRep} di ${exercise.repsPerSet}`
         : undefined
 
   return (
@@ -96,11 +91,12 @@ export default function TimedExerciseView({
       onOpenInfo={onOpenInfo}
       actionsHidden={actionsHidden}
       progress={{
-        total: progressTotal,
-        current: progressCurrent,
+        total: exercise.sets,
+        current: currentSet,
         state: progressState,
-        unit: isRepeaters ? 'Rep' : 'Serie',
       }}
+      side={getRunnerSide(exercise, activePhase, currentSet, currentRep)}
+      limb={getLimb(exercise)}
       // A paused timer keeps its phase's key, so the hourglass freezes instead of re-mounting
       contentKey={`${exerciseIndex}-${activePhase}`}
       timer={

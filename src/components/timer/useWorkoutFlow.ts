@@ -7,6 +7,7 @@ import { useVibration } from '../../hooks/useVibration'
 import { useWakeLock } from '../../hooks/useWakeLock'
 import { useSettingsStore } from '../../store/useSettingsStore'
 import { fireConfetti } from '../../utils/confetti'
+import { getGoCue, getRepRestCue } from '../../utils/sides'
 
 export type ExerciseOverride = {
   sets: number
@@ -130,15 +131,16 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
    * `countdownDuration`; otherwise jumps straight to `hanging`.
    *
    * Centralized so every transition into active work (start of exercise,
-   * skipped rest, resume-from-pause) behaves consistently.
+   * skipped rest, resume-from-pause) behaves consistently. `goCue` is spoken
+   * when the work starts right away ("Sinistra, vai!" on one-sided exercises).
    */
-  const enterActivePhase = useCallback(() => {
+  const enterActivePhase = useCallback((goCue = 'Vai!') => {
     if (!isRepsExercise && countdownDuration > 0) {
       setPhase('countdown')
       speak('Preparati!')
     } else {
       setPhase('hanging')
-      speak('Vai!')
+      speak(goCue)
       beepStart()
       vibrateShort()
     }
@@ -202,7 +204,7 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
 
     if (phase === 'countdown') {
       setPhase('hanging')
-      speak('Vai!')
+      speak(getGoCue(exercise, currentSet, currentRep))
       beepStart()
       vibrateShort()
       return
@@ -224,17 +226,21 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
         speak('Riposo tra le serie')
         setPhase('set_rest')
       } else if (exercise.restBetweenReps > 0) {
-        speak('Riposa')
+        speak(getRepRestCue(exercise, currentSet, currentRep))
         setPhase('resting')
       } else {
         setCurrentRep((r) => r + 1)
-        speak('Vai!')
+        speak(getGoCue(exercise, currentSet, currentRep + 1))
         beepStart()
       }
       return
     }
 
     if (phase === 'resting' || phase === 'set_rest') {
+      const goCue =
+        phase === 'set_rest'
+          ? getGoCue(exercise, currentSet + 1, 1)
+          : getGoCue(exercise, currentSet, currentRep + 1)
       if (phase === 'set_rest') {
         setCurrentSet((s) => s + 1)
         setCurrentRep(1)
@@ -245,12 +251,10 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
       skippedTimerRef.current = false
 
       if (wasSkipped) {
-        enterActivePhase()
+        enterActivePhase(goCue)
       } else {
         setPhase('hanging')
-        speak(
-          phase === 'set_rest' ? `Serie ${currentSet + 1}. Vai!` : 'Vai!',
-        )
+        speak(phase === 'set_rest' ? `Serie ${currentSet + 1}. ${goCue}` : goCue)
         beepStart()
         vibrateShort()
       }
@@ -337,9 +341,9 @@ export function useWorkoutFlow({ exercises, initialState }: UseWorkoutFlowArgs) 
       setOverrides((prev) => ({ ...prev, [exerciseIndex]: params }))
       setPendingAutoStartSeconds(null)
       wakeLockRequest()
-      enterActivePhase()
+      enterActivePhase(getGoCue(exercise ?? {}, currentSet, 1))
     },
-    [exerciseIndex, wakeLockRequest, enterActivePhase],
+    [exercise, exerciseIndex, currentSet, wakeLockRequest, enterActivePhase],
   )
 
   const skipExercise = useCallback(() => {

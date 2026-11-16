@@ -1,33 +1,34 @@
 interface SetProgressDotsProps {
   total: number
   current: number
-  activeState: 'active' | 'resting' | 'complete'
-  /** What the circles count, for the screen-reader sentence ("Serie 1 di 3") */
-  unit?: 'Serie' | 'Rep'
+  /** complete: the current set is done too (rest between sets) */
+  activeState: 'active' | 'complete'
 }
 
 /** Numbered circles: current in mustard, done in plum, upcoming on paper. */
-export default function SetProgressDots({
-  total,
-  current,
-  activeState,
-  unit = 'Serie',
-}: SetProgressDotsProps) {
+export default function SetProgressDots({ total, current, activeState }: SetProgressDotsProps) {
+  // Up to 10 sets stay on one line on a 375px phone
+  const compact = total > 7
+
   return (
     <div>
       <p className="sr-only">
-        {unit} {current} di {total}
+        Serie {current} di {total}
       </p>
-      <ol aria-hidden="true" className="flex flex-wrap items-center justify-center gap-2.5">
+      <ol
+        aria-hidden="true"
+        className={`flex flex-wrap items-center justify-center ${compact ? 'gap-1.5' : 'gap-2.5'}`}
+      >
         {Array.from({ length: total }, (_, i) => {
           const isCurrent = i === current - 1 && activeState === 'active'
-          const isDone =
-            i < current - 1 || (i === current - 1 && activeState !== 'active')
+          const isDone = i < current - 1 || (i === current - 1 && activeState === 'complete')
 
           return (
             <li
               key={i}
-              className={`flex size-9 items-center justify-center rounded-full border-2 border-plum font-poster text-base leading-none ${
+              className={`flex items-center justify-center rounded-full border-2 border-plum font-poster leading-none ${
+                compact ? 'size-7 text-sm' : 'size-9 text-base'
+              } ${
                 isDone
                   ? 'bg-plum text-cream'
                   : isCurrent

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import type { Exercise } from '../../types'
+import type { Exercise, Limb } from '../../types'
+import type { Side } from '../../utils/sides'
 import Button from '../ui/Button'
 import MuteButton from '../ui/MuteButton'
 import IconButton from '../ui/IconButton'
@@ -8,6 +9,7 @@ import PosterPill from '../ui/PosterPill'
 import Sunburst from '../ui/Sunburst'
 import HourglassTimer from './HourglassTimer'
 import SetProgressDots from './SetProgressDots'
+import SideMarker from './SideMarker'
 import { getExerciseColor } from '../../utils/exerciseColors'
 
 export interface ActiveTimer {
@@ -35,8 +37,8 @@ interface ActiveExerciseScreenProps {
   progress: {
     total: number
     current: number
-    state: 'active' | 'resting' | 'complete'
-    unit?: 'Serie' | 'Rep'
+    /** complete: the current set is done (rest between sets) */
+    state: 'active' | 'complete'
   }
   /** Re-keys the centre so it fades in on every set / phase change */
   contentKey: string
@@ -52,6 +54,9 @@ interface ActiveExerciseScreenProps {
   actions: ReactNode
   /** Hides the bar (keeping its space) while the info sheet's resume row sits on top of it */
   actionsHidden?: boolean
+  /** One-sided exercise: the side working now (or next, during a rest) */
+  side?: Side | null
+  limb?: Limb
 }
 
 /** Full-colour "exercise in progress" screen shared by the reps and the timed views. */
@@ -70,9 +75,12 @@ export default function ActiveExerciseScreen({
   footer,
   actions,
   actionsHidden = false,
+  side = null,
+  limb = 'hand',
 }: ActiveExerciseScreenProps) {
   const color = getExerciseColor(exerciseIndex)
-  const digits = value == null ? 0 : String(value).length
+  // A side marker takes ~90px on each edge: two digits drop a size so they don't run into it
+  const digits = value == null ? 0 : String(value).length + (side && value != null && value >= 10 ? 1 : 0)
   const timerLook = timer ? TIMER_LOOK[timer.kind] : null
   const seconds = timer ? Math.ceil(timer.remaining) : 0
 
@@ -100,7 +108,6 @@ export default function ActiveExerciseScreen({
           total={progress.total}
           current={progress.current}
           activeState={progress.state}
-          unit={progress.unit}
         />
 
         <button
@@ -128,11 +135,12 @@ export default function ActiveExerciseScreen({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18 }}
-            className="flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-3.5"
+            className="flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-3.5 py-6"
           >
             {timer && timerLook ? (
               <>
-                {/* 180×280, shrinking only when a short screen has no room for it */}
+                {/* 180×280, shrinking when a short screen (or a two-line title) leaves no room:
+                    the py-6 above keeps it off the title and the action bar */}
                 <div className="relative max-h-[280px] min-h-0 w-full flex-1">
                   <HourglassTimer
                     remaining={timer.remaining}
@@ -194,6 +202,8 @@ export default function ActiveExerciseScreen({
             )}
           </motion.div>
         </AnimatePresence>
+        {/* What sits under the hourglass (number, pill, caption) or under the reps number (pill, caption) */}
+        <SideMarker side={side} limb={limb} lift={timer ? 174 : 74} />
         <AnimatePresence>
           {footer && (
             <motion.div

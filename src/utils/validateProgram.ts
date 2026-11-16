@@ -2,10 +2,16 @@ import type {
   DayType,
   Equipment,
   Exercise,
+  ExerciseSide,
   ExerciseType,
   GripType,
+  Limb,
   TrainingProgram,
 } from '../types'
+
+const SIDE_VALUES: ExerciseSide[] = ['left', 'right', 'alternate_sets', 'alternate_reps']
+
+const LIMB_VALUES: Limb[] = ['hand', 'foot']
 
 const EQUIPMENT_VALUES: Equipment[] = [
   'hangboard',
@@ -187,6 +193,12 @@ function validateExercise(ex: unknown, ctx: string): string | null {
   }
   if (ex.canFinishEarly !== undefined && typeof ex.canFinishEarly !== 'boolean') {
     return `${ctx}.canFinishEarly deve essere true o false.`
+  }
+  if (ex.side !== undefined && !isOneOf(ex.side, SIDE_VALUES)) {
+    return `${ctx}.side "${String(ex.side)}" non valido. Valori ammessi: ${SIDE_VALUES.join(', ')}.`
+  }
+  if (ex.limb !== undefined && !isOneOf(ex.limb, LIMB_VALUES)) {
+    return `${ctx}.limb "${String(ex.limb)}" non valido. Valori ammessi: ${LIMB_VALUES.join(', ')}.`
   }
   return null
 }
