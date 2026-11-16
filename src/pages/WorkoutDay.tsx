@@ -456,7 +456,11 @@ function getTechLine(ex: Exercise): string {
   if (ex.grip) parts.push(gripLabels[ex.grip] ?? ex.grip)
   if (ex.weight && ex.weight !== 'corpo libero') parts.push(ex.weight)
   if (ex.type === 'repeaters') {
-    parts.push(`${ex.hangTime}s on / ${ex.restBetweenReps}s off`)
+    parts.push(
+      ex.restBetweenReps > 0
+        ? `${ex.hangTime}s on / ${ex.restBetweenReps}s off`
+        : `${ex.hangTime}s`
+    )
   } else if (
     ex.type === 'timed_hang' ||
     ex.type === 'timed_hold' ||
