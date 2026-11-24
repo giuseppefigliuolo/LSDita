@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, useMotionValue, useTransform, animate as motionAnimate } from 'framer-motion'
 import { INK, SURFACE, RADIUS, SHADOW } from '../../styles/tokens'
 
@@ -129,8 +130,11 @@ export default function BottomSheet({
     }
   }, [dragY, dismiss, dragFrom])
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center">
+  // Rendered at the end of #root, outside the page's stacking context, so it
+  // covers the bottom nav. Not on <body>: the iOS viewport fix re-lays out
+  // #root only, and the sheet's forms are what raise the keyboard.
+  return createPortal(
+    <div className="fixed inset-0 z-[60] flex items-end justify-center">
       <motion.div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         style={{ opacity: backdropOpacity }}
@@ -185,6 +189,7 @@ export default function BottomSheet({
           </button>
         )}
       </motion.div>
-    </div>
+    </div>,
+    document.getElementById('root') ?? document.body
   )
 }

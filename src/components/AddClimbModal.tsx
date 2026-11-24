@@ -74,7 +74,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
   return (
     <BottomSheet onClose={onClose}>
       {(dismiss) => (
-          <div className="px-5 pb-28">
+          <div className="px-5 pb-8">
             <h2
               className="text-lg font-bold text-text text-center mb-1"
               style={{ fontFamily: 'var(--font-display)' }}
