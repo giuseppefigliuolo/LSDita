@@ -12,7 +12,7 @@
 ![PWA](https://img.shields.io/badge/PWA-installable-5A2D82?logo=pwa&logoColor=white)
 
 A mobile-first Progressive Web App for structured climbing training —
-timer-based workouts, 4-week programs, progress tracking, voice cues, and confetti.
+timer-based workouts, multi-week programs with benchmark-driven loads, a climbing logbook, voice cues, and confetti.
 
 **[Live App →](https://giuseppefigliuolo.github.io/LSDita/)**
 
@@ -24,14 +24,17 @@ timer-based workouts, 4-week programs, progress tracking, voice cues, and confet
 
 | Feature | Details |
 |---|---|
-| **Timer Workouts** | Countdown-based execution with exercise intervals, sets & reps |
-| **4-Week Program** | Structured progression across finger strength, pull strength, power endurance, mobility |
-| **Dual Programs** | Home program (hangboard) + Travel program (Metolius Simulator 3D + 8kg dumbbell) |
-| **Progress Tracking** | Streak counter, completion calendar, workout history with feeling ratings (1–5) |
-| **Voice Cues** | Italian Web Speech API announces exercise transitions |
-| **Screen Wake Lock** | Keeps your screen on during active workouts |
-| **Offline Ready** | Full PWA with service worker — train without a signal |
-| **Data Export / Import** | JSON export/import of all your workout history |
+| **Timer Workouts** | Countdown-driven sessions: hangs, repeaters, reps, stretches, per-side exercises; resume an interrupted run |
+| **Programs** | Five built-in plans (see below) plus your own, uploaded as JSON and validated before use |
+| **Benchmark loads** | Test results (e.g. Critical Force) turn `load: { test, percent }` into "60 kg tot · togli 8 kg" for the day |
+| **Warm-up & Tests** | Program warm-up with a finger ramp computed from the day's loads; a page to record each test phase |
+| **Session editing** | Change any session's exercises, sets and times; saved as an override you can revert |
+| **Free Timer** | Standalone repeaters timer (reps × work / rest) |
+| **Logbook** | Routes and boulders with grade, style, ascent type, attempts, rating |
+| **Progress** | Streak, completion calendar, history with feeling ratings (1–5) |
+| **Voice & Haptics** | Italian Web Speech cues, beeps, vibration; screen kept awake during workouts |
+| **Offline Ready** | Installable PWA with service worker — train without a signal |
+| **Backup** | One JSON with everything: workouts, notes, tests, logbook, edited sessions, custom program |
 
 ---
 
@@ -46,7 +49,8 @@ Zustand 5                   →  state management (persisted to localStorage)
 React Router 7              →  navigation
 Web Speech API              →  Italian voice cues
 Screen Wake Lock API        →  display management
-Canvas Confetti             →  celebration 🎉
+Vitest                      →  unit tests
+Canvas confetti (in-house)  →  celebration 🎉
 ```
 
 ---
@@ -79,6 +83,26 @@ npm run dev
 npm run build     # production build
 npm run typecheck # type-check without emitting
 npm run lint      # ESLint
+npm test          # unit tests (Vitest), once
+npm run test:watch
+```
+
+Tests live next to the code (`src/**/*.test.ts`) and cover the pure logic: dates, streak, benchmark loads, program validation (including every bundled program), backup/restore. They run in the `Europe/Rome` timezone so date bugs around local midnight show up.
+
+Every commit runs lint, tests and build (Husky pre-commit); CI runs the same before deploying.
+
+---
+
+## Project layout
+
+```
+src/
+  data/          training programs (JSON)
+  pages/         one component per route
+  components/    UI; feature folders: settings/, workout-day/, edit-day/, timer/
+  store/         Zustand stores, persisted to localStorage
+  utils/         pure logic (dates, loads, validation, backup) + tests
+  hooks/         audio, speech, timer, wake lock, element size
 ```
 
 ---
@@ -106,13 +130,15 @@ The app is served at `/LSDita/` — configured in `vite.config.ts`.
 
 ## Programs
 
-### Home Program
-Full hangboard sessions using: hangboard, pull-up bar, wooden balls, fitness band, dumbbells.
-Focused on finger strength with half crimp, open hand, and repeater protocols.
+| Program | Length | Notes |
+|---|---|---|
+| **Lead Ott–Dic 2026** (default) | 11 weeks | Fixed calendar from 5 Oct 2026: tests, fall practice, route endurance, CR-based finger strength, warm-up protocol |
+| **Blocco Lead Endurance** | 4 weeks | Home hangboard plan: hangboard, pull-up bar, wooden balls, band, dumbbells |
+| **Trasferta** | 2 weeks | Travel kit only: Metolius Simulator 3D + 8 kg dumbbell |
+| **Ipertrofia** | 2 weeks | Full body without finger load (A2 pulley recovery) |
+| **Girl Workout** | 6 weeks | Full body + climbing + athletics (bar, rings, backpack) |
 
-### Travel Program
-Designed for training anywhere with minimal kit: Metolius Simulator 3D + 8kg dumbbell.
-Same 4-week structure, adapted exercises with bodyweight and portable equipment.
+A custom program is any JSON matching `TrainingProgram` in `src/types/index.ts`; Settings → *Carica un programma* checks it field by field and points at the first error.
 
 ---
 

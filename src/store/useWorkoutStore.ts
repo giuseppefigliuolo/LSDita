@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { computeStreak } from '../utils/streak'
 import type { CompletedWorkout, ExerciseNote, WorkoutNote } from '../types'
 
 interface WorkoutStore {
@@ -23,8 +24,6 @@ interface WorkoutStore {
   ) => boolean
   getCompletedCount: () => number
   getStreak: () => number
-  exportData: () => string
-  importData: (json: string) => void
   resetAll: () => void
 }
 
@@ -94,51 +93,7 @@ export const useWorkoutStore = create<WorkoutStore>()(
       getCompletedCount: () =>
         get().completedWorkouts.filter((w) => !w.partial).length,
 
-      getStreak: () => {
-        const workouts = get().completedWorkouts
-        if (workouts.length === 0) return 0
-
-        const dates = [...new Set(workouts.map((w) => w.date))].sort().reverse()
-        const today = new Date().toISOString().split('T')[0]
-        const yesterday = new Date(Date.now() - 86400000)
-          .toISOString()
-          .split('T')[0]
-
-        if (dates[0] !== today && dates[0] !== yesterday) return 0
-
-        let streak = 1
-        for (let i = 1; i < dates.length; i++) {
-          const prev = new Date(dates[i - 1])
-          const curr = new Date(dates[i])
-          const diff = (prev.getTime() - curr.getTime()) / 86400000
-          if (diff <= 2) streak++
-          else break
-        }
-        return streak
-      },
-
-      exportData: () => {
-        const { programStartDate, completedWorkouts, notes, exerciseNotes } = get()
-        return JSON.stringify(
-          { programStartDate, completedWorkouts, notes, exerciseNotes },
-          null,
-          2
-        )
-      },
-
-      importData: (json) => {
-        try {
-          const data = JSON.parse(json)
-          set({
-            programStartDate: data.programStartDate ?? null,
-            completedWorkouts: data.completedWorkouts ?? [],
-            notes: data.notes ?? [],
-            exerciseNotes: data.exerciseNotes ?? []
-          })
-        } catch {
-          console.error('Invalid import data')
-        }
-      },
+      getStreak: () => computeStreak(get().completedWorkouts.map((w) => w.date)),
 
       resetAll: () =>
         set({

@@ -125,7 +125,8 @@ function validateWeek(week: unknown, index: number): string | null {
   return null
 }
 
-function validateDay(day: unknown, ctx: string): string | null {
+/** Error message for the first invalid field of a session, or null when it's valid */
+export function validateDay(day: unknown, ctx = 'day'): string | null {
   if (!isObject(day)) return `${ctx} non è un oggetto.`
 
   const s =

@@ -2,7 +2,6 @@ import type { TrainingDay, TrainingProgram } from '../types'
 import {
   formatDayMonthIT,
   formatSeconds,
-  getCurrentDayOfWeek,
   getDayNameIT,
   getWeekNumber,
   parseLocalDate
@@ -36,19 +35,6 @@ export function getWeekDateRange(program: TrainingProgram, weekNumber: number): 
 
 export function getDayDurationLabel(day: TrainingDay): string {
   return day.durationLabel ?? `~${formatSeconds(getTotalExerciseDuration(day))}`
-}
-
-export function getTodayWorkout(program: TrainingProgram, startDate: string | null): { day: TrainingDay; weekNumber: number } | null {
-  const currentDay = getCurrentDayOfWeek()
-  const weekNumber = startDate ? getWeekNumber(startDate) : 1
-
-  const week = program.weeks.find((w) => w.weekNumber === weekNumber)
-  if (!week) return null
-
-  const day = week.days.find((d) => d.dayOfWeek === currentDay)
-  if (!day) return null
-
-  return { day, weekNumber }
 }
 
 export function getWorkoutForDay(program: TrainingProgram, weekNumber: number, dayOfWeek: string): TrainingDay | null {

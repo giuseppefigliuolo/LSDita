@@ -1,30 +1,24 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-  animate as motionAnimate,
-} from 'framer-motion'
+import { useState } from 'react'
 import Button from './ui/Button'
+import BottomSheet from './ui/BottomSheet'
+import {
+  DateInput,
+  DigitsInput,
+  FieldBlock,
+  SelectInput,
+  TextArea,
+  TextInput,
+} from './ui/FormFields'
 import type { AscentType, Climb, ClimbStyle } from '../types'
-import { INK, SURFACE, RADIUS, SHADOW } from '../styles/tokens'
+import { RADIUS, SHADOW } from '../styles/tokens'
+import { TONES } from '../styles/tones'
 import { useLogbookStore } from '../store/useLogbookStore'
+import { toLocalISODate } from '../utils/dateUtils'
 import {
   ASCENT_OPTIONS,
   FRENCH_GRADES,
   STYLE_OPTIONS,
 } from '../utils/climbGrades'
-
-type Tone = 'primary' | 'secondary' | 'accent' | 'violet' | 'green' | 'coral'
-
-const TONES: Record<Tone, { soft: string; label: string; ring: string }> = {
-  primary:   { soft: '#FDEEE4', label: '#A63E10', ring: '#D4541A' },
-  secondary: { soft: '#E2F6F6', label: '#0E7E7E', ring: '#17A8A8' },
-  accent:    { soft: '#FBF0CC', label: '#8A6D10', ring: '#E8B820' },
-  violet:    { soft: '#F2EAF8', label: '#5A2878', ring: '#7B3A9E' },
-  green:     { soft: '#EAF3DB', label: '#3F6E15', ring: '#5A9A1E' },
-  coral:     { soft: '#FCE4DF', label: '#A8341E', ring: '#E84830' },
-}
 
 interface Props {
   initial?: Climb
@@ -36,7 +30,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
   const updateClimb = useLogbookStore((s) => s.updateClimb)
   const deleteClimb = useLogbookStore((s) => s.deleteClimb)
 
-  const today = new Date().toISOString().slice(0, 10)
+  const today = toLocalISODate()
   const [name, setName] = useState(initial?.name ?? '')
   const [grade, setGrade] = useState<string>(initial?.grade ?? '6a')
   const [style, setStyle] = useState<ClimbStyle>(initial?.style ?? 'sport')
@@ -49,114 +43,10 @@ export default function AddClimbModal({ initial, onClose }: Props) {
   const [rating, setRating] = useState<1 | 2 | 3 | 4 | 5>(initial?.rating ?? 4)
   const [notes, setNotes] = useState(initial?.notes ?? '')
 
-  const dragY = useMotionValue(window.innerHeight)
-  const sheetScale = useTransform(dragY, [0, 300], [1, 0.95])
-  const sheetOpacity = useTransform(dragY, [0, 300], [1, 0.4])
-  const backdropOpacity = useTransform(dragY, [0, window.innerHeight], [1, 0])
-  const handleRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    motionAnimate(dragY, 0, { type: 'spring', damping: 28, stiffness: 300 })
-  }, [dragY])
-
-  const dismiss = useCallback(() => {
-    motionAnimate(dragY, window.innerHeight, {
-      duration: 0.25,
-      ease: 'easeIn',
-      onComplete: onClose,
-    })
-  }, [dragY, onClose])
-
-  useEffect(() => {
-    const el = handleRef.current
-    if (!el) return
-
-    let startY = 0
-    let lastY = 0
-    let lastTime = 0
-    let velY = 0
-    let dragging = false
-    let mouseDown = false
-
-    const begin = (y: number) => {
-      startY = y
-      lastY = y
-      lastTime = performance.now()
-      velY = 0
-      dragging = false
-    }
-
-    const move = (y: number, prevent: () => void) => {
-      const delta = y - startY
-      const now = performance.now()
-      const dt = now - lastTime
-      if (dt > 0) velY = ((y - lastY) / dt) * 1000
-      lastY = y
-      lastTime = now
-
-      if (!dragging) {
-        if (delta > 4) dragging = true
-        else return
-      }
-      prevent()
-      dragY.set(Math.max(0, delta))
-    }
-
-    const finish = () => {
-      if (!dragging) return
-      dragging = false
-      const current = dragY.get()
-      if (current > 100 || velY > 400) {
-        motionAnimate(dragY, window.innerHeight, {
-          duration: 0.25,
-          ease: 'easeIn',
-          onComplete: onClose,
-        })
-      } else {
-        motionAnimate(dragY, 0, { type: 'spring', stiffness: 400, damping: 30 })
-      }
-    }
-
-    const onTouchStart = (e: TouchEvent) => begin(e.touches[0].clientY)
-    const onTouchMove = (e: TouchEvent) =>
-      move(e.touches[0].clientY, () => e.preventDefault())
-    const onTouchEnd = () => finish()
-    const onPtrMove = (e: PointerEvent) => {
-      if (!mouseDown) return
-      move(e.clientY, () => e.preventDefault())
-    }
-    const onPtrUp = () => {
-      mouseDown = false
-      finish()
-      document.removeEventListener('pointermove', onPtrMove)
-      document.removeEventListener('pointerup', onPtrUp)
-    }
-    const onPtrDown = (e: PointerEvent) => {
-      if (e.pointerType !== 'mouse') return
-      mouseDown = true
-      begin(e.clientY)
-      document.addEventListener('pointermove', onPtrMove)
-      document.addEventListener('pointerup', onPtrUp)
-    }
-
-    el.addEventListener('touchstart', onTouchStart, { passive: true })
-    el.addEventListener('touchmove', onTouchMove, { passive: false })
-    el.addEventListener('touchend', onTouchEnd)
-    el.addEventListener('pointerdown', onPtrDown)
-    return () => {
-      el.removeEventListener('touchstart', onTouchStart)
-      el.removeEventListener('touchmove', onTouchMove)
-      el.removeEventListener('touchend', onTouchEnd)
-      el.removeEventListener('pointerdown', onPtrDown)
-      document.removeEventListener('pointermove', onPtrMove)
-      document.removeEventListener('pointerup', onPtrUp)
-    }
-  }, [dragY, onClose])
-
   const canSave = name.trim() !== '' && location.trim() !== ''
   const needsAttempts = ascentType === 'redpoint' || ascentType === 'project'
 
-  const handleSave = () => {
+  const handleSave = (dismiss: () => void) => {
     if (!canSave) return
     const payload: Climb = {
       id: initial?.id ?? crypto.randomUUID(),
@@ -175,45 +65,15 @@ export default function AddClimbModal({ initial, onClose }: Props) {
     dismiss()
   }
 
-  const handleDelete = () => {
+  const handleDelete = (dismiss: () => void) => {
     if (!initial) return
     deleteClimb(initial.id)
     dismiss()
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center">
-      <motion.div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        style={{ opacity: backdropOpacity }}
-        onClick={dismiss}
-      />
-      <motion.div
-        className="relative w-full max-w-lg max-h-[90dvh] overflow-hidden border-[3px] border-b-0 border-[#3A1248]"
-        style={{
-          borderRadius: RADIUS.sheetTop,
-          boxShadow: `0 -4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.55)`,
-          y: dragY,
-          scale: sheetScale,
-          opacity: sheetOpacity,
-        }}
-      >
-        <div className="bg-surface overflow-y-auto overscroll-contain max-h-[90dvh]">
-          <div
-            ref={handleRef}
-            className="sticky top-0 z-10 flex justify-center pt-3 pb-3 bg-surface cursor-grab active:cursor-grabbing touch-none"
-            style={{ touchAction: 'none' }}
-          >
-            <div
-              className="w-12 h-1.5 border-[1.5px] border-[#3A1248]"
-              style={{
-                borderRadius: RADIUS.btnSm,
-                backgroundColor: SURFACE,
-                boxShadow: SHADOW.xxs,
-              }}
-            />
-          </div>
-
+    <BottomSheet onClose={onClose}>
+      {(dismiss) => (
           <div className="px-5 pb-28">
             <h2
               className="text-lg font-bold text-text text-center mb-1"
@@ -279,7 +139,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
 
             {needsAttempts && (
               <FieldBlock label="Tentativi" tone="coral">
-                <NumberInput
+                <DigitsInput
                   tone="coral"
                   value={attempts}
                   onChange={setAttempts}
@@ -345,13 +205,13 @@ export default function AddClimbModal({ initial, onClose }: Props) {
                 variant="primary"
                 size="lg"
                 fullWidth
-                onClick={handleSave}
+                onClick={() => handleSave(dismiss)}
                 disabled={!canSave}
               >
                 {initial ? 'Salva modifiche' : 'Aggiungi al logbook'}
               </Button>
               {initial && (
-                <Button variant="danger" size="md" fullWidth onClick={handleDelete}>
+                <Button variant="danger" size="md" fullWidth onClick={() => handleDelete(dismiss)}>
                   Elimina
                 </Button>
               )}
@@ -360,159 +220,7 @@ export default function AddClimbModal({ initial, onClose }: Props) {
               </Button>
             </div>
           </div>
-        </div>
-      </motion.div>
-    </div>
-  )
-}
-
-function FieldBlock({
-  label,
-  tone = 'primary',
-  children,
-}: {
-  label: string
-  tone?: Tone
-  children: React.ReactNode
-}) {
-  return (
-    <label className="block mb-3 last:mb-0">
-      <span
-        className="text-[11px] font-bold uppercase tracking-wider mb-1 block"
-        style={{ color: TONES[tone].label }}
-      >
-        {label}
-      </span>
-      {children}
-    </label>
-  )
-}
-
-const inputBase =
-  'w-full border-[2px] border-[#3A1248] px-3 py-2 text-sm text-text outline-none focus:outline-none'
-
-function inputStyle(tone: Tone) {
-  return {
-    backgroundColor: TONES[tone].soft,
-    borderRadius: RADIUS.btnSm,
-    boxShadow: SHADOW.xs,
-  }
-}
-
-function TextInput({
-  value,
-  onChange,
-  placeholder,
-  tone = 'primary',
-}: {
-  value: string
-  onChange: (v: string) => void
-  placeholder?: string
-  tone?: Tone
-}) {
-  return (
-    <input
-      type="text"
-      value={value}
-      placeholder={placeholder}
-      onChange={(e) => onChange(e.target.value)}
-      className={inputBase}
-      style={inputStyle(tone)}
-    />
-  )
-}
-
-function TextArea({
-  value,
-  onChange,
-  tone = 'primary',
-}: {
-  value: string
-  onChange: (v: string) => void
-  tone?: Tone
-}) {
-  return (
-    <textarea
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      rows={3}
-      className={`${inputBase} resize-none`}
-      style={inputStyle(tone)}
-    />
-  )
-}
-
-function NumberInput({
-  value,
-  onChange,
-  onBlur,
-  tone = 'accent',
-}: {
-  value: string
-  onChange: (v: string) => void
-  onBlur?: () => void
-  tone?: Tone
-}) {
-  return (
-    <input
-      type="text"
-      inputMode="numeric"
-      pattern="[0-9]*"
-      value={value}
-      onChange={(e) => onChange(e.target.value.replace(/\D/g, ''))}
-      onBlur={onBlur}
-      className={`${inputBase} font-timer font-bold`}
-      style={{
-        ...inputStyle(tone),
-        color: TONES[tone].label,
-      }}
-    />
-  )
-}
-
-function DateInput({
-  value,
-  onChange,
-  tone = 'secondary',
-}: {
-  value: string
-  onChange: (v: string) => void
-  tone?: Tone
-}) {
-  return (
-    <input
-      type="date"
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      className={inputBase}
-      style={inputStyle(tone)}
-    />
-  )
-}
-
-function SelectInput({
-  value,
-  onChange,
-  options,
-  tone = 'secondary',
-}: {
-  value: string
-  onChange: (v: string) => void
-  options: { value: string; label: string }[]
-  tone?: Tone
-}) {
-  return (
-    <select
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      className={inputBase}
-      style={inputStyle(tone)}
-    >
-      {options.map((opt) => (
-        <option key={opt.value} value={opt.value}>
-          {opt.label}
-        </option>
-      ))}
-    </select>
+      )}
+    </BottomSheet>
   )
 }

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useWorkoutStore } from '../../store/useWorkoutStore'
 import { INK, RADIUS, SHADOW, SURFACE, SURFACE_ELEVATED } from '../../styles/tokens'
-import { formatDateShort } from '../../utils/dateUtils'
+import { formatDateShort, toLocalISODate } from '../../utils/dateUtils'
 import type { ExerciseNote } from '../../types'
 
 interface ExerciseNotesModalProps {
@@ -35,7 +35,7 @@ export default function ExerciseNotesModal({
     const note: ExerciseNote = {
       id: `ex-note-${now.getTime()}-${Math.random().toString(36).slice(2, 7)}`,
       exerciseId,
-      date: now.toISOString().split('T')[0],
+      date: toLocalISODate(now),
       createdAt: now.toISOString(),
       text,
     }

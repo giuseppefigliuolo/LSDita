@@ -13,7 +13,7 @@ import {
   getWeekDateRange
 } from '../utils/programUtils'
 import { formatKg, getLatestResult } from '../utils/benchmarks'
-import { daysSince, getDayNameIT, getTodayString } from '../utils/dateUtils'
+import { daysSince, getDayNameIT, getTodayString, toLocalISODate } from '../utils/dateUtils'
 import { fireConfettiFromEvent } from '../utils/confetti'
 import { INK, RADIUS, SHADOW } from '../styles/tokens'
 
@@ -226,7 +226,7 @@ export default function Dashboard() {
 
   function handleStartProgram(e: React.MouseEvent) {
     fireConfettiFromEvent(e)
-    setProgramStartDate(new Date().toISOString().split('T')[0])
+    setProgramStartDate(toLocalISODate())
   }
 
   return (

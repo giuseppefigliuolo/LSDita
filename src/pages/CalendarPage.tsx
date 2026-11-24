@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useSettingsStore } from '../store/useSettingsStore'
 import { getProgram } from '../utils/getProgram'
-import { getMonthNameIT } from '../utils/dateUtils'
+import { getMonthNameIT, toLocalISODate } from '../utils/dateUtils'
 import { getActiveWeekNumber, getDayTypeColor } from '../utils/programUtils'
 import { RADIUS, SHADOW } from '../styles/tokens'
 
@@ -36,7 +36,7 @@ export default function CalendarPage() {
 
   const calendarDays = buildMonthGrid(year, month)
 
-  const today = now.toISOString().split('T')[0]
+  const today = toLocalISODate(now)
   const completedDates = new Set(
     completedWorkouts.filter((w) => !w.partial).map((w) => w.date)
   )
@@ -45,7 +45,7 @@ export default function CalendarPage() {
     const dayOfWeekIndex = date.getDay()
     const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
     const dayName = dayNames[dayOfWeekIndex]
-    const dateStr = date.toISOString().split('T')[0]
+    const dateStr = toLocalISODate(date)
     const isCompleted = completedDates.has(dateStr)
     const isToday = dateStr === today
 

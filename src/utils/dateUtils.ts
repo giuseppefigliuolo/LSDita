@@ -40,8 +40,20 @@ export function formatDayMonthIT(date: Date): string {
   return `${date.getDate()} ${MONTHS_IT[date.getMonth()].slice(0, 3).toLowerCase()}`
 }
 
+/**
+ * "YYYY-MM-DD" of the local calendar day. toISOString() would give the UTC
+ * day, which in Italy is the previous one between local midnight and 1–2am,
+ * and for a Date built at local midnight (calendar cells) always.
+ */
+export function toLocalISODate(date: Date = new Date()): string {
+  const y = date.getFullYear()
+  const m = String(date.getMonth() + 1).padStart(2, '0')
+  const d = String(date.getDate()).padStart(2, '0')
+  return `${y}-${m}-${d}`
+}
+
 export function getTodayString(): string {
-  return new Date().toISOString().split('T')[0]
+  return toLocalISODate()
 }
 
 /** Whole days elapsed since an ISO timestamp. */
@@ -54,11 +66,6 @@ export function getDayOfWeekIndex(dayOfWeek: string): number {
   return days.indexOf(dayOfWeek)
 }
 
-export function getCurrentDayOfWeek(): string {
-  const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
-  return days[new Date().getDay()]
-}
-
 export function formatSeconds(seconds: number): string {
   const mins = Math.floor(seconds / 60)
   const secs = seconds % 60
@@ -66,9 +73,14 @@ export function formatSeconds(seconds: number): string {
   return `${mins}:${secs.toString().padStart(2, '0')}`
 }
 
-export function getWeekNumber(startDate: string, maxWeeks: number = 4): number {
-  const start = new Date(startDate)
-  const now = new Date()
-  const diffDays = Math.floor((now.getTime() - start.getTime()) / 86400000)
+/** Whole calendar days from a to b, immune to DST (23/25-hour days) */
+export function calendarDaysBetween(a: Date, b: Date): number {
+  const utcA = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())
+  const utcB = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate())
+  return Math.round((utcB - utcA) / 86400000)
+}
+
+export function getWeekNumber(startDate: string, maxWeeks: number = 4, now: Date = new Date()): number {
+  const diffDays = calendarDaysBetween(parseLocalDate(startDate), now)
   return Math.min(Math.floor(diffDays / 7) + 1, maxWeeks)
 }

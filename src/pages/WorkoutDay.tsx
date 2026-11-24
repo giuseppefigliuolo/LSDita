@@ -1,23 +1,17 @@
-import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import {
-  motion,
-  AnimatePresence,
-  useMotionValue,
-  useTransform,
-  animate as motionAnimate
-} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import IconButton from '../components/ui/IconButton'
-import PosterPill from '../components/ui/PosterPill'
-import Sunburst from '../components/ui/Sunburst'
-import ExerciseDescription from '../components/ui/ExerciseDescription'
 import Button from '../components/ui/Button'
-import ExerciseIllustration from '../components/illustrations/ExerciseIllustration'
-import EditDayModal from '../components/EditDayModal'
 import GuideSectionCard from '../components/ui/GuideSectionCard'
 import LinkCard from '../components/ui/LinkCard'
 import LoadCard from '../components/LoadCard'
-import type { DayIntensity, Exercise } from '../types'
+import EditDayModal from '../components/edit-day/EditDayModal'
+import HeroCard from '../components/workout-day/HeroCard'
+import ExerciseRow from '../components/workout-day/ExerciseRow'
+import ExerciseDetailSheet from '../components/workout-day/ExerciseDetailSheet'
+import SessionActionBar from '../components/workout-day/SessionActionBar'
+import type { Exercise } from '../types'
 import { dayOverrideKey, useSettingsStore } from '../store/useSettingsStore'
 import {
   resumableSession,
@@ -25,6 +19,7 @@ import {
 } from '../store/useSessionProgressStore'
 import { useWorkoutStore } from '../store/useWorkoutStore'
 import { useBenchmarkStore } from '../store/useBenchmarkStore'
+import { useElementHeight } from '../hooks/useElementHeight'
 import { getProgram } from '../utils/getProgram'
 import { getDistinctLoads } from '../utils/benchmarks'
 import {
@@ -33,10 +28,7 @@ import {
   getTotalExerciseDuration,
   getSessionLabel
 } from '../utils/programUtils'
-import { INK, SURFACE, RADIUS, SHADOW } from '../styles/tokens'
-import { getExerciseColor } from '../utils/exerciseColors'
-import { getExerciseVolume } from '../utils/exerciseLabels'
-import { getTodayString } from '../utils/dateUtils'
+import { getTodayString, toLocalISODate } from '../utils/dateUtils'
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -61,18 +53,8 @@ export default function WorkoutDay() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   }, [weekNumber, dayOfWeek])
-  const barRef = useRef<HTMLDivElement>(null)
   // The fixed CTA bar must never cover the last exercise: pad the page by its height.
-  const [barHeight, setBarHeight] = useState(104)
-  useEffect(() => {
-    const el = barRef.current
-    if (!el) return
-    const update = () => setBarHeight(el.offsetHeight)
-    update()
-    const ro = new ResizeObserver(update)
-    ro.observe(el)
-    return () => ro.disconnect()
-  }, [])
+  const [barRef, barHeight] = useElementHeight<HTMLDivElement>(104)
   const { selectedProgram } = useSettingsStore()
   const { completedWorkouts, markComplete } = useWorkoutStore()
   const sessionKey = dayOverrideKey(selectedProgram, Number(weekNumber), dayOfWeek ?? '')
@@ -109,6 +91,7 @@ export default function WorkoutDay() {
     savedSession,
     day.exercises.map((e) => e.id)
   )
+  const activePath = `/workout/${weekNumber}/${dayOfWeek}/active`
   const isDone = completedWorkouts.some(
     (w) =>
       !w.partial &&
@@ -121,7 +104,7 @@ export default function WorkoutDay() {
   function handleMarkDone() {
     if (!day || isDone) return
     const now = new Date()
-    const dateStr = now.toISOString().split('T')[0]
+    const dateStr = toLocalISODate(now)
     markComplete({
       id: `${week}-${day.dayOfWeek}-${dateStr}`,
       date: dateStr,
@@ -285,65 +268,26 @@ export default function WorkoutDay() {
       </motion.div>
 
       {/* Fixed bottom bar; the list above is padded by its measured height */}
-      <div
+      <SessionActionBar
         ref={barRef}
-        className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-plum bg-cream px-5 pt-3.5 pb-[calc(14px+env(safe-area-inset-bottom,0px))]"
-      >
-        <div className="mx-auto max-w-lg">
-          {hasExercises && resumable ? (
-            <div className="flex gap-3">
-              <Button
-                variant="ghost"
-                size="lg"
-                className="flex-1"
-                onClick={() => {
-                  clearSession(sessionKey)
-                  navigate(`/workout/${weekNumber}/${dayOfWeek}/active`)
-                }}
-              >
-                Ricomincia
-              </Button>
-              <Button
-                variant="primary"
-                size="lg"
-                className="flex-[2]"
-                onClick={() =>
-                  navigate(`/workout/${weekNumber}/${dayOfWeek}/active`, {
-                    state: { resume: true }
-                  })
-                }
-              >
-                ▶ Riprendi · {resumable.exerciseIndex + 1}/{day.exercises.length}
-              </Button>
-            </div>
-          ) : hasExercises ? (
-            <Button
-              variant="primary"
-              size="lg"
-              fullWidth
-              onClick={() =>
-                navigate(`/workout/${weekNumber}/${dayOfWeek}/active`)
-              }
-            >
-              ▶ {hasGuide ? 'Avvia esercizi' : 'Inizia allenamento'} · {totalMin} min
-            </Button>
-          ) : (
-            <Button
-              variant="primary"
-              size="lg"
-              fullWidth
-              disabled={isDone}
-              onClick={handleMarkDone}
-            >
-              {isDone ? '✓ Sessione completata' : '✓ Segna come completata'}
-            </Button>
-          )}
-        </div>
-      </div>
+        hasExercises={hasExercises}
+        hasGuide={hasGuide}
+        totalMin={totalMin}
+        exerciseCount={day.exercises.length}
+        resumeIndex={resumable?.exerciseIndex ?? null}
+        isDone={isDone}
+        onStart={() => navigate(activePath)}
+        onRestart={() => {
+          clearSession(sessionKey)
+          navigate(activePath)
+        }}
+        onResume={() => navigate(activePath, { state: { resume: true } })}
+        onMarkDone={handleMarkDone}
+      />
 
       <AnimatePresence>
         {selectedExercise && (
-          <ExerciseDetailModal
+          <ExerciseDetailSheet
             exercise={selectedExercise}
             sessionTitle={day.title}
             onClose={() => setSelectedExercise(null)}
@@ -361,727 +305,3 @@ export default function WorkoutDay() {
     </div>
   )
 }
-
-// ──────────────────────────────────────────────────────────────
-// Poster card
-// ──────────────────────────────────────────────────────────────
-
-const intensityLabels: Record<DayIntensity, string> = {
-  alta: 'Dita: alta',
-  media: 'Dita: media',
-  bassa: 'Dita: bassa'
-}
-
-const SUN_STYLE = {
-  background: 'radial-gradient(circle at 36% 34%, #f9e6a8 0 20%, #f5d77a 21%)',
-  boxShadow:
-    '3px 3px 0 #3b1746, 0 0 0 12px rgba(253,245,228,0.3), 0 0 0 24px rgba(253,245,228,0.14)'
-}
-
-function HeroCard({
-  typeLabel,
-  title,
-  description,
-  exerciseCount,
-  durationLabel,
-  intensity
-}: {
-  typeLabel: string
-  title: string
-  description: string
-  /** null hides the chip (sessions that are mostly read, not timed) */
-  exerciseCount: number | null
-  durationLabel: string
-  intensity?: DayIntensity
-}) {
-  return (
-    <div className="overflow-hidden rounded-3xl border-2 border-plum bg-paper shadow-[4px_4px_0_#3b1746]">
-      <div className="relative isolate flex flex-col gap-3 overflow-hidden border-b-2 border-plum bg-pastel-lavender px-5 pt-[22px] pb-5">
-        <Sunburst
-          ray="#C7A6CF"
-          base="#D9C2E0"
-          size={420}
-          center={{ right: 60, top: 60 }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-[28px] top-[28px] size-[64px] rounded-full border-2 border-plum"
-          style={SUN_STYLE}
-        />
-        <p className="relative font-mono text-[11px] font-bold uppercase tracking-[0.14em]">
-          {typeLabel}
-        </p>
-        <h2 className="relative max-w-[230px] font-poster text-[34px] leading-[1.05]">
-          {title}
-        </h2>
-        <div className="relative flex flex-wrap gap-2">
-          {exerciseCount != null && <PosterPill>{exerciseCount} esercizi</PosterPill>}
-          <PosterPill>{durationLabel}</PosterPill>
-          {intensity && <PosterPill>{intensityLabels[intensity]}</PosterPill>}
-        </div>
-      </div>
-      <p className="px-5 pt-4 pb-5 text-[15px] leading-[1.55] text-plum-soft [text-wrap:pretty]">
-        <ExerciseDescription text={description} />
-      </p>
-    </div>
-  )
-}
-
-// ──────────────────────────────────────────────────────────────
-// Exercise card
-// ──────────────────────────────────────────────────────────────
-
-const gripLabels: Record<string, string> = {
-  half_crimp: 'Half crimp',
-  open_hand: 'Mano aperta',
-  full_crimp: 'Arcuata',
-  three_finger_drag: 'Tre dita',
-  pinch: 'Pinch',
-  sloper: 'Sloper',
-  mixed: 'Mista'
-}
-
-const equipmentLabels: Record<string, string> = {
-  hangboard: 'Hangboard',
-  wooden_balls: 'Sfere legno',
-  pull_up_bar: 'Sbarra',
-  dumbbells: 'Manubri',
-  fitness_band: 'Elastico',
-  yoga_mat: 'Tappetino',
-  bodyweight: 'Corpo libero'
-}
-
-function getTechLine(ex: Exercise): string {
-  const parts: string[] = []
-  if (ex.grip) parts.push(gripLabels[ex.grip] ?? ex.grip)
-  if (ex.weight && ex.weight !== 'corpo libero') parts.push(ex.weight)
-  if (ex.type === 'repeaters') {
-    parts.push(
-      ex.restBetweenReps > 0
-        ? `${ex.hangTime}s on / ${ex.restBetweenReps}s off`
-        : `${ex.hangTime}s`
-    )
-  } else if (
-    ex.type === 'timed_hang' ||
-    ex.type === 'timed_hold' ||
-    ex.type === 'timed_stretch'
-  ) {
-    parts.push(`${ex.hangTime}s`)
-  }
-  if (parts.length === 0) {
-    parts.push(equipmentLabels[ex.equipment] ?? ex.equipment)
-  }
-  return parts.join(' · ')
-}
-
-function ExerciseRow({
-  exercise,
-  index,
-  onTap
-}: {
-  exercise: Exercise
-  index: number
-  onTap: () => void
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onTap}
-      className="flex w-full min-h-11 cursor-pointer items-center gap-3.5 py-2.5 text-left focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-violet"
-    >
-      <span
-        aria-hidden="true"
-        className="relative flex size-[46px] shrink-0 items-center justify-center rounded-full border-2 border-plum font-poster text-xl leading-none"
-        style={{ backgroundColor: getExerciseColor(index).bg }}
-      >
-        {index + 1}
-      </span>
-      <span className="min-w-0 flex-1">
-        <span className="block text-base font-extrabold leading-tight">
-          {exercise.name}
-        </span>
-        <span className="mt-0.5 block text-[13px] text-plum-muted">
-          {getTechLine(exercise)}
-        </span>
-      </span>
-      <PosterPill className="text-sm">{getExerciseVolume(exercise)}</PosterPill>
-    </button>
-  )
-}
-
-// ──────────────────────────────────────────────────────────────
-// Exercise detail modal (unchanged)
-// ──────────────────────────────────────────────────────────────
-
-const difficultyConfig: Record<
-  NonNullable<Exercise['difficulty']>,
-  { label: string; bg: string; fg: string }
-> = {
-  facile: { label: 'Facile', bg: '#5A9A1E', fg: '#FFFBF0' },
-  medio: { label: 'Medio', bg: '#E8B820', fg: INK },
-  hard: { label: 'Hard', bg: '#D4541A', fg: '#FFFBF0' }
-}
-
-function ExerciseDetailModal({
-  exercise,
-  sessionTitle,
-  onClose
-}: {
-  exercise: Exercise
-  sessionTitle: string
-  onClose: () => void
-}) {
-  const dragY = useMotionValue(window.innerHeight)
-  const sheetScale = useTransform(dragY, [0, 300], [1, 0.95])
-  const sheetOpacity = useTransform(dragY, [0, 300], [1, 0.4])
-  const backdropOpacity = useTransform(dragY, [0, window.innerHeight], [1, 0])
-  const sheetRef = useRef<HTMLDivElement>(null)
-
-  // Enter animation: slide up from bottom
-  useEffect(() => {
-    motionAnimate(dragY, 0, { type: 'spring', damping: 28, stiffness: 300 })
-  }, [dragY])
-
-  const dismiss = useCallback(() => {
-    motionAnimate(dragY, window.innerHeight, {
-      duration: 0.25,
-      ease: 'easeIn',
-      onComplete: onClose
-    })
-  }, [dragY, onClose])
-
-  useEffect(() => {
-    const el = sheetRef.current
-    if (!el) return
-
-    let startY = 0
-    let lastY = 0
-    let lastTime = 0
-    let velY = 0
-    let dragging = false
-    let mouseDown = false
-
-    const begin = (y: number) => {
-      startY = y
-      lastY = y
-      lastTime = performance.now()
-      velY = 0
-      dragging = false
-    }
-
-    const move = (y: number, prevent: () => void) => {
-      const delta = y - startY
-      const now = performance.now()
-      const dt = now - lastTime
-      if (dt > 0) velY = ((y - lastY) / dt) * 1000
-      lastY = y
-      lastTime = now
-
-      if (!dragging) {
-        if (delta > 8 && el.scrollTop <= 1) {
-          dragging = true
-        } else {
-          return
-        }
-      }
-
-      prevent()
-      dragY.set(Math.max(0, delta))
-    }
-
-    const finish = () => {
-      if (!dragging) return
-      dragging = false
-
-      const current = dragY.get()
-      if (current > 100 || velY > 400) {
-        motionAnimate(dragY, window.innerHeight, {
-          duration: 0.25,
-          ease: 'easeIn',
-          onComplete: onClose
-        })
-      } else {
-        motionAnimate(dragY, 0, { type: 'spring', stiffness: 400, damping: 30 })
-      }
-    }
-
-    const onTouchStart = (e: TouchEvent) => begin(e.touches[0].clientY)
-    const onTouchMove = (e: TouchEvent) =>
-      move(e.touches[0].clientY, () => e.preventDefault())
-    const onTouchEnd = () => finish()
-
-    const onPtrMove = (e: PointerEvent) => {
-      if (!mouseDown) return
-      move(e.clientY, () => e.preventDefault())
-    }
-    const onPtrUp = () => {
-      mouseDown = false
-      finish()
-      document.removeEventListener('pointermove', onPtrMove)
-      document.removeEventListener('pointerup', onPtrUp)
-    }
-    const onPtrDown = (e: PointerEvent) => {
-      if (e.pointerType !== 'mouse') return
-      mouseDown = true
-      begin(e.clientY)
-      document.addEventListener('pointermove', onPtrMove)
-      document.addEventListener('pointerup', onPtrUp)
-    }
-
-    el.addEventListener('touchstart', onTouchStart, { passive: true })
-    el.addEventListener('touchmove', onTouchMove, { passive: false })
-    el.addEventListener('touchend', onTouchEnd)
-    el.addEventListener('pointerdown', onPtrDown)
-
-    return () => {
-      el.removeEventListener('touchstart', onTouchStart)
-      el.removeEventListener('touchmove', onTouchMove)
-      el.removeEventListener('touchend', onTouchEnd)
-      el.removeEventListener('pointerdown', onPtrDown)
-      document.removeEventListener('pointermove', onPtrMove)
-      document.removeEventListener('pointerup', onPtrUp)
-    }
-  }, [dragY, onClose])
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center">
-      <motion.div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        style={{ opacity: backdropOpacity }}
-        onClick={dismiss}
-      />
-
-      <motion.div
-        ref={sheetRef}
-        className="relative w-full max-w-lg max-h-[85dvh] overflow-hidden border-[3px] border-b-0 border-[#3A1248]"
-        style={{
-          borderRadius: RADIUS.sheetTop,
-          boxShadow: `0 -4px 0px ${INK}, inset 0 2px 0 rgba(255,255,255,0.55)`,
-          y: dragY,
-          scale: sheetScale,
-          opacity: sheetOpacity
-        }}
-      >
-        <div className="bg-surface overflow-y-auto overscroll-contain max-h-[85dvh]">
-          <div className="sticky top-0 z-10 flex justify-center pt-3 pb-2 bg-surface">
-            <div
-              className="w-12 h-1.5 border-[1.5px] border-[#3A1248]"
-              style={{
-                borderRadius: RADIUS.btnSm,
-                backgroundColor: SURFACE,
-                boxShadow: SHADOW.xxs
-              }}
-            />
-          </div>
-
-          <ExerciseDetailBody
-            exercise={exercise}
-            sessionTitle={sessionTitle}
-          />
-        </div>
-
-        <button
-          type="button"
-          onClick={dismiss}
-          aria-label="Chiudi"
-          className="absolute top-3 right-3 z-20 w-9 h-9 flex items-center justify-center border-[2.5px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
-          style={{
-            borderColor: INK,
-            backgroundColor: '#FFF8E8',
-            borderRadius: RADIUS.backBtn,
-            boxShadow: SHADOW.xs
-          }}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke={INK}
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-      </motion.div>
-    </div>
-  )
-}
-
-function ExerciseDetailBody({
-  exercise,
-  sessionTitle
-}: {
-  exercise: Exercise
-  sessionTitle: string
-}) {
-  const equipmentLabel =
-    equipmentLabels[exercise.equipment] ?? exercise.equipment
-  const gripLabel = exercise.grip ? gripLabels[exercise.grip] : null
-  const isReps = exercise.type === 'reps'
-  const showTimeline = !isReps
-  const difficulty = exercise.difficulty
-    ? difficultyConfig[exercise.difficulty]
-    : null
-  const hasWeight = exercise.weight && exercise.weight !== 'corpo libero'
-
-  return (
-    <div className="px-5 pb-8 pt-1">
-      {/* Top row: illustration + meta + close */}
-      <div className="flex items-start gap-4 mb-5">
-        <div
-          className="shrink-0 flex items-center justify-center border-[2.5px] border-[#3A1248]"
-          style={{
-            width: 84,
-            height: 84,
-            borderRadius: RADIUS.blob,
-            backgroundColor: '#FFF8E8',
-            boxShadow: SHADOW.sm
-          }}
-        >
-          <ExerciseIllustration name={exercise.illustration} size={62} />
-        </div>
-        <div className="flex-1 min-w-0 pr-10">
-          <p
-            className="text-[10px] font-bold uppercase tracking-[0.2em] mb-1"
-            style={{ color: '#D4541A' }}
-          >
-            {sessionTitle}
-          </p>
-          <h2
-            className="font-bold text-text leading-tight mb-2.5"
-            style={{
-              fontSize: 24,
-              fontFamily: 'var(--font-display)',
-              overflowWrap: 'anywhere'
-            }}
-          >
-            {exercise.name}
-          </h2>
-          <div className="flex flex-wrap gap-1.5">
-            <MetaPill variant="muted">{equipmentLabel}</MetaPill>
-            {gripLabel && <MetaPill variant="accent">{gripLabel}</MetaPill>}
-            {hasWeight && (
-              <MetaPill variant="muted">{exercise.weight}</MetaPill>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Protocol card */}
-      <div
-        className="mb-3 border-[2.5px] border-[#3A1248] overflow-hidden"
-        style={{
-          borderRadius: RADIUS.card,
-          backgroundColor: '#FFF8E8',
-          boxShadow: SHADOW.sm
-        }}
-      >
-        <div className="px-4 pt-3 pb-1">
-          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted">
-            Protocollo
-          </p>
-        </div>
-        <div className="flex items-stretch px-2 pb-2">
-          <ProtocolStat
-            value={`${exercise.sets}×${exercise.repsPerSet}`}
-            label={isReps ? 'Set × Rep' : 'Serie × Rep'}
-            color="#D4541A"
-          />
-          {!isReps && (
-            <>
-              <DashedDivider />
-              <ProtocolStat
-                value={`${exercise.hangTime}s`}
-                label="Tenuta"
-                color="#E8B820"
-              />
-            </>
-          )}
-          {!isReps && exercise.restBetweenReps > 0 && (
-            <>
-              <DashedDivider />
-              <ProtocolStat
-                value={`${exercise.restBetweenReps}s`}
-                label="Pausa rep"
-                color="#3FB6A8"
-              />
-            </>
-          )}
-        </div>
-        {showTimeline && (
-          <div className="px-4 pb-3 pt-1">
-            <RepTimeline
-              reps={exercise.repsPerSet}
-              hangTime={exercise.hangTime}
-              restBetweenReps={exercise.restBetweenReps}
-            />
-            <div className="flex items-center justify-between mt-2 text-[11px] text-text-muted font-timer">
-              <span>
-                1 serie = {exercise.repsPerSet} ripetizioni ×{' '}
-                {exercise.hangTime}s hang
-                {exercise.restBetweenReps > 0
-                  ? ` / ${exercise.restBetweenReps}s pausa`
-                  : ''}
-              </span>
-              <span className="flex items-center gap-1">
-                <span
-                  className="inline-block w-1.5 h-1.5 rounded-full"
-                  style={{ backgroundColor: '#E8B820' }}
-                />
-                hang
-              </span>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Side cards: rest set + difficulty */}
-      <div className="grid grid-cols-2 gap-3 mb-5">
-        <SideCard
-          icon={
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#FFFBF0"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="13" r="8" />
-              <path d="M12 9v4l2.5 2.5M9 2h6M12 5V2" />
-            </svg>
-          }
-          iconBg="#7B3A9E"
-          value={`${exercise.restBetweenSets}s`}
-          label="Recupero tra serie"
-        />
-        {difficulty && (
-          <SideCard
-            icon={
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={difficulty.fg}
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="12" cy="12" r="5" />
-                <circle cx="12" cy="12" r="1.5" fill={difficulty.fg} />
-              </svg>
-            }
-            iconBg={difficulty.bg}
-            value={difficulty.label}
-            label="Difficoltà"
-          />
-        )}
-      </div>
-
-      {/* Description */}
-      <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted mb-2">
-        Descrizione
-      </p>
-      <div
-        className="mb-5 px-4 py-3.5 border-[2.5px] border-[#3A1248]"
-        style={{
-          borderRadius: RADIUS.card,
-          backgroundColor: '#FFF8E8',
-          boxShadow: SHADOW.sm
-        }}
-      >
-        <p
-          className="text-text"
-          style={{ fontSize: 14, lineHeight: 1.55 }}
-        >
-          <ExerciseDescription text={exercise.description} />
-        </p>
-      </div>
-
-      {/* Note pill */}
-      {exercise.notes && (
-        <div
-          className="inline-flex items-center gap-2 max-w-full px-3.5 py-2 text-xs font-medium text-text"
-          style={{
-            border: `1.5px dashed ${INK}`,
-            borderRadius: RADIUS.pill,
-            backgroundColor: 'transparent'
-          }}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#E8B820"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="shrink-0"
-          >
-            <path d="M12 20h9" />
-            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
-          </svg>
-          <span className="font-bold uppercase tracking-wider text-[10px]">
-            Nota:
-          </span>
-          <span className="truncate min-w-0">{exercise.notes}</span>
-        </div>
-      )}
-    </div>
-  )
-}
-
-function MetaPill({
-  children,
-  variant
-}: {
-  children: React.ReactNode
-  variant: 'muted' | 'accent'
-}) {
-  const isAccent = variant === 'accent'
-  return (
-    <span
-      className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border-[1.5px] border-[#3A1248]"
-      style={{
-        borderRadius: RADIUS.pill,
-        backgroundColor: isAccent ? '#D4541A' : '#FFF8E8',
-        color: isAccent ? '#FFFBF0' : INK
-      }}
-    >
-      {children}
-    </span>
-  )
-}
-
-function ProtocolStat({
-  value,
-  label,
-  color
-}: {
-  value: string
-  label: string
-  color: string
-}) {
-  return (
-    <div className="flex-1 flex flex-col items-center justify-center py-2 px-2">
-      <span
-        className="font-bold font-timer leading-none"
-        style={{ color, fontSize: 26 }}
-      >
-        {value}
-      </span>
-      <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted mt-1.5">
-        {label}
-      </span>
-    </div>
-  )
-}
-
-function DashedDivider() {
-  return (
-    <div
-      className="self-stretch my-2"
-      style={{
-        width: 0,
-        borderLeft: `1.5px dashed ${INK}`,
-        opacity: 0.4
-      }}
-    />
-  )
-}
-
-function RepTimeline({
-  reps,
-  hangTime,
-  restBetweenReps
-}: {
-  reps: number
-  hangTime: number
-  restBetweenReps: number
-}) {
-  const hangColor = '#E8B820'
-  const restColor = '#3FB6A8'
-  const hasRest = restBetweenReps > 0
-  const segments: { weight: number; color: string }[] = []
-  for (let i = 0; i < reps; i++) {
-    segments.push({ weight: hangTime, color: hangColor })
-    if (hasRest && i < reps - 1) {
-      segments.push({ weight: restBetweenReps, color: restColor })
-    }
-  }
-  const total = segments.reduce((sum, s) => sum + s.weight, 0)
-
-  return (
-    <div
-      className="flex w-full overflow-hidden border-[2px] border-[#3A1248]"
-      style={{
-        height: 22,
-        borderRadius: RADIUS.pill,
-        boxShadow: SHADOW.xxs
-      }}
-    >
-      {segments.map((s, i) => (
-        <div
-          key={i}
-          style={{
-            width: `${(s.weight / total) * 100}%`,
-            backgroundColor: s.color,
-            borderRight:
-              i < segments.length - 1 ? `1.5px solid ${INK}` : 'none'
-          }}
-        />
-      ))}
-    </div>
-  )
-}
-
-function SideCard({
-  icon,
-  iconBg,
-  value,
-  label
-}: {
-  icon: React.ReactNode
-  iconBg: string
-  value: string
-  label: string
-}) {
-  return (
-    <div
-      className="flex items-center gap-3 px-3 py-3 border-[2.5px] border-[#3A1248]"
-      style={{
-        borderRadius: RADIUS.card,
-        backgroundColor: '#FFF8E8',
-        boxShadow: SHADOW.sm
-      }}
-    >
-      <div
-        className="shrink-0 w-10 h-10 flex items-center justify-center border-[2px] border-[#3A1248]"
-        style={{
-          backgroundColor: iconBg,
-          borderRadius: RADIUS.btnSm,
-          boxShadow: SHADOW.xs
-        }}
-      >
-        {icon}
-      </div>
-      <div className="min-w-0 flex-1">
-        <p className="text-base font-bold font-timer text-text leading-tight">
-          {value}
-        </p>
-        <p className="text-[11px] text-text-muted leading-tight mt-0.5">
-          {label}
-        </p>
-      </div>
-    </div>
-  )
-}
-

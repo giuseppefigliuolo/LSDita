@@ -14,6 +14,7 @@ import {
 import { getProgram } from '../utils/getProgram'
 import type { CompletedWorkout, WorkoutNote } from '../types'
 import { getWorkoutForDay } from '../utils/programUtils'
+import { toLocalISODate } from '../utils/dateUtils'
 import MuteButton from '../components/ui/MuteButton'
 
 export default function ActiveWorkout() {
@@ -50,7 +51,7 @@ export default function ActiveWorkout() {
     const startedAt = new Date()
     return {
       startedAt: startedAt.getTime(),
-      dateStr: startedAt.toISOString().split('T')[0],
+      dateStr: toLocalISODate(startedAt),
     }
   })
 
