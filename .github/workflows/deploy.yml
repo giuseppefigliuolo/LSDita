@@ -33,6 +33,9 @@ jobs:
 
       - run: npm run build
 
+      # Browser tests on the build, with the runner's preinstalled Chrome
+      - run: npx playwright test
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

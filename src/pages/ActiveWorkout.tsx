@@ -123,9 +123,13 @@ export default function ActiveWorkout() {
   }
 
   return (
+    // Pinned to the layout viewport like the bottom nav, not sized with dvh:
+    // in the iOS standalone PWA dvh can stay short after the keyboard closes
+    // (exercise notes, workout note) or after returning from the background,
+    // which lifts the action bar and shows the page background under it.
     <motion.div
-      className="overflow-hidden overscroll-none bg-bg flex flex-col"
-      style={{ height: 'calc(100dvh - env(safe-area-inset-top, 0px))' }}
+      data-testid="workout-screen"
+      className="fixed inset-x-0 bottom-0 top-[env(safe-area-inset-top,0px)] overflow-hidden overscroll-none bg-bg flex flex-col"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
