@@ -4936,7 +4936,7 @@
     {
       "weekNumber": 10,
       "theme": "Blocco 3 · Resistenza",
-      "description": "Resistenza specifica per le vie: 1:1, prova generale da progetto, trave al 92% per non perdere forza.",
+      "description": "Resistenza specifica per le vie: 1:1, prova generale da progetto, trave al 92%, 1 kg sopra quello che hai tenuto in settimana 8, per non perdere forza.",
       "volumeMultiplier": 0.8,
       "days": [
         {
@@ -4996,7 +4996,7 @@
                 "test": "cr_open_hand",
                 "percent": 92
               },
-              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie.",
+              "notes": "Obiettivo: 10\" con circa 3\" di margine all'ultima serie. Dopo una serie te ne avanzano 5\" o più? +2 kg dalla serie dopo, anche più volte nella stessa seduta (massimo +4 kg), e la volta successiva parti dal più alto tra il carico di oggi e l'ultimo peso che hai usato. Non tieni 10\" puliti? Togli 2 kg. Mano aperta = priorità per le svase: se il suo CR esce molto più basso della semi-arcuata, aggiungi una serie. Dalla settimana 6 alla 8 hai tenuto il corpo libero: se la prima serie a +1 kg (in palestra 1,25) non è pulita, torna a corpo libero invece di togliere 2 kg.",
               "difficulty": "hard"
             }
           ]
