@@ -63,10 +63,12 @@ export default function TestsPage() {
 
   const phase = config.phases[phaseIndex]
   const bodyweight = getBodyweight(config, bodyweightKg)
+  // Bodyweight only matters for CR-style tests (loads as % of a total weight)
+  const usesCR = config.tests.some((t) => t.percentOfBodyweight)
 
   return (
     <div className="bg-bg min-h-dvh">
-      <PageHeader title="Test e CR" subtitle={program.name} backButton />
+      <PageHeader title={usesCR ? 'Test e CR' : 'Test'} subtitle={program.name} backButton />
 
       <motion.div
         className="px-4 pt-4 pb-12 max-w-lg mx-auto"
@@ -81,23 +83,25 @@ export default function TestsPage() {
           {config.description}
         </motion.p>
 
-        <motion.div
-          variants={fadeUp}
-          className="flex items-center justify-between gap-3 px-4 py-3 mb-6 border-[2.5px] border-[#3A1248]"
-          style={{
-            borderRadius: RADIUS.card,
-            backgroundColor: '#FFF8E8',
-            boxShadow: SHADOW.sm
-          }}
-        >
-          <div>
-            <p className="text-sm font-bold text-text">Peso corporeo</p>
-            <p className="text-xs text-text-secondary">
-              Usato per il peso da togliere sulla trave
-            </p>
-          </div>
-          <BodyweightStepper value={bodyweight} onChange={setBodyweight} />
-        </motion.div>
+        {usesCR && (
+          <motion.div
+            variants={fadeUp}
+            className="flex items-center justify-between gap-3 px-4 py-3 mb-6 border-[2.5px] border-[#3A1248]"
+            style={{
+              borderRadius: RADIUS.card,
+              backgroundColor: '#FFF8E8',
+              boxShadow: SHADOW.sm
+            }}
+          >
+            <div>
+              <p className="text-sm font-bold text-text">Peso corporeo</p>
+              <p className="text-xs text-text-secondary">
+                Usato per il peso da togliere sulla trave
+              </p>
+            </div>
+            <BodyweightStepper value={bodyweight} onChange={setBodyweight} />
+          </motion.div>
+        )}
 
         <motion.p
           variants={fadeUp}

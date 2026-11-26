@@ -1,0 +1,1734 @@
+{
+  "id": "margherita",
+  "name": "Margherita · ciclo 4 settimane",
+  "description": "Dall'arrampicata \"a tentativi di grado\" a un allenamento in cui ogni sessione sviluppa una capacità: A forza e boulder (lunedì), B resistenza e tecnica (mercoledì), C tecnica leggera facoltativa (venerdì), falesia nel weekend. Livello di partenza: 6b in indoor, 6a+ in falesia, blu al boulder. Il ciclo dura 4 settimane: alla fine si confrontano i test e si aggiorna il programma.",
+  "durationWeeks": 4,
+  "warmup": {
+    "title": "Riscaldamento · 30'",
+    "summary": "30' · uguale in tutte le sessioni",
+    "description": "Uguale in tutte le sessioni. Prepara dita e avambracci, spalle, schiena, core, anche e caviglie. Niente trave intensa qui: le dita si scaldano gradualmente e si allenano dopo.",
+    "sections": [
+      {
+        "title": "Scaldare",
+        "duration": "5'",
+        "body": "Cyclette o corsa leggera."
+      },
+      {
+        "title": "Mobilità",
+        "duration": "5'",
+        "body": "Mobilità articolare e dinamica: spalle, anche, polsi, caviglie."
+      },
+      {
+        "title": "Spalle, schiena e core",
+        "duration": "8'",
+        "items": [
+          "Extrarotazioni con elastico 2 × 12.",
+          "Face pull al TRX o con l'elastico 2 × 12.",
+          "Scapular push-up 2 × 10: in plank a braccia tese, avvicina e allontana le scapole senza piegare i gomiti.",
+          "Plank 2 × 30–40\".",
+          "Dead bug 2 × 10.",
+          "Hollow body 2 × 20\"."
+        ]
+      },
+      {
+        "title": "Gambe e anche",
+        "duration": "6'",
+        "items": [
+          "Squat a corpo libero 2 × 12.",
+          "Affondi 2 × 8 per gamba.",
+          "Mobilità di anche e caviglie."
+        ]
+      },
+      {
+        "title": "Dita e parete",
+        "duration": "6'",
+        "items": [
+          "Mobilità di dita e polsi.",
+          "Flessioni ed estensioni leggere delle dita.",
+          "Arrampicata facile su prese grandi, senza carichi elevati.",
+          "Sessione A: prima del boulder di forza aggiungi 3–4 blocchi facili in crescendo."
+        ]
+      }
+    ]
+  },
+  "benchmarks": {
+    "description": "Per misurare i progressi con dei numeri, non a sensazione. Prima volta in settimana 1, poi a fine scarico in settimana 4. Standardizza tutto: stessa trave e stesso listello, stessa durata, stesso rialzo per i piedi.",
+    "summary": "Trave, blocchi di riferimento, trazioni, rematore, core",
+    "bodyweightKg": 60,
+    "phases": [
+      {
+        "id": "w1",
+        "label": "Settimana 1",
+        "dates": "inizio ciclo",
+        "weekNumber": 1
+      },
+      {
+        "id": "w4",
+        "label": "Settimana 4",
+        "dates": "fine ciclo",
+        "weekNumber": 4
+      }
+    ],
+    "tests": [
+      {
+        "id": "pullups_max",
+        "label": "Trazioni",
+        "unit": "rip",
+        "howTo": "Ripetizioni pulite massime, una serie, a inizio forza complementare."
+      },
+      {
+        "id": "plank",
+        "label": "Plank",
+        "unit": "s",
+        "howTo": "Tenuta massima sugli avambracci, a fine sessione. Stop quando il bacino cede."
+      },
+      {
+        "id": "hollow",
+        "label": "Hollow body",
+        "unit": "s",
+        "howTo": "Tenuta massima con la zona lombare a terra. Stop quando la schiena si stacca."
+      },
+      {
+        "id": "hang_assist",
+        "label": "Sospensione 7\" · assistenza",
+        "howTo": "Listello comodo della trave, 7\". Livello più basso che dà sforzo 6–7/10, con lo sforzo, es. \"un piede · 7/10\". Progresso = livello più basso, oppure stesso livello con meno sforzo."
+      },
+      {
+        "id": "row",
+        "label": "Rematore",
+        "howTo": "Peso × ripetizioni per braccio, es. \"8 kg × 10\"."
+      },
+      {
+        "id": "boulder_easy",
+        "label": "Blocco di riferimento facile",
+        "howTo": "Tentativi · movimenti fatti · chiuso sì/no · fatica 1–10, es. \"1 · tutti · sì · 4\"."
+      },
+      {
+        "id": "boulder_hard",
+        "label": "Blocco di riferimento difficile",
+        "howTo": "Uno che chiudi a fatica. Stesso formato."
+      },
+      {
+        "id": "boulder_project",
+        "label": "Blocco di riferimento progetto",
+        "howTo": "Uno che oggi non chiudi. Stesso formato, es. \"5 · 4 su 7 · no · 9\"."
+      }
+    ]
+  },
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "theme": "Adattamento",
+      "description": "Impara gli esercizi, trova i carichi e segna i valori di partenza.",
+      "volumeMultiplier": 1,
+      "days": [
+        {
+          "dayOfWeek": "monday",
+          "label": "A",
+          "type": "boulder",
+          "title": "Forza e boulder",
+          "icon": "boulder",
+          "description": "La sessione per i passaggi più difficili: prese piccole, movimenti dinamici, blocchi al limite. Settimana 1: si imparano gli esercizi e si segnano i valori di partenza.",
+          "intensity": "alta",
+          "durationLabel": "2–2 h 30",
+          "warmupNote": "Con 3–4 blocchi facili in crescendo prima del boulder",
+          "exercisesTitle": "Trave, forza complementare e core",
+          "exercisesNote": "La trave è il primo esercizio: falla subito dopo il riscaldamento, poi esci dal timer, fai il boulder e torna qui con «Riprendi» per forza e core.",
+          "recordsTests": true,
+          "guide": [
+            {
+              "title": "Valori di partenza",
+              "body": "Questa settimana non si cerca la prestazione: si imparano gli esercizi, si trovano i carichi e si segnano i valori nella pagina Test (Settimana 1). Obiettivi del ciclo: blocchi verdi più sicuri, 6a/6a+ in falesia più consolidato, più continuità nei circuiti, una base per arrivare al 6b+.",
+              "items": [
+                "Sospensione: livello di assistenza e sforzo nell'esercizio della trave.",
+                "Blocchi di riferimento: durante il boulder, scegline 3: uno che chiudi facilmente, uno che chiudi a fatica, uno che oggi non chiudi. Fotografali o segnati dove sono. Per ciascuno: tentativi, movimenti fatti, chiuso sì/no, fatica da 1 a 10.",
+                "Trazioni: una serie di ripetizioni pulite massime, prima delle serie normali.",
+                "Rematore: peso × ripetizioni (in settimana 4 l'ultima serie a ripetizioni massime).",
+                "Plank e hollow body: a fine sessione, una prova di tenuta massima ciascuno con il cronometro."
+              ],
+              "afterExercises": false
+            },
+            {
+              "title": "Boulder di forza",
+              "duration": "45–55'",
+              "body": "Prima 3–4 blocchi facili in crescendo, poi 4–5 blocchi blu e verdi alla tua portata ma impegnativi. 3–5 tentativi per blocco, 2–3' di recupero tra i tentativi duri. Conta la qualità del movimento, non il numero di blocchi: non serve chiuderli tutti. Oggi scegli anche i 3 blocchi di riferimento (vedi Test).",
+              "items": [
+                "Prese piccole e tacche.",
+                "Spostamento del baricentro.",
+                "Lanci e movimenti dinamici.",
+                "Coordinazione piedi-mani.",
+                "Tenuta del core nei movimenti in strapiombo."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Qualche minuto di arrampicata facilissima o di stretching per gli avambracci.",
+              "afterExercises": true
+            },
+            {
+              "title": "Regole sempre valide",
+              "items": [
+                "Mai dita intense in due sessioni di fila.",
+                "Niente cedimento sistematico nelle trazioni e negli esercizi di forza.",
+                "Dolore a dita, gomiti o spalle: fermi subito l'esercizio che lo provoca.",
+                "Almeno 48 ore tra le sessioni più dure.",
+                "Qualità dei movimenti prima della quantità di esercizi."
+              ],
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-a-trave",
+              "name": "Sospensioni 7\" · presa comoda",
+              "description": "Trave della palestra, sempre lo stesso listello: quello comodo e profondo, mai le tasche né le tacche piccole. Due mani, mano aperta o semi-arcuata a 4 dita, mai arcuata completa (pollice sopra l'indice). Metti un rialzo sotto la trave (panca, sgabello, cassone) e scegli uno dei 3 livelli di assistenza: 1) due piedi appoggiati, 2) un piede appoggiato, 3) senza piedi. I piedi spingono solo quanto serve per restare a uno sforzo di 6–7/10. Usa sempre lo stesso rialzo, così i livelli restano confrontabili. Si fa subito dopo il riscaldamento, a dita fresche, prima del boulder.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "max-hang-open",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 7,
+              "restBetweenReps": 0,
+              "restBetweenSets": 150,
+              "notes": "Settimana di prova. Prima serie con due piedi; se è facile passa a un piede, e poi senza piedi, finché trovi il livello che dà sforzo 6–7/10. Quel livello è il test di partenza: segnalo nella pagina Test (Settimana 1).",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-trazioni",
+              "name": "Trazioni",
+              "description": "Presa prona alla larghezza delle spalle. Parti a braccia tese, scapole attive, sali fino al mento sopra la sbarra e scendi controllando. Mantieni sempre 1–2 ripetizioni di margine: niente cedimento. Se non arrivi a 5 trazioni pulite usa un elastico sotto i piedi; se ne fai più di 10 metti un po' di peso in uno zaino, così 3–4 ripetizioni restano davvero allenanti.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 3,
+              "repsPerSet": 3,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "notes": "Prima delle serie fai il test: trazioni pulite massime, una sola serie. Recupera 3' e poi fai le 3 serie da 3.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-rematore",
+              "name": "Rematore con manubrio",
+              "description": "Un ginocchio e una mano sulla panca, schiena piatta. Tira il manubrio verso l'anca, prima avvicinando la scapola alla colonna e poi piegando il gomito. Scendi lento. La serie alterna i lati: sinistra, destra, sinistra…",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 6,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Trova il peso con cui la decima ripetizione è impegnativa ma pulita, e segnalo nelle note (serve anche come test).",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-bulgaro",
+              "name": "Bulgarian split squat",
+              "description": "Piede dietro appoggiato su una panca, piede davanti a un passo lungo di distanza. Scendi in verticale finché il ginocchio dietro sfiora terra, risali spingendo sul tallone davanti. Controllo e stabilità prima del carico. La serie alterna le gambe.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 8,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Corpo libero.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-a-ginocchia",
+              "name": "Ginocchia al petto appeso",
+              "description": "Alla sbarra, spalle attive. Porta le ginocchia al petto arrotondando il bacino, scendi controllando senza dondolare.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "leg-raises",
+              "sets": 3,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "difficulty": "medio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "wednesday",
+          "label": "B",
+          "type": "climbing_gym",
+          "title": "Resistenza e tecnica",
+          "icon": "climbing",
+          "description": "Probabilmente la sessione più importante per la falesia: non basta la forza per un movimento duro, bisogna tenere la qualità dei movimenti quando gli avambracci iniziano a stancarsi.",
+          "intensity": "media",
+          "durationLabel": "2–2 h 30",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Continuità e core",
+          "guide": [
+            {
+              "title": "Circuiti",
+              "duration": "40–45'",
+              "body": "3–4 circuiti di difficoltà crescente: 2 da 5c/6a e 1–2 da 6a/6b, in base alla giornata.",
+              "items": [
+                "Completa i circuiti senza fermarti.",
+                "Concentrati sulla respirazione.",
+                "Non stringere le prese più del necessario.",
+                "Usa bene i piedi.",
+                "Non stancare inutilmente gli avambracci."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Arrampicata facilissima o stretching per gli avambracci.",
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-b-continuita",
+              "name": "Continuità",
+              "description": "Arrampicata continua su terreno facile, alternando vie o traversi: non scendi mai a terra durante il tempo. Intensità moderata, devi poter continuare a muoverti senza arrivare alla ghisa piena. Recupero completo, lontano dalla parete. Respira, stringi le prese il meno possibile, usa i piedi.",
+              "equipment": "bodyweight",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 360,
+              "restBetweenReps": 0,
+              "restBetweenSets": 180,
+              "notes": "3 × 6'. Scegli un terreno su cui arrivi alla fine con un po' di ghisa ma senza staccarti.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-b-body-saw",
+              "name": "Body saw al TRX",
+              "description": "Plank sugli avambracci con i piedi nelle maniglie del TRX. Spingi il corpo indietro di qualche centimetro facendo scorrere le spalle oltre i gomiti, poi torna avanti. Bacino fermo, schiena piatta: se la schiena si inarca, accorcia il movimento.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-plank-laterale",
+              "name": "Plank laterale",
+              "description": "Sull'avambraccio, gomito sotto la spalla, corpo in linea dalla testa ai piedi. Spingi il fianco verso l'alto e non lasciarlo cadere. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 15,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Due serie per lato.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-b-bird-dog",
+              "name": "Bird dog",
+              "description": "A quattro zampe. Allunga insieme il braccio e la gamba opposti fino a metterli in linea con la schiena, tieni 2\" e torna. Bacino fermo, come se avessi un bicchiere d'acqua sulla schiena. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "La mano indicata è quella che si allunga.",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "friday",
+          "label": "C",
+          "type": "climbing_gym",
+          "title": "Tecnica e preparazione alla falesia",
+          "icon": "climbing",
+          "description": "Facoltativa: nelle settimane da 2 allenamenti si fanno solo A e B. Qui conta la tecnica, non la prestazione. Se sabato vai in falesia falla leggerissima oppure riposa: non si arriva in falesia con gli avambracci già stanchi.",
+          "intensity": "bassa",
+          "durationLabel": "1 h 30 – 2 h",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Mobilità e stretching",
+          "guide": [
+            {
+              "title": "Boulder tecnici facili",
+              "duration": "25'",
+              "body": "Blocchi facili, un esercizio alla volta per qualche blocco. Sembrano semplici ma in falesia fanno una grande differenza.",
+              "items": [
+                "Silent feet: appoggia i piedi senza fare rumore.",
+                "No readjustment: una volta presa una presa, non correggere la posizione della mano.",
+                "Straight arms: tieni le braccia distese quando puoi.",
+                "Hip positioning: prova rotazioni del bacino e spostamenti laterali.",
+                "Downclimbing: scendi dai blocchi controllando i movimenti."
+              ]
+            },
+            {
+              "title": "Circuiti di continuità",
+              "duration": "30–40'",
+              "body": "Circuiti facili, ritmo tranquillo, senza ghisa. Se domani vai in falesia, fermati a 15–20'."
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-c-cat-cow",
+              "name": "Cat-Cow",
+              "description": "A quattro zampe, alterna inarcamento (cat: schiena arcuata, mento al petto) ed estensione (cow: pancia verso terra, testa su). Inspira in cow, espira in cat. Mobilizza tutta la colonna e prepara agli allungamenti più profondi.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "cat-cow",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 4,
+              "restBetweenReps": 2,
+              "restBetweenSets": 15,
+              "notes": "Movimento fluido, sincronizzato col respiro",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-thoracic",
+              "name": "Rotazione toracica",
+              "description": "Su un fianco, gambe piegate sovrapposte. Apri il braccio di sopra verso il lato opposto ruotando il busto e cerca di portare la scapola a terra. Migliora la rotazione del busto, utile nei movimenti laterali e per respirare meglio sotto ghisa.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "thoracic-rotation",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "notes": "Un set per lato",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-forearm",
+              "name": "Stretching avambracci",
+              "description": "In ginocchio, palmi a terra con le dita verso le ginocchia: oscilla dolcemente per allungare i flessori. Poi inverti: dorso delle mani a terra per gli estensori.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "forearm-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 35,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Flessori prima, poi estensori. Un set ciascuno",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-pigeon",
+              "name": "Pigeon pose",
+              "description": "Da quadrupedia porta un ginocchio avanti verso la mano dello stesso lato, distendi la gamba dietro e scendi con il busto verso terra. Allunga gluteo e anca: aiuta a stare vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "pigeon-pose",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Rilassati e respira",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-90-90",
+              "name": "90/90 anche",
+              "description": "A terra: gamba davanti piegata a 90° con lo stinco perpendicolare al corpo, gamba dietro piegata a 90° all'indietro. Busto dritto, poi inclinati in avanti sopra lo stinco davanti. Apre la rotazione dell'anca, il movimento di drop knee e del bacino girato verso la parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Se fai fatica a tenere il busto dritto, un cuscino sotto il gluteo",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-frog",
+              "name": "Frog stretch",
+              "description": "In ginocchio, allarga le ginocchia il più possibile con i piedi girati verso l'esterno. Scendi sugli avambracci e spingi i fianchi indietro. Allunga gli adduttori: rana, piedi alti e bacino vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "frog-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 50,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Scendi gradualmente, non forzare",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "saturday",
+          "label": "WE",
+          "type": "lead",
+          "title": "Falesia",
+          "icon": "rope",
+          "description": "L'obiettivo principale: applicare in via quello che alleni durante la settimana. Sabato o domenica.",
+          "durationLabel": "giornata",
+          "guide": [
+            {
+              "title": "Come impostare la giornata",
+              "items": [
+                "Una o due vie facili per scaldarti prima di provare quelle impegnative.",
+                "Alterna vie a vista e vie lavorate: il grado a vista dice se migliorano lettura, tecnica e gestione delle energie.",
+                "Non trasformare ogni uscita in una gara per il grado: si migliora anche imparando a muoversi meglio, consumare meno e recuperare.",
+                "Niente falesia questo weekend? Riposo o attività aerobica leggera."
+              ]
+            },
+            {
+              "title": "Cosa segnare",
+              "body": "Ogni via nel Diario: grado, a vista / flash / lavorata, numero di tentativi. Nelle note la fatica da 1 a 10. Dopo 8–12 settimane il grado più alto chiuso e il grado a vista diranno se il programma funziona."
+            }
+          ],
+          "exercises": []
+        }
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "theme": "Progressione",
+      "description": "Aumenta leggermente il volume o la difficoltà dei blocchi.",
+      "volumeMultiplier": 1,
+      "days": [
+        {
+          "dayOfWeek": "monday",
+          "label": "A",
+          "type": "boulder",
+          "title": "Forza e boulder",
+          "icon": "boulder",
+          "description": "La sessione per i passaggi più difficili: prese piccole, movimenti dinamici, blocchi al limite. Un po' più di volume rispetto alla settimana 1.",
+          "intensity": "alta",
+          "durationLabel": "2–2 h 30",
+          "warmupNote": "Con 3–4 blocchi facili in crescendo prima del boulder",
+          "exercisesTitle": "Trave, forza complementare e core",
+          "exercisesNote": "La trave è il primo esercizio: falla subito dopo il riscaldamento, poi esci dal timer, fai il boulder e torna qui con «Riprendi» per forza e core.",
+          "guide": [
+            {
+              "title": "Boulder di forza",
+              "duration": "45–55'",
+              "body": "Prima 3–4 blocchi facili in crescendo, poi 4–5 blocchi blu e verdi impegnativi: rispetto alla settimana 1 aggiungi un blocco o sceglierne uno un po' più duro. 3–5 tentativi per blocco, 2–3' di recupero.",
+              "items": [
+                "Prese piccole e tacche.",
+                "Spostamento del baricentro.",
+                "Lanci e movimenti dinamici.",
+                "Coordinazione piedi-mani.",
+                "Tenuta del core nei movimenti in strapiombo."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Qualche minuto di arrampicata facilissima o di stretching per gli avambracci.",
+              "afterExercises": true
+            },
+            {
+              "title": "Regole sempre valide",
+              "items": [
+                "Mai dita intense in due sessioni di fila.",
+                "Niente cedimento sistematico nelle trazioni e negli esercizi di forza.",
+                "Dolore a dita, gomiti o spalle: fermi subito l'esercizio che lo provoca.",
+                "Almeno 48 ore tra le sessioni più dure.",
+                "Qualità dei movimenti prima della quantità di esercizi."
+              ],
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-a-trave",
+              "name": "Sospensioni 7\" · presa comoda",
+              "description": "Trave della palestra, sempre lo stesso listello: quello comodo e profondo, mai le tasche né le tacche piccole. Due mani, mano aperta o semi-arcuata a 4 dita, mai arcuata completa (pollice sopra l'indice). Metti un rialzo sotto la trave (panca, sgabello, cassone) e scegli uno dei 3 livelli di assistenza: 1) due piedi appoggiati, 2) un piede appoggiato, 3) senza piedi. I piedi spingono solo quanto serve per restare a uno sforzo di 6–7/10. Usa sempre lo stesso rialzo, così i livelli restano confrontabili. Si fa subito dopo il riscaldamento, a dita fresche, prima del boulder.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "max-hang-open",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 7,
+              "restBetweenReps": 0,
+              "restBetweenSets": 150,
+              "notes": "Sforzo 6–7/10, stesso livello della settimana 1. Mai a cedimento: alla fine dei 7\" devi poter tenere ancora qualche secondo.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-trazioni",
+              "name": "Trazioni",
+              "description": "Presa prona alla larghezza delle spalle. Parti a braccia tese, scapole attive, sali fino al mento sopra la sbarra e scendi controllando. Mantieni sempre 1–2 ripetizioni di margine: niente cedimento. Se non arrivi a 5 trazioni pulite usa un elastico sotto i piedi; se ne fai più di 10 metti un po' di peso in uno zaino, così 3–4 ripetizioni restano davvero allenanti.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 3,
+              "repsPerSet": 4,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "notes": "1–2 ripetizioni di margine a ogni serie.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-rematore",
+              "name": "Rematore con manubrio",
+              "description": "Un ginocchio e una mano sulla panca, schiena piatta. Tira il manubrio verso l'anca, prima avvicinando la scapola alla colonna e poi piegando il gomito. Scendi lento. La serie alterna i lati: sinistra, destra, sinistra…",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 6,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Stesso peso: se tutte le serie sono pulite, la prossima volta +1–2 kg.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-bulgaro",
+              "name": "Bulgarian split squat",
+              "description": "Piede dietro appoggiato su una panca, piede davanti a un passo lungo di distanza. Scendi in verticale finché il ginocchio dietro sfiora terra, risali spingendo sul tallone davanti. Controllo e stabilità prima del carico. La serie alterna le gambe.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 8,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Se è facile, un manubrio leggero in mano.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-a-ginocchia",
+              "name": "Ginocchia al petto appeso",
+              "description": "Alla sbarra, spalle attive. Porta le ginocchia al petto arrotondando il bacino, scendi controllando senza dondolare.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "leg-raises",
+              "sets": 3,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-plank-laterale",
+              "name": "Plank laterale",
+              "description": "Sull'avambraccio, gomito sotto la spalla, corpo in linea dalla testa ai piedi. Spingi il fianco verso l'alto e non lasciarlo cadere. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 15,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Due serie per lato.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-a-hollow",
+              "name": "Hollow body",
+              "description": "Sulla schiena, zona lombare schiacciata a terra. Solleva spalle e gambe tese, braccia sopra la testa: il corpo è una banana. Se la schiena si stacca da terra, piega le ginocchia.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "hollow-body",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 25,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "wednesday",
+          "label": "B",
+          "type": "climbing_gym",
+          "title": "Resistenza e tecnica",
+          "icon": "climbing",
+          "description": "Probabilmente la sessione più importante per la falesia: non basta la forza per un movimento duro, bisogna tenere la qualità dei movimenti quando gli avambracci iniziano a stancarsi.",
+          "intensity": "media",
+          "durationLabel": "2–2 h 30",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Continuità e core",
+          "guide": [
+            {
+              "title": "Circuiti",
+              "duration": "40–45'",
+              "body": "3–4 circuiti di difficoltà crescente: 2 da 5c/6a e 1–2 da 6a/6b, in base alla giornata.",
+              "items": [
+                "Completa i circuiti senza fermarti.",
+                "Concentrati sulla respirazione.",
+                "Non stringere le prese più del necessario.",
+                "Usa bene i piedi.",
+                "Non stancare inutilmente gli avambracci."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Arrampicata facilissima o stretching per gli avambracci.",
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-b-continuita",
+              "name": "Continuità",
+              "description": "Arrampicata continua su terreno facile, alternando vie o traversi: non scendi mai a terra durante il tempo. Intensità moderata, devi poter continuare a muoverti senza arrivare alla ghisa piena. Recupero completo, lontano dalla parete. Respira, stringi le prese il meno possibile, usa i piedi.",
+              "equipment": "bodyweight",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 420,
+              "restBetweenReps": 0,
+              "restBetweenSets": 180,
+              "notes": "3 × 7', stessa difficoltà della settimana 1: si aumenta la durata, non la difficoltà.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-b-body-saw",
+              "name": "Body saw al TRX",
+              "description": "Plank sugli avambracci con i piedi nelle maniglie del TRX. Spingi il corpo indietro di qualche centimetro facendo scorrere le spalle oltre i gomiti, poi torna avanti. Bacino fermo, schiena piatta: se la schiena si inarca, accorcia il movimento.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-plank-laterale",
+              "name": "Plank laterale",
+              "description": "Sull'avambraccio, gomito sotto la spalla, corpo in linea dalla testa ai piedi. Spingi il fianco verso l'alto e non lasciarlo cadere. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 15,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Due serie per lato.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-b-bird-dog",
+              "name": "Bird dog",
+              "description": "A quattro zampe. Allunga insieme il braccio e la gamba opposti fino a metterli in linea con la schiena, tieni 2\" e torna. Bacino fermo, come se avessi un bicchiere d'acqua sulla schiena. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "La mano indicata è quella che si allunga.",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "friday",
+          "label": "C",
+          "type": "climbing_gym",
+          "title": "Tecnica e preparazione alla falesia",
+          "icon": "climbing",
+          "description": "Facoltativa: nelle settimane da 2 allenamenti si fanno solo A e B. Qui conta la tecnica, non la prestazione. Se sabato vai in falesia falla leggerissima oppure riposa: non si arriva in falesia con gli avambracci già stanchi.",
+          "intensity": "bassa",
+          "durationLabel": "1 h 30 – 2 h",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Mobilità e stretching",
+          "guide": [
+            {
+              "title": "Boulder tecnici facili",
+              "duration": "25'",
+              "body": "Blocchi facili, un esercizio alla volta per qualche blocco. Sembrano semplici ma in falesia fanno una grande differenza.",
+              "items": [
+                "Silent feet: appoggia i piedi senza fare rumore.",
+                "No readjustment: una volta presa una presa, non correggere la posizione della mano.",
+                "Straight arms: tieni le braccia distese quando puoi.",
+                "Hip positioning: prova rotazioni del bacino e spostamenti laterali.",
+                "Downclimbing: scendi dai blocchi controllando i movimenti."
+              ]
+            },
+            {
+              "title": "Circuiti di continuità",
+              "duration": "30–40'",
+              "body": "Circuiti facili, ritmo tranquillo, senza ghisa. Se domani vai in falesia, fermati a 15–20'."
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-c-cat-cow",
+              "name": "Cat-Cow",
+              "description": "A quattro zampe, alterna inarcamento (cat: schiena arcuata, mento al petto) ed estensione (cow: pancia verso terra, testa su). Inspira in cow, espira in cat. Mobilizza tutta la colonna e prepara agli allungamenti più profondi.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "cat-cow",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 4,
+              "restBetweenReps": 2,
+              "restBetweenSets": 15,
+              "notes": "Movimento fluido, sincronizzato col respiro",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-thoracic",
+              "name": "Rotazione toracica",
+              "description": "Su un fianco, gambe piegate sovrapposte. Apri il braccio di sopra verso il lato opposto ruotando il busto e cerca di portare la scapola a terra. Migliora la rotazione del busto, utile nei movimenti laterali e per respirare meglio sotto ghisa.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "thoracic-rotation",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "notes": "Un set per lato",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-forearm",
+              "name": "Stretching avambracci",
+              "description": "In ginocchio, palmi a terra con le dita verso le ginocchia: oscilla dolcemente per allungare i flessori. Poi inverti: dorso delle mani a terra per gli estensori.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "forearm-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 35,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Flessori prima, poi estensori. Un set ciascuno",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-pigeon",
+              "name": "Pigeon pose",
+              "description": "Da quadrupedia porta un ginocchio avanti verso la mano dello stesso lato, distendi la gamba dietro e scendi con il busto verso terra. Allunga gluteo e anca: aiuta a stare vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "pigeon-pose",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Rilassati e respira",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-90-90",
+              "name": "90/90 anche",
+              "description": "A terra: gamba davanti piegata a 90° con lo stinco perpendicolare al corpo, gamba dietro piegata a 90° all'indietro. Busto dritto, poi inclinati in avanti sopra lo stinco davanti. Apre la rotazione dell'anca, il movimento di drop knee e del bacino girato verso la parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Se fai fatica a tenere il busto dritto, un cuscino sotto il gluteo",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-frog",
+              "name": "Frog stretch",
+              "description": "In ginocchio, allarga le ginocchia il più possibile con i piedi girati verso l'esterno. Scendi sugli avambracci e spingi i fianchi indietro. Allunga gli adduttori: rana, piedi alti e bacino vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "frog-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 50,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Scendi gradualmente, non forzare",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "saturday",
+          "label": "WE",
+          "type": "lead",
+          "title": "Falesia",
+          "icon": "rope",
+          "description": "L'obiettivo principale: applicare in via quello che alleni durante la settimana. Sabato o domenica.",
+          "durationLabel": "giornata",
+          "guide": [
+            {
+              "title": "Come impostare la giornata",
+              "items": [
+                "Una o due vie facili per scaldarti prima di provare quelle impegnative.",
+                "Alterna vie a vista e vie lavorate: il grado a vista dice se migliorano lettura, tecnica e gestione delle energie.",
+                "Non trasformare ogni uscita in una gara per il grado: si migliora anche imparando a muoversi meglio, consumare meno e recuperare.",
+                "Niente falesia questo weekend? Riposo o attività aerobica leggera."
+              ]
+            },
+            {
+              "title": "Cosa segnare",
+              "body": "Ogni via nel Diario: grado, a vista / flash / lavorata, numero di tentativi. Nelle note la fatica da 1 a 10. Dopo 8–12 settimane il grado più alto chiuso e il grado a vista diranno se il programma funziona."
+            }
+          ],
+          "exercises": []
+        }
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "theme": "Intensificazione",
+      "description": "Movimenti più impegnativi e tentativi di qualità migliore.",
+      "volumeMultiplier": 1,
+      "days": [
+        {
+          "dayOfWeek": "monday",
+          "label": "A",
+          "type": "boulder",
+          "title": "Forza e boulder",
+          "icon": "boulder",
+          "description": "La sessione per i passaggi più difficili. Settimana di intensificazione: blocchi e trave un gradino più duri, stesso tempo.",
+          "intensity": "alta",
+          "durationLabel": "2–2 h 30",
+          "warmupNote": "Con 3–4 blocchi facili in crescendo prima del boulder",
+          "exercisesTitle": "Trave, forza complementare e core",
+          "exercisesNote": "La trave è il primo esercizio: falla subito dopo il riscaldamento, poi esci dal timer, fai il boulder e torna qui con «Riprendi» per forza e core.",
+          "guide": [
+            {
+              "title": "Boulder di forza",
+              "duration": "45–55'",
+              "body": "Settimana di intensificazione: stessi 4–5 blocchi ma più duri, cerca movimenti che normalmente non riesci a fare. Meno tentativi buttati, più tentativi di qualità: 2–3' veri di recupero.",
+              "items": [
+                "Prese piccole e tacche.",
+                "Spostamento del baricentro.",
+                "Lanci e movimenti dinamici.",
+                "Coordinazione piedi-mani.",
+                "Tenuta del core nei movimenti in strapiombo."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Qualche minuto di arrampicata facilissima o di stretching per gli avambracci.",
+              "afterExercises": true
+            },
+            {
+              "title": "Regole sempre valide",
+              "items": [
+                "Mai dita intense in due sessioni di fila.",
+                "Niente cedimento sistematico nelle trazioni e negli esercizi di forza.",
+                "Dolore a dita, gomiti o spalle: fermi subito l'esercizio che lo provoca.",
+                "Almeno 48 ore tra le sessioni più dure.",
+                "Qualità dei movimenti prima della quantità di esercizi."
+              ],
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-a-trave",
+              "name": "Sospensioni 7\" · presa comoda",
+              "description": "Trave della palestra, sempre lo stesso listello: quello comodo e profondo, mai le tasche né le tacche piccole. Due mani, mano aperta o semi-arcuata a 4 dita, mai arcuata completa (pollice sopra l'indice). Metti un rialzo sotto la trave (panca, sgabello, cassone) e scegli uno dei 3 livelli di assistenza: 1) due piedi appoggiati, 2) un piede appoggiato, 3) senza piedi. I piedi spingono solo quanto serve per restare a uno sforzo di 6–7/10. Usa sempre lo stesso rialzo, così i livelli restano confrontabili. Si fa subito dopo il riscaldamento, a dita fresche, prima del boulder.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "max-hang-open",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 7,
+              "restBetweenReps": 0,
+              "restBetweenSets": 150,
+              "notes": "Sforzo 7/10: se nella settimana 2 l'ultima serie era pulita, spingi meno con i piedi o prova il livello successivo. Già senza piedi e sotto 7/10? Resta senza piedi: non serve di più in questo ciclo. Dita doloranti → salta e basta.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-trazioni",
+              "name": "Trazioni",
+              "description": "Presa prona alla larghezza delle spalle. Parti a braccia tese, scapole attive, sali fino al mento sopra la sbarra e scendi controllando. Mantieni sempre 1–2 ripetizioni di margine: niente cedimento. Se non arrivi a 5 trazioni pulite usa un elastico sotto i piedi; se ne fai più di 10 metti un po' di peso in uno zaino, così 3–4 ripetizioni restano davvero allenanti.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 4,
+              "repsPerSet": 3,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "notes": "Discesa lenta di 3\" a ogni ripetizione.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-rematore",
+              "name": "Rematore con manubrio",
+              "description": "Un ginocchio e una mano sulla panca, schiena piatta. Tira il manubrio verso l'anca, prima avvicinando la scapola alla colonna e poi piegando il gomito. Scendi lento. La serie alterna i lati: sinistra, destra, sinistra…",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 6,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Peso della settimana 2 o +1–2 kg.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-bulgaro",
+              "name": "Bulgarian split squat",
+              "description": "Piede dietro appoggiato su una panca, piede davanti a un passo lungo di distanza. Scendi in verticale finché il ginocchio dietro sfiora terra, risali spingendo sul tallone davanti. Controllo e stabilità prima del carico. La serie alterna le gambe.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 8,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Discesa lenta di 3\".",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-a-ginocchia",
+              "name": "Ginocchia al petto appeso",
+              "description": "Alla sbarra, spalle attive. Porta le ginocchia al petto arrotondando il bacino, scendi controllando senza dondolare.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "leg-raises",
+              "sets": 3,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-plank-laterale",
+              "name": "Plank laterale",
+              "description": "Sull'avambraccio, gomito sotto la spalla, corpo in linea dalla testa ai piedi. Spingi il fianco verso l'alto e non lasciarlo cadere. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 35,
+              "restBetweenReps": 0,
+              "restBetweenSets": 15,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Due serie per lato.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-a-hollow",
+              "name": "Hollow body",
+              "description": "Sulla schiena, zona lombare schiacciata a terra. Solleva spalle e gambe tese, braccia sopra la testa: il corpo è una banana. Se la schiena si stacca da terra, piega le ginocchia.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "hollow-body",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "wednesday",
+          "label": "B",
+          "type": "climbing_gym",
+          "title": "Resistenza e tecnica",
+          "icon": "climbing",
+          "description": "Probabilmente la sessione più importante per la falesia: non basta la forza per un movimento duro, bisogna tenere la qualità dei movimenti quando gli avambracci iniziano a stancarsi.",
+          "intensity": "media",
+          "durationLabel": "2–2 h 30",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Continuità e core",
+          "guide": [
+            {
+              "title": "Circuiti",
+              "duration": "40–45'",
+              "body": "3–4 circuiti di difficoltà crescente: 2 da 5c/6a e 1–2 da 6a/6b, in base alla giornata. Questa settimana prova a farne 2 da 6a/6b.",
+              "items": [
+                "Completa i circuiti senza fermarti.",
+                "Concentrati sulla respirazione.",
+                "Non stringere le prese più del necessario.",
+                "Usa bene i piedi.",
+                "Non stancare inutilmente gli avambracci."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Arrampicata facilissima o stretching per gli avambracci.",
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-b-continuita",
+              "name": "Continuità",
+              "description": "Arrampicata continua su terreno facile, alternando vie o traversi: non scendi mai a terra durante il tempo. Intensità moderata, devi poter continuare a muoverti senza arrivare alla ghisa piena. Recupero completo, lontano dalla parete. Respira, stringi le prese il meno possibile, usa i piedi.",
+              "equipment": "bodyweight",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 3,
+              "repsPerSet": 1,
+              "hangTime": 480,
+              "restBetweenReps": 0,
+              "restBetweenSets": 180,
+              "notes": "3 × 8', stessa difficoltà. Mai aumentare durata e difficoltà insieme.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-b-body-saw",
+              "name": "Body saw al TRX",
+              "description": "Plank sugli avambracci con i piedi nelle maniglie del TRX. Spingi il corpo indietro di qualche centimetro facendo scorrere le spalle oltre i gomiti, poi torna avanti. Bacino fermo, schiena piatta: se la schiena si inarca, accorcia il movimento.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 12,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-plank-laterale",
+              "name": "Plank laterale",
+              "description": "Sull'avambraccio, gomito sotto la spalla, corpo in linea dalla testa ai piedi. Spingi il fianco verso l'alto e non lasciarlo cadere. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 1,
+              "hangTime": 35,
+              "restBetweenReps": 0,
+              "restBetweenSets": 15,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Due serie per lato.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-b-bird-dog",
+              "name": "Bird dog",
+              "description": "A quattro zampe. Allunga insieme il braccio e la gamba opposti fino a metterli in linea con la schiena, tieni 2\" e torna. Bacino fermo, come se avessi un bicchiere d'acqua sulla schiena. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "La mano indicata è quella che si allunga.",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "friday",
+          "label": "C",
+          "type": "climbing_gym",
+          "title": "Tecnica e preparazione alla falesia",
+          "icon": "climbing",
+          "description": "Facoltativa: nelle settimane da 2 allenamenti si fanno solo A e B. Qui conta la tecnica, non la prestazione. Se sabato vai in falesia falla leggerissima oppure riposa: non si arriva in falesia con gli avambracci già stanchi.",
+          "intensity": "bassa",
+          "durationLabel": "1 h 30 – 2 h",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Mobilità e stretching",
+          "guide": [
+            {
+              "title": "Boulder tecnici facili",
+              "duration": "25'",
+              "body": "Blocchi facili, un esercizio alla volta per qualche blocco. Sembrano semplici ma in falesia fanno una grande differenza.",
+              "items": [
+                "Silent feet: appoggia i piedi senza fare rumore.",
+                "No readjustment: una volta presa una presa, non correggere la posizione della mano.",
+                "Straight arms: tieni le braccia distese quando puoi.",
+                "Hip positioning: prova rotazioni del bacino e spostamenti laterali.",
+                "Downclimbing: scendi dai blocchi controllando i movimenti."
+              ]
+            },
+            {
+              "title": "Circuiti di continuità",
+              "duration": "30–40'",
+              "body": "Circuiti facili, ritmo tranquillo, senza ghisa. Se domani vai in falesia, fermati a 15–20'."
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-c-cat-cow",
+              "name": "Cat-Cow",
+              "description": "A quattro zampe, alterna inarcamento (cat: schiena arcuata, mento al petto) ed estensione (cow: pancia verso terra, testa su). Inspira in cow, espira in cat. Mobilizza tutta la colonna e prepara agli allungamenti più profondi.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "cat-cow",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 4,
+              "restBetweenReps": 2,
+              "restBetweenSets": 15,
+              "notes": "Movimento fluido, sincronizzato col respiro",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-thoracic",
+              "name": "Rotazione toracica",
+              "description": "Su un fianco, gambe piegate sovrapposte. Apri il braccio di sopra verso il lato opposto ruotando il busto e cerca di portare la scapola a terra. Migliora la rotazione del busto, utile nei movimenti laterali e per respirare meglio sotto ghisa.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "thoracic-rotation",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "notes": "Un set per lato",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-forearm",
+              "name": "Stretching avambracci",
+              "description": "In ginocchio, palmi a terra con le dita verso le ginocchia: oscilla dolcemente per allungare i flessori. Poi inverti: dorso delle mani a terra per gli estensori.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "forearm-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 35,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Flessori prima, poi estensori. Un set ciascuno",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-pigeon",
+              "name": "Pigeon pose",
+              "description": "Da quadrupedia porta un ginocchio avanti verso la mano dello stesso lato, distendi la gamba dietro e scendi con il busto verso terra. Allunga gluteo e anca: aiuta a stare vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "pigeon-pose",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Rilassati e respira",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-90-90",
+              "name": "90/90 anche",
+              "description": "A terra: gamba davanti piegata a 90° con lo stinco perpendicolare al corpo, gamba dietro piegata a 90° all'indietro. Busto dritto, poi inclinati in avanti sopra lo stinco davanti. Apre la rotazione dell'anca, il movimento di drop knee e del bacino girato verso la parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Se fai fatica a tenere il busto dritto, un cuscino sotto il gluteo",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-frog",
+              "name": "Frog stretch",
+              "description": "In ginocchio, allarga le ginocchia il più possibile con i piedi girati verso l'esterno. Scendi sugli avambracci e spingi i fianchi indietro. Allunga gli adduttori: rana, piedi alti e bacino vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "frog-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 50,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Scendi gradualmente, non forzare",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "saturday",
+          "label": "WE",
+          "type": "lead",
+          "title": "Falesia",
+          "icon": "rope",
+          "description": "L'obiettivo principale: applicare in via quello che alleni durante la settimana. Sabato o domenica.",
+          "durationLabel": "giornata",
+          "guide": [
+            {
+              "title": "Come impostare la giornata",
+              "items": [
+                "Una o due vie facili per scaldarti prima di provare quelle impegnative.",
+                "Alterna vie a vista e vie lavorate: il grado a vista dice se migliorano lettura, tecnica e gestione delle energie.",
+                "Non trasformare ogni uscita in una gara per il grado: si migliora anche imparando a muoversi meglio, consumare meno e recuperare.",
+                "Niente falesia questo weekend? Riposo o attività aerobica leggera."
+              ]
+            },
+            {
+              "title": "Cosa segnare",
+              "body": "Ogni via nel Diario: grado, a vista / flash / lavorata, numero di tentativi. Nelle note la fatica da 1 a 10. Dopo 8–12 settimane il grado più alto chiuso e il grado a vista diranno se il programma funziona."
+            }
+          ],
+          "exercises": []
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "theme": "Scarico e test",
+      "description": "Volume ridotto del 30–40%: recupera e ripeti i test della settimana 1.",
+      "volumeMultiplier": 0.65,
+      "days": [
+        {
+          "dayOfWeek": "monday",
+          "label": "A",
+          "type": "boulder",
+          "title": "Forza e boulder · scarico e test",
+          "icon": "boulder",
+          "description": "Volume ridotto del 30–40% e test di fine ciclo, a dita fresche.",
+          "intensity": "media",
+          "durationLabel": "1 h 30",
+          "warmupNote": "Con 3–4 blocchi facili in crescendo prima del boulder",
+          "exercisesTitle": "Trave, forza complementare e core",
+          "exercisesNote": "La trave è il primo esercizio: falla subito dopo il riscaldamento, poi esci dal timer, fai il boulder e torna qui con «Riprendi» per forza e core.",
+          "recordsTests": true,
+          "guide": [
+            {
+              "title": "Test di fine ciclo",
+              "body": "Stesse condizioni della settimana 1: stessa presa, stessa trave, stesso rialzo per i piedi. Segna tutto nella pagina Test (Settimana 4) e confronta. Obiettivi del ciclo: blocchi verdi più sicuri, 6a/6a+ in falesia più consolidato, più continuità nei circuiti, una base per arrivare al 6b+.",
+              "items": [
+                "Sospensione: livello di assistenza e sforzo nell'esercizio della trave.",
+                "Blocchi di riferimento: durante il boulder, riprova i 3 blocchi della settimana 1. Per ciascuno: tentativi, movimenti fatti, chiuso sì/no, fatica da 1 a 10.",
+                "Trazioni: una serie di ripetizioni pulite massime, prima delle serie normali.",
+                "Rematore: peso × ripetizioni (in settimana 4 l'ultima serie a ripetizioni massime).",
+                "Plank e hollow body: a fine sessione, una prova di tenuta massima ciascuno con il cronometro."
+              ],
+              "afterExercises": false
+            },
+            {
+              "title": "Boulder di forza",
+              "duration": "25–30'",
+              "body": "Scarico: 3 blocchi impegnativi, 3 tentativi ciascuno, più i 3 blocchi di riferimento (vedi Test)."
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Qualche minuto di arrampicata facilissima o di stretching per gli avambracci.",
+              "afterExercises": true
+            },
+            {
+              "title": "Regole sempre valide",
+              "items": [
+                "Mai dita intense in due sessioni di fila.",
+                "Niente cedimento sistematico nelle trazioni e negli esercizi di forza.",
+                "Dolore a dita, gomiti o spalle: fermi subito l'esercizio che lo provoca.",
+                "Almeno 48 ore tra le sessioni più dure.",
+                "Qualità dei movimenti prima della quantità di esercizi."
+              ],
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-a-trave",
+              "name": "Sospensioni 7\" · presa comoda",
+              "description": "Trave della palestra, sempre lo stesso listello: quello comodo e profondo, mai le tasche né le tacche piccole. Due mani, mano aperta o semi-arcuata a 4 dita, mai arcuata completa (pollice sopra l'indice). Metti un rialzo sotto la trave (panca, sgabello, cassone) e scegli uno dei 3 livelli di assistenza: 1) due piedi appoggiati, 2) un piede appoggiato, 3) senza piedi. I piedi spingono solo quanto serve per restare a uno sforzo di 6–7/10. Usa sempre lo stesso rialzo, così i livelli restano confrontabili. Si fa subito dopo il riscaldamento, a dita fresche, prima del boulder.",
+              "equipment": "hangboard",
+              "type": "timed_hang",
+              "grip": "open_hand",
+              "illustration": "max-hang-open",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 7,
+              "restBetweenReps": 0,
+              "restBetweenSets": 150,
+              "notes": "Scarico e test: 2 sospensioni, la prima al livello della settimana 1, la seconda al livello più basso che dà ancora sforzo 6–7/10. Segna livello e sforzo nella pagina Test (Settimana 4).",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-trazioni",
+              "name": "Trazioni",
+              "description": "Presa prona alla larghezza delle spalle. Parti a braccia tese, scapole attive, sali fino al mento sopra la sbarra e scendi controllando. Mantieni sempre 1–2 ripetizioni di margine: niente cedimento. Se non arrivi a 5 trazioni pulite usa un elastico sotto i piedi; se ne fai più di 10 metti un po' di peso in uno zaino, così 3–4 ripetizioni restano davvero allenanti.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "weighted-pullup",
+              "sets": 2,
+              "repsPerSet": 3,
+              "hangTime": 4,
+              "restBetweenReps": 0,
+              "restBetweenSets": 120,
+              "notes": "Prima il test, come in settimana 1: una serie di trazioni pulite massime. Recupera 3' e poi 2 serie leggere da 3.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-rematore",
+              "name": "Rematore con manubrio",
+              "description": "Un ginocchio e una mano sulla panca, schiena piatta. Tira il manubrio verso l'anca, prima avvicinando la scapola alla colonna e poi piegando il gomito. Scendi lento. La serie alterna i lati: sinistra, destra, sinistra…",
+              "equipment": "dumbbells",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 4,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Scarico: 2 serie per lato con il peso della settimana 3. Nell'ultima serie per lato fai tutte le ripetizioni pulite che riesci e segna peso × ripetizioni nella pagina Test.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-a-bulgaro",
+              "name": "Bulgarian split squat",
+              "description": "Piede dietro appoggiato su una panca, piede davanti a un passo lungo di distanza. Scendi in verticale finché il ginocchio dietro sfiora terra, risali spingendo sul tallone davanti. Controllo e stabilità prima del carico. La serie alterna le gambe.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 8,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Scarico: una serie per gamba.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-a-ginocchia",
+              "name": "Ginocchia al petto appeso",
+              "description": "Alla sbarra, spalle attive. Porta le ginocchia al petto arrotondando il bacino, scendi controllando senza dondolare.",
+              "equipment": "pull_up_bar",
+              "type": "reps",
+              "illustration": "leg-raises",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 60,
+              "difficulty": "medio"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "wednesday",
+          "label": "B",
+          "type": "climbing_gym",
+          "title": "Resistenza e tecnica",
+          "icon": "climbing",
+          "description": "Scarico: meno circuiti e un giro di continuità in meno. Arrampica in scioltezza.",
+          "intensity": "bassa",
+          "durationLabel": "1 h 30",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Continuità e core",
+          "guide": [
+            {
+              "title": "Circuiti",
+              "duration": "25'",
+              "body": "2 circuiti 5c/6a e uno 6a, senza fermarti.",
+              "items": [
+                "Completa i circuiti senza fermarti.",
+                "Concentrati sulla respirazione.",
+                "Non stringere le prese più del necessario.",
+                "Usa bene i piedi.",
+                "Non stancare inutilmente gli avambracci."
+              ]
+            },
+            {
+              "title": "Defaticamento",
+              "duration": "5–10'",
+              "body": "Arrampicata facilissima o stretching per gli avambracci.",
+              "afterExercises": true
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-b-continuita",
+              "name": "Continuità",
+              "description": "Arrampicata continua su terreno facile, alternando vie o traversi: non scendi mai a terra durante il tempo. Intensità moderata, devi poter continuare a muoverti senza arrivare alla ghisa piena. Recupero completo, lontano dalla parete. Respira, stringi le prese il meno possibile, usa i piedi.",
+              "equipment": "bodyweight",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 360,
+              "restBetweenReps": 0,
+              "restBetweenSets": 180,
+              "notes": "Scarico: 2 × 6'.",
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-b-body-saw",
+              "name": "Body saw al TRX",
+              "description": "Plank sugli avambracci con i piedi nelle maniglie del TRX. Spingi il corpo indietro di qualche centimetro facendo scorrere le spalle oltre i gomiti, poi torna avanti. Bacino fermo, schiena piatta: se la schiena si inarca, accorcia il movimento.",
+              "equipment": "bodyweight",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 1,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 45,
+              "difficulty": "medio"
+            },
+            {
+              "id": "mg-plank-laterale",
+              "name": "Plank laterale",
+              "description": "Sull'avambraccio, gomito sotto la spalla, corpo in linea dalla testa ai piedi. Spingi il fianco verso l'alto e non lasciarlo cadere. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "timed_hold",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 15,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "Scarico: una serie per lato.",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-b-bird-dog",
+              "name": "Bird dog",
+              "description": "A quattro zampe. Allunga insieme il braccio e la gamba opposti fino a metterli in linea con la schiena, tieni 2\" e torna. Bacino fermo, come se avessi un bicchiere d'acqua sulla schiena. La serie alterna i lati.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 3,
+              "restBetweenReps": 0,
+              "restBetweenSets": 20,
+              "side": "alternate_sets",
+              "limb": "hand",
+              "notes": "La mano indicata è quella che si allunga.",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "friday",
+          "label": "C",
+          "type": "climbing_gym",
+          "title": "Tecnica e preparazione alla falesia",
+          "icon": "climbing",
+          "description": "Facoltativa: nelle settimane da 2 allenamenti si fanno solo A e B. Qui conta la tecnica, non la prestazione. Se sabato vai in falesia falla leggerissima oppure riposa: non si arriva in falesia con gli avambracci già stanchi. In settimana di scarico è meglio saltarla.",
+          "intensity": "bassa",
+          "durationLabel": "1 h 30 – 2 h",
+          "warmupNote": "Uguale in tutte le sessioni",
+          "exercisesTitle": "Mobilità e stretching",
+          "guide": [
+            {
+              "title": "Boulder tecnici facili",
+              "duration": "25'",
+              "body": "Blocchi facili, un esercizio alla volta per qualche blocco. Sembrano semplici ma in falesia fanno una grande differenza.",
+              "items": [
+                "Silent feet: appoggia i piedi senza fare rumore.",
+                "No readjustment: una volta presa una presa, non correggere la posizione della mano.",
+                "Straight arms: tieni le braccia distese quando puoi.",
+                "Hip positioning: prova rotazioni del bacino e spostamenti laterali.",
+                "Downclimbing: scendi dai blocchi controllando i movimenti."
+              ]
+            },
+            {
+              "title": "Circuiti di continuità",
+              "duration": "30–40'",
+              "body": "Circuiti facili, ritmo tranquillo, senza ghisa. Se domani vai in falesia, fermati a 15–20'."
+            }
+          ],
+          "exercises": [
+            {
+              "id": "mg-c-cat-cow",
+              "name": "Cat-Cow",
+              "description": "A quattro zampe, alterna inarcamento (cat: schiena arcuata, mento al petto) ed estensione (cow: pancia verso terra, testa su). Inspira in cow, espira in cat. Mobilizza tutta la colonna e prepara agli allungamenti più profondi.",
+              "equipment": "yoga_mat",
+              "type": "reps",
+              "illustration": "cat-cow",
+              "sets": 2,
+              "repsPerSet": 10,
+              "hangTime": 4,
+              "restBetweenReps": 2,
+              "restBetweenSets": 15,
+              "notes": "Movimento fluido, sincronizzato col respiro",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-thoracic",
+              "name": "Rotazione toracica",
+              "description": "Su un fianco, gambe piegate sovrapposte. Apri il braccio di sopra verso il lato opposto ruotando il busto e cerca di portare la scapola a terra. Migliora la rotazione del busto, utile nei movimenti laterali e per respirare meglio sotto ghisa.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "thoracic-rotation",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 30,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "notes": "Un set per lato",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-forearm",
+              "name": "Stretching avambracci",
+              "description": "In ginocchio, palmi a terra con le dita verso le ginocchia: oscilla dolcemente per allungare i flessori. Poi inverti: dorso delle mani a terra per gli estensori.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "forearm-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 35,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Flessori prima, poi estensori. Un set ciascuno",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-pigeon",
+              "name": "Pigeon pose",
+              "description": "Da quadrupedia porta un ginocchio avanti verso la mano dello stesso lato, distendi la gamba dietro e scendi con il busto verso terra. Allunga gluteo e anca: aiuta a stare vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "pigeon-pose",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Rilassati e respira",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-90-90",
+              "name": "90/90 anche",
+              "description": "A terra: gamba davanti piegata a 90° con lo stinco perpendicolare al corpo, gamba dietro piegata a 90° all'indietro. Busto dritto, poi inclinati in avanti sopra lo stinco davanti. Apre la rotazione dell'anca, il movimento di drop knee e del bacino girato verso la parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "default",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 60,
+              "restBetweenReps": 0,
+              "restBetweenSets": 5,
+              "side": "alternate_sets",
+              "limb": "foot",
+              "notes": "Un set per lato. Se fai fatica a tenere il busto dritto, un cuscino sotto il gluteo",
+              "difficulty": "facile"
+            },
+            {
+              "id": "mg-c-frog",
+              "name": "Frog stretch",
+              "description": "In ginocchio, allarga le ginocchia il più possibile con i piedi girati verso l'esterno. Scendi sugli avambracci e spingi i fianchi indietro. Allunga gli adduttori: rana, piedi alti e bacino vicino alla parete.",
+              "equipment": "yoga_mat",
+              "type": "timed_stretch",
+              "illustration": "frog-stretch",
+              "sets": 2,
+              "repsPerSet": 1,
+              "hangTime": 50,
+              "restBetweenReps": 0,
+              "restBetweenSets": 10,
+              "notes": "Scendi gradualmente, non forzare",
+              "difficulty": "facile"
+            }
+          ]
+        },
+        {
+          "dayOfWeek": "saturday",
+          "label": "WE",
+          "type": "lead",
+          "title": "Falesia tranquilla o riposo",
+          "icon": "rope",
+          "description": "Settimana di scarico: vie sotto il tuo massimo, oppure riposo o un'attività aerobica leggera.",
+          "intensity": "bassa",
+          "durationLabel": "giornata",
+          "guide": [
+            {
+              "title": "Come impostare la giornata",
+              "items": [
+                "Una o due vie facili per scaldarti prima di provare quelle impegnative.",
+                "Alterna vie a vista e vie lavorate: il grado a vista dice se migliorano lettura, tecnica e gestione delle energie.",
+                "Non trasformare ogni uscita in una gara per il grado: si migliora anche imparando a muoversi meglio, consumare meno e recuperare.",
+                "Niente falesia questo weekend? Riposo o attività aerobica leggera."
+              ]
+            },
+            {
+              "title": "Cosa segnare",
+              "body": "Ogni via nel Diario: grado, a vista / flash / lavorata, numero di tentativi. Nelle note la fatica da 1 a 10. Dopo 8–12 settimane il grado più alto chiuso e il grado a vista diranno se il programma funziona."
+            }
+          ],
+          "exercises": []
+        }
+      ]
+    }
+  ]
+}

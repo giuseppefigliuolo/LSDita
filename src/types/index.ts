@@ -122,6 +122,8 @@ export interface TrainingProgram {
 export interface WarmupProtocol {
   title: string
   description: string
+  /** Short hint on the Dashboard card, e.g. "30'" */
+  summary?: string
   sections: GuideSection[]
   /** Finger ramp as % of the day's load, computed from the week's loaded exercises */
   rampPercents?: number[]
@@ -149,6 +151,8 @@ export interface BenchmarkTest {
 
 export interface BenchmarkConfig {
   description: string
+  /** What the tests cover, shown on the sessions that record them */
+  summary?: string
   bodyweightKg: number
   phases: BenchmarkPhase[]
   tests: BenchmarkTest[]
@@ -195,7 +199,7 @@ export interface TimerState {
   isPaused: boolean
 }
 
-export type ProgramId = 'home' | 'travel' | 'hypertrophy' | 'girl_workout' | 'lead_autumn_2026' | 'custom'
+export type ProgramId = 'home' | 'travel' | 'hypertrophy' | 'girl_workout' | 'lead_autumn_2026' | 'margherita' | 'custom'
 
 export type ClimbStyle = 'boulder' | 'sport' | 'multipitch' | 'trad' | 'gym'
 export type AscentType = 'onsight' | 'flash' | 'redpoint' | 'project'

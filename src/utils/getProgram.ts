@@ -3,6 +3,7 @@ import travelProgram from '../data/training-program-travel.json'
 import hypertrophyProgram from '../data/training-program-hypertrophy.json'
 import girlWorkoutProgram from '../data/training-program-girlfriend.json'
 import leadAutumnProgram from '../data/training-program-lead-autumn-2026.json'
+import margheritaProgram from '../data/training-program-margherita.json'
 import { dayOverrideKey, useSettingsStore } from '../store/useSettingsStore'
 import { useBenchmarkStore } from '../store/useBenchmarkStore'
 import { resolveProgramLoads } from './benchmarks'
@@ -14,6 +15,7 @@ const builtInPrograms: Record<Exclude<ProgramId, 'custom'>, TrainingProgram> = {
   hypertrophy: hypertrophyProgram as unknown as TrainingProgram,
   girl_workout: girlWorkoutProgram as unknown as TrainingProgram,
   lead_autumn_2026: leadAutumnProgram as unknown as TrainingProgram,
+  margherita: margheritaProgram as unknown as TrainingProgram,
 }
 
 function getBaseProgram(id: ProgramId): TrainingProgram {
@@ -82,4 +84,5 @@ export const programOptions: { id: ProgramId; label: string; description: string
   { id: 'hypertrophy', label: 'Ipertrofia 2 Settimane', description: 'Full body senza dita — recupero puleggia A2' },
   { id: 'girl_workout', label: 'Girl Workout 6 Settimane', description: 'Full body + climbing + atletismo (sbarra, anelli, zaino)' },
   { id: 'lead_autumn_2026', label: 'Lead Ott–Dic 2026', description: 'Test + 10 settimane: volo, resistenza su via, forza dita (CR)' },
+  { id: 'margherita', label: 'Margherita · 4 settimane', description: 'Forza e boulder, resistenza, tecnica + falesia nel weekend' },
 ]

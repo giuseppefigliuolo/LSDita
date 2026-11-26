@@ -176,7 +176,7 @@ export default function WorkoutDay() {
                   variant="secondary"
                   eyebrow="Test"
                   title="Registra i risultati"
-                  subtitle="CR, sfere, lift, circuito, trazioni, volo"
+                  subtitle={program.benchmarks.summary}
                   onClick={() => navigate('/tests')}
                 />
               </motion.div>

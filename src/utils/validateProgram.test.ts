@@ -4,6 +4,7 @@ import travelProgram from '../data/training-program-travel.json'
 import hypertrophyProgram from '../data/training-program-hypertrophy.json'
 import girlWorkoutProgram from '../data/training-program-girlfriend.json'
 import leadAutumnProgram from '../data/training-program-lead-autumn-2026.json'
+import margheritaProgram from '../data/training-program-margherita.json'
 import { validateDay, validateProgram, validateProgramJson } from './validateProgram'
 
 const builtIn = {
@@ -12,6 +13,7 @@ const builtIn = {
   hypertrophy: hypertrophyProgram,
   girl_workout: girlWorkoutProgram,
   lead_autumn_2026: leadAutumnProgram,
+  margherita: margheritaProgram,
 }
 
 const clone = <T>(x: T): T => structuredClone(x)

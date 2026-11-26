@@ -44,6 +44,9 @@ export default function Dashboard() {
   const weekNumber = getActiveWeekNumber(program, programStartDate, overrideWeek)
   const currentWeek = program.weeks.find((w) => w.weekNumber === weekNumber)
   const weekRange = getWeekDateRange(program, weekNumber)
+  const usesCR = Boolean(
+    program.benchmarks?.tests.some((t) => t.percentOfBodyweight)
+  )
   const crSummary = program.benchmarks
     ? program.benchmarks.tests
         .filter((t) => t.percentOfBodyweight)
@@ -381,7 +384,7 @@ export default function Dashboard() {
               className="bg-pastel-coral -rotate-2"
               eyebrow="Fisso"
               title="Riscaldamento"
-              subtitle="15–25' + rampa dita"
+              subtitle={program.warmup.summary}
               onClick={() => navigate('/warmup')}
             />
           )}
@@ -389,7 +392,7 @@ export default function Dashboard() {
             <PosterLinkCard
               className="bg-pastel-mint rotate-2"
               eyebrow="Test"
-              title="CR e test"
+              title={usesCR ? 'CR e test' : 'Test'}
               subtitle={crSummary}
               onClick={() => navigate('/tests')}
             />

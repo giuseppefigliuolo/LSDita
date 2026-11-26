@@ -6,6 +6,7 @@
   "durationWeeks": 11,
   "warmup": {
     "title": "Riscaldamento standard",
+    "summary": "15–25' + rampa dita",
     "description": "Dura 15 minuti nella S1 e 20–25 nelle sessioni lunghe. Il vecchio riscaldamento scaldava il corpo e lasciava fredde proprio le dita, che sono la parte più a rischio: per questo c'è la rampa dita.",
     "rampPercents": [
       50,
@@ -46,6 +47,7 @@
   },
   "benchmarks": {
     "description": "Senza numeri di partenza non sapremo mai se il programma funziona, né quanto carico mettere sulla trave. Regola d'oro: dita riposate, pelle buona, il giorno dopo un riposo.",
+    "summary": "CR, sfere, lift, circuito, trazioni, volo",
     "bodyweightKg": 67,
     "phases": [
       {
